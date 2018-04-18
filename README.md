@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/liyas-thomas/master/images/manifest/icon-512x512.png" alt="Liyas Thomas" width="200"></a>
+  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
   <br>
   <h1>Liyas Thomas</h1>
 </div>
