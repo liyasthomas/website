@@ -1,0 +1,48 @@
+[
+	{
+		"color":"white",
+		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
+		"title":"Lvr. Virtual reality for everyone.",
+		"description":"I'm on a mission to bring amazing virtual and augmented reality experiences to the world.",
+		"info":"Project",
+		"img":"https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png",
+		"icon":"arrow-forward",
+		"link":"https://liyas-vr.firebaseapp.com"
+	},
+	{
+		"color":"cyan",
+		"title":"Feedie",
+		"description":"Fuse team",
+		"info":"Project",
+		"img":"https://cdn.dribbble.com/users/68671/screenshots/1607784/rating.png",
+		"icon":"arrow-forward",
+		"link":"https://github.com/FuseOrg/Feedie"
+	},
+	{
+		"color":"blue",
+		"title":"Fuse Org",
+		"description":"Fuse team",
+		"info":"Project",
+		"img":"unnamed1.png",
+		"icon":"arrow-forward",
+		"link":"https://github.com/FuseOrg"
+	},
+	{
+		"color":"orange",
+		"title":"Pineapple Notes",
+		"description":"Fuse team",
+		"info":"Project",
+		"img":"unnamed1.png",
+		"icon":"arrow-forward",
+		"link":"https://pineapple-notes.firebaseapp.com"
+	},
+	{
+		"color":"teal",
+		"title":"Form Face",
+		"description":"Fuse team",
+		"info":"Project",
+		"img":"unnamed1.png",
+		"icon":"arrow-forward",
+		"link":"https://form-face.firebaseapp.com"
+	}
+]

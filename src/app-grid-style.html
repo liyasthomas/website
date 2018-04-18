@@ -1,0 +1,227 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<dom-module id="app-grid-style">
+  <template>
+    <style is="custom-style">
+      :host {
+        --app-grid-expandible-item: {
+          -webkit-flex-basis: calc((100% - 0.1px) / var(--app-grid-columns, 1) * var(--app-grid-expandible-item-columns, 1) - var(--app-grid-gutter, 0px)) !important;
+          flex-basis: calc((100% - 0.1px) / var(--app-grid-columns, 1) * var(--app-grid-expandible-item-columns, 1) - var(--app-grid-gutter, 0px)) !important;
+          max-width: calc((100% - 0.1px) / var(--app-grid-columns, 1) * var(--app-grid-expandible-item-columns, 1) - var(--app-grid-gutter, 0px)) !important;
+        };
+      }
+      .app-grid {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        padding-top: var(--app-grid-gutter, 0px);
+        padding-left: var(--app-grid-gutter, 0px);
+        box-sizing: border-box;
+      }
+      .app-grid > * {
+        /* Required for IE 10 */
+        -ms-flex: 1 1 100%;
+        -webkit-flex: 1;
+        flex: 1;
+
+        /* The width for an item is: (100% - subPixelAdjustment - gutter * columns) / columns */
+        -webkit-flex-basis: calc((100% - 0.1px - (var(--app-grid-gutter, 0px) * var(--app-grid-columns, 1))) / var(--app-grid-columns, 1));
+        flex-basis: calc((100% - 0.1px - (var(--app-grid-gutter, 0px) * var(--app-grid-columns, 1))) / var(--app-grid-columns, 1));
+
+        max-width: calc((100% - 0.1px - (var(--app-grid-gutter, 0px) * var(--app-grid-columns, 1))) / var(--app-grid-columns, 1));
+        margin-bottom: var(--app-grid-gutter, 0px);
+        margin-right: var(--app-grid-gutter, 0px);
+        height: var(--app-grid-item-height);
+        box-sizing: border-box;
+      }
+      .app-grid[has-aspect-ratio] > * {
+        position: relative;
+      }
+      .app-grid[has-aspect-ratio] > *::before {
+        display: block;
+        content: "";
+        padding-top: var(--app-grid-item-height, 100%);
+      }
+      .app-grid[has-aspect-ratio] > * > * {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+			.grid {
+				transition: all .1s;
+				width: 100%;
+			}
+			.list {
+				transition: all .1s;
+				border-radius: 5px;
+			}
+			.list .item {
+				@apply(--app-grid-expandible-item);
+				--app-grid-item-height: 40vw;
+			}
+			.banner {
+				height: 46px;
+				widows: auto;
+			}
+			.actions {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				@apply --layout-justified;
+				padding: 16px;
+				color: var(--light-text-color);
+			}
+			.app-grid {
+				margin: 0 auto;
+			}
+			.item {
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: #fff;
+				display: inline-block;
+				background-color: #fff;
+				color: var(--secondary-text-color);
+				border-radius: 5px;
+				-webkit-transition: all .1s;
+				-o-transition: all .1s;
+				transition: all .1s;
+			}
+			.item:hover {
+				z-index: 10;
+				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+			}
+			.container {
+      	@apply --layout-horizontal;
+				height: 100%;
+				width: 100%;
+			}
+			.flexchild {
+				@apply --layout-flex;
+			}
+			.flex-vertical {
+				@apply --layout-vertical;
+			}
+			.flex-horizontal {
+				@apply --layout-horizontal;
+			}
+			.flex-center-center {
+				@apply --layout-horizontal;
+				@apply --layout-center-center;
+			}
+			.flex-end-align {
+				@apply --layout-horizontal;
+				@apply --layout-end;
+				height: 100%
+			}
+			.block {
+				padding: 32px;
+			}
+			.title {
+				font-size: 46px;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				line-height: 1.25;
+				width: 50%;
+			}
+			.description {
+				font-size: 32px;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				line-height: 1.25;
+				width: 75%;
+			}
+			.info {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
+				font-weight: 500;
+				padding: 32px;
+				font-size: 18px;
+				text-overflow: ellipsis;
+			}
+			@media (max-width: 640px) {
+				.app-grid {
+					width: 100%;
+				}
+				paper-ripple {
+					display: none;
+				}
+				.actions, .block, .info {
+					padding: 16px;
+				}
+				.img {
+					padding: 0 16px;
+				}
+				.title {
+					font-size: 32px;
+					width: 80%;
+				}
+				.description {
+					font-size: 22px;
+					width: 90%;
+				}
+				.info {
+					font-size: 16px;
+				}
+				.sharable {
+					padding-top: 16px;
+				}
+			}
+			.white-bg {
+				background-color: var(--paper-grey-100);
+				color: var(--paper-grey-900);
+			}
+			.grey-bg {
+				background-color: var(--paper-grey-300);
+				color: var(--paper-grey-800);
+			}
+			.black-bg {
+				background-color: var(--paper-grey-800);
+				color: var(--paper-grey-50);
+			}
+			.purple-bg {
+				background-color: var(--paper-purple-a700);
+				color: var(--paper-cyan-a700);
+			}
+			.deep-purple-bg {
+				background-color: var(--paper-purple-900);
+				color: var(--paper-purple-a700);
+			}
+			.orange-bg {
+				background-color: var(--paper-orange-a700);
+				color: #fff;
+			}
+			.cyan-bg {
+				background-color: var(--paper-cyan-a700);
+				color: #fff;
+			}
+			.green-bg {
+				background-color: var(--paper-green-a700);
+				color: var(--paper-indigo-900);
+			}
+			.blue-bg {
+				background-color: var(--paper-blue-a700);
+				color: #fff;
+			}
+			.teal-bg {
+				background-color: var(--paper-teal-a700);
+				color: var(--paper-grey-800);
+			}
+			.indigo-bg {
+				background-color: var(--paper-indigo-900);
+				color: var(--paper-purple-a700);
+			}
+    </style>
+  </template>
+</dom-module>

@@ -1,0 +1,182 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="app-grid-style.html">
+
+<dom-module id="my-about">
+  <template>
+		<style include="app-grid-style">
+		</style>
+    <style include="shared-styles" is="custom-style">
+      :host {
+        display: block;
+				--app-grid-item-height: 100%;
+      }
+  		@media all and (min-width: 0) and (max-width: 360px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 80vw;
+					--app-grid-expandible-item-columns: 1;
+				}
+			}
+  		@media all and (min-width: 361px) and (max-width: 640px) {
+				:host {
+					--app-grid-columns: 2;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 70vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+				.item:nth-child(n) {
+					@apply --app-grid-expandible-item;
+				}
+			}
+  		@media all and (min-width: 641px) and (max-width: 960px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 40vw;
+					--app-grid-expandible-item-columns: 1;
+				}
+			}
+			@media all and (min-width: 961px) {
+				:host {
+					--app-grid-columns: 2;
+					--app-grid-gutter: 32px;
+					--app-grid-item-height: 25vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+			}
+			.content {
+				max-width: 60%;
+				margin: 0 auto;
+			}
+			.card {
+				background-color: #fff;
+				color: var(--secondary-text-color);
+				padding: 16px;
+				margin: 32px;
+				border-bottom: solid 1px #eee;
+			}
+			.item {
+				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+			}
+			@media (max-width: 640px) {
+				.content, .app-grid {
+					max-width: 100%;
+				}
+				.card {
+					margin: 16px 0;
+				}
+			}
+    </style>
+		<div class="content">
+			<div class="card">
+				<h2 class="title">V <span>1.0</span></h2>version one.zero
+				<p>Fuse Org is a developers community.</p>
+				<p>This program is dedicated to assisting individual organizers of active mobile, web, cloud, graphic, game, and AI developments on their journey leading successful and engaged groups via online training, meetup materials, networking oppertunities, and more.</p>
+				<p>The program membership is free with no strings attatched - we won't ask you to promote Fuse's products, use our branding in events, or limit your work to any specific technologies, topics, or partners.</p>
+				<p>
+					<a href="https://goo.gl/forms/9xCgZBtat0KTwMeg2"><paper-button raised class="primary"><iron-icon icon="my-icons:flash-on"></iron-icon>Join Fuse Org</paper-button></a>
+				</p>
+				<p>As a member, you'll get support to grow your network and community and, most importantly, support to grow as an individual leader. If you want a closer partnership with Fuse Org, you can optionally join the Fuse Org Developers Community Program platform on top of the standard membership.</p>
+				<p>
+					<a href="mailto:sdncerc@gmail.com?&subject=Hello Fuse Org!&body=Hi,%0A"><paper-button class="secondary"><iron-icon icon="my-icons:mail"></iron-icon>Say Hi</paper-button></a>
+				</p>
+			</div>
+			<div class="card">
+				<h2 class="title">Buy us a coffee!</h2>appreciate our works by making a donation.
+				<p>
+					<a href="https://www.paypal.com"><paper-button class="secondary"><iron-icon icon="my-icons:paypal"></iron-icon>PayPal</paper-button></a>
+				</p>
+			</div>
+			<div class="card">
+				<h2 class="title">Open source projects</h2>open sourcing our projects, or part of it, can help inspire other coders.
+				<p>
+					<a href="https://github.com/FuseOrg"><paper-button><iron-icon icon="my-icons:github"></iron-icon>GitHub</paper-button></a>
+				</p>
+			</div>
+			<div class="card">
+				<h2 class="title">Social</h2>follow us on
+				<p>
+					<template is="dom-repeat" items="[[social]]">
+						<a href="{{item.link}}" target="_blank"><paper-icon-button class="link" icon="my-icons:{{item.icon}}"></paper-icon-button></a>
+					</template>
+				</p>
+			</div>
+			<div class="card">
+				<h2 class="title">Team</h2>who we are
+				<p>Fuse Org is a collective initiative by some students of NCERC and a few thousand of their friends.</p>
+				<p>&copy; All rights reserved, all wrongs reserved.</p>
+			</div>
+			<div class="app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[team]]">
+					<div class="item">
+						<div class="container">
+							<div class="flexchild flex-vertical">
+								<div class="block flex-horizontal">
+									<div class="title flexchild">{{item.sname}}</div>
+									<div>
+										<a href="{{item.github}}"><paper-icon-button icon="my-icons:github"></paper-icon-button></a>
+									</div>
+								</div>
+								<div class="flexchild flex-center-center">
+									<iron-image class="banner" preload fade sizing="contain" src="../images/assets/about/[[item.image]]" placeholder="../images/assets/about/[[item.image]]"></iron-image>
+								</div>
+								<div class="description block flex-horizontal">
+									<div class="flexchild">
+										{{item.name}}
+									</div>
+									<div>
+										<a href="{{item.website}}"><paper-icon-button icon="my-icons:language"></paper-icon-button></a>
+										<a href="mailto:{{item.mail}}"><paper-icon-button icon="my-icons:mail"></paper-icon-button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+  </template>
+  <script>
+    class MyAbout extends Polymer.Element {
+      static get is() { return 'my-about'; }
+
+      static get properties() {
+        return {
+					social: {
+						type: Array,
+						value: function() {
+							return [
+								{link: "https://www.facebook.com", icon: "facebook"},
+								{link: "https://twitter.com", icon: "twitter"},
+								{link: "https://plus.google.com", icon: "google-plus"},
+								{link: "https://instagram.com", icon: "instagram"},
+								{link: "https://www.youtube.com", icon: "youtube"},
+								{link: "https://github.com/FuseOrg", icon: "github"},
+								{link: "https://www.linkedin.com", icon: "linkedin"},
+								{link: "https://chat.whatsapp.com/BuNhyHxoft9A34Pm2vYIO4", icon: "whatsapp"}
+							]
+						}
+					},
+					team: {
+						type: Array,
+						value: function() {
+							return [
+								{name: "Liyas", sname: "Li", dess: "Technical assistant", image: "boy.svg"},
+								{name: "Jovial", sname: "Jo", dess: "Technical assistant", image: "boy-16.svg"},
+								{name: "Muvin", sname: "Mu", dess: "Tester", image: "boy-3.svg"},
+								{name: "Ajith", sname: "Aj", dess: "Data  analyst", image: "boy-14.svg"},
+								{name: "Adith", sname: "Ad", dess: "Tester", image: "boy-7.svg"},
+								{name: "Arjun", sname: "Ar", dess: "Tester", image: "boy-11.svg"},
+							]
+						}
+					}
+        };
+      }
+    }
+
+    window.customElements.define(MyAbout.is, MyAbout);
+  </script>
+</dom-module>

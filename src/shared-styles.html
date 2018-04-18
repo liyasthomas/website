@@ -1,0 +1,89 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!-- shared styles for all views -->
+<dom-module id="shared-styles">
+  <template>
+    <style is="custom-style">
+			a {
+        text-decoration: none !important;
+				outline: none;
+				color: inherit;
+			}
+			a.link {
+				color: var(--accent-color);
+			}
+			a.link:hover {
+				color: var(--dark-accent-color);
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			h1, h2, h3, h4 {
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-weight: normal;
+				margin: 0;
+			}
+			paper-item, paper-icon-item {
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				line-height: 1.5;
+				color: var(--primary-text-color);
+				--paper-item-focused: {
+				};
+				--paper-item-focused-before: {
+					opacity: 0;
+				};
+			}
+			paper-icon-button.link {
+				margin: 4px;
+			}
+/*
+			paper-icon-button {
+				color: var(--light-text-color);
+			}
+			paper-icon-button:hover {
+				color: var(--secondary-text-color);
+			}
+*/
+			paper-button {
+				text-transform: none;
+				font-weight: 500 !important;
+				margin: 0;
+			}
+			paper-button.primary {
+				color: #fff;
+				background-color: var(--accent-color);
+				--paper-button-raised-keyboard-focus: {
+					background-color: var(--dark-accent-color) !important;
+				};
+			}
+			paper-button.primary:hover {
+				background-color: var(--dark-accent-color);
+			}
+			paper-button.secondary {
+				color: var(--accent-color);
+				--paper-button-raised-keyboard-focus: {
+					color: var(--dark-accent-color) !important;
+				};
+			}
+			paper-button.secondary:hover {
+				color: var(--dark-accent-color);
+			}
+			paper-button iron-icon {
+				padding-right: 8px;
+			}
+			paper-progress {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				z-index: 10;
+			}
+			.error {
+				padding: 16px;
+				color: var(--secondary-text-color);
+				text-align: center;
+			}
+    </style>
+  </template>
+</dom-module>

@@ -1,0 +1,508 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../bower_components/iron-scroll-threshold/iron-scroll-threshold.html">
+
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner-lite.html">
+
+<link rel="import" href="../bower_components/neon-animation/web-animations.html">
+<link rel="import" href="../bower_components/neon-animation/neon-animated-pages.html">
+<link rel="import" href="../bower_components/neon-animation/neon-animatable.html">
+<link rel="import" href="../bower_components/neon-animation/neon-animations.html">
+
+<link rel="lazy-import" href="my-home.html">
+<link rel="lazy-import" href="my-projects.html">
+<link rel="lazy-import" href="my-about.html">
+<link rel="lazy-import" href="my-404.html">
+
+<link rel="import" href="my-icons.html">
+
+<dom-module id="my-app">
+  <template>
+    <style is="custom-style">
+      :host {
+        display: block;
+
+				--primary-color: #fff;
+				--light-primary-color: #fff;
+				--dark-primary-color: #fff;
+
+				--accent-color: var(--paper-blue-a400);
+				--light-accent-color: var(--paper-blue-a200);
+				--dark-accent-color: var(--paper-blue-a700);
+
+				--primary-text-color: rgba(0,0,0,.87);
+				--secondary-text-color: rgba(0,0,0,.54);
+				--light-text-color: rgba(0,0,0,.28);
+
+				--paper-tabs-selection-bar-color: var(--primary-text-color);
+				--paper-tab-ink: var(--light-text-color);
+
+				--paper-fab-keyboard-focus-background: var(--accent-color);
+
+				--paper-progress-active-color: var(--light-accent-color);
+				--paper-progress-secondary-color: var(--dark-accent-color);
+				--paper-progress-container-color: var(--accent-color);
+
+				color: var(--primary-text-color);
+      }
+			[hidden] {
+				display: none;
+			}
+			a {
+        text-decoration: none;
+				outline: none;
+				color: inherit;
+			}
+			app-drawer {
+      	--app-drawer-scrim-background: rgba(0,0,0,.5);
+				--app-drawer-content-container: {
+      		@apply --shadow-elevation-12dp;
+					background-color: #fff;
+				}
+			}
+      .drawer-contents {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .listbox paper-icon-item {
+        color: var(--secondary-text-color);
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-size: 16px;
+				font-weight: 500;
+				cursor: pointer;
+      }
+			.listbox a.iron-selected paper-icon-item {
+				background: var(--paper-grey-100);
+				color: var(--primary-text-color);
+			}
+			.listbox a#home.iron-selected paper-icon-item {
+        color: var(--paper-deep-orange-500);
+			}
+			.listbox a#projects.iron-selected paper-icon-item {
+        color: var(--paper-red-500);
+			}
+			.listbox a#about.iron-selected paper-icon-item {
+        color: var(--paper-blue-500);
+			}
+			.listbox iron-collapse {
+				outline: none;
+				border-top: 1px solid var(--paper-grey-100);
+				border-bottom: 1px solid var(--paper-grey-100);
+				background: var(--paper-grey-50);
+			}
+      app-header {
+				background-color: #fff;
+				color: var(--light-text-color);
+				--app-header-shadow: {
+					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
+				};
+      }
+			app-toolbar.drawer {
+				background-color: #fff; 
+				color: var(--primary-text-color);
+			}
+			app-header:not([shadow]) {
+			}
+			[drawer-toggle] {
+				margin-right: 8px;
+			}
+			.logo {
+				display: inline-block;
+				vertical-align: middle;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				color: var(--secondary-text-color);
+				letter-spacing: 0;
+				font-weight: 800;
+			}
+			.logo span {
+				color: var(--accent-color);
+			}
+			[main-title] {
+				font-size: 56px;
+			}
+			[condensed-title] {
+				font-size: 24px;
+			}
+			app-toolbar.bottom {
+				height: auto;
+			}
+      paper-tabs {
+        height: 100%;
+      }
+			[fit-container] {
+				width: 100%;
+			}
+      paper-tab {
+        --iron-icon-height: 26px;
+        --iron-icon-width: 26px;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				color: var(--light-text-color);
+				text-transform: capitalize;
+				padding: 0;
+      }
+			paper-tab a {
+				@apply --layout-vertical;
+				@apply --layout-center-center;
+				padding: 0 16px;
+				font-weight: 500;
+				font-size: 16px;
+  		}
+			paper-tabs paper-tab.iron-selected {
+				color: var(--accent-color);
+			}
+			paper-tabs paper-tab#home.iron-selected {
+				color: var(--accent-color);
+			}
+			paper-tabs paper-tab#projects.iron-selected {
+				color: var(--accent-color);
+			}
+			paper-tabs paper-tab#about.iron-selected {
+				color: var(--accent-color);
+			}
+      .pages {
+        @apply --layout-flex;
+      }
+			neon-animated-pages > .iron-selected {
+        @apply --layout-flex;
+				position: relative;
+			}
+			paper-progress {
+				width: 100%;
+			}
+			.error {
+				padding: 16px;
+				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
+				font-size: 14px;
+				color: var(--secondary-text-color);
+			}
+			paper-toast {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				@apply --layout-justified;
+				background-color: #fff !important;
+				color: var(--paper-grey-500);
+			}
+			.toast-button {
+				text-transform: none;
+				margin: 4px;
+			}
+			.flex-horizontal {
+				@apply --layout-horizontal;
+			}
+			.flexchild {
+				@apply --layout-flex;
+			}
+			footer {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+    		@apply --layout-justified;
+				padding: 64px 32px 32px;
+				background-color: var(--paper-grey-100);
+				color: var(--light-text-color);
+				font-size: 16px;
+			}
+			footer paper-icon-button {
+				margin: 4px;
+			}
+			@media (max-width: 640px) {
+				paper-toast {
+					margin: 0;
+					border-radius: 0;
+					width: 100%;
+				}
+				.toast-button {
+					margin: 16px 8px;
+				}
+				app-drawer {
+					--app-drawer-width: 80%;
+				}
+			}
+    </style>
+    <app-location
+        route="{{route}}"
+        url-space-regex="^[[rootPath]]">
+    </app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}">
+    </app-route>
+		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
+			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>
+		</paper-toast>
+		<paper-toast id="sharehome" duration="0">
+			<div class="flex-vertical">
+				<div class="flex-horizontal flex-center-center">
+					<div class="flex-horizontal flexchild">
+						<div class="flexchild">Share via</div>
+						<paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
+					</div>
+				</div>
+				<div class="sharable" on-tap="openShare">
+					<a class="toast-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//fuse-org.firebaseapp.com" target="_blank"><paper-icon-button icon="my-icons:facebook"></paper-icon-button></a>
+					<a class="toast-button" href="https://twitter.com/home?status=Fuse%20Org%20%7C%20Developers%20Community%20https%3A//fuse-org.firebaseapp.com" target="_blank"><paper-icon-button icon="my-icons:twitter"></paper-icon-button></a>
+					<a class="toast-button" href="https://plus.google.com/share?url=https%3A//fuse-org.firebaseapp.com" target="_blank"><paper-icon-button icon="my-icons:google-plus"></paper-icon-button></a>
+					<a class="toast-button" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//fuse-org.firebaseapp.com&title=Fuse%20Org&summary=Developers%20Community&source=https%3A//fuse-org.firebaseapp.com" target="_blank"><paper-icon-button icon="my-icons:linkedin"></paper-icon-button></a>
+					<a class="toast-button" href="https://pinterest.com/pin/create/button/?url=https%3A//fuse-org.firebaseapp.com&media=https%3A//fuse-org.firebaseapp.com&description=Developers%20Community" target="_blank"><paper-icon-button icon="my-icons:pinterest"></paper-icon-button></a>
+					<a class="toast-button" href="mailto:sdncerc@gmail.com?&subject=Hello Fuse Org!&body=Hi,%0A"><paper-icon-button icon="my-icons:mail"></paper-icon-button></a>
+					<paper-icon-button class="toast-button" icon="my-icons:content-copy"></paper-icon-button>
+				</div>
+			</div>
+		</paper-toast>
+<!--		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>-->
+    <app-drawer-layout force-narrow fullbleed>
+      <!-- Drawer content -->
+      <app-drawer id="drawer" slot="drawer" swipe-open>
+				<div class="drawer-contents">
+					<app-toolbar class="drawer">
+						<div class="logo">Recycle Mix</div>
+					</app-toolbar>
+					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
+						<a id="home" href="[[rootPath]]" tabindex="-1">
+							<paper-icon-item>
+								<iron-icon src="../images/assets/app/home.svg" item-icon slot="item-icon"></iron-icon>
+								<span>Home</span>
+								<paper-ripple></paper-ripple>
+							</paper-icon-item>
+						</a>
+						<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
+							<iron-icon src="../images/assets/app/briefcase.svg" item-icon slot="item-icon"></iron-icon>
+							<span style="width: calc(100% - 80px)">Projects</span>
+							<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
+							<paper-ripple></paper-ripple>
+						</paper-icon-item>
+						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
+							<a id="recycle" href="projects" tabindex="-1">
+								<paper-icon-item>
+									<iron-icon src="../images/assets/app/business.svg" item-icon slot="item-icon"></iron-icon>
+									<span>All projects</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+							</a>
+							<iron-ajax auto
+								id="ajax"
+								url="data/projects_feeds.json"
+								loading="{{loading}}"
+								handle-as="json"
+								progress="{{progress}}"
+								last-response="{{ajaxResponse}}"
+								last-error="{{error}}"
+								debounce-duration="300"></iron-ajax>
+							<div class="actions flex-center-center" hidden$="[[!loading]]">
+								<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
+							</div>
+							<template is="dom-repeat" items="[[ajaxResponse]]">
+								<a id="[[item.title]]" href="[[item.link]]" tabindex="-1">
+									<paper-icon-item>
+										<iron-icon icon="my-icons:[[item.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span>{{item.title}}</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+							</template>
+							<template is="dom-if" if="{{error}}">
+								<div class="error">
+									<div>Failed to load projects list. Make sure you're connected to internet.</div>
+									<span>🙁😢😒</span>
+									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+								</div>
+							</template>
+						</iron-collapse>
+						<a id="about" href="about" tabindex="-1">
+							<paper-icon-item>
+								<iron-icon src="../images/assets/app/info.svg" item-icon slot="item-icon"></iron-icon>
+								<span>About</span>
+								<paper-ripple></paper-ripple>
+							</paper-icon-item>
+						</a>
+					</paper-listbox>
+				</div>
+      </app-drawer>
+			<app-header-layout fullbleed>
+				<app-header slot="header" fixed condenses effects="waterfall resize-title">
+					<app-toolbar sticky class="tab-nav">
+						<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
+						<span condensed-title><div class="logo"><span>Liyas</span> Thomas</div></span>
+						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
+							<paper-tab id="home">
+								<a href="[[rootPath]]" tabindex="-1">
+									<iron-icon icon="my-icons:home"></iron-icon>
+								</a>
+							</paper-tab>
+							<paper-tab id="projects">
+								<a href="projects" tabindex="-1">
+									<iron-icon icon="my-icons:code"></iron-icon>
+								</a>
+							</paper-tab>
+							<paper-tab id="about">
+								<a href="about" tabindex="-1">
+									<iron-icon icon="my-icons:face"></iron-icon>
+								</a>
+							</paper-tab>
+						</paper-tabs>
+						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
+					</app-toolbar>
+					<app-toolbar class="bottom">
+						<span main-title><div class="logo"><span>Liyas</span> Thomas</div></span>
+					</app-toolbar>
+				</app-header>
+				<div class="pages">
+					<neon-animated-pages
+							selected="[[page]]"
+							attr-for-selected="name"
+							fallback-selection="404"
+							role="main"
+							entry-animation="fade-in-animation"
+							exit-animation="fade-out-animation">
+						<my-home name="home"></my-home>
+						<my-projects name="projects"></my-projects>
+						<my-about name="about"></my-about>
+						<my-404 name="404"></my-404>
+					</neon-animated-pages>
+				</div>
+				<footer>
+					<div>
+						<a href="https://github.com/FuseOrg" target="_blank"><paper-icon-button icon="my-icons:github"></paper-icon-button></a>
+						<a href="https://twitter.com/FuseOrg" target="_blank"><paper-icon-button icon="my-icons:twitter"></paper-icon-button></a>
+						<a href="https://www.facebook.com/FuseOrg" target="_blank"><paper-icon-button icon="my-icons:facebook"></paper-icon-button></a>
+						<a href="https://www.youtube.com/FuseOrg" target="_blank"><paper-icon-button icon="my-icons:youtube"></paper-icon-button></a>
+						<a href="https://plus.google.com/+FuseOrg" target="_blank"><paper-icon-button icon="my-icons:google-plus"></paper-icon-button></a>
+					</div>
+	<!--				<div>&copy;Fuse Org</div>-->
+				</footer>
+				<template is="dom-if" if="{{loading}}">
+					<paper-progress value="{{progress}}" indeterminate active$="[[loading]]"></paper-progress>
+				</template>
+			</app-header-layout>
+    </app-drawer-layout>
+  </template>
+  <script>
+    class MyApp extends Polymer.Element {
+      static get is() { return 'my-app'; }
+
+      static get properties() {
+        return {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged'
+          },
+					wideLayout: {
+						type: Boolean,
+						value: false,
+            reflectToAttribute: true,
+						observer: 'onLayoutChange'
+					},
+					opened: {
+						type: Boolean,
+						reflectToAttribute: true
+					},
+          routeData: Object,
+          subroute: String,
+          // This shouldn't be neccessary, but the Analyzer isn't picking up
+          // Polymer.Element#rootPath
+          rootPath: String,
+        };
+      }
+
+      static get observers() {
+        return [
+          '_routePageChanged(routeData.page)',
+        ];
+      }
+
+			scrollTop() {
+				var scrollDuration = 200;
+				var scrollStep = -window.scrollY / (scrollDuration / 15),
+				scrollInterval = setInterval(function(){
+					if ( window.scrollY != 0 ) {
+						window.scrollBy( 0, scrollStep );
+					}
+					else clearInterval(scrollInterval); 
+				},15);
+			}
+
+			update(worker) {
+				this.$.updateToast.show();
+			}
+
+			openShare() {
+				this.$.sharehome.toggle();
+			}
+
+			toggle() {
+				this.$.collapse.toggle();
+			}
+
+			_getIcon(opened) {
+				return opened ? 'expand-less' : 'expand-more';
+			}
+
+//			connectedCallback() {
+//				super.connectedCallback();
+//				Polymer.RenderStatus.beforeNextRender(this, function() {
+//					this.$.ready_toast.open();
+//				});
+//			}
+
+      _routePageChanged(page) {
+        // If no page was found in the route data, page will be an empty string.
+        // Default to 'home' in that case.
+        this.page = page || 'home';
+
+        // Close a non-persistent drawer when the page & route are changed.
+        if (!this.$.drawer.persistent) {
+          this.$.drawer.close();
+        }
+      }
+
+      _pageChanged(page) {
+        // Load page import on demand. Show 404 page if fails
+        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+        Polymer.importHref(
+            resolvedPageUrl,
+            null,
+            this._showPage404.bind(this),
+            true);
+      }
+
+      onLayoutChange(wide) {
+        var drawer = this.$.drawer;
+
+        if (wide && drawer.opened) {
+          drawer.opened = false;
+        }
+      }
+
+      _showPage404() {
+        this.page = '404';
+      }
+    }
+
+    window.customElements.define(MyApp.is, MyApp);
+  </script>
+</dom-module>

@@ -1,0 +1,167 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="app-grid-style.html">
+
+<dom-module id="my-home">
+  <template>
+		<style include="app-grid-style">
+		</style>
+    <style include="shared-styles">
+      :host {
+        display: block;
+				--app-grid-item-height: 100%;
+      }
+  		@media all and (min-width: 0) and (max-width: 360px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 100vw;
+					--app-grid-expandible-item-columns: 1;
+				}
+				.list {
+					width: 100%;
+				}
+			}
+  		@media all and (min-width: 361px) and (max-width: 640px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 100vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+				.list {
+					width: 100%;
+				}
+			}
+  		@media all and (min-width: 641px) and (max-width: 960px) {
+				:host {
+					--app-grid-columns: 2;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 50vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+				.list {
+					width: 80vw;
+				}
+			}
+			@media all and (min-width: 961px) {
+				:host {
+					--app-grid-columns: 2;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 50vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+				.list {
+					width: 50vw;
+				}
+				.item:nth-child(3n+1) {
+					@apply --app-grid-expandible-item;
+				}
+			}
+    </style>
+		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+   	<div hidden$="{{!wideLayout}}">
+			<template is="dom-if" if="{{!error}}">
+				<div class="actions">
+					<div></div>
+					<paper-icon-button
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
+				</div>
+			</template>
+		</div>
+		<iron-ajax auto
+			url="data/home_feeds.json"
+			id="ajax"
+			loading="{{loading}}"
+			handle-as="json"
+			last-error="{{error}}"
+			last-response="{{ajaxResponse}}">
+		</iron-ajax>
+		<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+			<template is="dom-repeat" items="[[ajaxResponse]]">
+				<div class$="[[_computeBgClass(item.color)]] item" style="background-image: url({{item.img}})">
+					<a href="{{item.link}}">
+						<div class="container">
+							<div class="flexchild flex-vertical">
+								<div class="block flexchild flex-horizontal">
+									<div class="flexchild">
+										<div>
+											<img src="{{item.logo}}" alt="{{item.title}}" class="banner">
+										</div>
+										<div class="title">
+											{{item.title}}
+										</div>
+										<div class="description">
+											{{item.description}}
+										</div>
+									</div>
+								</div>
+								<div class="flex-horizontal info">
+									<div class="flexchild">
+										<span>{{item.info}}</span>
+									</div>
+									<div>
+										<iron-icon icon="my-icons:{{item.icon}}"></iron-icon>
+									</div>
+								</div>
+							</div>
+							<paper-ripple></paper-ripple>
+						</div>
+					</a>
+				</div>
+			</template>
+		</div>
+		<div class="actions flex-center-center" hidden$="[[!loading]]">
+			<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
+		</div>
+    <template is="dom-if" if="{{error}}">
+			<div class="error">
+				<h1>🙁😢😒</h1>
+				<div>Failed to load Home feeds. Make sure you're connected to internet.</div>
+				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+			</div>
+    </template>
+		<template is="dom-if" if="{{loading}}">
+			<paper-progress value="{{progress}}" indeterminate active$="[[loading]]"></paper-progress>
+		</template>
+  </template>
+	<script>
+    class MyHome extends Polymer.Element {
+      static get is() { return 'my-home'; }
+
+			getUIType(UI) {
+				return UI ? 'list' : 'grid';
+			}
+
+			getUIIcon(icon) {
+				return icon ? 'dashboard' : 'view-agenda';
+			}
+
+			_computeBgClass(color) {
+				return color + '-bg';
+			}
+
+      static get properties() {
+        return {
+        };
+      }
+
+			static get attached() {
+				this._updateGridStyles = this._updateGridStyles || function() {
+					this.updateStyles();
+				}.bind(this);
+				window.addEventListener('resize', this._updateGridStyles);
+			}
+
+			static get detached() {
+        window.removeEventListener('resize', this._updateGridStyles);
+			}
+    }
+
+    window.customElements.define(MyHome.is, MyHome);
+  </script>
+</dom-module>
