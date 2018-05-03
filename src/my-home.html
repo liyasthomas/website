@@ -16,7 +16,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 100vw;
+					--app-grid-item-height: 150vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -27,7 +27,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 100vw;
+					--app-grid-item-height: 120vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -38,18 +38,21 @@
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 50vw;
+					--app-grid-item-height: 60vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 80vw;
 				}
+				.item:nth-child(3n+1) {
+					@apply --app-grid-expandible-item;
+				}
 			}
 			@media all and (min-width: 961px) {
 				:host {
 					--app-grid-columns: 2;
-					--app-grid-gutter: 16px;
-					--app-grid-item-height: 50vw;
+					--app-grid-gutter: 46px;
+					--app-grid-item-height: 40vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -83,7 +86,7 @@
 		</iron-ajax>
 		<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 			<template is="dom-repeat" items="[[ajaxResponse]]">
-				<div class$="[[_computeBgClass(item.color)]] item" style="background-image: url({{item.img}})">
+				<div class$="[[_computeBgClass(item.color)]] item">
 					<a href="{{item.link}}">
 						<div class="container">
 							<div class="flexchild flex-vertical">
@@ -109,6 +112,9 @@
 									</div>
 								</div>
 							</div>
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{item.img}}"  alt="{{item.title}}"></iron-image>
+							</div>
 							<paper-ripple></paper-ripple>
 						</div>
 					</a>
@@ -121,7 +127,8 @@
     <template is="dom-if" if="{{error}}">
 			<div class="error">
 				<h1>🙁😢😒</h1>
-				<div>Failed to load Home feeds. Make sure you're connected to internet.</div>
+				<div>Failed to load Home feeds.</div>
+				<div>Make sure you're connected to internet.</div>
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
     </template>

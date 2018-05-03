@@ -14,7 +14,6 @@
 <link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
-<link rel="import" href="../bower_components/iron-scroll-threshold/iron-scroll-threshold.html">
 
 <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
@@ -46,13 +45,13 @@
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
 
-				--accent-color: var(--paper-blue-a400);
-				--light-accent-color: var(--paper-blue-a200);
-				--dark-accent-color: var(--paper-blue-a700);
+				--accent-color: var(--paper-cyan-a400);
+				--light-accent-color: var(--paper-cyan-a200);
+				--dark-accent-color: var(--paper-cyan-a700);
 
 				--primary-text-color: rgba(0,0,0,.87);
 				--secondary-text-color: rgba(0,0,0,.54);
-				--light-text-color: rgba(0,0,0,.28);
+				--light-text-color: rgba(0,0,0,.38);
 
 				--paper-tabs-selection-bar-color: var(--primary-text-color);
 				--paper-tab-ink: var(--light-text-color);
@@ -74,7 +73,6 @@
 				color: inherit;
 			}
 			app-drawer {
-      	--app-drawer-scrim-background: rgba(0,0,0,.5);
 				--app-drawer-content-container: {
       		@apply --shadow-elevation-12dp;
 					background-color: #fff;
@@ -108,11 +106,10 @@
 				outline: none;
 				border-top: 1px solid var(--paper-grey-100);
 				border-bottom: 1px solid var(--paper-grey-100);
-				background: var(--paper-grey-50);
 			}
       app-header {
-				background-color: #fff;
-				color: var(--light-text-color);
+				background-color: var(--primary-color);
+				color: var(--secondary-text-color);
 				--app-header-shadow: {
 					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 				};
@@ -134,7 +131,7 @@
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				color: var(--secondary-text-color);
 				letter-spacing: 0;
-				font-weight: 800;
+				font-weight: 500;
 			}
 			.logo span {
 				color: var(--accent-color);
@@ -211,6 +208,10 @@
 			.flex-horizontal {
 				@apply --layout-horizontal;
 			}
+			.flex-center-center {
+				@apply --layout-horizontal;
+				@apply --layout-center-center;
+			}
 			.flexchild {
 				@apply --layout-flex;
 			}
@@ -279,7 +280,7 @@
       <app-drawer id="drawer" slot="drawer" swipe-open>
 				<div class="drawer-contents">
 					<app-toolbar class="drawer">
-						<div class="logo">Recycle Mix</div>
+						<div class="logo">Liyas Thomas</div>
 					</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
@@ -401,6 +402,10 @@
     </app-drawer-layout>
   </template>
   <script>
+    // Gesture events like tap and track generated from touch will not be
+    // preventable, allowing for better scrolling performance.
+    Polymer.setPassiveTouchGestures(true);
+
     class MyApp extends Polymer.Element {
       static get is() { return 'my-app'; }
 

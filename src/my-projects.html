@@ -16,7 +16,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 100vw;
+					--app-grid-item-height: 150vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -27,7 +27,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 100vw;
+					--app-grid-item-height: 120vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -38,24 +38,39 @@
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 50vw;
+					--app-grid-item-height: 60vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 80vw;
 				}
+				.item:nth-child(3n+1) {
+					@apply --app-grid-expandible-item;
+				}
 			}
 			@media all and (min-width: 961px) {
 				:host {
-					--app-grid-columns: 2;
-					--app-grid-gutter: 16px;
-					--app-grid-item-height: 50vw;
+					--app-grid-columns: 4;
+					--app-grid-gutter: 46px;
+					--app-grid-item-height: 30vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
-					width: 50vw;
+					width: 60vw;
 				}
-				.item:nth-child(5n+3) {
+				.item:nth-child(7n+1) {
+					@apply --app-grid-expandible-item;
+				}
+				.item:nth-child(7n+2) {
+					@apply --app-grid-expandible-item;
+				}
+				.item:nth-child(7n+4) {
+					@apply --app-grid-expandible-item;
+				}
+				.item:nth-child(7n+6) {
+					@apply --app-grid-expandible-item;
+				}
+				.item:nth-child(7n+7) {
 					@apply --app-grid-expandible-item;
 				}
 			}
@@ -74,7 +89,7 @@
 			</template>
 		</div>
 		<iron-ajax auto
-			url="https://raw.githubusercontent.com/liyasthomas/fuse-org/master/data/projects_feeds.json"
+			url="data/projects_feeds.json"
 			id="ajax"
 			loading="{{loading}}"
 			handle-as="json"
@@ -83,24 +98,36 @@
 		</iron-ajax>
 		<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 			<template is="dom-repeat" items="[[ajaxResponse]]">
-				<div class$="[[_computeBgClass(item.color)]] item" style="background-image: url({{item.img}})">
+				<div class$="[[_computeBgClass(item.color)]] item">
 					<a href="{{item.link}}">
 						<div class="container">
 							<div class="flexchild flex-vertical">
 								<div class="block flexchild flex-horizontal">
-									<div class="flexchild title">
-										{{item.title}}
+									<div class="flexchild">
+										<div>
+											<img src="{{item.logo}}" alt="{{item.title}}" class="banner">
+										</div>
+										<div class="title">
+											{{item.title}}
+										</div>
+										<div class="description">
+											{{item.description}}
+										</div>
 									</div>
 								</div>
-								<div class="flex-horizontal description">
+								<div class="flex-horizontal info">
 									<div class="flexchild">
-										<span>{{item.description}}</span>
+										<span>{{item.info}}</span>
 									</div>
 									<div>
-										<paper-icon-button icon="my-icons:{{item.icon}}"></paper-icon-button>
+										<iron-icon icon="my-icons:{{item.icon}}"></iron-icon>
 									</div>
 								</div>
 							</div>
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{item.img}}"  alt="{{item.title}}"></iron-image>
+							</div>
+							<paper-ripple></paper-ripple>
 						</div>
 					</a>
 				</div>
@@ -112,12 +139,13 @@
     <template is="dom-if" if="{{error}}">
 			<div class="error">
 				<h1>🙁😢😒</h1>
-				<div>Failed to load Home feeds. Make sure you're connected to internet.</div>
+				<div>Failed to load Projects feeds.</div>
+				<div>Make sure you're connected to internet.</div>
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
     </template>
 		<template is="dom-if" if="{{loading}}">
-			<paper-progress indeterminate active$="[[loading]]"></paper-progress>
+			<paper-progress value="{{progress}}" indeterminate active$="[[loading]]"></paper-progress>
 		</template>
   </template>
 	<script>

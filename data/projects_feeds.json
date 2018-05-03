@@ -1,27 +1,162 @@
 [
 	{
+		"color":"white",
+		"logo":"",
 		"title":"Lvr",
-		"icon":"code",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab1.svg",
+		"icon":"adjust",
 		"link":""
 	},
 	{
-		"title":"Feedie",
-		"icon":"code",
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab2.svg",
+		"icon":"adjust",
 		"link":""
 	},
 	{
-		"title":"Fuse Org",
-		"icon":"code",
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab3.svg",
+		"icon":"adjust",
 		"link":""
 	},
 	{
-		"title":"Pineapple Notes",
-		"icon":"code",
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab4.svg",
+		"icon":"adjust",
 		"link":""
 	},
 	{
-		"title":"Form Face",
-		"icon":"code",
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab5.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab6.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab7.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab8.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab9.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab10.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab11.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab12.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab13.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab14.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab15.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"white",
+		"logo":"",
+		"title":"Lvr",
+		"description":"",
+		"info":"Project / ",
+		"img":"../images/assets/home/ab16.svg",
+		"icon":"adjust",
 		"link":""
 	}
 ]

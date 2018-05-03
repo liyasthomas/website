@@ -2,47 +2,51 @@
 	{
 		"color":"white",
 		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
-		"title":"Lvr. Virtual reality for everyone.",
+		"title":"Lvr - Virtual reality for everyone.",
 		"description":"I'm on a mission to bring amazing virtual and augmented reality experiences to the world.",
-		"info":"Project",
-		"img":"https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png",
-		"icon":"arrow-forward",
+		"info":"Project / VR",
+		"img":"../images/assets/home/ab1.svg",
+		"icon":"adjust",
 		"link":"https://liyas-vr.firebaseapp.com"
 	},
 	{
 		"color":"cyan",
+		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Feedie",
 		"description":"Fuse team",
 		"info":"Project",
-		"img":"https://cdn.dribbble.com/users/68671/screenshots/1607784/rating.png",
-		"icon":"arrow-forward",
+		"img":"",
+		"icon":"feedback",
 		"link":"https://github.com/FuseOrg/Feedie"
 	},
 	{
 		"color":"blue",
+		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Fuse Org",
 		"description":"Fuse team",
-		"info":"Project",
-		"img":"unnamed1.png",
-		"icon":"arrow-forward",
+		"info":"Organization",
+		"img":"",
+		"icon":"group",
 		"link":"https://github.com/FuseOrg"
 	},
 	{
 		"color":"orange",
+		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Pineapple Notes",
 		"description":"Fuse team",
-		"info":"Project",
-		"img":"unnamed1.png",
-		"icon":"arrow-forward",
+		"info":"Project / Web",
+		"img":"",
+		"icon":"note",
 		"link":"https://pineapple-notes.firebaseapp.com"
 	},
 	{
 		"color":"teal",
+		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Form Face",
 		"description":"Fuse team",
-		"info":"Project",
-		"img":"unnamed1.png",
-		"icon":"arrow-forward",
+		"info":"Project / GIF",
+		"img":"",
+		"icon":"tag-faces",
 		"link":"https://form-face.firebaseapp.com"
 	}
 ]

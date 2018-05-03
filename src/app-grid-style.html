@@ -66,22 +66,11 @@
 			}
 			.list {
 				transition: all .1s;
-				border-radius: 5px;
+				border-radius: 10px;
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 40vw;
-			}
-			.banner {
-				height: 46px;
-				widows: auto;
-			}
-			.actions {
-				@apply --layout-horizontal;
-				@apply --layout-center;
-				@apply --layout-justified;
-				padding: 16px;
-				color: var(--light-text-color);
+				--app-grid-item-height: 30vw;
 			}
 			.app-grid {
 				margin: 0 auto;
@@ -94,19 +83,62 @@
 				display: inline-block;
 				background-color: #fff;
 				color: var(--secondary-text-color);
-				border-radius: 5px;
+				border-radius: 10px;
+				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
 				-webkit-transition: all .1s;
 				-o-transition: all .1s;
 				transition: all .1s;
-			}
-			.item:hover {
-				z-index: 10;
-				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
 			}
 			.container {
       	@apply --layout-horizontal;
 				height: 100%;
 				width: 100%;
+			}
+			.lightbox {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.lightbox * {
+				z-index: 0;
+			}
+			.bg {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				transition: all 300ms;
+				--iron-image-placeholder: {
+					animation: animateLavaLamp 3s infinite linear;
+					opacity: 0.1;
+				}
+			}
+			@keyframes animateLavaLamp {
+				0% {
+					background-color: #fff989;
+				}
+				25% {
+					background-color: #fb007e;
+				}
+				50% {
+					background-color: #20faff;
+				}
+				75% {
+					background-color: #00ffb0;
+				}
+				to {
+					background-color: #fff989;
+				}
+			}
+			.banner {
+				height: 46px;
+				width: auto;
+			}
+			.actions {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				@apply --layout-justified;
+				padding: 16px;
+				color: var(--light-text-color);
 			}
 			.flexchild {
 				@apply --layout-flex;
@@ -130,16 +162,17 @@
 				padding: 32px;
 			}
 			.title {
-				font-size: 46px;
+				font-size: 32px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				line-height: 1.25;
 				width: 50%;
 			}
 			.description {
-				font-size: 32px;
+				padding-top: 16px;
+				font-size: 28px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				line-height: 1.25;
-				width: 75%;
+				width: 60%;
 			}
 			.info {
 				@apply --layout-horizontal;
@@ -147,7 +180,7 @@
 				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
 				font-weight: 500;
 				padding: 32px;
-				font-size: 18px;
+				font-size: 16px;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
@@ -160,22 +193,13 @@
 				.actions, .block, .info {
 					padding: 16px;
 				}
-				.img {
-					padding: 0 16px;
-				}
 				.title {
-					font-size: 32px;
+					font-size: 28px;
 					width: 80%;
 				}
 				.description {
 					font-size: 22px;
 					width: 90%;
-				}
-				.info {
-					font-size: 16px;
-				}
-				.sharable {
-					padding-top: 16px;
 				}
 			}
 			.white-bg {
@@ -216,7 +240,7 @@
 			}
 			.teal-bg {
 				background-color: var(--paper-teal-a700);
-				color: var(--paper-grey-800);
+				color: #fff;
 			}
 			.indigo-bg {
 				background-color: var(--paper-indigo-900);

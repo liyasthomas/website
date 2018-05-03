@@ -1,11 +1,8 @@
 {
   "name": "Liyas Thomas",
   "short_name": "Liyas Thomas",
-  "description": "Official website",
-	"lang": "en-US",
   "start_url": "/",
   "display": "standalone",
-	"orientation": "any",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "icons": [
