@@ -16,7 +16,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 150vw;
+					--app-grid-item-height: 120vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -27,7 +27,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 120vw;
+					--app-grid-item-height: 100vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -37,8 +37,8 @@
   		@media all and (min-width: 641px) and (max-width: 960px) {
 				:host {
 					--app-grid-columns: 2;
-					--app-grid-gutter: 16px;
-					--app-grid-item-height: 60vw;
+					--app-grid-gutter: 32px;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -52,11 +52,11 @@
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 46px;
-					--app-grid-item-height: 40vw;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
-					width: 50vw;
+					width: 60vw;
 				}
 				.item:nth-child(3n+1) {
 					@apply --app-grid-expandible-item;
@@ -84,17 +84,29 @@
 			last-error="{{error}}"
 			last-response="{{ajaxResponse}}">
 		</iron-ajax>
+		<template is="dom-if" if="{{loading}}">
+			<div class="actions flex-center-center" hidden$="[[!loading]]">
+				<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
+			</div>
+		</template>
+    <template is="dom-if" if="{{error}}">
+			<div class="error">
+				<div>Failed to load feeds.</div>
+				<div>Make sure you're connected to internet.</div>
+				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+			</div>
+    </template>
 		<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 			<template is="dom-repeat" items="[[ajaxResponse]]">
 				<div class$="[[_computeBgClass(item.color)]] item">
 					<a href="{{item.link}}">
+						<div class="lightbox">
+							<iron-image class="bg" preload fade sizing="cover" src="{{item.img}}"  alt="{{item.title}}"></iron-image>
+						</div>
 						<div class="container">
-							<div class="flexchild flex-vertical">
+							<div class="flexchild flex-vertical content">
 								<div class="block flexchild flex-horizontal">
 									<div class="flexchild">
-										<div>
-											<img src="{{item.logo}}" alt="{{item.title}}" class="banner">
-										</div>
 										<div class="title">
 											{{item.title}}
 										</div>
@@ -105,36 +117,18 @@
 								</div>
 								<div class="flex-horizontal info">
 									<div class="flexchild">
-										<span>{{item.info}}</span>
+										<paper-button raised class$="[[_computeFgClass(item.color)]]">{{item.info}}</paper-button>
 									</div>
 									<div>
 										<iron-icon icon="my-icons:{{item.icon}}"></iron-icon>
 									</div>
 								</div>
 							</div>
-							<div class="lightbox">
-								<iron-image class="bg" preload fade sizing="cover" src="{{item.img}}"  alt="{{item.title}}"></iron-image>
-							</div>
-							<paper-ripple></paper-ripple>
 						</div>
 					</a>
 				</div>
 			</template>
 		</div>
-		<div class="actions flex-center-center" hidden$="[[!loading]]">
-			<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
-		</div>
-    <template is="dom-if" if="{{error}}">
-			<div class="error">
-				<h1>🙁😢😒</h1>
-				<div>Failed to load Home feeds.</div>
-				<div>Make sure you're connected to internet.</div>
-				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
-			</div>
-    </template>
-		<template is="dom-if" if="{{loading}}">
-			<paper-progress value="{{progress}}" indeterminate active$="[[loading]]"></paper-progress>
-		</template>
   </template>
 	<script>
     class MyHome extends Polymer.Element {
@@ -150,6 +144,10 @@
 
 			_computeBgClass(color) {
 				return color + '-bg';
+			}
+
+			_computeFgClass(color) {
+				return color + '-fg';
 			}
 
       static get properties() {

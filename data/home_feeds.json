@@ -1,52 +1,74 @@
 [
 	{
-		"color":"white",
-		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
-		"title":"Lvr - Virtual reality for everyone.",
-		"description":"I'm on a mission to bring amazing virtual and augmented reality experiences to the world.",
+		"color":"cyan",
+		"title":"Snap.",
+		"description":"",
+		"info":"Project / AR",
+		"img":"../images/assets/home/ab11.svg",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"color":"red",
+		"title":"Lvr · Virtual reality for everyone",
+		"description":"",
 		"info":"Project / VR",
 		"img":"../images/assets/home/ab1.svg",
-		"icon":"adjust",
-		"link":"https://liyas-vr.firebaseapp.com"
+		"icon":"visibility",
+		"link":""
 	},
 	{
 		"color":"cyan",
-		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Feedie",
-		"description":"Fuse team",
-		"info":"Project",
-		"img":"",
-		"icon":"feedback",
-		"link":"https://github.com/FuseOrg/Feedie"
+		"description":"",
+		"info":"Project / PHP",
+		"img":"../images/assets/home/ab13.svg",
+		"icon":"star",
+		"link":""
 	},
 	{
 		"color":"blue",
-		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
-		"title":"Fuse Org",
-		"description":"Fuse team",
-		"info":"Organization",
-		"img":"",
+		"title":"Fuse Org · Developers community",
+		"description":"",
+		"info":"Initiative / TEAM",
+		"img":"../images/assets/home/ab12.svg",
 		"icon":"group",
-		"link":"https://github.com/FuseOrg"
+		"link":""
 	},
 	{
-		"color":"orange",
-		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
-		"title":"Pineapple Notes",
-		"description":"Fuse team",
-		"info":"Project / Web",
-		"img":"",
+		"color":"black",
+		"title":"",
+		"description":"",
+		"info":"Project / LOGO",
+		"img":"../images/assets/home/fuse.png",
+		"icon":"bubble-chart",
+		"link":""
+	},
+	{
+		"color":"deep-orange",
+		"title":"Pineapple Notes · Simple, clean note app",
+		"description":"",
+		"info":"Project / FIREBASE",
+		"img":"../images/assets/home/ab2.svg",
 		"icon":"note",
-		"link":"https://pineapple-notes.firebaseapp.com"
+		"link":""
+	},
+	{
+		"color":"green",
+		"title":"Recycle Mix",
+		"description":"",
+		"info":"Project / NSITE",
+		"img":"../images/assets/home/ab9.svg",
+		"icon":"filter-vintage",
+		"link":""
 	},
 	{
 		"color":"teal",
-		"logo":"https://vr.google.com/static/images/sections/icons/ic-Daydream_2x.png",
 		"title":"Form Face",
-		"description":"Fuse team",
+		"description":"",
 		"info":"Project / GIF",
-		"img":"",
-		"icon":"tag-faces",
-		"link":"https://form-face.firebaseapp.com"
+		"img":"../images/assets/home/ab5.svg",
+		"icon":"face",
+		"link":""
 	}
 ]

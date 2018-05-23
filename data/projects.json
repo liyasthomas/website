@@ -1,0 +1,37 @@
+[
+	{
+		"title":"Snap",
+		"icon":"adjust",
+		"link":""
+	},
+	{
+		"title":"Lvr",
+		"icon":"visibility",
+		"link":""
+	},
+	{
+		"title":"Feedie",
+		"icon":"star",
+		"link":""
+	},
+	{
+		"title":"Fuse Org",
+		"icon":"group",
+		"link":""
+	},
+	{
+		"title":"Pineapple Notes",
+		"icon":"note",
+		"link":""
+	},
+	{
+		"title":"Recycle Mix",
+		"icon":"filter-vintage",
+		"link":""
+	},
+	{
+		"title":"Form Face",
+		"icon":"face",
+		"link":""
+	}
+]

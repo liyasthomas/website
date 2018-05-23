@@ -1,6 +1,5 @@
 <link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
-
 <dom-module id="app-grid-style">
   <template>
     <style is="custom-style">
@@ -66,11 +65,10 @@
 			}
 			.list {
 				transition: all .1s;
-				border-radius: 10px;
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 30vw;
+				--app-grid-item-height: 40vw;
 			}
 			.app-grid {
 				margin: 0 auto;
@@ -79,59 +77,36 @@
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				background-color: #fff;
 				display: inline-block;
-				background-color: #fff;
-				color: var(--secondary-text-color);
-				border-radius: 10px;
-				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+				color: #fff;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.14);
 				-webkit-transition: all .1s;
 				-o-transition: all .1s;
 				transition: all .1s;
 			}
+			.lightbox {
+				position: absolute;
+				z-index: 0;
+				width: 100%;
+				height: 100%;
+			}
 			.container {
+				position: absolute;
+				z-index: 1;
       	@apply --layout-horizontal;
 				height: 100%;
 				width: 100%;
 			}
-			.lightbox {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-			}
-			.lightbox * {
-				z-index: 0;
-			}
 			.bg {
+				--iron-image-placeholder: {
+					background-color: #eaeaea;
+				}
 				width: 100%;
 				height: 100%;
-				border-radius: 10px;
+				border-radius: 12px;
 				transition: all 300ms;
-				--iron-image-placeholder: {
-					animation: animateLavaLamp 3s infinite linear;
-					opacity: 0.1;
-				}
-			}
-			@keyframes animateLavaLamp {
-				0% {
-					background-color: #fff989;
-				}
-				25% {
-					background-color: #fb007e;
-				}
-				50% {
-					background-color: #20faff;
-				}
-				75% {
-					background-color: #00ffb0;
-				}
-				to {
-					background-color: #fff989;
-				}
-			}
-			.banner {
-				height: 46px;
-				width: auto;
 			}
 			.actions {
 				@apply --layout-horizontal;
@@ -162,10 +137,11 @@
 				padding: 32px;
 			}
 			.title {
-				font-size: 32px;
+				width: 80%;
+				font-size: 46px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				line-height: 1.25;
-				width: 50%;
+				line-height: 1.2;
+				font-weight: 600;
 			}
 			.description {
 				padding-top: 16px;
@@ -190,12 +166,9 @@
 				paper-ripple {
 					display: none;
 				}
-				.actions, .block, .info {
-					padding: 16px;
-				}
 				.title {
-					font-size: 28px;
-					width: 80%;
+					font-size: 32px;
+					width: 90%;
 				}
 				.description {
 					font-size: 22px;
@@ -204,47 +177,94 @@
 			}
 			.white-bg {
 				background-color: var(--paper-grey-100);
-				color: var(--paper-grey-900);
+				color: var(--paper-grey-800);
 			}
 			.grey-bg {
 				background-color: var(--paper-grey-300);
 				color: var(--paper-grey-800);
 			}
 			.black-bg {
-				background-color: var(--paper-grey-800);
-				color: var(--paper-grey-50);
+				background-color: var(--paper-grey-900);
+				color: #fff;
 			}
+/*
 			.purple-bg {
-				background-color: var(--paper-purple-a700);
-				color: var(--paper-cyan-a700);
+				color: #fff;
 			}
 			.deep-purple-bg {
-				background-color: var(--paper-purple-900);
-				color: var(--paper-purple-a700);
+				color: #fff;
 			}
-			.orange-bg {
-				background-color: var(--paper-orange-a700);
+			.red-bg {
+				color: #fff;
+			}
+			.deep-orange-bg {
 				color: #fff;
 			}
 			.cyan-bg {
-				background-color: var(--paper-cyan-a700);
 				color: #fff;
 			}
+*/
 			.green-bg {
-				background-color: var(--paper-green-a700);
-				color: var(--paper-indigo-900);
+				color: var(--paper-green-a700);
 			}
+/*
 			.blue-bg {
-				background-color: var(--paper-blue-a700);
 				color: #fff;
 			}
 			.teal-bg {
-				background-color: var(--paper-teal-a700);
-				color: #fff;
+				color: var(--paper-grey-800);
 			}
 			.indigo-bg {
-				background-color: var(--paper-indigo-900);
 				color: var(--paper-purple-a700);
+			}
+*/
+			.white-fg {
+				color: var(--paper-grey-100);
+				background-color: var(--paper-grey-800);
+			}
+			.grey-fg {
+				color: var(--paper-grey-300);
+				background-color: var(--paper-grey-800);
+			}
+			.black-fg {
+				color: var(--paper-grey-900);
+				background-color: #fff;
+			}
+			.purple-fg {
+				color: var(--paper-purple-a700);
+				background-color: #fff;
+			}
+			.deep-purple-fg {
+				color: var(--paper-deep-purple-a700);
+				background-color: #fff;
+			}
+			.red-fg {
+				color: var(--paper-red-a700);
+				background-color: #fff;
+			}
+			.cyan-fg {
+				color: var(--paper-cyan-a700);
+				background-color: #fff;
+			}
+			.green-fg {
+				color: var(--paper-green-a700);
+				background-color: #fff;
+			}
+			.deep-orange-fg {
+				color: var(--paper-deep-orange-a700);
+				background-color: #fff;
+			}
+			.blue-fg {
+				color: var(--paper-blue-a700);
+				background-color: #fff;
+			}
+			.teal-fg {
+				color: var(--paper-teal-a700);
+				background-color: #fff;
+			}
+			.indigo-fg {
+				color: var(--paper-indigo-900);
+				background-color: var(--paper-purple-a700);
 			}
     </style>
   </template>
