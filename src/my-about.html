@@ -4,7 +4,7 @@
 <link rel="import" href="app-grid-style.html">
 
 <dom-module id="my-about">
-  <template>
+	<template>
 		<style include="app-grid-style">
 		</style>
     <style include="shared-styles" is="custom-style">
@@ -72,12 +72,12 @@
     </style>
 		<div class="content">
 			<div class="card">
-				<h2 class="title">V <span>1.0</span></h2>version one.zero
+				<h2 class="title">About</h2>
 				<p>Fuse Org is a developers community.</p>
 				<p>This program is dedicated to assisting individual organizers of active mobile, web, cloud, graphic, game, and AI developments on their journey leading successful and engaged groups via online training, meetup materials, networking oppertunities, and more.</p>
 				<p>The program membership is free with no strings attatched - we won't ask you to promote Fuse's products, use our branding in events, or limit your work to any specific technologies, topics, or partners.</p>
 				<p>
-					<a href="https://goo.gl/forms/9xCgZBtat0KTwMeg2"><paper-button raised class="primary"><iron-icon icon="my-icons:flash-on"></iron-icon>Join Fuse Org</paper-button></a>
+					<a href=""><paper-button raised class="primary"><iron-icon icon="my-icons:flash-on"></iron-icon>Hire me!</paper-button></a>
 				</p>
 				<p>As a member, you'll get support to grow your network and community and, most importantly, support to grow as an individual leader. If you want a closer partnership with Fuse Org, you can optionally join the Fuse Org Developers Community Program platform on top of the standard membership.</p>
 				<p>
@@ -85,19 +85,20 @@
 				</p>
 			</div>
 			<div class="card">
-				<h2 class="title">Buy us a coffee!</h2>appreciate our works by making a donation.
+				<h2 class="title">Buy us a coffee!</h2>Appreciate our works by making a donation.
 				<p>
-					<a href="https://www.paypal.com"><paper-button class="secondary"><iron-icon icon="my-icons:paypal"></iron-icon>PayPal</paper-button></a>
+					<a href="https://www.paypal.com"><paper-button class="secondary"><iron-icon src="../images/assets/social/paypal.svg"></iron-icon>PayPal</paper-button></a>
 				</p>
 			</div>
 			<div class="card">
 				<h2 class="title">Open source projects</h2>open sourcing our projects, or part of it, can help inspire other coders.
 				<p>
-					<a href="https://github.com/FuseOrg"><paper-button><iron-icon icon="my-icons:github"></iron-icon>GitHub</paper-button></a>
+					<a href="https://dribbble.com/liyasthomas"><paper-button><iron-icon src="../images/assets/social/dribbble.svg"></iron-icon>Dribbble</paper-button></a>
+					<a href="https://github.com/liyasthomas"><paper-button><iron-icon src="../images/assets/social/github.svg"></iron-icon>GitHub</paper-button></a>
 				</p>
 			</div>
 			<div class="card">
-				<h2 class="title">Social</h2>follow us on
+				<h2 class="title">Social</h2>follow me on
 				<p>
 					<template is="dom-repeat" items="[[social]]">
 						<a href="{{item.link}}" target="_blank"><paper-icon-button class="link" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button></a>
@@ -138,45 +139,152 @@
 				</template>
 			</div>
 		</div>
-  </template>
-  <script>
-    class MyAbout extends Polymer.Element {
-      static get is() { return 'my-about'; }
+	</template>
+	<script>
+		class MyAbout extends Polymer.Element {
+			static get is() {
+				return 'my-about';
+			}
 
-      static get properties() {
-        return {
+			static get properties() {
+				return {
 					social: {
 						type: Array,
 						value: function() {
-							return [
-								{link: "https://www.facebook.com", icon: "facebook"},
-								{link: "https://twitter.com", icon: "twitter"},
-								{link: "https://plus.google.com", icon: "google-plus"},
-								{link: "https://instagram.com", icon: "instagram"},
-								{link: "https://www.youtube.com", icon: "youtube"},
-								{link: "https://github.com/FuseOrg", icon: "github"},
-								{link: "https://www.linkedin.com", icon: "linkedin"},
-								{link: "https://chat.whatsapp.com/BuNhyHxoft9A34Pm2vYIO4", icon: "whatsapp"}
+							return [{
+									link: "https://www.facebook.com/liyasthomas",
+									icon: "facebook"
+								},
+								{
+									link: "https://twitter.com/liyasthomas",
+									icon: "twitter"
+								},
+								{
+									link: "https://plus.google.com/liyasthomas",
+									icon: "google-plus"
+								},
+								{
+									link: "https://instagram.com/liyasthomas",
+									icon: "instagram"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "youtube"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "blogger"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "wordpress"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "wattpad"
+								},
+								{
+									link: "https://github.com/liyasthomas",
+									icon: "github"
+								},
+								{
+									link: "https://github.com//liyasthomas",
+									icon: "tumblr"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "linkedin"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "pinterest"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "behance"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "dribbble"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "kickstarter"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "medium"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "snapchat"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "skype"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "reddit"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "paypal"
+								},
+								{
+									link: "tel:+919539653962",
+									icon: "whatsapp"
+								}
 							]
 						}
 					},
 					team: {
 						type: Array,
 						value: function() {
-							return [
-								{name: "Liyas", sname: "Li", dess: "Technical assistant", image: "boy.svg"},
-								{name: "Jovial", sname: "Jo", dess: "Technical assistant", image: "boy-16.svg"},
-								{name: "Muvin", sname: "Mu", dess: "Tester", image: "boy-3.svg"},
-								{name: "Ajith", sname: "Aj", dess: "Data  analyst", image: "boy-14.svg"},
-								{name: "Adith", sname: "Ad", dess: "Tester", image: "boy-7.svg"},
-								{name: "Arjun", sname: "Ar", dess: "Tester", image: "boy-11.svg"},
+							return [{
+									name: "Liyas",
+									sname: "Li",
+									dess: "Technical assistant",
+									image: "boy.svg"
+								},
+								{
+									name: "Jovial",
+									sname: "Jo",
+									dess: "Technical assistant",
+									image: "boy-16.svg"
+								},
+								{
+									name: "Muvin",
+									sname: "Mu",
+									dess: "Tester",
+									image: "boy-3.svg"
+								},
+								{
+									name: "Ajith",
+									sname: "Aj",
+									dess: "Data  analyst",
+									image: "boy-14.svg"
+								},
+								{
+									name: "Adith",
+									sname: "Ad",
+									dess: "Tester",
+									image: "boy-7.svg"
+								},
+								{
+									name: "Arjun",
+									sname: "Ar",
+									dess: "Tester",
+									image: "boy-11.svg"
+								},
 							]
 						}
 					}
-        };
-      }
-    }
+				};
+			}
+		}
 
-    window.customElements.define(MyAbout.is, MyAbout);
-  </script>
+		window.customElements.define(MyAbout.is, MyAbout);
+
+	</script>
 </dom-module>

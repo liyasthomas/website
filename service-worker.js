@@ -1,7 +1,7 @@
 var CACHE_NAME = 'liyas-thomas-cache';
 var urlsToCache = [
-  '/',
-  '/index.html',
+//  '/',
+//  '/index.html',
 //  '/about.html',
 //  '/src/my-app.html',
 ];

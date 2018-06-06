@@ -131,6 +131,7 @@
 				overflow: hidden;
 				text-overflow: ellipsis;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-weight: 600;
 			}
       :host([page=home]) .logo {
         background: linear-gradient(45deg, #e458fc, #1d1279);
@@ -221,7 +222,8 @@
 			footer paper-icon-button {
 				margin: 4px;
 			}
-			paper-fab.scroll {
+			#scroll {
+				display: none;
 				@apply --shadow-elevation-4dp;
 				--paper-fab-background: #fff;
 				--paper-fab-keyboard-focus-background: #fff;
@@ -272,138 +274,139 @@
 					<template is="dom-repeat" items="[[social]]">
 						<a href="{{item.link}}" target="_blank"><paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button></a>
 					</template>
-	<paper-icon-button class="toast-button" icon="my-icons:content-copy"></paper-icon-button>
-	</div>
-	</div>
-	</paper-toast>
-	<!--		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>-->
-	<app-drawer-layout force-narrow fullbleed>
-		<!-- Drawer content -->
-		<app-drawer id="drawer" slot="drawer" swipe-open>
-			<div class="drawer-contents">
-				<app-toolbar class="drawer">
-					<div class="logo">Liyas Thomas</div>
-				</app-toolbar>
-				<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
-					<a id="home" href="[[rootPath]]" tabindex="-1">
-						<paper-icon-item>
-							<iron-icon src="../images/assets/app/home.svg" item-icon slot="item-icon"></iron-icon>
-							<span>Home</span>
-							<paper-ripple></paper-ripple>
-						</paper-icon-item>
-					</a>
-					<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
-						<iron-icon src="../images/assets/app/briefcase.svg" item-icon slot="item-icon"></iron-icon>
-						<span style="width: calc(100% - 80px)">Projects</span>
-						<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
-						<paper-ripple></paper-ripple>
-					</paper-icon-item>
-					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
-						<a id="projects" href="projects" tabindex="-1">
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, " target="_blank"><paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button></a>
+					<paper-icon-button class="toast-button" icon="my-icons:content-copy"></paper-icon-button>
+				</div>
+			</div>
+		</paper-toast>
+	<!--<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>-->
+		<app-drawer-layout force-narrow fullbleed>
+			<!-- Drawer content -->
+			<app-drawer id="drawer" slot="drawer" swipe-open>
+				<div class="drawer-contents">
+					<app-toolbar class="drawer">
+						<div class="logo">Liyas Thomas</div>
+					</app-toolbar>
+					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
+						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>
-								<iron-icon src="../images/assets/app/business.svg" item-icon slot="item-icon"></iron-icon>
-								<span>All projects</span>
+								<iron-icon src="../images/assets/app/home.svg" item-icon slot="item-icon"></iron-icon>
+								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<iron-ajax auto id="ajax" url="data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="300"></iron-ajax>
-						<template is="dom-if" if="{{loading}}">
-							<div class="actions flex-center-center" hidden$="[[!loading]]">
-								<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
-							</div>
-						</template>
-						<template is="dom-repeat" items="[[ajaxResponse]]">
-								<a id="[[item.title]]" href="[[item.link]]" tabindex="-1">
-									<paper-icon-item>
-										<iron-icon icon="my-icons:[[item.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span>{{item.title}}</span>
-										<paper-ripple></paper-ripple>
-									</paper-icon-item>
-								</a>
-						</template>
-						<template is="dom-if" if="{{error}}">
-								<div class="error">
-									<div>Failed to load projects list. Make sure you're connected to internet.</div>
-									<span>🙁😢😒</span>
-									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
-								</div>
-						</template>
-					</iron-collapse>
-					<a id="about" href="about" tabindex="-1">
-						<paper-icon-item>
-							<iron-icon src="../images/assets/app/info.svg" item-icon slot="item-icon"></iron-icon>
-							<span>About</span>
+						<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
+							<iron-icon src="../images/assets/app/briefcase.svg" item-icon slot="item-icon"></iron-icon>
+							<span style="width: calc(100% - 80px)">Projects</span>
+							<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 							<paper-ripple></paper-ripple>
 						</paper-icon-item>
-					</a>
-				</paper-listbox>
-			</div>
-		</app-drawer>
-		<app-header-layout fullbleed>
-			<app-header slot="header" fixed condenses effects="waterfall resize-title">
-				<app-toolbar sticky class="tab-nav">
-					<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-					<span condensed-title><div class="logo">Liyas Thomas</div></span>
-					<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
-						<paper-tab id="home">
-							<a href="[[rootPath]]" tabindex="-1">
-								<iron-icon icon="my-icons:home"></iron-icon>
+						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
+							<a id="projects" href="projects" tabindex="-1">
+								<paper-icon-item>
+									<iron-icon src="../images/assets/app/business.svg" item-icon slot="item-icon"></iron-icon>
+									<span>All projects</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
 							</a>
-						</paper-tab>
-						<paper-tab id="projects">
-							<a href="projects" tabindex="-1">
-								<iron-icon icon="my-icons:work"></iron-icon>
-							</a>
-						</paper-tab>
-						<paper-tab id="about">
-							<a href="about" tabindex="-1">
-								<iron-icon icon="my-icons:face"></iron-icon>
-							</a>
-						</paper-tab>
-					</paper-tabs>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ">
-						<paper-icon-button icon="my-icons:mail"></paper-icon-button>
-					</a>
-					<paper-icon-button icon="my-icons:add" on-tap="openShare"></paper-icon-button>
-					<template is="dom-if" if="{{loading}}">
-						<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
-					</template>
-				</app-toolbar>
-				<app-toolbar class="bottom">
-					<span main-title><div class="logo">Liyas Thomas</div></span>
-				</app-toolbar>
-			</app-header>
-			<div class="pages">
-				<neon-animated-pages selected="[[page]]" attr-for-selected="name" fallback-selection="404" role="main" entry-animation="fade-in-animation" exit-animation="fade-out-animation">
-					<my-home name="home"></my-home>
-					<my-projects name="projects"></my-projects>
-					<my-about name="about"></my-about>
-					<my-404 name="404"></my-404>
-				</neon-animated-pages>
-			</div>
-			<footer>
-				<div>
-					<a href="https://github.com/FuseOrg" target="_blank">
-						<paper-icon-button icon="my-icons:github"></paper-icon-button>
-					</a>
-					<a href="https://twitter.com/FuseOrg" target="_blank">
-						<paper-icon-button icon="my-icons:twitter"></paper-icon-button>
-					</a>
-					<a href="https://www.facebook.com/FuseOrg" target="_blank">
-						<paper-icon-button icon="my-icons:facebook"></paper-icon-button>
-					</a>
-					<a href="https://www.youtube.com/FuseOrg" target="_blank">
-						<paper-icon-button icon="my-icons:youtube"></paper-icon-button>
-					</a>
-					<a href="https://plus.google.com/+FuseOrg" target="_blank">
-						<paper-icon-button icon="my-icons:google-plus"></paper-icon-button>
-					</a>
+							<iron-ajax auto id="ajax" url="data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="300"></iron-ajax>
+							<template is="dom-if" if="{{loading}}">
+								<div class="actions flex-center-center" hidden$="[[!loading]]">
+									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
+								</div>
+							</template>
+							<template is="dom-repeat" items="[[ajaxResponse]]">
+									<a id="[[item.title]]" href="[[item.link]]" tabindex="-1">
+										<paper-icon-item>
+											<iron-icon icon="my-icons:[[item.icon]]" item-icon slot="item-icon"></iron-icon>
+											<span>{{item.title}}</span>
+											<paper-ripple></paper-ripple>
+										</paper-icon-item>
+									</a>
+							</template>
+							<template is="dom-if" if="{{error}}">
+									<div class="error">
+										<div>Failed to load projects list. Make sure you're connected to internet.</div>
+										<span>🙁😢😒</span>
+										<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+									</div>
+							</template>
+						</iron-collapse>
+						<a id="about" href="about" tabindex="-1">
+							<paper-icon-item>
+								<iron-icon src="../images/assets/app/info.svg" item-icon slot="item-icon"></iron-icon>
+								<span>About</span>
+								<paper-ripple></paper-ripple>
+							</paper-icon-item>
+						</a>
+					</paper-listbox>
 				</div>
-				<!--				<div>&copy;Fuse Org</div>-->
-			</footer>
-			<paper-fab class="scroll" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
-		</app-header-layout>
-	</app-drawer-layout>
+			</app-drawer>
+			<app-header-layout fullbleed>
+				<app-header slot="header" fixed condenses effects="waterfall resize-title">
+					<app-toolbar sticky class="tab-nav">
+						<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
+						<span condensed-title><div class="logo">Liyas Thomas</div></span>
+						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
+							<paper-tab id="home">
+								<a href="[[rootPath]]" tabindex="-1">
+									<iron-icon icon="my-icons:home"></iron-icon>
+								</a>
+							</paper-tab>
+							<paper-tab id="projects">
+								<a href="projects" tabindex="-1">
+									<iron-icon icon="my-icons:work"></iron-icon>
+								</a>
+							</paper-tab>
+							<paper-tab id="about">
+								<a href="about" tabindex="-1">
+									<iron-icon icon="my-icons:face"></iron-icon>
+								</a>
+							</paper-tab>
+						</paper-tabs>
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ">
+							<paper-icon-button icon="my-icons:mail"></paper-icon-button>
+						</a>
+						<paper-icon-button icon="my-icons:add" on-tap="openShare"></paper-icon-button>
+						<template is="dom-if" if="{{loading}}">
+							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
+						</template>
+					</app-toolbar>
+					<app-toolbar class="bottom">
+						<span main-title><div class="logo">Liyas Thomas</div></span>
+					</app-toolbar>
+				</app-header>
+				<div class="pages">
+					<neon-animated-pages selected="[[page]]" attr-for-selected="name" fallback-selection="404" role="main" entry-animation="fade-in-animation" exit-animation="fade-out-animation">
+						<my-home name="home"></my-home>
+						<my-projects name="projects"></my-projects>
+						<my-about name="about"></my-about>
+						<my-404 name="404"></my-404>
+					</neon-animated-pages>
+				</div>
+				<footer>
+					<div>
+						<a href="https://github.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/github.svg"></paper-icon-button>
+						</a>
+						<a href="https://twitter.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/twitter.svg"></paper-icon-button>
+						</a>
+						<a href="https://www.facebook.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/facebook.svg"></paper-icon-button>
+						</a>
+						<a href="https://www.youtube.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/youtube"></paper-icon-button>
+						</a>
+						<a href="https://plus.google.com/+liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/google-plus.svg"></paper-icon-button>
+						</a>
+					</div>
+					<!--<div>&copy;Fuse Org</div>-->
+				</footer>
+				<paper-fab id="scroll" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
+			</app-header-layout>
+		</app-drawer-layout>
 	</template>
 	<script>
 		// Gesture events like tap and track generated from touch will not be
@@ -456,16 +459,64 @@
 									icon: "youtube"
 								},
 								{
-									link: "https://github.com//liyasthomas",
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "blogger"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "wordpress"
+								},
+								{
+									link: "https://www.youtube.com/liyasthomas",
+									icon: "wattpad"
+								},
+								{
+									link: "https://github.com/liyasthomas",
 									icon: "github"
+								},
+								{
+									link: "https://github.com//liyasthomas",
+									icon: "tumblr"
 								},
 								{
 									link: "https://www.linkedin.com/in/liyasthomas",
 									icon: "linkedin"
 								},
 								{
-									link: "mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ",
-									icon: "mail"
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "pinterest"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "behance"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "dribbble"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "kickstarter"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "medium"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "snapchat"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "skype"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "reddit"
+								},
+								{
+									link: "https://www.linkedin.com/in/liyasthomas",
+									icon: "paypal"
 								},
 								{
 									link: "tel:+919539653962",
