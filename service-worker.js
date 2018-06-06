@@ -1,9 +1,9 @@
 var CACHE_NAME = 'liyas-thomas-cache';
 var urlsToCache = [
-//  '/',
-//  '/index.html',
-//  '/about.html',
-//  '/src/my-app.html',
+  '/',
+  '/index.html',
+  '/src/my-app.html',
+  '/src/about.html'
 ];
 
 self.addEventListener('install', function (event) {
