@@ -1,74 +1,74 @@
 [
 	{
-		"color":"cyan",
-		"title":"Snap.",
-		"description":"",
-		"info":"Project / AR",
-		"img":"../images/assets/home/ab11.svg",
-		"icon":"adjust",
-		"link":""
+		"color": "cyan",
+		"title": "Snap.",
+		"description": "",
+		"info": "Project / AR",
+		"img": "../images/assets/home/ab11.svg",
+		"icon": "adjust",
+		"link": ""
 	},
 	{
-		"color":"red",
-		"title":"Lvr · Virtual reality for everyone",
-		"description":"",
-		"info":"Project / VR",
-		"img":"../images/assets/home/ab1.svg",
-		"icon":"visibility",
-		"link":""
+		"color": "red",
+		"title": "Lvr · Virtual reality for everyone",
+		"description": "",
+		"info": "Project / VR",
+		"img": "../images/assets/home/ab1.svg",
+		"icon": "visibility",
+		"link": ""
 	},
 	{
-		"color":"cyan",
-		"title":"Feedie",
-		"description":"",
-		"info":"Project / PHP",
-		"img":"../images/assets/home/ab13.svg",
-		"icon":"star",
-		"link":""
+		"color": "cyan",
+		"title": "Feedie",
+		"description": "",
+		"info": "Project / PHP",
+		"img": "../images/assets/home/ab13.svg",
+		"icon": "star",
+		"link": ""
 	},
 	{
-		"color":"blue",
-		"title":"Fuse Org · Developers community",
-		"description":"",
-		"info":"Initiative / TEAM",
-		"img":"../images/assets/home/ab12.svg",
-		"icon":"group",
-		"link":""
+		"color": "blue",
+		"title": "Fuse Org · Developers community",
+		"description": "",
+		"info": "Initiative / TEAM",
+		"img": "../images/assets/home/ab12.svg",
+		"icon": "group",
+		"link": ""
 	},
 	{
-		"color":"black",
-		"title":"",
-		"description":"",
-		"info":"Project / LOGO",
-		"img":"../images/assets/home/fuse.png",
-		"icon":"bubble-chart",
-		"link":""
+		"color": "black",
+		"title": "",
+		"description": "",
+		"info": "Project / LOGO",
+		"img": "../images/assets/home/fuse.png",
+		"icon": "bubble-chart",
+		"link": ""
 	},
 	{
-		"color":"green",
-		"title":"Recycle Mix",
-		"description":"",
-		"info":"Project / NSITE",
-		"img":"../images/assets/home/ab9.svg",
-		"icon":"filter-vintage",
-		"link":""
+		"color": "green",
+		"title": "Recycle Mix",
+		"description": "",
+		"info": "Project / NSITE",
+		"img": "../images/assets/home/ab9.svg",
+		"icon": "filter-vintage",
+		"link": ""
 	},
 	{
-		"color":"teal",
-		"title":"Form Face",
-		"description":"",
-		"info":"Project / GIF",
-		"img":"../images/assets/home/ab5.svg",
-		"icon":"face",
-		"link":""
+		"color": "teal",
+		"title": "Form Face",
+		"description": "",
+		"info": "Project / GIF",
+		"img": "../images/assets/home/ab5.svg",
+		"icon": "face",
+		"link": ""
 	},
 	{
-		"color":"deep-orange",
-		"title":"Pineapple Notes · Simple, clean note app",
-		"description":"",
-		"info":"Project / FIREBASE",
-		"img":"../images/assets/home/ab2.svg",
-		"icon":"note",
-		"link":""
+		"color": "deep-orange",
+		"title": "Pineapple Notes · Simple, clean note app",
+		"description": "",
+		"info": "Project / FIREBASE",
+		"img": "../images/assets/home/ab2.svg",
+		"icon": "note",
+		"link": ""
 	}
 ]

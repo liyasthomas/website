@@ -110,7 +110,7 @@
       // Load and register pre-caching Service Worker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js', {
+          navigator.serviceWorker.register('service-workerjs', {
             scope: Polymer.rootPath,
           });
         });

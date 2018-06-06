@@ -66,6 +66,15 @@
 
 				color: var(--primary-text-color);
       }
+      :host([page=home]) .theme {
+        background: linear-gradient(45deg, #32fbfc, #3214f2);
+      }
+      :host([page=projects]) .theme {
+        background: linear-gradient(45deg, #e6683c, #dc2743);
+      }
+      :host([page=about]) .theme {
+        background: linear-gradient(45deg, #e458fc, #1d1279);
+      }
 			[hidden] {
 				display: none;
 			}
@@ -95,13 +104,13 @@
 				cursor: pointer;
       }
 			#home.iron-selected {
-        color: var(--paper-deep-purple-a400);
+        color: var(--paper-blue-a400);
 			}
 			#projects.iron-selected {
         color: var(--paper-deep-orange-a400);
 			}
 			#about.iron-selected {
-        color: var(--paper-blue-a400);
+        color: var(--paper-deep-purple-a400);
 			}
 			iron-collapse {
 				outline: none;
@@ -123,7 +132,7 @@
 				margin-right: 8px;
 			}
 			.logo {
-				background: linear-gradient(45deg, #e458fc, #1d1279);
+				background: linear-gradient(45deg, #32fbfc, #3214f2);
 				-webkit-background-clip: text !important;
 				-webkit-text-fill-color: transparent !important;
 				vertical-align: middle;
@@ -133,15 +142,6 @@
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 600;
 			}
-      :host([page=home]) .logo {
-        background: linear-gradient(45deg, #e458fc, #1d1279);
-      }
-      :host([page=projects]) .logo {
-        background: linear-gradient(45deg, #e6683c, #dc2743);
-      }
-      :host([page=about]) .logo {
-        background: linear-gradient(45deg, #32fbfc, #3214f2);
-      }
 			[main-title] {
 				font-size: 56px;
 				margin-left: 46px;
@@ -200,6 +200,9 @@
 				text-transform: none;
 				margin: 4px;
 			}
+			.flexchild {
+				@apply --layout-flex;
+			}
 			.flex-horizontal {
 				@apply --layout-horizontal;
 			}
@@ -207,31 +210,27 @@
 				@apply --layout-horizontal;
 				@apply --layout-center-center;
 			}
-			.flexchild {
-				@apply --layout-flex;
-			}
 			footer {
 				@apply --layout-horizontal;
 				@apply --layout-center;
     		@apply --layout-justified;
 				padding: 64px 32px 32px;
-				background-color: var(--paper-grey-100);
-				color: var(--light-text-color);
-				font-size: 16px;
 			}
 			footer paper-icon-button {
 				margin: 4px;
 			}
-			#scroll {
-				display: none;
+			#fab {
 				@apply --shadow-elevation-4dp;
-				--paper-fab-background: #fff;
-				--paper-fab-keyboard-focus-background: #fff;
-				color: var(--secondary-text-color);
+				--paper-fab-background: inherit;
+				--paper-fab-keyboard-focus-background: inherit;
+				color: #fff;
 				position: fixed;
 				z-index: 6;
 				right: 20px;
 				bottom: 20px;          
+			}
+			#fab:hover {
+				@apply --shadow-elevation-6dp;
 			}
 			@media (max-width: 640px) {
 				paper-toast {
@@ -285,7 +284,7 @@
 			<app-drawer id="drawer" slot="drawer" swipe-open>
 				<div class="drawer-contents">
 					<app-toolbar class="drawer">
-						<div class="logo">Liyas Thomas</div>
+						<div class="logo theme">Liyas Thomas</div>
 					</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
@@ -346,7 +345,7 @@
 				<app-header slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-						<span condensed-title><div class="logo">Liyas Thomas</div></span>
+						<span condensed-title><div class="logo theme">Liyas Thomas</div></span>
 						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
 							<paper-tab id="home">
 								<a href="[[rootPath]]" tabindex="-1">
@@ -373,7 +372,7 @@
 						</template>
 					</app-toolbar>
 					<app-toolbar class="bottom">
-						<span main-title><div class="logo">Liyas Thomas</div></span>
+						<span main-title><div class="logo theme">Liyas Thomas</div></span>
 					</app-toolbar>
 				</app-header>
 				<div class="pages">
@@ -386,25 +385,21 @@
 				</div>
 				<footer>
 					<div>
-						<a href="https://github.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/github.svg"></paper-icon-button>
+						<a href="https://www.facebook.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/facebook.svg"></paper-icon-button>
 						</a>
 						<a href="https://twitter.com/liyasthomas" target="_blank">
 							<paper-icon-button src="../images/assets/social/twitter.svg"></paper-icon-button>
 						</a>
-						<a href="https://www.facebook.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/facebook.svg"></paper-icon-button>
-						</a>
-						<a href="https://www.youtube.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/youtube"></paper-icon-button>
-						</a>
 						<a href="https://plus.google.com/+liyasthomas" target="_blank">
 							<paper-icon-button src="../images/assets/social/google-plus.svg"></paper-icon-button>
 						</a>
+						<a href="https://github.com/liyasthomas" target="_blank">
+							<paper-icon-button src="../images/assets/social/github.svg"></paper-icon-button>
+						</a>
 					</div>
-					<!--<div>&copy;Fuse Org</div>-->
 				</footer>
-				<paper-fab id="scroll" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
+				<paper-fab id="fab" class="theme" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
 			</app-header-layout>
 		</app-drawer-layout>
 	</template>
