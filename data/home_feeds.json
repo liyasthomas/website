@@ -1,17 +1,44 @@
 [
 	{
-		"color": "red",
-		"title": "Camion Info Tech · My gift",
-		"description": "",
-		"info": "Initiative / COMPANY",
-		"img": "../images/assets/home/ribbon.svg",
+		"color": "purple",
+		"title": "Who is he?",
+		"description": "Developer? artist? or a playboy?",
+		"info": "Read about me",
+		"img": "../images/assets/home/banner.svg",
+		"icon": "face",
+		"link": "about"
+	},
+	{
+		"color": "white",
+		"title": "Award",
+		"description": "Developer? artist? or a playboy?",
+		"info": "Award",
+		"img": "../images/assets/home/principle.svg",
 		"icon": "group",
 		"link": ""
 	},
 	{
-		"color": "yellow",
-		"title": "Saap · Not your ordinary camera!",
+		"color": "teal",
+		"title": "What does he do?",
+		"description": "Developer? artist? or a playboy?",
+		"info": "Award",
+		"img": "../images/assets/home/icon.svg",
+		"icon": "group",
+		"link": "projects"
+	},
+	{
+		"color": "red",
+		"title": "Camion Info Tech",
 		"description": "",
+		"info": "Initiative / COMPANY",
+		"img": "../images/assets/home/ribbon.svg",
+		"icon": "group",
+		"link": "https://www.camioninfotech.com"
+	},
+	{
+		"color": "yellow",
+		"title": "Saap!",
+		"description": "Not your ordinary camera",
 		"info": "Project / AR",
 		"img": "../images/assets/home/Spectacles.svg",
 		"icon": "adjust",
@@ -19,8 +46,8 @@
 	},
 	{
 		"color": "blue",
-		"title": "Lvr · Virtual reality for everyone",
-		"description": "",
+		"title": "Lvr",
+		"description": "Virtual reality for everyone",
 		"info": "Project / VR",
 		"img": "../images/assets/home/ar.svg",
 		"icon": "visibility",
@@ -28,8 +55,8 @@
 	},
 	{
 		"color": "cyan",
-		"title": "Feedie · Rate better!",
-		"description": "",
+		"title": "Feedie",
+		"description": "Rate better!",
 		"info": "Project / PHP",
 		"img": "../images/assets/home/ab11.svg",
 		"icon": "star",
