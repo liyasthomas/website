@@ -1,7 +1,7 @@
 <link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 <dom-module id="app-grid-style">
-  <template>
+	<template>
     <style is="custom-style">
       :host {
         --app-grid-expandible-item: {
@@ -60,11 +60,11 @@
       }
 
 			.grid {
-				transition: all .1s;
+				transition: all .1s ease;
 				width: 100%;
 			}
 			.list {
-				transition: all .1s;
+				transition: all .1s ease;
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
@@ -79,12 +79,13 @@
 				background-size: cover;
 				display: inline-block;
 				color: #fff;
-				border-radius: 12px;
 				overflow: hidden;
-				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.14);
-				-webkit-transition: all .1s;
-				-o-transition: all .1s;
-				transition: all .1s;
+				border-radius: 8px;
+				box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+				transition: all .1s ease;
+			}
+			.item:hover {
+				box-shadow: 0 12px 20px rgba(36,37,38,0.13);
 			}
 			.lightbox {
 				position: absolute;
@@ -105,8 +106,8 @@
 				}
 				width: 100%;
 				height: 100%;
-				border-radius: 12px;
-				transition: all 300ms;
+				border-radius: 8px;
+				transition: all .1s ease;
 			}
 			.actions {
 				@apply --layout-horizontal;

@@ -2,7 +2,7 @@
 	{
 		"color": "purple",
 		"title": "Who is he?",
-		"description": "Developer? artist? or a playboy?",
+		"description": "Developer, artist or playboy?",
 		"info": "Read about me",
 		"img": "../images/assets/home/banner.svg",
 		"icon": "face",
@@ -11,7 +11,7 @@
 	{
 		"color": "white",
 		"title": "Award",
-		"description": "Developer? artist? or a playboy?",
+		"description": "Hooray!",
 		"info": "Award",
 		"img": "../images/assets/home/principle.svg",
 		"icon": "group",
@@ -20,7 +20,7 @@
 	{
 		"color": "teal",
 		"title": "What does he do?",
-		"description": "Developer? artist? or a playboy?",
+		"description": "C'mon!",
 		"info": "Award",
 		"img": "../images/assets/home/icon.svg",
 		"icon": "group",
@@ -56,6 +56,15 @@
 	{
 		"color": "cyan",
 		"title": "Feedie",
+		"description": "Rate better!",
+		"info": "Project / PHP",
+		"img": "../images/assets/home/ab11.svg",
+		"icon": "star",
+		"link": ""
+	},
+	{
+		"color": "white",
+		"title": "Art",
 		"description": "Rate better!",
 		"info": "Project / PHP",
 		"img": "../images/assets/home/ab11.svg",

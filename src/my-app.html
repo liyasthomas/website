@@ -47,9 +47,9 @@
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
 
-				--accent-color: var(--paper-blue-a400);
-				--light-accent-color: var(--paper-blue-a200);
-				--dark-accent-color: var(--paper-blue-a700);
+				--accent-color: var(--paper-deep-purple-a400);
+				--light-accent-color: var(--paper-deep-purple-a200);
+				--dark-accent-color: var(--paper-deep-purple-a700);
 
 				--primary-text-color: rgba(0,0,0,.87);
 				--secondary-text-color: rgba(0,0,0,.54);
@@ -192,7 +192,7 @@
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
-				max-width: 320px;
+/*				max-width: 320px;*/
 				background-color: #fff !important;
 				color: var(--paper-grey-500);
 			}
@@ -220,6 +220,7 @@
 				margin: 4px;
 			}
 			#fab {
+				visibility: hidden;
 				@apply --shadow-elevation-4dp;
 				--paper-fab-background: inherit;
 				--paper-fab-keyboard-focus-background: inherit;
@@ -231,9 +232,6 @@
 			}
 			@media (max-width: 640px) {
 				paper-toast {
-					margin: 0;
-					max-width: none;
-					border-radius: 0;
 					width: 100%;
 				}
 				.toast-button {
@@ -256,7 +254,7 @@
     </app-route>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
-			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>
+<!--			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>-->
 		</paper-toast>
 		<paper-toast id="sharehome" duration="0">
 			<div class="flex-vertical flexchild">
@@ -443,40 +441,12 @@
 									icon: "google-plus"
 								},
 								{
-									link: "https://instagram.com/liyasthomas",
-									icon: "instagram"
-								},
-								{
-									link: "https://www.youtube.com/liyasthomas",
-									icon: "youtube"
-								},
-								{
-									link: "https://www.youtube.com/liyasthomas",
-									icon: "blogger"
-								},
-								{
-									link: "https://www.youtube.com/liyasthomas",
-									icon: "wordpress"
-								},
-								{
-									link: "https://www.youtube.com/liyasthomas",
-									icon: "wattpad"
-								},
-								{
 									link: "https://github.com/liyasthomas",
 									icon: "github"
 								},
 								{
-									link: "https://github.com//liyasthomas",
-									icon: "tumblr"
-								},
-								{
 									link: "https://www.linkedin.com/in/liyasthomas",
 									icon: "linkedin"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "pinterest"
 								},
 								{
 									link: "https://www.linkedin.com/in/liyasthomas",
@@ -485,30 +455,6 @@
 								{
 									link: "https://www.linkedin.com/in/liyasthomas",
 									icon: "dribbble"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "kickstarter"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "medium"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "snapchat"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "skype"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "reddit"
-								},
-								{
-									link: "https://www.linkedin.com/in/liyasthomas",
-									icon: "paypal"
 								},
 								{
 									link: "tel:+919539653962",
