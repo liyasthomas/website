@@ -1,37 +1,81 @@
-[
-	{
-		"title": "Snap",
-		"icon": "adjust",
-		"link": ""
-	},
-	{
-		"title": "Lvr",
-		"icon": "visibility",
-		"link": ""
-	},
-	{
-		"title": "Feedie",
-		"icon": "star",
-		"link": ""
-	},
-	{
-		"title": "Fuse Org",
-		"icon": "group",
-		"link": ""
-	},
-	{
-		"title": "Pineapple Notes",
-		"icon": "note",
-		"link": ""
-	},
-	{
-		"title": "Recycle Mix",
-		"icon": "filter-vintage",
-		"link": ""
-	},
-	{
-		"title": "Form Face",
-		"icon": "face",
-		"link": ""
-	}
+{
+	"android": [
+		{
+			"title": "Android",
+			"icon": "android",
+			"sub": [
+				{
+					"title": "PWA Wrapper",
+					"icon": "bubble-chart",
+					"link": ""
+},
+				{
+					"title": "Pineapple Notes",
+					"icon": "note",
+					"link": ""
+}
 ]
+}
+],
+	"web": [
+		{
+			"title": "Web",
+			"icon": "language",
+			"sub": [
+				{
+					"title": "Saapshot",
+					"icon": "camera-alt",
+					"link": "https://liyasthomas.github.io/saapshot"
+},
+				{
+					"title": "Saap",
+					"icon": "adjust",
+					"link": "https://liyasthomas.github.io/lvr"
+},
+				{
+					"title": "Lvr",
+					"icon": "visibility",
+					"link": "https://liyas-vr.firebaseapp.com"
+},
+				{
+					"title": "Feedie",
+					"icon": "star",
+					"link": "https://github.com/fuseorg/feedie"
+},
+				{
+					"title": "Pineapple Notes",
+					"icon": "note",
+					"link": "https://pineapple-notes.firebaseapp.com"
+},
+				{
+					"title": "Recycle Mix",
+					"icon": "filter-vintage",
+					"link": "https://recycle-mix.firebaseapp.com"
+},
+				{
+					"title": "Form Face",
+					"icon": "tag-faces",
+					"link": "https://form-face.firebaseapp.com"
+}
+]
+}
+],
+	"others": [
+		{
+			"title": "Initiatives",
+			"icon": "group",
+			"sub": [
+				{
+					"title": "Camion Info Tech",
+					"icon": "layers",
+					"link": "https://www.camioninfotech.com/"
+},
+				{
+					"title": "Fuse Org",
+					"icon": "code",
+					"link": "https://fuse-org.firebaseapp.com"
+}
+]
+}
+]
+}

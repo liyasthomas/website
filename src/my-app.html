@@ -52,10 +52,10 @@
 				--dark-accent-color: var(--paper-deep-purple-a700);
 
 				--primary-text-color: rgba(0,0,0,.87);
-				--secondary-text-color: rgba(0,0,0,.54);
-				--light-text-color: rgba(0,0,0,.38);
+				--secondary-text-color: rgba(0,0,0,.38);
+				--light-text-color: rgba(0,0,0,.12);
 
-				--paper-tabs-selection-bar-color: var(--primary-text-color);
+				--paper-tabs-selection-bar-color: var(--secondary-text-color);
 				--paper-tab-ink: var(--light-text-color);
 
 				--paper-fab-keyboard-focus-background: var(--accent-color);
@@ -101,8 +101,16 @@
         color: inherit;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 500;
-				cursor: pointer;
       }
+			span.expand {
+				width: calc(100% - 80px);
+			}
+			.category {
+				background-color: var(--paper-grey-100);
+				color: var(--paper-grey-500);
+				border-top: 1px solid var(--paper-grey-200);
+				border-bottom: 1px solid var(--paper-grey-200);
+			}
 			#home.iron-selected {
         color: var(--paper-blue-a400);
 			}
@@ -114,8 +122,7 @@
 			}
 			iron-collapse {
 				outline: none;
-				border-top: 1px solid var(--paper-grey-100);
-				border-bottom: 1px solid var(--paper-grey-100);
+				background-color: var(--paper-grey-50);;
 			}
       app-header {
 				background-color: var(--primary-color);
@@ -124,10 +131,12 @@
 					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 				};
       }
+/*
 			app-toolbar.drawer {
 				background-color: #fff; 
 				color: var(--primary-text-color);
 			}
+*/
 			[drawer-toggle] {
 				margin-right: 8px;
 			}
@@ -155,9 +164,6 @@
       paper-tabs {
         height: 100%;
       }
-			[fit-container] {
-				width: 100%;
-			}
       paper-tab {
         --iron-icon-height: 26px;
         --iron-icon-width: 26px;
@@ -192,7 +198,7 @@
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
-/*				max-width: 320px;*/
+				max-width: 320px;
 				background-color: #fff !important;
 				color: var(--paper-grey-500);
 			}
@@ -231,14 +237,14 @@
 				bottom: 20px;          
 			}
 			@media (max-width: 640px) {
+				app-drawer {
+					--app-drawer-width: 80%;
+				}
 				paper-toast {
 					width: 100%;
 				}
 				.toast-button {
 					margin: 16px 8px;
-				}
-				app-drawer {
-					--app-drawer-width: 80%;
 				}
 			}
     </style>
@@ -254,7 +260,7 @@
     </app-route>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
-<!--			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>-->
+			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>
 		</paper-toast>
 		<paper-toast id="sharehome" duration="0">
 			<div class="flex-vertical flexchild">
@@ -284,51 +290,96 @@
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>
-								<iron-icon src="../images/assets/app/home.svg" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:home" item-icon slot="item-icon"></iron-icon>
 								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
-							<iron-icon src="../images/assets/app/briefcase.svg" item-icon slot="item-icon"></iron-icon>
-							<span style="width: calc(100% - 80px)">Projects</span>
-							<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
-							<paper-ripple></paper-ripple>
-						</paper-icon-item>
+						<a id="projects" tabindex="-1">
+							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
+								<iron-icon icon="my-icons:favorite" item-icon slot="item-icon"></iron-icon>
+								<span class="expand">Projects</span>
+								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
+								<paper-ripple></paper-ripple>
+							</paper-icon-item>
+						</a>
 						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
-							<a id="projects" href="projects" tabindex="-1">
-								<paper-icon-item>
-									<iron-icon src="../images/assets/app/business.svg" item-icon slot="item-icon"></iron-icon>
-									<span>All projects</span>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
-							</a>
 							<iron-ajax auto id="ajax" url="data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="300"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class="actions flex-center-center" hidden$="[[!loading]]">
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
-							<template is="dom-repeat" items="[[ajaxResponse]]">
-									<a id="[[item.title]]" href="[[item.link]]" tabindex="-1">
+							
+							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
+								<paper-icon-item class="category">
+									<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
+									<span>{{android.title}}</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+								<template is="dom-repeat" items="[[android.sub]]" as="sub">
+									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
-											<iron-icon icon="my-icons:[[item.icon]]" item-icon slot="item-icon"></iron-icon>
-											<span>{{item.title}}</span>
+											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<span>{{sub.title}}</span>
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
 									</a>
+								</template>
 							</template>
+							
+							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
+								<paper-icon-item class="category">
+									<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
+									<span>{{web.title}}</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+								<template is="dom-repeat" items="[[web.sub]]" as="sub">
+									<a href="[[sub.link]]" tabindex="-1">
+										<paper-icon-item>
+											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<span>{{sub.title}}</span>
+											<paper-ripple></paper-ripple>
+										</paper-icon-item>
+									</a>
+								</template>
+							</template>
+							
+							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
+								<paper-icon-item class="category">
+									<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
+									<span>{{others.title}}</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+								<template is="dom-repeat" items="[[others.sub]]" as="sub">
+									<a href="[[sub.link]]" tabindex="-1">
+										<paper-icon-item>
+											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<span>{{sub.title}}</span>
+											<paper-ripple></paper-ripple>
+										</paper-icon-item>
+									</a>
+								</template>
+							</template>
+							
 							<template is="dom-if" if="{{error}}">
-									<div class="error">
-										<div>Failed to load projects list. Make sure you're connected to internet.</div>
-										<span>🙁😢😒</span>
-										<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
-									</div>
+								<div class="error">
+									<div>Failed to load projects list. Make sure you're connected to internet.</div>
+									<span>🙁😢😒</span>
+									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+								</div>
 							</template>
+							<a href="projects" tabindex="-1">
+								<paper-icon-item class="category">
+									<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
+									<span>View all projects</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+							</a>
 						</iron-collapse>
 						<a id="about" href="about" tabindex="-1">
 							<paper-icon-item>
-								<iron-icon src="../images/assets/app/info.svg" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:face" item-icon slot="item-icon"></iron-icon>
 								<span>About</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
@@ -339,7 +390,7 @@
 			<app-header-layout fullbleed>
 				<app-header slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
-						<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
+						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
 						<span condensed-title><div class="logo theme">Liyas Thomas</div></span>
 						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
 							<paper-tab id="home">
@@ -349,7 +400,7 @@
 							</paper-tab>
 							<paper-tab id="projects">
 								<a href="projects" tabindex="-1">
-									<iron-icon icon="my-icons:work"></iron-icon>
+									<iron-icon icon="my-icons:favorite"></iron-icon>
 								</a>
 							</paper-tab>
 							<paper-tab id="about">
@@ -361,7 +412,7 @@
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ">
 							<paper-icon-button icon="my-icons:mail"></paper-icon-button>
 						</a>
-						<paper-icon-button icon="my-icons:add" on-tap="openShare"></paper-icon-button>
+						<paper-icon-button icon="my-icons:more-vert" on-tap="openShare"></paper-icon-button>
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>
