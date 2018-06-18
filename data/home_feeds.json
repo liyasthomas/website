@@ -1,14 +1,5 @@
 [
 	{
-		"color": "purple",
-		"title": "Who is he?",
-		"description": "Developer, artist or playboy?",
-		"info": "Read about me",
-		"img": "../images/assets/home/banner.svg",
-		"icon": "face",
-		"link": "about"
-	},
-	{
 		"color": "white",
 		"title": "Award",
 		"description": "Hooray!",
@@ -16,15 +7,6 @@
 		"img": "../images/assets/home/principle.svg",
 		"icon": "group",
 		"link": ""
-	},
-	{
-		"color": "teal",
-		"title": "What does he do?",
-		"description": "C'mon!",
-		"info": "Award",
-		"img": "../images/assets/home/icon.svg",
-		"icon": "group",
-		"link": "projects"
 	},
 	{
 		"color": "red",

@@ -1,5 +1,4 @@
-<link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 <dom-module id="app-grid-style">
 	<template>
     <style is="custom-style">
@@ -68,16 +67,16 @@
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 45vw;
+				--app-grid-item-height: 40vw;
 			}
 			.app-grid {
 				margin: 0 auto;
 			}
 			.item {
-				background-position: center center;
+				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				display: inline-block;
+				display: flex;
 				color: #fff;
 				overflow: hidden;
 				border-radius: 16px;
@@ -113,8 +112,17 @@
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
-				padding: 16px;
+				padding: 0 32px;
+			}
+			.actions paper-icon-button {
 				color: var(--secondary-text-color);
+			}
+			.content {
+				background-position: right;
+				background-repeat: no-repeat;
+				background-size: contain;
+				padding: 0 0 32px 0;
+				margin: 32px;
 			}
 			.flexchild {
 				@apply --layout-flex;
@@ -144,6 +152,9 @@
 				line-height: 1.2;
 				font-weight: 600;
 			}
+			.title span {
+				color: var(--accent-color);
+			}
 			.description {
 				padding-top: 16px;
 				font-size: 28px;
@@ -166,6 +177,12 @@
 				}
 				paper-ripple {
 					display: none;
+				}
+				.actions {
+					padding: 16px;
+				}
+				.content {
+					margin: 32px 16px;
 				}
 				.title {
 					font-size: 32px;

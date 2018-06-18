@@ -22,6 +22,7 @@
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/paper-progress/paper-progress.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-spinner/paper-spinner-lite.html">
 <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
 
@@ -47,9 +48,9 @@
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
 
-				--accent-color: var(--paper-deep-purple-a400);
-				--light-accent-color: var(--paper-deep-purple-a200);
-				--dark-accent-color: var(--paper-deep-purple-a700);
+				--accent-color: var(--paper-blue-a400);
+				--light-accent-color: var(--paper-blue-a200);
+				--dark-accent-color: var(--paper-blue-a700);
 
 				--primary-text-color: rgba(0,0,0,.87);
 				--secondary-text-color: rgba(0,0,0,.38);
@@ -155,9 +156,11 @@
 				font-size: 56px;
 				margin-left: 46px;
 			}
+/*
 			[condensed-title] {
-				font-size: 24px;
+				font-size: 22px;
 			}
+*/
 			app-toolbar.bottom {
 				height: auto;
 			}
@@ -198,6 +201,7 @@
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
+				@apply --shadow-elevation-12dp;
 				max-width: 320px;
 				background-color: #fff !important;
 				color: var(--paper-grey-500);
@@ -241,6 +245,8 @@
 					--app-drawer-width: 80%;
 				}
 				paper-toast {
+					margin: 0;
+					max-width: none;
 					width: 100%;
 				}
 				.toast-button {
@@ -254,7 +260,7 @@
     </app-location>
     <app-route
         route="{{route}}"
-        pattern="/:page"
+        pattern="[[rootPath]]:page"
         data="{{routeData}}"
         tail="{{subroute}}">
     </app-route>
@@ -280,12 +286,12 @@
 			</div>
 		</paper-toast>
 	<!--<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>-->
-		<app-drawer-layout force-narrow fullbleed>
+		<app-drawer-layout fullbleed force-narrow>
 			<!-- Drawer content -->
 			<app-drawer id="drawer" slot="drawer" swipe-open>
 				<div class="drawer-contents">
 					<app-toolbar class="drawer">
-						<div class="logo theme">Liyas Thomas</div>
+						<div class="logo theme" on-click="scrollTop">Liyas Thomas</div>
 					</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
@@ -387,6 +393,7 @@
 					</paper-listbox>
 				</div>
 			</app-drawer>
+      <!-- Main content -->
 			<app-header-layout fullbleed>
 				<app-header slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
@@ -554,12 +561,12 @@
 				return opened ? 'expand-less' : 'expand-more';
 			}
 
-			//			connectedCallback() {
-			//				super.connectedCallback();
-			//				Polymer.RenderStatus.beforeNextRender(this, function() {
-			//					this.$.ready_toast.open();
-			//				});
-			//			}
+//			connectedCallback() {
+//				super.connectedCallback();
+//				Polymer.RenderStatus.beforeNextRender(this, function() {
+//					this.$.ready_toast.open();
+//				});
+//			}
 
 			_routePageChanged(page) {
 				// If no page was found in the route data, page will be an empty string.
