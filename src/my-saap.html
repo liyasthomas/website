@@ -68,19 +68,26 @@
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<div class="content" style="background-image: url(../images/assets/home/icon.svg);">
 			<div class="title">
-				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
-				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
+				<p><span>Saap!</span>.</p>
+				<p>Not your <span>ordinary</span> camera.</p>
+			</div>
+			<div class="description">
+				Saap! is my final year project.
 			</div>
 			<p>
-				<a href="saap"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="saap"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="primary">Demo<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button class="secondary">Github<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
+		</div>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 		</div>
 		<iron-ajax auto url="data/saap_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
 		<template is="dom-if" if="{{!error0}}">
 			<div class="actions flex-justified">
-				<div class="title">All <span>saap</span></div>
+				<div class="title"><span>Saap!</span></div>
 				<paper-icon-button
 						hidden$="{{!wideLayout}}"
 						toggles
@@ -101,6 +108,10 @@
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
 		</template>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
@@ -144,6 +155,10 @@
 				</template>
 			</div>
 		</template>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
@@ -187,6 +202,10 @@
 				</template>
 			</div>
 		</template>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
@@ -198,6 +217,53 @@
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 				<template is="dom-repeat" items="[[others.sub]]" as="sub">
+					<div class$="[[_computeBgClass(sub.color)]] item">
+						<a href="{{sub.link}}">
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+							</div>
+							<div class="container">
+								<div class="flexchild flex-vertical">
+									<div class="block flexchild flex-horizontal">
+										<div class="flexchild">
+											<div class="title">
+												{{sub.title}}
+											</div>
+											<div class="description">
+												{{sub.description}}
+											</div>
+										</div>
+									</div>
+									<div class="flex-horizontal info">
+										<div class="flexchild">
+											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</template>
+			</div>
+		</template>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+		</div>
+		<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
+			<template is="dom-if" if="{{!error0}}">
+				<div class="actions">
+					<div class="title">
+						<iron-icon icon="my-icons:[[similar.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{similar.title}}</span>
+					</div>
+				</div>
+			</template>
+			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">

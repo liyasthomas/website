@@ -121,5 +121,31 @@
 }
 ]
 }
+],
+	"similar": [
+		{
+			"title": "Similar",
+			"icon": "android",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Similar 1",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "bubble-chart",
+					"link": ""
+},
+				{
+					"color": "white",
+					"title": "Similar 2",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "note",
+					"link": ""
+}
+]
+}
 ]
 }
