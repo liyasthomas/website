@@ -3,9 +3,18 @@
 <dom-module id="shared-styles">
 	<template>
     <style is="custom-style">
+			*,
+			*:focus,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				outline: 0;
+			}
+			[hidden] {
+				display: none;
+			}
 			a {
-        text-decoration: none !important;
-				outline: none;
+        text-decoration: none;
 				color: inherit;
 			}
 			a.link {
@@ -13,6 +22,9 @@
 			}
 			a.link:hover {
 				color: var(--dark-accent-color);
+			}
+			p {
+				margin: 16px 0;
 			}
 			ul {
 				margin: 0;
@@ -24,12 +36,12 @@
 				font-weight: normal;
 				margin: 0;
 			}
+			.listbox {
+				padding: 0;
+				color: var(--secondary-text-color);
+			}
 			paper-item, paper-icon-item {
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				line-height: 1.5;
-				color: var(--primary-text-color);
-				--paper-item-focused: {
-				};
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
@@ -37,15 +49,15 @@
 			paper-icon-button.link {
 				margin: 4px;
 			}
-			paper-icon-button {
+			paper-icon-button.link {
 				color: var(--secondary-text-color);
 			}
-			paper-icon-button:hover {
+			paper-icon-button.link:hover {
 				color: var(--secondary-text-color);
 			}
 			paper-button {
 				border-radius: 46px;
-				margin: 0;
+				margin: 8px;
 				padding: 0.7em 1.2em;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 500;
@@ -73,18 +85,65 @@
 				color: var(--dark-accent-color);
 			}
 			paper-button iron-icon {
+        --iron-icon-height: 26px;
+        --iron-icon-width: 26px;
 				padding-left: 8px;
 			}
 			paper-progress {
         display: block;
         width: 100%;
-				position: fixed;
-				top: 0;
+			}
+			iron-collapse {
+				outline: none;
+				background-color: var(--paper-grey-50);
+			}
+			.flexchild {
+				@apply --layout-flex;
+			}
+			.flex-vertical {
+				@apply --layout-vertical;
+			}
+			.flex-horizontal {
+				@apply --layout-horizontal;
+			}
+			.flex-center-center {
+				@apply --layout-horizontal;
+				@apply --layout-center-center;
+			}
+			.flex-end-align {
+				@apply --layout-horizontal;
+				@apply --layout-end;
+				height: 100%
+			}
+			.flex-justified {
+				@apply --layout-justified;
+			}
+			.actions {
+				@apply --layout-horizontal;
+				padding: 32px;
+			}
+			.actions paper-icon-button {
+				color: var(--secondary-text-color);
+			}
+			.content {
+				background-position: right;
+				background-repeat: no-repeat;
+				background-size: contain;
+				padding: 32px;
 			}
 			.error {
 				padding: 16px;
-				color: var(--paper-grey-500);
-				text-align: center;
+				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
+				font-size: 14px;
+				color: var(--secondary-text-color);
+			}
+			@media (max-width: 640px) {
+				.actions {
+					padding: 32px 16px;
+				}
+				.content {
+					padding: 32px 16px;
+				}
 			}
     </style>
   </template>

@@ -15,7 +15,7 @@
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 150vw;
+					--app-grid-item-height: 60vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -24,157 +24,251 @@
 			}
   		@media all and (min-width: 361px) and (max-width: 640px) {
 				:host {
-					--app-grid-columns: 1;
+					--app-grid-columns: 2;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 120vw;
+					--app-grid-item-height: 60vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 100%;
+				}
+				.item:nth-child(3n+1) {
+					@apply --app-grid-expandible-item;
 				}
 			}
   		@media all and (min-width: 641px) and (max-width: 960px) {
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 32px;
-					--app-grid-item-height: 40vw;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 80vw;
 				}
-				.item:nth-child(3n+1) {
+				.item:nth-child(5n+1) {
 					@apply --app-grid-expandible-item;
 				}
 			}
 			@media all and (min-width: 961px) {
 				:host {
-					--app-grid-columns: 4;
-					--app-grid-gutter: 46px;
-					--app-grid-item-height: 30vw;
+					--app-grid-columns: 2;
+					--app-grid-gutter: 32px;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 60vw;
 				}
-				.item:nth-child(12n+2) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(12n+4) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(12n+8) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(12n+12) {
+				.item:nth-child(5n+3) {
 					@apply --app-grid-expandible-item;
 				}
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-   	<div hidden$="{{!wideLayout}}">
-			<template is="dom-if" if="{{!error}}">
-				<div class="actions">
-					<div></div>
-					<paper-icon-button
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-			</template>
+		<div class="content" style="background-image: url(../images/assets/home/icon.svg);">
+			<div class="title">
+				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
+				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
+			</div>
+			<p>
+				<a href="projects"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="projects"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+			</p>
 		</div>
-		<iron-ajax auto
-			url="data/projects_feeds.json"
-			id="ajax"
-			loading="{{loading}}"
-			handle-as="json"
-			last-error="{{error}}"
-			last-response="{{ajaxResponse}}">
+		<iron-ajax auto url="data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
-		<template is="dom-if" if="{{loading}}">
-			<div class="actions flex-center-center" hidden$="[[!loading]]">
-				<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
+		<template is="dom-if" if="{{!error0}}">
+			<div class="actions flex-justified">
+				<div class="title">All <span>projects</span></div>
+				<paper-icon-button
+						hidden$="{{!wideLayout}}"
+						toggles
+						active="{{UI}}"
+						icon$="my-icons:[[getUIIcon(UI)]]">
+				</paper-icon-button>
 			</div>
 		</template>
-    <template is="dom-if" if="{{error}}">
+		<template is="dom-if" if="{{loading0}}">
+			<div class="actions flex-center-center" hidden$="[[!loading0]]">
+				<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+			</div>
+		</template>
+		<template is="dom-if" if="{{error0}}">
 			<div class="error">
 				<div>Failed to load feeds.</div>
 				<div>Make sure you're connected to internet.</div>
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
-    </template>
-		<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-			<template is="dom-repeat" items="[[ajaxResponse]]">
-				<div class$="[[_computeBgClass(item.color)]] item">
-					<a href="{{item.link}}">
-						<div class="lightbox">
-							<iron-image class="bg" preload fade sizing="cover" src="{{item.img}}"></iron-image>
-						</div>
-						<div class="container">
-							<div class="flexchild flex-vertical content">
-								<div class="block flexchild flex-horizontal">
-									<div class="flexchild">
-										<div class="title">
-											{{item.title}}
-										</div>
-										<div class="description">
-											{{item.description}}
+		</template>
+		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
+			<template is="dom-if" if="{{!error0}}">
+				<div class="actions">
+					<div class="title">
+						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{android.title}}</span>
+					</div>
+				</div>
+			</template>
+			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[android.sub]]" as="sub">
+					<div class$="[[_computeBgClass(sub.color)]] item">
+						<a href="{{sub.link}}">
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+							</div>
+							<div class="container">
+								<div class="flexchild flex-vertical">
+									<div class="block flexchild flex-horizontal">
+										<div class="flexchild">
+											<div class="title">
+												{{sub.title}}
+											</div>
+											<div class="description">
+												{{sub.description}}
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="flex-horizontal info">
-									<div class="flexchild">
-										<paper-button raised class$="[[_computeFgClass(item.color)]]">{{item.info}}</paper-button>
-									</div>
-									<div>
-										<iron-icon icon="my-icons:{{item.icon}}"></iron-icon>
+									<div class="flex-horizontal info">
+										<div class="flexchild">
+											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</a>
+						</a>
+					</div>
+				</template>
+			</div>
+		</template>
+		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+			<template is="dom-if" if="{{!error0}}">
+				<div class="actions">
+					<div class="title">
+						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{web.title}}</span>
+					</div>
 				</div>
 			</template>
+			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[web.sub]]" as="sub">
+					<div class$="[[_computeBgClass(sub.color)]] item">
+						<a href="{{sub.link}}">
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+							</div>
+							<div class="container">
+								<div class="flexchild flex-vertical">
+									<div class="block flexchild flex-horizontal">
+										<div class="flexchild">
+											<div class="title">
+												{{sub.title}}
+											</div>
+											<div class="description">
+												{{sub.description}}
+											</div>
+										</div>
+									</div>
+									<div class="flex-horizontal info">
+										<div class="flexchild">
+											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</template>
+			</div>
+		</template>
+		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
+			<template is="dom-if" if="{{!error0}}">
+				<div class="actions">
+					<div class="title">
+						<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{others.title}}</span>
+					</div>
+				</div>
+			</template>
+			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[others.sub]]" as="sub">
+					<div class$="[[_computeBgClass(sub.color)]] item">
+						<a href="{{sub.link}}">
+							<div class="lightbox">
+								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+							</div>
+							<div class="container">
+								<div class="flexchild flex-vertical">
+									<div class="block flexchild flex-horizontal">
+										<div class="flexchild">
+											<div class="title">
+												{{sub.title}}
+											</div>
+											<div class="description">
+												{{sub.description}}
+											</div>
+										</div>
+									</div>
+									<div class="flex-horizontal info">
+										<div class="flexchild">
+											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</template>
+			</div>
+		</template>
+		<div class="content">
+			<div class="title">
+				<p>contact me</p>
+			</div>
+			<p>
+				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+			</p>
 		</div>
   </template>
 	<script>
     class MyProjects extends Polymer.Element {
       static get is() { return 'my-projects'; }
-
 			getUIType(UI) {
 				return UI ? 'list' : 'grid';
 			}
-
 			getUIIcon(icon) {
 				return icon ? 'dashboard' : 'view-agenda';
 			}
-
 			_computeBgClass(color) {
 				return color + '-bg';
 			}
-
 			_computeFgClass(color) {
 				return color + '-fg';
 			}
-
       static get properties() {
         return {
         };
       }
-
 			static get attached() {
 				this._updateGridStyles = this._updateGridStyles || function() {
 					this.updateStyles();
 				}.bind(this);
 				window.addEventListener('resize', this._updateGridStyles);
 			}
-
 			static get detached() {
         window.removeEventListener('resize', this._updateGridStyles);
 			}
     }
-
     window.customElements.define(MyProjects.is, MyProjects);
   </script>
 </dom-module>

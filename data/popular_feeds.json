@@ -1,14 +1,5 @@
 [
 	{
-		"color": "white",
-		"title": "Award",
-		"description": "Hooray!",
-		"info": "Award",
-		"img": "../images/assets/home/principle.svg",
-		"icon": "group",
-		"link": ""
-	},
-	{
 		"color": "red",
 		"title": "Camion Info Tech",
 		"description": "",
@@ -24,7 +15,7 @@
 		"info": "Project / AR",
 		"img": "../images/assets/home/Spectacles.svg",
 		"icon": "adjust",
-		"link": ""
+		"link": "saap"
 	},
 	{
 		"color": "blue",
@@ -33,7 +24,7 @@
 		"info": "Project / VR",
 		"img": "../images/assets/home/ar.svg",
 		"icon": "visibility",
-		"link": ""
+		"link": "lvr"
 	},
 	{
 		"color": "cyan",
@@ -42,15 +33,15 @@
 		"info": "Project / PHP",
 		"img": "../images/assets/home/ab11.svg",
 		"icon": "star",
-		"link": ""
+		"link": "feedie"
 	},
 	{
 		"color": "white",
 		"title": "Art",
 		"description": "Rate better!",
-		"info": "Project / PHP",
+		"info": "Paper / Print",
 		"img": "../images/assets/home/ab11.svg",
 		"icon": "star",
-		"link": ""
+		"link": "art"
 	}
 ]

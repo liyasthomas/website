@@ -94,6 +94,7 @@
 
 	<!-- Web Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet'>
+
 	<script>
 		/**
 		 * [polymer-root-path]
@@ -224,6 +225,12 @@
 	<noscript>
 		Please enable JavaScript to view this website.
 	</noscript>
+	<script>
+		window.addEventListener('WebComponentsReady', function() {
+			document.querySelector('my-app').show();
+		});
+
+	</script>
 	<!-- Built with love using Polymer -->
 </body>
 

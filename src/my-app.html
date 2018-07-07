@@ -31,16 +31,17 @@
 <link rel="import" href="../bower_components/neon-animation/neon-animatable.html">
 <link rel="import" href="../bower_components/neon-animation/neon-animations.html">
 
+<link rel="import" href="my-icons.html">
+<link rel="import" href="shared-styles.html">
+
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-projects.html">
 <link rel="lazy-import" href="my-about.html">
 <link rel="lazy-import" href="my-404.html">
 
-<link rel="import" href="my-icons.html">
-
 <dom-module id="my-app">
 	<template>
-    <style is="custom-style">
+    <style is="custom-style" include="shared-styles">
       :host {
         display: block;
 
@@ -95,14 +96,6 @@
 				height: 100%;
 				overflow: auto;
       }
-			.listbox {
-				color: var(--secondary-text-color);
-			}
-      paper-icon-item {
-        color: inherit;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				font-weight: 500;
-      }
 			span.expand {
 				width: calc(100% - 80px);
 			}
@@ -121,10 +114,6 @@
 			#about.iron-selected {
         color: var(--paper-deep-purple-a400);
 			}
-			iron-collapse {
-				outline: none;
-				background-color: var(--paper-grey-50);;
-			}
       app-header {
 				background-color: var(--primary-color);
 				color: var(--secondary-text-color);
@@ -142,15 +131,11 @@
 				margin-right: 8px;
 			}
 			.logo {
-				background: linear-gradient(45deg, #32fbfc, #3214f2);
-				-webkit-background-clip: text !important;
-				-webkit-text-fill-color: transparent !important;
-				vertical-align: middle;
-				display: inline-block;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 600;
+				color: #000;
 			}
 			[main-title] {
 				font-size: 56px;
@@ -187,17 +172,7 @@
         @apply --layout-flex;
 				position: relative;
 			}
-			paper-progress {
-        display: block;
-        width: 100%;
-			}
-			.error {
-				padding: 16px;
-				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
-				font-size: 14px;
-				color: var(--secondary-text-color);
-			}
-			paper-toast {
+			#sharehome {
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
@@ -208,29 +183,21 @@
 			}
 			.toast-button {
 				text-transform: none;
-				margin: 4px;
-			}
-			.flexchild {
-				@apply --layout-flex;
-			}
-			.flex-horizontal {
-				@apply --layout-horizontal;
-			}
-			.flex-center-center {
-				@apply --layout-horizontal;
-				@apply --layout-center-center;
+				margin: 8px;
 			}
 			footer {
 				@apply --layout-horizontal;
 				@apply --layout-center;
     		@apply --layout-justified;
-				padding: 64px 32px 32px;
+				background-color: var(--paper-grey-200);
+				color: var(--secondary-text-color);
+				font-size: 16px;
+				padding: 32px;
 			}
 			footer paper-icon-button {
 				margin: 4px;
 			}
 			#fab {
-				visibility: hidden;
 				@apply --shadow-elevation-4dp;
 				--paper-fab-background: inherit;
 				--paper-fab-keyboard-focus-background: inherit;
@@ -248,6 +215,9 @@
 					margin: 0;
 					max-width: none;
 					width: 100%;
+				}
+				#sharehome {
+					max-width: none;
 				}
 				.toast-button {
 					margin: 16px 8px;
@@ -285,13 +255,13 @@
 				</div>
 			</div>
 		</paper-toast>
-	<!--<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>-->
+	<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
 		<app-drawer-layout fullbleed force-narrow>
 			<!-- Drawer content -->
 			<app-drawer id="drawer" slot="drawer" swipe-open>
 				<div class="drawer-contents">
 					<app-toolbar class="drawer">
-						<div class="logo theme" on-click="scrollTop">Liyas Thomas</div>
+						<div class="logo">👦💻</div>
 					</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
@@ -312,17 +282,19 @@
 						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 							<iron-ajax auto id="ajax" url="data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="300"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
-								<div class="actions flex-center-center" hidden$="[[!loading]]">
+								<div class="actions" hidden$="[[!loading]]">
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
 							
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
-								<paper-icon-item class="category">
-									<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-									<span>{{android.title}}</span>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
+								<a href="android" tabindex="-1">
+									<paper-icon-item class="category">
+										<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span>{{android.title}}</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
 								<template is="dom-repeat" items="[[android.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
@@ -335,11 +307,13 @@
 							</template>
 							
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<paper-icon-item class="category">
-									<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-									<span>{{web.title}}</span>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
+								<a href="web" tabindex="-1">
+									<paper-icon-item class="category">
+										<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span>{{web.title}}</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
@@ -352,11 +326,13 @@
 							</template>
 							
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<paper-icon-item class="category">
-									<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
-									<span>{{others.title}}</span>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
+								<a href="others" tabindex="-1">
+									<paper-icon-item class="category">
+										<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span>{{others.title}}</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
@@ -395,10 +371,10 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="animatable" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
-						<span condensed-title><div class="logo theme">Liyas Thomas</div></span>
+						<span condensed-title><div class="logo">👦💻</div></span>
 						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
 							<paper-tab id="home">
 								<a href="[[rootPath]]" tabindex="-1">
@@ -425,7 +401,7 @@
 						</template>
 					</app-toolbar>
 					<app-toolbar class="bottom">
-						<span main-title><div class="logo theme">Liyas Thomas</div></span>
+						<span main-title><div class="logo">👦💻</div></span>
 					</app-toolbar>
 				</app-header>
 				<div class="pages">
@@ -452,7 +428,7 @@
 						</a>
 					</div>
 				</footer>
-				<paper-fab id="fab" class="theme" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" class="theme" icon="my-icons:mail"></paper-fab></a>
 			</app-header-layout>
 		</app-drawer-layout>
 	</template>
@@ -535,6 +511,32 @@
 				];
 			}
 
+			show() {
+				const hanimation = this.$.animatable.animate([
+					{transform:'translateY(-100%)', easing: 'ease'},
+					{transform:'translateY(0)', easing: 'ease'},
+				],
+				{
+					duration: 800,
+				});
+
+				hanimation.finished.then(() => {
+					this.$.animatable.style.transform = 'translateY(0)';
+				});
+
+				const fanimation = this.$.fab.animate([
+					{transform:'scale(0)', easing: 'ease'},
+					{transform:'scale(1)', easing: 'ease'},
+				],
+				{
+					duration: 800,
+				});
+
+				fanimation.finished.then(() => {
+					this.$.fab.style.transform = 'scale(1)';
+				});
+			}
+
 			scrollTop() {
 				var scrollDuration = 200;
 				var scrollStep = -window.scrollY / (scrollDuration / 15),
@@ -561,12 +563,20 @@
 				return opened ? 'expand-less' : 'expand-more';
 			}
 
-//			connectedCallback() {
-//				super.connectedCallback();
-//				Polymer.RenderStatus.beforeNextRender(this, function() {
-//					this.$.ready_toast.open();
-//				});
-//			}
+			constructor() {
+				super();
+			}
+
+			ready() {
+				super.ready();
+			}
+
+			connectedCallback() {
+				super.connectedCallback();
+				Polymer.RenderStatus.beforeNextRender(this, function() {
+					this.$.ready_toast.open();
+				});
+			}
 
 			_routePageChanged(page) {
 				// If no page was found in the route data, page will be an empty string.
