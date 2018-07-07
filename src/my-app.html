@@ -159,10 +159,12 @@
         @apply --layout-flex;
 				position: relative;
 			}
-			#sharehome {
+			paper-toast {
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				@apply --layout-justified;
+			}
+			#sharehome {
 				@apply --shadow-elevation-12dp;
 				max-width: 320px;
 				background-color: #fff !important;
@@ -223,22 +225,23 @@
     </app-route>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
-			<paper-button onclick="window.location.reload(true)" class="toast-button">Okay</paper-button>
+			<paper-button onclick="window.location.reload(true)">Okay</paper-button>
 		</paper-toast>
 		<paper-toast id="sharehome" duration="0">
-			<div class="flex-vertical flexchild">
-				<div class="flex-horizontal flex-center-center">
-					<div class="flex-horizontal flexchild">
-						<div class="flexchild">Share via</div>
-						<paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
-					</div>
+			<div class="flex-vertical">
+				<div class="flex-horizontal">
+					<div class="flexchild">Share via</div><paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
 				</div>
-				<div class="flex-vertical flexchild" on-tap="openShare">
+				<div>
 					<template is="dom-repeat" items="[[social]]">
 						<a href="{{item.link}}" target="_blank"><paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button></a>
 					</template>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank"><paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button></a>
-					<a href="tel:+919539653962"><paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank">
+						<paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button>
+					</a>
+					<a href="tel:+919539653962">
+						<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
+					</a>
 				</div>
 			</div>
 		</paper-toast>
@@ -378,7 +381,7 @@
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ">
 							<paper-icon-button icon="my-icons:mail"></paper-icon-button>
 						</a>
-						<paper-icon-button icon="my-icons:more-vert" on-tap="openShare"></paper-icon-button>
+						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>
