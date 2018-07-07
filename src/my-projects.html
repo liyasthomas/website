@@ -66,14 +66,14 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/home/icon.svg);">
+		<div class="content" style="background-image: url(../images/assets/home/Icon.svg);">
 			<div class="title">
 				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
 				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
 			</div>
 			<p>
 				<a href="projects"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="projects"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="projects"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 		<iron-ajax auto url="data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
