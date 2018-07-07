@@ -1,21 +1,17 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
-
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
-
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
-
 <link rel="import" href="../bower_components/paper-toast/paper-toast.html">
 <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
@@ -25,47 +21,36 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-spinner/paper-spinner-lite.html">
 <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
-
 <link rel="import" href="../bower_components/neon-animation/web-animations.html">
 <link rel="import" href="../bower_components/neon-animation/neon-animated-pages.html">
 <link rel="import" href="../bower_components/neon-animation/neon-animatable.html">
 <link rel="import" href="../bower_components/neon-animation/neon-animations.html">
-
 <link rel="import" href="my-icons.html">
 <link rel="import" href="shared-styles.html">
-
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-projects.html">
 <link rel="lazy-import" href="my-about.html">
 <link rel="lazy-import" href="my-404.html">
-
 <dom-module id="my-app">
 	<template>
     <style is="custom-style" include="shared-styles">
       :host {
         display: block;
-
 				--primary-color: #fff;
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
-
 				--accent-color: var(--paper-blue-a400);
 				--light-accent-color: var(--paper-blue-a200);
 				--dark-accent-color: var(--paper-blue-a700);
-
 				--primary-text-color: rgba(0,0,0,.87);
 				--secondary-text-color: rgba(0,0,0,.38);
 				--light-text-color: rgba(0,0,0,.12);
-
 				--paper-tabs-selection-bar-color: var(--secondary-text-color);
 				--paper-tab-ink: var(--light-text-color);
-
 				--paper-fab-keyboard-focus-background: var(--accent-color);
-
 				--paper-progress-active-color: var(--light-accent-color);
 				--paper-progress-secondary-color: var(--dark-accent-color);
 				--paper-progress-container-color: var(--accent-color);
-
 				color: var(--primary-text-color);
       }
       :host([page=home]) .theme {
@@ -255,7 +240,7 @@
 				</div>
 			</div>
 		</paper-toast>
-	<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
+		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
 		<app-drawer-layout fullbleed force-narrow>
 			<!-- Drawer content -->
 			<app-drawer id="drawer" slot="drawer" swipe-open>
@@ -286,7 +271,6 @@
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
-							
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
 								<a href="android" tabindex="-1">
 									<paper-icon-item class="category">
@@ -305,7 +289,6 @@
 									</a>
 								</template>
 							</template>
-							
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
 								<a href="web" tabindex="-1">
 									<paper-icon-item class="category">
@@ -324,7 +307,6 @@
 									</a>
 								</template>
 							</template>
-							
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
 								<a href="others" tabindex="-1">
 									<paper-icon-item class="category">
@@ -343,7 +325,6 @@
 									</a>
 								</template>
 							</template>
-							
 							<template is="dom-if" if="{{error}}">
 								<div class="error">
 									<div>Failed to load projects list. Make sure you're connected to internet.</div>
@@ -436,12 +417,10 @@
 		// Gesture events like tap and track generated from touch will not be
 		// preventable, allowing for better scrolling performance.
 		Polymer.setPassiveTouchGestures(true);
-
 		class MyApp extends Polymer.Element {
 			static get is() {
 				return 'my-app';
 			}
-
 			static get properties() {
 				return {
 					page: {
@@ -504,13 +483,11 @@
 					rootPath: String,
 				};
 			}
-
 			static get observers() {
 				return [
 					'_routePageChanged(routeData.page)',
 				];
 			}
-
 			show() {
 				const hanimation = this.$.animatable.animate([
 					{transform:'translateY(-100%)', easing: 'ease'},
@@ -519,11 +496,9 @@
 				{
 					duration: 800,
 				});
-
 				hanimation.finished.then(() => {
 					this.$.animatable.style.transform = 'translateY(0)';
 				});
-
 				const fanimation = this.$.fab.animate([
 					{transform:'scale(0)', easing: 'ease'},
 					{transform:'scale(1)', easing: 'ease'},
@@ -531,12 +506,10 @@
 				{
 					duration: 800,
 				});
-
 				fanimation.finished.then(() => {
 					this.$.fab.style.transform = 'scale(1)';
 				});
 			}
-
 			scrollTop() {
 				var scrollDuration = 200;
 				var scrollStep = -window.scrollY / (scrollDuration / 15),
@@ -546,49 +519,39 @@
 						} else clearInterval(scrollInterval);
 					}, 15);
 			}
-
 			update(worker) {
 				this.$.updateToast.show();
 			}
-
 			openShare() {
 				this.$.sharehome.toggle();
 			}
-
 			toggle() {
 				this.$.collapse.toggle();
 			}
-
 			_getIcon(opened) {
 				return opened ? 'expand-less' : 'expand-more';
 			}
-
 			constructor() {
 				super();
 			}
-
 			ready() {
 				super.ready();
 			}
-
 			connectedCallback() {
 				super.connectedCallback();
 				Polymer.RenderStatus.beforeNextRender(this, function() {
 					this.$.ready_toast.open();
 				});
 			}
-
 			_routePageChanged(page) {
 				// If no page was found in the route data, page will be an empty string.
 				// Default to 'home' in that case.
 				this.page = page || 'home';
-
 				// Close a non-persistent drawer when the page & route are changed.
 				if (!this.$.drawer.persistent) {
 					this.$.drawer.close();
 				}
 			}
-
 			_pageChanged(page) {
 				// Load page import on demand. Show 404 page if fails
 				var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
@@ -598,21 +561,16 @@
 					this._showPage404.bind(this),
 					true);
 			}
-
 			onLayoutChange(wide) {
 				var drawer = this.$.drawer;
-
 				if (wide && drawer.opened) {
 					drawer.opened = false;
 				}
 			}
-
 			_showPage404() {
 				this.page = '404';
 			}
 		}
-
 		window.customElements.define(MyApp.is, MyApp);
-
 	</script>
 </dom-module>
