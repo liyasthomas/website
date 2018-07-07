@@ -30,6 +30,7 @@
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-projects.html">
 <link rel="lazy-import" href="my-about.html">
+<link rel="lazy-import" href="my-saap.html">
 <link rel="lazy-import" href="my-404.html">
 <dom-module id="my-app">
 	<template>
@@ -115,6 +116,9 @@
 			[drawer-toggle] {
 				margin-right: 8px;
 			}
+			app-toolbar paper-icon-button {
+				margin: 0 4px;
+			}
 			.logo {
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -126,11 +130,9 @@
 				font-size: 56px;
 				margin-left: 46px;
 			}
-/*
 			[condensed-title] {
 				font-size: 22px;
 			}
-*/
 			app-toolbar.bottom {
 				height: auto;
 			}
@@ -390,6 +392,7 @@
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
+						<my-saap name="saap"></my-saap>
 						<my-404 name="404"></my-404>
 					</neon-animated-pages>
 				</div>
