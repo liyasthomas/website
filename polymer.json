@@ -5,7 +5,9 @@
     "src/my-home.html",
     "src/my-projects.html",
     "src/my-about.html",
+    "src/my-android.html",
     "src/my-web.html",
+    "src/my-other.html",
     "src/my-saap.html",
     "src/my-404.html"
   ],

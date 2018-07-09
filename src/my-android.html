@@ -2,8 +2,8 @@
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="app-grid-style.html">
-<dom-module id="my-projects">
-  <template>
+<dom-module id="my-android">
+	<template>
 		<style include="app-grid-style">
 		</style>
     <style include="shared-styles">
@@ -52,21 +52,15 @@
 			}
 			@media all and (min-width: 961px) {
 				:host {
-					--app-grid-columns: 4;
+					--app-grid-columns: 2;
 					--app-grid-gutter: 32px;
-					--app-grid-item-height: 40vw;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 60vw;
 				}
-				.item:nth-child(5n+1) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(5n+2) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(5n+4) {
+				.item:nth-child(5n+3) {
 					@apply --app-grid-expandible-item;
 				}
 			}
@@ -74,7 +68,7 @@
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
-				All&nbsp;<span>Projects</span>
+				<span>Android</span>&nbsp;projects
 			</div>
 			<div class="description">
 				Not your ordinary camera.
@@ -85,7 +79,7 @@
 				<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
 		</div>
-		<iron-ajax auto url="data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+		<iron-ajax auto url="data/android_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
 		<template is="dom-if" if="{{loading0}}">
 			<div class="actions flex-center-center" hidden$="[[!loading0]]">
@@ -104,7 +98,7 @@
 				<div class="actions flex-justified">
 					<div class="title">
 						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{android.title}}</span>&nbsp;(12)
+						All&nbsp;<span>{{android.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -147,29 +141,18 @@
 					</div>
 				</template>
 			</div>
-			<div class="actions flex-center-center">
-				<a href="projects">
-					<paper-button raised class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-				</a>
-			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+		<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 			<template is="dom-if" if="{{!error0}}">
-				<div class="actions flex-justified">
+				<div class="actions">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{web.title}}</span>&nbsp;(18)
+						<iron-icon icon="my-icons:[[similar.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{similar.title}}</span>
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
 				</div>
 			</template>
-			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[web.sub]]" as="sub">
+			<div class="app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -200,65 +183,6 @@
 						</a>
 					</div>
 				</template>
-			</div>
-			<div class="actions flex-center-center">
-				<a href="projects">
-					<paper-button raised class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-				</a>
-			</div>
-		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.other]]" as="other">
-			<template is="dom-if" if="{{!error0}}">
-				<div class="actions flex-justified">
-					<div class="title">
-						<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{other.title}}</span>&nbsp;(7)
-					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-			</template>
-			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[other.sub]]" as="sub">
-					<div class$="[[_computeBgClass(sub.color)]] item">
-						<a href="{{sub.link}}">
-							<div class="lightbox">
-								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-							</div>
-							<div class="container">
-								<div class="flexchild flex-vertical">
-									<div class="block flexchild flex-horizontal">
-										<div class="flexchild">
-											<div class="title">
-												{{sub.title}}
-											</div>
-											<div class="description">
-												{{sub.description}}
-											</div>
-										</div>
-									</div>
-									<div class="flex-horizontal info">
-										<div class="flexchild">
-											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-				</template>
-			</div>
-			<div class="actions flex-center-center">
-				<a href="projects">
-					<paper-button raised class="primary">View all Other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-				</a>
 			</div>
 		</template>
 		<div class="content">
@@ -270,10 +194,12 @@
 				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
-  </template>
+	</template>
 	<script>
-    class MyProjects extends Polymer.Element {
-      static get is() { return 'my-projects'; }
+		class MyAndroid extends Polymer.Element {
+			static get is() {
+				return 'my-android';
+			}
 			getUIType(UI) {
 				return UI ? 'list' : 'grid';
 			}
@@ -286,10 +212,10 @@
 			_computeFgClass(color) {
 				return color + '-fg';
 			}
-      static get properties() {
-        return {
-        };
-      }
+			static get properties() {
+				return {
+				};
+			}
 			static get attached() {
 				this._updateGridStyles = this._updateGridStyles || function() {
 					this.updateStyles();
@@ -297,9 +223,9 @@
 				window.addEventListener('resize', this._updateGridStyles);
 			}
 			static get detached() {
-        window.removeEventListener('resize', this._updateGridStyles);
+				window.removeEventListener('resize', this._updateGridStyles);
 			}
-    }
-    window.customElements.define(MyProjects.is, MyProjects);
-  </script>
+		}
+		window.customElements.define(MyAndroid.is, MyAndroid);
+	</script>
 </dom-module>

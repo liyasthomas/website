@@ -1,0 +1,54 @@
+{
+	"android": [
+		{
+			"title": "Android",
+			"icon": "language",
+			"sub": [
+				{
+					"color": "white",
+					"title": "PWA Wrapper",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "bubble-chart",
+					"link": "saap"
+},
+				{
+					"color": "white",
+					"title": "Pineapple Notes",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "note",
+					"link": "saap"
+}
+]
+}
+],
+	"similar": [
+		{
+			"title": "Similar",
+			"icon": "group",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Similar 1",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "bubble-chart",
+					"link": ""
+},
+				{
+					"color": "white",
+					"title": "Similar 2",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "note",
+					"link": ""
+}
+]
+}
+]
+}

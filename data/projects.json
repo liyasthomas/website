@@ -60,9 +60,9 @@
 ]
 }
 ],
-	"others": [
+	"other": [
 		{
-			"title": "Others",
+			"title": "Other",
 			"icon": "group",
 			"sub": [
 				{

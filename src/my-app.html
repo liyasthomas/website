@@ -30,7 +30,9 @@
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-projects.html">
 <link rel="lazy-import" href="my-about.html">
+<link rel="lazy-import" href="my-android.html">
 <link rel="lazy-import" href="my-web.html">
+<link rel="lazy-import" href="my-other.html">
 <link rel="lazy-import" href="my-saap.html">
 <link rel="lazy-import" href="my-404.html">
 <dom-module id="my-app">
@@ -317,15 +319,15 @@
 									</a>
 								</template>
 							</template>
-							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a href="others" tabindex="-1">
+							<template is="dom-repeat" items="[[ajaxResponse.other]]" as="other">
+								<a href="other" tabindex="-1">
 									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span>{{others.title}}</span>
+										<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span>{{other.title}}</span>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<template is="dom-repeat" items="[[others.sub]]" as="sub">
+								<template is="dom-repeat" items="[[other.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
@@ -362,7 +364,7 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header id="animatable" slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="header" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
 						<span condensed-title><div class="logo">👦💻</div></span>
@@ -383,7 +385,7 @@
 								</a>
 							</paper-tab>
 						</paper-tabs>
-						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi, ">
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank">
 							<paper-icon-button icon="my-icons:mail"></paper-icon-button>
 						</a>
 						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
@@ -395,12 +397,14 @@
 						<span main-title><div class="logo">👦💻</div></span>
 					</app-toolbar>
 				</app-header>
-				<div class="pages">
+				<div id="pages" class="pages">
 					<neon-animated-pages selected="[[page]]" attr-for-selected="name" fallback-selection="404" role="main" entry-animation="fade-in-animation" exit-animation="fade-out-animation">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
+						<my-android name="android"></my-android>
 						<my-web name="web"></my-web>
+						<my-other name="other"></my-other>
 						<my-saap name="saap"></my-saap>
 						<my-404 name="404"></my-404>
 					</neon-animated-pages>
@@ -501,22 +505,32 @@
 				];
 			}
 			show() {
-				const hanimation = this.$.animatable.animate([
+				const hanimation = this.$.header.animate([
 					{transform:'translateY(-100%)', easing: 'ease'},
 					{transform:'translateY(0)', easing: 'ease'},
 				],
 				{
-					duration: 800,
+					duration: 400,
 				});
 				hanimation.finished.then(() => {
-					this.$.animatable.style.transform = 'translateY(0)';
+					this.$.header.style.transform = 'translateY(0)';
+				});
+				const banimation = this.$.pages.animate([
+					{transform:'translateY(50%)', easing: 'ease'},
+					{transform:'translateY(0)', easing: 'ease'},
+				],
+				{
+					duration: 400,
+				});
+				banimation.finished.then(() => {
+					this.$.pages.style.transform = 'translateY(0)';
 				});
 				const fanimation = this.$.fab.animate([
 					{transform:'scale(0)', easing: 'ease'},
 					{transform:'scale(1)', easing: 'ease'},
 				],
 				{
-					duration: 800,
+					duration: 400,
 				});
 				fanimation.finished.then(() => {
 					this.$.fab.style.transform = 'scale(1)';
