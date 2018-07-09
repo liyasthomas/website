@@ -66,26 +66,28 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/projects/Spectacles.svg);">
+		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
-				<p><span>Saap!</span>.</p>
-				<p>Not your <span>ordinary</span> camera.</p>
+				<span>Saap</span>!
 			</div>
 			<div class="description">
+				Not your ordinary camera.
 				Saap! is my final year project.
 			</div>
 			<p>
 				<a href="saap"><paper-button raised class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
-				<a href="saap"><paper-button raised class="secondary">Github<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
+		</div>
+		<div class="content">
+			<div class="title"><span>Saap!</span></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 		</div>
 		<iron-ajax auto url="data/saap_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
-		<template is="dom-if" if="{{!error0}}">
-			<div class="actions flex-justified">
-				<div class="title"><span>Saap!</span></div>
-			</div>
-		</template>
 		<template is="dom-if" if="{{loading0}}">
 			<div class="actions flex-center-center" hidden$="[[!loading0]]">
 				<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
@@ -98,20 +100,12 @@
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
 		</template>
-		<div class="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-		</div>
-		<div class="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-		</div>
-		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
+		<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{android.title}}</span>
+						<iron-icon icon="my-icons:[[section1.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{section1.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -122,7 +116,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[android.sub]]" as="sub">
+				<template is="dom-repeat" items="[[section1.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -159,12 +153,12 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 		</div>
-		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+		<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{web.title}}</span>
+						<iron-icon icon="my-icons:[[section2.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{section2.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -175,7 +169,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[web.sub]]" as="sub">
+				<template is="dom-repeat" items="[[section2.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -212,12 +206,12 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 		</div>
-		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
+		<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{others.title}}</span>
+						<iron-icon icon="my-icons:[[section3.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{section3.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -228,7 +222,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[others.sub]]" as="sub">
+				<template is="dom-repeat" items="[[section3.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">

@@ -1,8 +1,8 @@
 {
-	"android": [
+	"section1": [
 		{
-			"title": "Android",
-			"icon": "android",
+			"title": "Screenshots",
+			"icon": "wallpaper",
 			"sub": [
 				{
 					"color": "white",
@@ -25,9 +25,9 @@
 ]
 }
 ],
-	"web": [
+	"section2": [
 		{
-			"title": "Web",
+			"title": "Prototyping",
 			"icon": "language",
 			"sub": [
 				{
@@ -96,9 +96,9 @@
 ]
 }
 ],
-	"others": [
+	"section3": [
 		{
-			"title": "Others",
+			"title": "Architecture",
 			"icon": "group",
 			"sub": [
 				{
@@ -125,7 +125,7 @@
 	"similar": [
 		{
 			"title": "Similar",
-			"icon": "android",
+			"icon": "group",
 			"sub": [
 				{
 					"color": "white",

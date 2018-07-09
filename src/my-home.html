@@ -66,14 +66,16 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/home/Icon_1.svg);">
+		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
-				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
-				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
+				Hi, I'm&nbsp;<span>Liyas Thomas</span>
+			</div>
+			<div class="description">
+				A designer, developer, and an entrepreneur.
 			</div>
 			<p>
-				<a href="projects"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="projects"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 		<iron-ajax auto url="data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -90,12 +92,12 @@
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
+		<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{android.title}}</span>
+						<iron-icon icon="my-icons:[[recent.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{recent.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -106,7 +108,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[android.sub]]" as="sub">
+				<template is="dom-repeat" items="[[recent.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -139,12 +141,12 @@
 				</template>
 			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+		<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{web.title}}</span>
+						<iron-icon icon="my-icons:[[popular.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{popular.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -155,7 +157,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[web.sub]]" as="sub">
+				<template is="dom-repeat" items="[[popular.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -188,12 +190,12 @@
 				</template>
 			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
+		<template is="dom-repeat" items="[[ajaxResponse0.projects]]" as="projects">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{others.title}}</span>
+						<iron-icon icon="my-icons:[[projects.icon]]" item-icon slot="item-icon"></iron-icon>
+						My&nbsp;<span>{{projects.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -204,7 +206,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[others.sub]]" as="sub">
+				<template is="dom-repeat" items="[[projects.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">

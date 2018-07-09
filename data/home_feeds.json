@@ -1,8 +1,8 @@
 {
-	"android": [
+	"recent": [
 		{
-			"title": "Android",
-			"icon": "android",
+			"title": "Recent",
+			"icon": "star",
 			"sub": [
 				{
 					"color": "white",
@@ -25,10 +25,10 @@
 ]
 }
 ],
-	"web": [
+	"popular": [
 		{
-			"title": "Web",
-			"icon": "language",
+			"title": "Popular",
+			"icon": "whatshot",
 			"sub": [
 				{
 					"color": "white",
@@ -96,10 +96,10 @@
 ]
 }
 ],
-	"others": [
+	"projects": [
 		{
-			"title": "Others",
-			"icon": "group",
+			"title": "Projects",
+			"icon": "work",
 			"sub": [
 				{
 					"color": "white",

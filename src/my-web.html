@@ -68,12 +68,15 @@
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
-				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
-				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
+				<span>Web</span>&nbsp;projects
+			</div>
+			<div class="description">
+				Not your ordinary camera.
+				Saap! is my final year project.
 			</div>
 			<p>
-				<a href="projects"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="projects"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
+				<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
 		</div>
 		<iron-ajax auto url="data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -90,12 +93,12 @@
 				<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
+		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{android.title}}</span>
+						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
+						All&nbsp;<span>{{web.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -106,7 +109,7 @@
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[android.sub]]" as="sub">
+				<template is="dom-repeat" items="[[web.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
