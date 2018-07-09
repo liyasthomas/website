@@ -30,6 +30,7 @@
 <link rel="lazy-import" href="my-home.html">
 <link rel="lazy-import" href="my-projects.html">
 <link rel="lazy-import" href="my-about.html">
+<link rel="lazy-import" href="my-web.html">
 <link rel="lazy-import" href="my-saap.html">
 <link rel="lazy-import" href="my-404.html">
 <dom-module id="my-app">
@@ -233,7 +234,7 @@
 				<div class="flex-horizontal">
 					<div class="flexchild">Share via</div><paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
 				</div>
-				<div>
+				<div on-tap="openShare">
 					<template is="dom-repeat" items="[[social]]">
 						<a href="{{item.link}}" target="_blank"><paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button></a>
 					</template>
@@ -242,6 +243,9 @@
 					</a>
 					<a href="tel:+919539653962">
 						<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
+					</a>
+					<a href="about">
+						<paper-icon-button class="toast-button" icon="my-icons:more-horiz"></paper-icon-button>
 					</a>
 				</div>
 			</div>
@@ -273,7 +277,7 @@
 						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 							<iron-ajax auto id="ajax" url="data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="300"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
-								<div class="actions" hidden$="[[!loading]]">
+								<div class="actions flex-center-center" hidden$="[[!loading]]">
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
@@ -396,6 +400,7 @@
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
+						<my-web name="web"></my-web>
 						<my-saap name="saap"></my-saap>
 						<my-404 name="404"></my-404>
 					</neon-animated-pages>

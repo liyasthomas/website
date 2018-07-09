@@ -143,6 +143,11 @@
 					</div>
 				</template>
 			</div>
+			<div class="actions flex-center-center">
+				<a href="projects">
+					<paper-button raised class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+			</div>
 		</template>
 		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 			<template is="dom-if" if="{{!error0}}">
@@ -186,6 +191,11 @@
 					</div>
 				</template>
 			</div>
+			<div class="actions flex-center-center">
+				<a href="projects">
+					<paper-button raised class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+			</div>
 		</template>
 		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 			<template is="dom-if" if="{{!error0}}">
@@ -228,6 +238,11 @@
 						</a>
 					</div>
 				</template>
+			</div>
+			<div class="actions flex-center-center">
+				<a href="projects">
+					<paper-button raised class="primary">View all Other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
 			</div>
 		</template>
 		<div class="content">

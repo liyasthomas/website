@@ -1,0 +1,125 @@
+{
+	"android": [
+		{
+			"title": "Android",
+			"icon": "android",
+			"sub": [
+				{
+					"color": "white",
+					"title": "PWA Wrapper",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "bubble-chart",
+					"link": "saap"
+},
+				{
+					"color": "white",
+					"title": "Pineapple Notes",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "note",
+					"link": "saap"
+}
+]
+}
+],
+	"web": [
+		{
+			"title": "Web",
+			"icon": "language",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Saapshot",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "camera-alt",
+					"link": "https://liyasthomas.github.io/saapshot"
+},
+				{
+					"color": "white",
+					"title": "Saap",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "adjust",
+					"link": "https://liyasthomas.github.io/lvr"
+},
+				{
+					"color": "white",
+					"title": "Lvr",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "visibility",
+					"link": "https://liyas-vr.firebaseapp.com"
+},
+				{
+					"color": "white",
+					"title": "Feedie",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "star",
+					"link": "https://github.com/fuseorg/feedie"
+},
+				{
+					"color": "white",
+					"title": "Pineapple Notes",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "note",
+					"link": "https://pineapple-notes.firebaseapp.com"
+},
+				{
+					"color": "white",
+					"title": "Recycle Mix",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "filter-vintage",
+					"link": "https://recycle-mix.firebaseapp.com"
+},
+				{
+					"color": "white",
+					"title": "Form Face",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "tag-faces",
+					"link": "https://form-face.firebaseapp.com"
+}
+]
+}
+],
+	"others": [
+		{
+			"title": "Others",
+			"icon": "group",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Camion Info Tech",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "layers",
+					"link": "https://www.camioninfotech.com/"
+},
+				{
+					"color": "white",
+					"title": "Fuse Org",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/projects/ab1.svg",
+					"icon": "code",
+					"link": "https://fuse-org.firebaseapp.com"
+}
+]
+}
+]
+}

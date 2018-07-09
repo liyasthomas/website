@@ -2,7 +2,7 @@
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="app-grid-style.html">
-<dom-module id="my-home">
+<dom-module id="my-web">
 	<template>
 		<style include="app-grid-style">
 		</style>
@@ -66,7 +66,7 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/home/Icon_1.svg);">
+		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
 				<p>Hi, I'm <span>Liyas Thomas</span>.</p>
 				<p>A <span>designer</span>, <span>developer</span>, and an <span>entrepreneur</span>.</p>
@@ -76,7 +76,7 @@
 				<a href="projects"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
-		<iron-ajax auto url="data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+		<iron-ajax auto url="data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
 		<template is="dom-if" if="{{loading0}}">
 			<div class="actions flex-center-center" hidden$="[[!loading0]]">
@@ -139,23 +139,17 @@
 				</template>
 			</div>
 		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+		<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 			<template is="dom-if" if="{{!error0}}">
-				<div class="actions flex-justified">
+				<div class="actions">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{web.title}}</span>
+						<iron-icon icon="my-icons:[[similar.icon]]" item-icon slot="item-icon"></iron-icon>
+						<span>{{similar.title}}</span>
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
 				</div>
 			</template>
-			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[web.sub]]" as="sub">
+			<div class="app-grid" has-aspect-ratio>
+				<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
 							<div class="lightbox">
@@ -186,60 +180,6 @@
 						</a>
 					</div>
 				</template>
-			</div>
-		</template>
-		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
-			<template is="dom-if" if="{{!error0}}">
-				<div class="actions flex-justified">
-					<div class="title">
-						<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{others.title}}</span>
-					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-			</template>
-			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-				<template is="dom-repeat" items="[[others.sub]]" as="sub">
-					<div class$="[[_computeBgClass(sub.color)]] item">
-						<a href="{{sub.link}}">
-							<div class="lightbox">
-								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-							</div>
-							<div class="container">
-								<div class="flexchild flex-vertical">
-									<div class="block flexchild flex-horizontal">
-										<div class="flexchild">
-											<div class="title">
-												{{sub.title}}
-											</div>
-											<div class="description">
-												{{sub.description}}
-											</div>
-										</div>
-									</div>
-									<div class="flex-horizontal info">
-										<div class="flexchild">
-											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-				</template>
-			</div>
-			<div class="actions flex-center-center">
-				<a href="projects">
-					<paper-button raised class="primary">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-				</a>
 			</div>
 		</template>
 		<div class="content">
@@ -253,9 +193,9 @@
 		</div>
 	</template>
 	<script>
-		class MyHome extends Polymer.Element {
+		class MyWeb extends Polymer.Element {
 			static get is() {
-				return 'my-home';
+				return 'my-web';
 			}
 			getUIType(UI) {
 				return UI ? 'list' : 'grid';
@@ -283,6 +223,6 @@
 				window.removeEventListener('resize', this._updateGridStyles);
 			}
 		}
-		window.customElements.define(MyHome.is, MyHome);
+		window.customElements.define(MyWeb.is, MyWeb);
 	</script>
 </dom-module>

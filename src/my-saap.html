@@ -66,7 +66,7 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/home/icon.svg);">
+		<div class="content" style="background-image: url(../images/assets/projects/Spectacles.svg);">
 			<div class="title">
 				<p><span>Saap!</span>.</p>
 				<p>Not your <span>ordinary</span> camera.</p>
@@ -79,21 +79,11 @@
 				<a href="saap"><paper-button raised class="secondary">Github<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
 		</div>
-		<div class="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-		</div>
 		<iron-ajax auto url="data/saap_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 		</iron-ajax>
 		<template is="dom-if" if="{{!error0}}">
 			<div class="actions flex-justified">
 				<div class="title"><span>Saap!</span></div>
-				<paper-icon-button
-						hidden$="{{!wideLayout}}"
-						toggles
-						active="{{UI}}"
-						icon$="my-icons:[[getUIIcon(UI)]]">
-				</paper-icon-button>
 			</div>
 		</template>
 		<template is="dom-if" if="{{loading0}}">
@@ -112,13 +102,23 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 		</div>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
 			<template is="dom-if" if="{{!error0}}">
-				<div class="actions">
+				<div class="actions flex-justified">
 					<div class="title">
 						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
 						<span>{{android.title}}</span>
 					</div>
+					<paper-icon-button
+							hidden$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -161,11 +161,17 @@
 		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 			<template is="dom-if" if="{{!error0}}">
-				<div class="actions">
+				<div class="actions flex-justified">
 					<div class="title">
 						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
 						<span>{{web.title}}</span>
 					</div>
+					<paper-icon-button
+							hidden$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -208,11 +214,17 @@
 		</div>
 		<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 			<template is="dom-if" if="{{!error0}}">
-				<div class="actions">
+				<div class="actions flex-justified">
 					<div class="title">
 						<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
 						<span>{{others.title}}</span>
 					</div>
+					<paper-icon-button
+							hidden$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -262,7 +274,7 @@
 					</div>
 				</div>
 			</template>
-			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+			<div class="app-grid" has-aspect-ratio>
 				<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 					<div class$="[[_computeBgClass(sub.color)]] item">
 						<a href="{{sub.link}}">
