@@ -66,7 +66,7 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
+		<div class="content banner" style="background-image: url(../images/assets/feeds/banner_1.svg);">
 			<div class="title">
 				Hi, I'm&nbsp;<span>Liyas Thomas</span>
 			</div>
@@ -75,7 +75,7 @@
 			</div>
 			<p>
 				<a href="saap"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
-				<a href="saap"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Read more<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
 		</div>
 		<iron-ajax auto url="data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -96,7 +96,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[recent.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[recent.icon]]"></iron-icon>
 						<span>{{recent.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
@@ -145,7 +145,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[popular.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[popular.icon]]"></iron-icon>
 						<span>{{popular.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
@@ -194,8 +194,8 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[projects.icon]]" item-icon slot="item-icon"></iron-icon>
-						My&nbsp;<span>{{projects.title}}</span>
+						<iron-icon icon="my-icons:[[projects.icon]]"></iron-icon>
+						my&nbsp;<span>{{projects.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -246,11 +246,11 @@
 		</template>
 		<div class="content">
 			<div class="title">
-				<p>contact me</p>
+				<span>contact</span>&nbsp;me
 			</div>
 			<p>
 				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 	</template>

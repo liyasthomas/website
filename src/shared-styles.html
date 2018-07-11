@@ -61,14 +61,14 @@
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 500;
 				text-transform: none;
-				font-weight: 500 !important;
+				font-weight: 500;
 				transition: all .2s;
 			}
 			paper-button.primary {
 				background-color: var(--accent-color);
 				color: #fff;
 				--paper-button-raised-keyboard-focus: {
-					background-color: var(--dark-accent-color) !important;
+					background-color: var(--dark-accent-color);
 				};
 			}
 			paper-button.primary:hover {
@@ -78,16 +78,15 @@
 				background-color: #fff;
 				color: var(--secondary-text-color);
 				--paper-button-raised-keyboard-focus: {
-					color: var(--dark-accent-color) !important;
+					background-color: #fff;
+					color: var(--dark-accent-color);
 				};
 			}
 			paper-button.secondary:hover {
-				color: var(--dark-accent-color);
+				color: var(--accent-color);
 			}
 			paper-button iron-icon {
-        --iron-icon-height: 26px;
-        --iron-icon-width: 26px;
-				padding-left: 8px;
+				margin-left: 8px;
 			}
 			paper-progress {
         display: block;
@@ -117,6 +116,10 @@
 			}
 			.flex-justified {
 				@apply --layout-justified;
+			}
+			.banner {
+				height: calc(100vh - 180px);
+				margin-bottom: 16px;
 			}
 			.actions {
 				@apply --layout-horizontal;

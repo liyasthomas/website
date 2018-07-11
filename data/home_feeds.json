@@ -1,7 +1,7 @@
 {
 	"recent": [
 		{
-			"title": "Recent",
+			"title": "recent",
 			"icon": "star",
 			"sub": [
 				{
@@ -27,15 +27,15 @@
 ],
 	"popular": [
 		{
-			"title": "Popular",
+			"title": "popular",
 			"icon": "whatshot",
 			"sub": [
 				{
 					"color": "white",
-					"title": "Saapshot",
+					"title": "Award",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "camera-alt",
 					"link": "https://liyasthomas.github.io/saapshot"
 },
@@ -50,12 +50,12 @@
 },
 				{
 					"color": "white",
-					"title": "Lvr",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
-					"icon": "visibility",
-					"link": "https://liyas-vr.firebaseapp.com"
+					"title": "Wallpapers",
+					"description": "Curated list of HD wallpapers.",
+					"info": "Wallpapers / SCREEN",
+					"img": "../images/assets/home/iPhone_MockUps.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
@@ -98,7 +98,7 @@
 ],
 	"projects": [
 		{
-			"title": "Projects",
+			"title": "projects",
 			"icon": "work",
 			"sub": [
 				{

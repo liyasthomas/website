@@ -1,7 +1,7 @@
 {
 	"other": [
 		{
-			"title": "Other",
+			"title": "other",
 			"icon": "language",
 			"sub": [
 				{
@@ -27,7 +27,7 @@
 ],
 	"similar": [
 		{
-			"title": "Similar",
+			"title": "similar",
 			"icon": "group",
 			"sub": [
 				{

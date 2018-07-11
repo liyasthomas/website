@@ -76,11 +76,13 @@
 				color: #fff;
 				overflow: hidden;
 				border-radius: 16px;
-				box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+				@apply --shadow-elevation-2dp;
+/*				box-shadow: 0 6px 15px rgba(36,37,38,0.08);*/
 				transition: all .1s ease;
 			}
 			.item:hover {
-				box-shadow: 0 12px 20px rgba(36,37,38,0.13);
+				@apply --shadow-elevation-4dp;
+/*				box-shadow: 0 12px 20px rgba(36,37,38,0.13);*/
 			}
 			.lightbox {
 				position: absolute;

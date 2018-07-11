@@ -97,7 +97,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[android.icon]]"></iron-icon>
 						All&nbsp;<span>{{android.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
@@ -146,7 +146,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
 					<div class="title">
-						<iron-icon icon="my-icons:[[similar.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[similar.icon]]"></iron-icon>
 						<span>{{similar.title}}</span>
 					</div>
 				</div>
@@ -187,11 +187,11 @@
 		</template>
 		<div class="content">
 			<div class="title">
-				<p>contact me</p>
+				<span>contact</span>&nbsp;me
 			</div>
 			<p>
 				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 	</template>

@@ -72,9 +72,9 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
+		<div class="content banner" style="background-image: url(../images/assets/feeds/banner_2.svg);">
 			<div class="title">
-				All&nbsp;<span>Projects</span>
+				My&nbsp;<span>projects</span>
 			</div>
 			<div class="description">
 				Not your ordinary camera.
@@ -103,8 +103,8 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{android.title}}</span>&nbsp;(12)
+						<iron-icon icon="my-icons:[[android.icon]]"></iron-icon>
+						popular&nbsp;<span>{{android.title}}</span>&nbsp;
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -157,8 +157,8 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{web.title}}</span>&nbsp;(18)
+						<iron-icon icon="my-icons:[[web.icon]]"></iron-icon>
+						popular&nbsp;<span>{{web.title}}</span>&nbsp;
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -211,8 +211,8 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
-						<span>{{other.title}}</span>&nbsp;(7)
+						<iron-icon icon="my-icons:[[other.icon]]"></iron-icon>
+						popular&nbsp;<span>{{other.title}}</span>&nbsp;
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -263,11 +263,11 @@
 		</template>
 		<div class="content">
 			<div class="title">
-				<p>contact me</p>
+				<span>contact</span>&nbsp;me
 			</div>
 			<p>
 				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
   </template>

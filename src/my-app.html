@@ -43,29 +43,29 @@
 				--primary-color: #fff;
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
-				--accent-color: var(--paper-blue-a400);
-				--light-accent-color: var(--paper-blue-a200);
-				--dark-accent-color: var(--paper-blue-a700);
+				--accent-color: #000dff;
+				--light-accent-color: #0037ff;
+				--dark-accent-color: #0000ff;
 				--primary-text-color: rgba(0,0,0,.87);
 				--secondary-text-color: rgba(0,0,0,.38);
 				--light-text-color: rgba(0,0,0,.12);
-				--paper-tabs-selection-bar-color: var(--secondary-text-color);
+				--paper-tabs-selection-bar-color: var(--accent-color);
 				--paper-tab-ink: var(--light-text-color);
 				--paper-fab-keyboard-focus-background: var(--accent-color);
 				--paper-progress-active-color: var(--light-accent-color);
 				--paper-progress-secondary-color: var(--dark-accent-color);
 				--paper-progress-container-color: var(--accent-color);
 				color: var(--primary-text-color);
+/*
+        --iron-icon-height: 26px;
+        --iron-icon-width: 26px;
+*/
       }
+/*
       :host([page=home]) .theme {
-        background: linear-gradient(45deg, #32fbfc, #3214f2);
+        background: rgb(0,24,255);
       }
-      :host([page=projects]) .theme {
-        background: linear-gradient(45deg, #e6683c, #dc2743);
-      }
-      :host([page=about]) .theme {
-        background: linear-gradient(45deg, #e458fc, #1d1279);
-      }
+*/
 			[hidden] {
 				display: none;
 			}
@@ -94,14 +94,17 @@
 				border-top: 1px solid var(--paper-grey-200);
 				border-bottom: 1px solid var(--paper-grey-200);
 			}
+			.theme {
+				color: var(--accent-color);
+			}
 			#home.iron-selected {
-        color: var(--paper-blue-a400);
+				color: var(--accent-color);
 			}
 			#projects.iron-selected {
-        color: var(--paper-deep-orange-a400);
+				color: var(--accent-color);
 			}
 			#about.iron-selected {
-        color: var(--paper-deep-purple-a400);
+				color: var(--accent-color);
 			}
       app-header {
 				background-color: var(--primary-color);
@@ -110,12 +113,6 @@
 					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 				};
       }
-/*
-			app-toolbar.drawer {
-				background-color: #fff; 
-				color: var(--primary-text-color);
-			}
-*/
 			[drawer-toggle] {
 				margin-right: 8px;
 			}
@@ -144,8 +141,6 @@
         height: 100%;
       }
       paper-tab {
-        --iron-icon-height: 26px;
-        --iron-icon-width: 26px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				text-transform: capitalize;
 				padding: 0;
@@ -283,11 +278,19 @@
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
+							<template is="dom-if" if="{{error}}">
+								<div class="error">
+									<div>Failed to load projects list. Make sure you're connected to internet.</div>
+									<span>🙁😢😒</span>
+									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+								</div>
+							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
 								<a href="android" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span>{{android.title}}</span>
+										<span class="expand">{{android.title}}</span>
+										<iron-icon icon="my-icons:open-in-new"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -305,7 +308,8 @@
 								<a href="web" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span>{{web.title}}</span>
+										<span class="expand">{{web.title}}</span>
+										<iron-icon icon="my-icons:open-in-new"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -323,8 +327,8 @@
 								<a href="other" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span>{{other.title}}</span>
-										<paper-ripple></paper-ripple>
+										<span class="expand">{{other.title}}</span>
+										<iron-icon icon="my-icons:open-in-new"></iron-icon>
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[other.sub]]" as="sub">
@@ -337,17 +341,11 @@
 									</a>
 								</template>
 							</template>
-							<template is="dom-if" if="{{error}}">
-								<div class="error">
-									<div>Failed to load projects list. Make sure you're connected to internet.</div>
-									<span>🙁😢😒</span>
-									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
-								</div>
-							</template>
 							<a href="projects" tabindex="-1">
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
-									<span>View all projects</span>
+										<span class="expand">{{other.title}}</span>
+										<iron-icon icon="my-icons:open-in-new"></iron-icon>
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
@@ -510,27 +508,17 @@
 					{transform:'translateY(0)', easing: 'ease'},
 				],
 				{
-					duration: 400,
+					duration: 800,
 				});
 				hanimation.finished.then(() => {
 					this.$.header.style.transform = 'translateY(0)';
-				});
-				const banimation = this.$.pages.animate([
-					{transform:'translateY(50%)', easing: 'ease'},
-					{transform:'translateY(0)', easing: 'ease'},
-				],
-				{
-					duration: 400,
-				});
-				banimation.finished.then(() => {
-					this.$.pages.style.transform = 'translateY(0)';
 				});
 				const fanimation = this.$.fab.animate([
 					{transform:'scale(0)', easing: 'ease'},
 					{transform:'scale(1)', easing: 'ease'},
 				],
 				{
-					duration: 400,
+					duration: 800,
 				});
 				fanimation.finished.then(() => {
 					this.$.fab.style.transform = 'scale(1)';

@@ -66,7 +66,7 @@
 			}
     </style>
 		<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-		<div class="content" style="background-image: url(../images/assets/projects/ab1.svg);">
+		<div class="content banner" style="background-image: url(../images/assets/projects/ab1.svg);">
 			<div class="title">
 				<span>Saap</span>!
 			</div>
@@ -104,7 +104,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section1.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[section1.icon]]"></iron-icon>
 						<span>{{section1.title}}</span>
 					</div>
 					<paper-icon-button
@@ -157,7 +157,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section2.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[section2.icon]]"></iron-icon>
 						<span>{{section2.title}}</span>
 					</div>
 					<paper-icon-button
@@ -210,7 +210,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section3.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[section3.icon]]"></iron-icon>
 						<span>{{section3.title}}</span>
 					</div>
 					<paper-icon-button
@@ -263,7 +263,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
 					<div class="title">
-						<iron-icon icon="my-icons:[[similar.icon]]" item-icon slot="item-icon"></iron-icon>
+						<iron-icon icon="my-icons:[[similar.icon]]"></iron-icon>
 						<span>{{similar.title}}</span>
 					</div>
 				</div>
@@ -304,11 +304,11 @@
 		</template>
 		<div class="content">
 			<div class="title">
-				<p>contact me</p>
+				<span>contact</span>&nbsp;me
 			</div>
 			<p>
-				<a href="saap"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
   </template>

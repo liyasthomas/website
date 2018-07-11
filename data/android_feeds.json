@@ -1,8 +1,8 @@
 {
 	"android": [
 		{
-			"title": "Android",
-			"icon": "language",
+			"title": "android",
+			"icon": "android",
 			"sub": [
 				{
 					"color": "white",
@@ -27,7 +27,7 @@
 ],
 	"similar": [
 		{
-			"title": "Similar",
+			"title": "similar",
 			"icon": "group",
 			"sub": [
 				{
