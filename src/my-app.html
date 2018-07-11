@@ -61,11 +61,16 @@
         --iron-icon-width: 26px;
 */
       }
-/*
       :host([page=home]) .theme {
-        background: rgb(0,24,255);
+        background: #ffdf00;
+				color: #ff0266;
       }
-*/
+      :host([page=projects]) .theme {
+        background: #1041fb;
+      }
+      :host([page=about]) .theme {
+        background: #1e1e2e;
+      }
 			[hidden] {
 				display: none;
 			}
@@ -93,9 +98,6 @@
 				color: var(--paper-grey-500);
 				border-top: 1px solid var(--paper-grey-200);
 				border-bottom: 1px solid var(--paper-grey-200);
-			}
-			.theme {
-				color: var(--accent-color);
 			}
 			#home.iron-selected {
 				color: var(--accent-color);
@@ -290,7 +292,7 @@
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
 										<span class="expand">{{android.title}}</span>
-										<iron-icon icon="my-icons:open-in-new"></iron-icon>
+										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -309,7 +311,7 @@
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
-										<iron-icon icon="my-icons:open-in-new"></iron-icon>
+										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -328,7 +330,7 @@
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
 										<span class="expand">{{other.title}}</span>
-										<iron-icon icon="my-icons:open-in-new"></iron-icon>
+										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[other.sub]]" as="sub">
@@ -344,8 +346,8 @@
 							<a href="projects" tabindex="-1">
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
-										<span class="expand">{{other.title}}</span>
-										<iron-icon icon="my-icons:open-in-new"></iron-icon>
+										<span class="expand">View all projects</span>
+										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
@@ -362,7 +364,7 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header id="header" slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="header" class="theme" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
 						<span condensed-title><div class="logo">👦💻</div></span>
