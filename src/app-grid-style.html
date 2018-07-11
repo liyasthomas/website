@@ -69,33 +69,20 @@
 				padding-bottom: 0;
 			}
 			.item {
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				display: flex;
-				color: #fff;
-				overflow: hidden;
-				border-radius: 2px;
 				@apply --shadow-elevation-2dp;
-/*				box-shadow: 0 6px 15px rgba(36,37,38,0.08);*/
 				transition: all .1s ease;
+				border-radius: 4px;
 			}
 			.item:hover {
 				@apply --shadow-elevation-4dp;
-/*				box-shadow: 0 12px 20px rgba(36,37,38,0.13);*/
 			}
 			.lightbox {
-				position: absolute;
-				z-index: 0;
 				width: 100%;
 				height: 100%;
 			}
 			.container {
-				position: absolute;
-				z-index: 1;
-      	@apply --layout-horizontal;
-				height: 100%;
-				width: 100%;
+      	@apply --layout-flex;
+      	@apply --layout-vertical;
 			}
 			.bg {
 				--iron-image-placeholder: {
@@ -103,24 +90,33 @@
 				}
 				width: 100%;
 				height: 100%;
-				border-radius: 2px;
 				transition: all .1s ease;
 			}
 			.block {
-				padding: 32px;
+      	@apply --layout-horizontal;
+				background-color: #fff;
+			}
+			.top {
+				padding: 16px;
+				border-radius: 4px 4px 0 0;
+			}
+			.mid {
+				padding: 0 16px 16px 16px;
+			}
+			.bottom {
+				padding: 8px 16px;
+				border-radius: 0 0 4px 4px;
 			}
 			.title {
 				display: -webkit-box;
-				white-space: normal;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 2;
-				font-size: 32px;
+				-webkit-line-clamp: 1;
+				font-size: 22px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				line-height: 1.2;
+				line-height: 1.25;
 				font-weight: 600;
-				width: 80%;
 			}
 			.title span {
 				color: var(--accent-color);
@@ -128,28 +124,21 @@
 			.title iron-icon {
 				margin-right: 16px;
 			}
-			.actions .title {
-				color: var(--primary-text-color);
-			}
 			.description {
 				display: -webkit-box;
-				white-space: normal;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 2;
-				padding-top: 16px;
-				font-size: 28px;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				line-height: 1.25;
-				width: 80%;
+				-webkit-line-clamp: 1;
+				color: var(--secondary-text-color);
+				font-size: 20px;
+				line-height: 1.2;
 			}
 			.info {
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
 				font-weight: 500;
-				padding: 32px;
 				font-size: 16px;
 				text-overflow: ellipsis;
 			}
@@ -161,12 +150,10 @@
 					display: none;
 				}
 				.title {
-					font-size: 26px;
-					width: 90%;
+					font-size: 20px;
 				}
 				.description {
-					font-size: 22px;
-					width: 90%;
+					font-size: 18px;
 				}
 			}
 			.white-bg {
@@ -213,6 +200,7 @@
 			.indigo-bg {
 				color: var(--paper-purple-a700);
 			}
+
 			.white-fg {
 				color: var(--paper-grey-100);
 				background-color: var(--paper-grey-800);
@@ -226,44 +214,44 @@
 				background-color: #fff;
 			}
 			.purple-fg {
-				color: var(--paper-purple-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-purple-a700);
 			}
 			.deep-purple-fg {
-				color: var(--paper-deep-purple-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-deep-purple-a700);
 			}
 			.red-fg {
-				color: var(--paper-red-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-red-a700);
 			}
 			.yellow-fg {
 				color: var(--paper-yellow-a200);
 				background-color: var(--paper-grey-900);
 			}
 			.cyan-fg {
-				color: var(--paper-cyan-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-cyan-a700);
 			}
 			.green-fg {
-				color: var(--paper-green-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-green-a700);
 			}
 			.deep-orange-fg {
-				color: var(--paper-deep-orange-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-deep-orange-a700);
 			}
 			.blue-fg {
-				color: var(--paper-blue-a700);
-				background-color: #fff;
+				background-color: var(--paper-blue-a700);
+				color: #fff;
 			}
 			.teal-fg {
-				color: var(--paper-teal-a700);
-				background-color: #fff;
+				color: #fff;
+				background-color: var(--paper-teal-a700);
 			}
 			.indigo-fg {
-				color: var(--paper-indigo-900);
-				background-color: var(--paper-purple-a700);
+				color: #fff;
+				background-color: var(--paper-indigo-900);
 			}
     </style>
   </template>

@@ -62,16 +62,16 @@
 */
       }
       :host([page=home]) .ptheme {
-        background-color: #ffde03;
+        background-color: #ffdf00;
 				color: #ff0266;
       }
       :host([page=home]) .stheme {
-        background-color: #1041fb;
+        background-color: #0235ff;
 				color: #fff;
       }
       :host([page=projects]) .ptheme {
-        background-color: #0336ff;
-				color: #ffde03;
+        background-color: #0235ff;
+				color: #ffdf00;
       }
       :host([page=about]) .ptheme {
         background-color: #1e1e2e;
@@ -146,6 +146,9 @@
 			}
       paper-tabs {
         height: 100%;
+				--paper-tab-content-unselected: {
+					opacity: 1;
+				}
       }
       paper-tab {
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;

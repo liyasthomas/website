@@ -5,18 +5,18 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "white",
-					"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, illo! Pariatur est ea",
-					"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, illo! Pariatur est ea, libero, eum officia enim atque voluptates obcaecati assumenda nisi, reprehenderit inventore quis voluptas corrupti. Ut architecto, veritatis itaque animi nostrum suscipit impedit quod perspiciatis perferendis nisi rerum in rem consequatur doloribus fuga debitis odio atque accusantium eos, error aspernatur esse velit fugiat quos. Sit eaque quia optio, tempore ad aut, veniam minima explicabo inventore temporibus, accusamus. Mollitia non tenetur quia necessitatibus quidem, cum ut enim cumque provident reprehenderit, magni dicta tempora ducimus quam voluptas illum numquam. Rem, nesciunt aut dolorem illum assumenda quisquam eos a? Magni quod perspiciatis accusamus deserunt asperiores mollitia repellat, quibusdam, fugiat ullam at quam quo quis! Praesentium deleniti nostrum voluptatibus cumque nemo, sequi facilis nobis veniam reiciendis maiores aliquid iusto, voluptatem molestias vel fuga sint a quasi laudantium! Perferendis est quas eligendi sunt, delectus, non maiores facere molestias enim ipsa a omnis obcaecati.",
+					"color": "yellow",
+					"title": "Saap!",
+					"description": "Virtual reality for everyone",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/Spectacles.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
 				{
-					"color": "white",
+					"color": "purple",
 					"title": "Pineapple Notes",
-					"description": "blah",
+					"description": "Simple, clean note app",
 					"info": "Type / TAG",
 					"img": "../images/assets/projects/ab1.svg",
 					"icon": "note",
@@ -31,7 +31,7 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "white",
+					"color": "deep-purple",
 					"title": "Award",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -40,7 +40,7 @@
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "white",
+					"color": "indigo",
 					"title": "Saap",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -49,7 +49,7 @@
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "white",
+					"color": "teal",
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
@@ -58,7 +58,7 @@
 					"link": "wallpapers"
 },
 				{
-					"color": "white",
+					"color": "cyan",
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -67,7 +67,7 @@
 					"link": "https://github.com/fuseorg/feedie"
 },
 				{
-					"color": "white",
+					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -76,7 +76,7 @@
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "green",
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -85,7 +85,7 @@
 					"link": "https://recycle-mix.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "red",
 					"title": "Form Face",
 					"description": "blah",
 					"info": "Type / TAG",

@@ -117,34 +117,26 @@
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 				<template is="dom-repeat" items="[[android.sub]]" as="sub">
-					<div class$="[[_computeBgClass(sub.color)]] item">
-						<a href="{{sub.link}}">
-							<div class="lightbox">
+					<div class="item">
+						<div class="container">
+							<div class="block top">
+								<div class="title">{{sub.title}}</div>
+							</div>
+							<div class="block mid">
+								<div class="description">{{sub.description}}</div>
+							</div>
+							<div class$="[[_computeBgClass(sub.color)]] flexchild">
 								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 							</div>
-							<div class="container">
-								<div class="flexchild flex-vertical">
-									<div class="block flexchild flex-horizontal">
-										<div class="flexchild">
-											<div class="title">
-												{{sub.title}}
-											</div>
-											<div class="description">
-												{{sub.description}}
-											</div>
-										</div>
-									</div>
-									<div class="flex-horizontal info">
-										<div class="flexchild">
-											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
+							<div class="block info bottom">
+								<div class="flexchild">
+									<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+								</div>
+								<div>
+									<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
 								</div>
 							</div>
-						</a>
+						</div>
 					</div>
 				</template>
 			</div>
@@ -171,34 +163,26 @@
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 				<template is="dom-repeat" items="[[web.sub]]" as="sub">
-					<div class$="[[_computeBgClass(sub.color)]] item">
-						<a href="{{sub.link}}">
-							<div class="lightbox">
+					<div class="item">
+						<div class="container">
+							<div class="block top">
+								<div class="title">{{sub.title}}</div>
+							</div>
+							<div class="block mid">
+								<div class="description">{{sub.description}}</div>
+							</div>
+							<div class$="[[_computeBgClass(sub.color)]] flexchild">
 								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 							</div>
-							<div class="container">
-								<div class="flexchild flex-vertical">
-									<div class="block flexchild flex-horizontal">
-										<div class="flexchild">
-											<div class="title">
-												{{sub.title}}
-											</div>
-											<div class="description">
-												{{sub.description}}
-											</div>
-										</div>
-									</div>
-									<div class="flex-horizontal info">
-										<div class="flexchild">
-											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
+							<div class="block info bottom">
+								<div class="flexchild">
+									<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+								</div>
+								<div>
+									<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
 								</div>
 							</div>
-						</a>
+						</div>
 					</div>
 				</template>
 			</div>
@@ -225,34 +209,26 @@
 			</template>
 			<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 				<template is="dom-repeat" items="[[other.sub]]" as="sub">
-					<div class$="[[_computeBgClass(sub.color)]] item">
-						<a href="{{sub.link}}">
-							<div class="lightbox">
+					<div class="item">
+						<div class="container">
+							<div class="block top">
+								<div class="title">{{sub.title}}</div>
+							</div>
+							<div class="block mid">
+								<div class="description">{{sub.description}}</div>
+							</div>
+							<div class$="[[_computeBgClass(sub.color)]] flexchild">
 								<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 							</div>
-							<div class="container">
-								<div class="flexchild flex-vertical">
-									<div class="block flexchild flex-horizontal">
-										<div class="flexchild">
-											<div class="title">
-												{{sub.title}}
-											</div>
-											<div class="description">
-												{{sub.description}}
-											</div>
-										</div>
-									</div>
-									<div class="flex-horizontal info">
-										<div class="flexchild">
-											<paper-button raised class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
+							<div class="block info bottom">
+								<div class="flexchild">
+									<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+								</div>
+								<div>
+									<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
 								</div>
 							</div>
-						</a>
+						</div>
 					</div>
 				</template>
 			</div>
