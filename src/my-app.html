@@ -61,15 +61,20 @@
         --iron-icon-width: 26px;
 */
       }
-      :host([page=home]) .theme {
-        background: #ffdf00;
+      :host([page=home]) .ptheme {
+        background-color: #ffde03;
 				color: #ff0266;
       }
-      :host([page=projects]) .theme {
-        background: #1041fb;
+      :host([page=home]) .stheme {
+        background-color: #1041fb;
+				color: #fff;
       }
-      :host([page=about]) .theme {
-        background: #1e1e2e;
+      :host([page=projects]) .ptheme {
+        background-color: #0336ff;
+				color: #ffde03;
+      }
+      :host([page=about]) .ptheme {
+        background-color: #1e1e2e;
       }
 			[hidden] {
 				display: none;
@@ -228,6 +233,7 @@
 		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
 			<paper-button onclick="window.location.reload(true)">Okay</paper-button>
 		</paper-toast>
+		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
 		<paper-toast id="sharehome" duration="0">
 			<div class="flex-vertical">
 				<div class="flex-horizontal">
@@ -249,7 +255,6 @@
 				</div>
 			</div>
 		</paper-toast>
-		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
 		<app-drawer-layout fullbleed force-narrow>
 			<!-- Drawer content -->
 			<app-drawer id="drawer" slot="drawer" swipe-open>
@@ -364,7 +369,7 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header id="header" class="theme" slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="header" class="ptheme" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
 						<span condensed-title><div class="logo">👦💻</div></span>
@@ -425,7 +430,7 @@
 						</a>
 					</div>
 				</footer>
-				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" class="theme" icon="my-icons:mail"></paper-fab></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" class="stheme" icon="my-icons:mail"></paper-fab></a>
 			</app-header-layout>
 		</app-drawer-layout>
 	</template>
