@@ -43,7 +43,7 @@
 				--primary-color: #fff;
 				--light-primary-color: #fff;
 				--dark-primary-color: #fff;
-				--accent-color: #000dff;
+				--accent-color: #0235ff;;
 				--light-accent-color: #0037ff;
 				--dark-accent-color: #0000ff;
 				--primary-text-color: rgba(0,0,0,.87);
@@ -71,10 +71,19 @@
       }
       :host([page=projects]) .ptheme {
         background-color: #0235ff;
-				color: #ffdf00;
+				color: #ff0266;
+      }
+      :host([page=projects]) .stheme {
+        background-color: #ffdf00;
+				color: #fff;
       }
       :host([page=about]) .ptheme {
         background-color: #1e1e2e;
+				color: #ffdf00;
+      }
+      :host([page=about]) .stheme {
+        background-color: #ff0266;
+				color: #fff;
       }
 			[hidden] {
 				display: none;
@@ -105,13 +114,13 @@
 				border-bottom: 1px solid var(--paper-grey-200);
 			}
 			#home.iron-selected {
-				color: var(--accent-color);
+				color: #0235ff;
 			}
 			#projects.iron-selected {
-				color: var(--accent-color);
+				color: #ffdf00;
 			}
 			#about.iron-selected {
-				color: var(--accent-color);
+				color: #ff0266;
 			}
       app-header {
 				background-color: var(--primary-color);
