@@ -5,20 +5,20 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "yellow",
-					"title": "Saap!",
-					"description": "Virtual reality for everyone",
+					"color": "purple",
+					"title": "Redesign. Refresh. Reinvent.",
+					"description": "Meet the all new material designed website for a refreshing experiences with eye candy colors and animations with ease",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/Spectacles.svg",
+					"img": "../images/assets/home/Workspace.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
 				{
 					"color": "purple",
-					"title": "Pineapple Notes",
-					"description": "Simple, clean note app",
+					"title": "Lvr",
+					"description": "Virtual reality for everyone",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/home/ar.svg",
 					"icon": "note",
 					"link": "saap"
 }
@@ -31,7 +31,7 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "deep-purple",
+					"color": "white",
 					"title": "Award",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -40,16 +40,16 @@
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "indigo",
+					"color": "white",
 					"title": "Saap",
-					"description": "blah",
+					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/home/daydream.svg",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "teal",
+					"color": "black",
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
