@@ -1,0 +1,143 @@
+{
+	"social": [
+		{
+			"title": "social",
+			"sub": [
+				{
+					"link": "https://www.facebook.com/liyasthomas",
+					"icon": "facebook"
+}, {
+					"link": "https://twitter.com/liyasthomas",
+					"icon": "twitter"
+}, {
+					"link": "https://plus.google.com/liyasthomas",
+					"icon": "google-plus"
+}, {
+					"link": "https://instagram.com/liyasthomas",
+					"icon": "instagram"
+}, {
+					"link": "https://www.youtube.com/liyasthomas",
+					"icon": "youtube"
+}, {
+					"link": "https://www.youtube.com/liyasthomas",
+					"icon": "blogger"
+}, {
+					"link": "https://www.youtube.com/liyasthomas",
+					"icon": "wordpress"
+}, {
+					"link": "https://www.youtube.com/liyasthomas",
+					"icon": "wattpad"
+}, {
+					"link": "https://github.com/liyasthomas",
+					"icon": "github"
+}, {
+					"link": "https://github.com//liyasthomas",
+					"icon": "tumblr"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "linkedin"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "pinterest"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "behance"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "dribbble"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "kickstarter"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "medium"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "snapchat"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "skype"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "reddit"
+}, {
+					"link": "https://www.linkedin.com/in/liyasthomas",
+					"icon": "paypal"
+}, {
+					"link": "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
+					"icon": "whatsapp"
+}
+]
+}
+],
+	"gallery": [
+		{
+			"title": "Gallery",
+			"sub": [
+				{
+					"color": "teal",
+					"title": "Similar 1",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "twitter",
+					"link": ""
+},
+				{
+					"color": "purple",
+					"title": "Similar 2",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "linkedin",
+					"link": ""
+},
+				{
+					"color": "cyan",
+					"title": "Similar 3",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "facebook",
+					"link": ""
+},
+				{
+					"color": "blue",
+					"title": "Similar 4",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "linkedin",
+					"link": ""
+},
+				{
+					"color": "green",
+					"title": "Similar 5",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "facebook",
+					"link": ""
+},
+				{
+					"color": "red",
+					"title": "Similar 6",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "instagram",
+					"link": ""
+},
+				{
+					"color": "cyan",
+					"title": "Similar 7",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about",
+					"icon": "google-plus",
+					"link": ""
+}
+]
+}
+]
+}

@@ -9,7 +9,7 @@
 					"title": "PWA Wrapper",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "bubble-chart",
 					"link": ""
 },
@@ -18,7 +18,7 @@
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "note",
 					"link": ""
 }
@@ -35,7 +35,7 @@
 					"title": "Saapshot",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "camera-alt",
 					"link": "https://liyasthomas.github.io/saapshot"
 },
@@ -44,7 +44,7 @@
 					"title": "Saap",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
 },
@@ -53,7 +53,7 @@
 					"title": "Lvr",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "visibility",
 					"link": "https://liyas-vr.firebaseapp.com"
 },
@@ -62,7 +62,7 @@
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "star",
 					"link": "https://github.com/fuseorg/feedie"
 },
@@ -71,7 +71,7 @@
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "note",
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
@@ -80,7 +80,7 @@
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
 },
@@ -89,7 +89,7 @@
 					"title": "Form Face",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "tag-faces",
 					"link": "https://form-face.firebaseapp.com"
 }
@@ -106,7 +106,7 @@
 					"title": "Camion Info Tech",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "layers",
 					"link": "https://www.camioninfotech.com/"
 },
@@ -115,7 +115,7 @@
 					"title": "Fuse Org",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "code",
 					"link": "https://fuse-org.firebaseapp.com"
 }
@@ -132,7 +132,7 @@
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "bubble-chart",
 					"link": ""
 },
@@ -141,7 +141,7 @@
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "note",
 					"link": ""
 }

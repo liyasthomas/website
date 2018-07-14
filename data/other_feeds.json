@@ -9,7 +9,7 @@
 					"title": "PWA Wrapper",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
@@ -18,7 +18,7 @@
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "note",
 					"link": "saap"
 }
@@ -35,7 +35,7 @@
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "bubble-chart",
 					"link": ""
 },
@@ -44,7 +44,7 @@
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/ab1.svg",
+					"img": "../images/assets/projects/",
 					"icon": "note",
 					"link": ""
 }
