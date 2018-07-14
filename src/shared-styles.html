@@ -31,16 +31,17 @@
 				list-style: none;
 			}
 			h1, h2, h3, h4 {
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: normal;
 				margin: 0;
 			}
 			.listbox {
+				background-color: inherit;
 				padding: 0;
-				color: var(--secondary-text-color);
+				color: var(--primary-text-color);
 			}
 			paper-item, paper-icon-item {
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
@@ -57,20 +58,20 @@
 			paper-button {
 				margin: 4px;
 				padding: .7em 1.2em;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				font-weight: 500;
+				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-weight: 700;
 				text-transform: none;
 				transition: all .2s;
 			}
 			paper-button.primary {
-				background-color: var(--accent-color);
-				color: #fff;
+				background-color: var(--primary-color);
+				color: var(--primary-text-color);
 				--paper-button-raised-keyboard-focus: {
-					background-color: var(--dark-accent-color);
+					background-color: var(--dark-primary-color);
 				};
 			}
 			paper-button.primary:hover {
-				background-color: var(--dark-accent-color);
+				background-color: var(--dark-primary-color);
 			}
 			paper-button.secondary {
 				background-color: #fff;
@@ -92,7 +93,6 @@
 			}
 			iron-collapse {
 				outline: none;
-				background-color: var(--paper-grey-50);
 			}
 			.flexchild {
 				@apply --layout-flex;
@@ -127,7 +127,7 @@
 				font-size: 32px;
 			}
 			.actions paper-icon-button {
-				color: var(--secondary-text-color);
+				color: var(--primary-text-color);
 			}
 			.content {
 				background-position: center;

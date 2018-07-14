@@ -40,18 +40,19 @@
     <style is="custom-style" include="shared-styles">
       :host {
         display: block;
-				--primary-color: #fff;
-				--light-primary-color: #fff;
+				--primary-color: #fedbd0;
+				--light-primary-color: #feeae6;
 				--dark-primary-color: #fff;
-				--accent-color: #0235ff;;
-				--light-accent-color: #0037ff;
-				--dark-accent-color: #0000ff;
-				--primary-text-color: rgba(0,0,0,.87);
-				--secondary-text-color: rgba(0,0,0,.38);
+				--accent-color: #442c2e;;
+				--light-accent-color: #feeae6;
+				--dark-accent-color: #442c2e;
+				--primary-text-color: #442c2e;
+				--secondary-text-color: #8f8081;
 				--light-text-color: rgba(0,0,0,.12);
 				--paper-tabs-selection-bar-color: var(--accent-color);
 				--paper-tab-ink: var(--light-text-color);
-				--paper-fab-keyboard-focus-background: var(--accent-color);
+				--paper-fab-background: var(--primary-color);
+				--paper-fab-keyboard-focus-background: var(--primary-color);
 				--paper-progress-active-color: var(--light-accent-color);
 				--paper-progress-secondary-color: var(--dark-accent-color);
 				--paper-progress-container-color: var(--accent-color);
@@ -60,30 +61,6 @@
         --iron-icon-height: 26px;
         --iron-icon-width: 26px;
 */
-      }
-      :host([page=home]) .ptheme {
-        background-color: #ffdf00;
-				color: #ff0266;
-      }
-      :host([page=home]) .stheme {
-        background-color: #0235ff;
-				color: #fff;
-      }
-      :host([page=projects]) .ptheme {
-        background-color: #0235ff;
-				color: #ff0266;
-      }
-      :host([page=projects]) .stheme {
-        background-color: #ffdf00;
-				color: #fff;
-      }
-      :host([page=about]) .ptheme {
-        background-color: #1e1e2e;
-				color: #ffdf00;
-      }
-      :host([page=about]) .stheme {
-        background-color: #ff0266;
-				color: #fff;
       }
 			[hidden] {
 				display: none;
@@ -94,10 +71,10 @@
 				color: inherit;
 			}
 			app-drawer {
-				--app-drawer-scrim-background: rgba(0, 0, 0, 0.4);
+				--app-drawer-scrim-background: rgba(254, 234, 230, .5);
 				--app-drawer-content-container: {
       		@apply --shadow-elevation-12dp;
-					background-color: #fff;
+					background-color: var(--primary-color);
 				}
 			}
       .drawer-contents {
@@ -108,23 +85,21 @@
 				width: calc(100% - 80px);
 			}
 			.category {
-				background-color: var(--paper-grey-100);
-				color: var(--paper-grey-500);
-				border-top: 1px solid var(--paper-grey-200);
-				border-bottom: 1px solid var(--paper-grey-200);
+				background-color: #f0cac0;
+				color: var(--primary-text-color);
 			}
 			#home.iron-selected {
-				color: #0235ff;
+				color: #eaa4a4;
 			}
 			#projects.iron-selected {
-				color: #ffdf00;
+				color: #eaa4a4;
 			}
 			#about.iron-selected {
-				color: #ff0266;
+				color: #eaa4a4;
 			}
       app-header {
 				background-color: var(--primary-color);
-				color: var(--secondary-text-color);
+				color: var(--primary-text-color);
 				--app-header-shadow: {
 					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 				};
@@ -138,16 +113,15 @@
 			.logo {
 				overflow: hidden;
 				text-overflow: ellipsis;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				font-weight: 600;
-				color: #000;
+				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-weight: 700;
 			}
 			[main-title] {
 				font-size: 56px;
 				margin-left: 46px;
 			}
 			[condensed-title] {
-				font-size: 22px;
+				font-size: 20px;
 			}
 			app-toolbar.bottom {
 				height: auto;
@@ -208,7 +182,7 @@
 				@apply --shadow-elevation-4dp;
 				--paper-fab-background: inherit;
 				--paper-fab-keyboard-focus-background: inherit;
-				color: #fff;
+				color: var(--primary-text-color);
 				position: fixed;
 				z-index: 6;
 				right: 20px;
@@ -272,7 +246,7 @@
 			<app-drawer id="drawer" slot="drawer" swipe-open>
 				<div class="drawer-contents">
 					<app-toolbar class="drawer">
-						<div class="logo">👦💻</div>
+						<div class="logo">Liyas Thomas</div>
 					</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
@@ -381,10 +355,10 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header id="header" class="ptheme" slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="header" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
-						<span condensed-title><div class="logo">👦💻</div></span>
+						<span condensed-title><div class="logo">Liyas Thomas</div></span>
 						<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
 							<paper-tab id="home">
 								<a href="[[rootPath]]" tabindex="-1">
@@ -411,7 +385,7 @@
 						</template>
 					</app-toolbar>
 					<app-toolbar class="bottom">
-						<span main-title><div class="logo">👦💻</div></span>
+						<span main-title><div class="logo">Liyas Thomas</div></span>
 					</app-toolbar>
 				</app-header>
 				<div id="pages" class="pages">
@@ -442,7 +416,7 @@
 						</a>
 					</div>
 				</footer>
-				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" class="stheme" icon="my-icons:mail"></paper-fab></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" icon="my-icons:mail"></paper-fab></a>
 			</app-header-layout>
 		</app-drawer-layout>
 	</template>
