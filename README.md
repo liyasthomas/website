@@ -2,7 +2,7 @@
 When I wrote this, only God and I understood what I was doing. Now, only God knows.
 ```
 <div align="center">
-  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
+  <a href="https://liyasthomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
   <br>
   <h1>Liyas Thomas</h1>
   <sub>Built with ❤︎ by
@@ -13,9 +13,9 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ---
 
-[![Build Status](https://travis-ci.org/liyasthomas/liyas-thomas.svg?branch=master)](https://travis-ci.org/liyasthomas/liyas-thomas) [![GitHub release](https://img.shields.io/github/release/liyasthomas/liyas-thomas/all.svg)](https://github.com/liyasthomas/liyas-thomas/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/liyas-thomas/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/liyas-thomas.svg)](https://github.com/liyasthomas/liyas-thomas/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+[![Build Status](https://travis-ci.org/liyasthomas/liyasthomas.svg?branch=master)](https://travis-ci.org/liyasthomas/liyasthomas) [![GitHub release](https://img.shields.io/github/release/liyasthomas/liyasthomas/all.svg)](https://github.com/liyasthomas/liyasthomas/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/liyasthomas/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyasthomas.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/liyasthomas.svg)](https://github.com/liyasthomas/liyasthomas/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/liyas-thomas/master/assets/images/favicon.png" alt="Liyas Thomas" width="32"> Liyas Thomas
+# <img src="https://raw.githubusercontent.com/liyasthomas/liyasthomas/master/assets/images/favicon.png" alt="Liyas Thomas" width="32"> Liyas Thomas
 
 ### My official website by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -142,13 +142,13 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, 
 
 ## Continuous Integration
 
-We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/liyas-thomas).
+We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/liyasthomas).
 
 ---
 
 ## Versioning
 
-This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/liyas-thomas/releases).
+This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/liyasthomas/releases).
 
 ---
 
@@ -172,7 +172,7 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 ### Thanks
 * [Sample](https://www.google.com) - For [Sample](https://www.google.com)
 
-See the list of [contributors](https://github.com/liyasthomas/liyas-thomas/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/liyasthomas/liyasthomas/graphs/contributors) who participated in this project.
 
 ---
 

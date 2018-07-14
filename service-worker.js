@@ -1,4 +1,4 @@
-var CACHE_NAME = 'liyas-thomas-cache';
+var CACHE_NAME = 'liyasthomas-cache';
 var urlsToCache = [
   '/',
   '/index.html',
