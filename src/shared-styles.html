@@ -36,9 +36,7 @@
 				margin: 0;
 			}
 			.listbox {
-				background-color: inherit;
-				padding: 0;
-				color: var(--primary-text-color);
+				color: var(--secondary-text-color);
 			}
 			paper-item, paper-icon-item {
 				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
@@ -64,21 +62,20 @@
 				transition: all .2s;
 			}
 			paper-button.primary {
-				background-color: var(--primary-color);
-				color: var(--primary-text-color);
+				background-color: var(--accent-color);
+				color: #fff;
 				--paper-button-raised-keyboard-focus: {
-					background-color: var(--dark-primary-color);
+					background-color: var(--dark-accent-color);
 				};
 			}
 			paper-button.primary:hover {
-				background-color: var(--dark-primary-color);
+				background-color: var(--dark-accent-color);
 			}
 			paper-button.secondary {
 				background-color: #fff;
 				color: var(--secondary-text-color);
 				--paper-button-raised-keyboard-focus: {
-					background-color: #fff;
-					color: var(--dark-accent-color);
+					color: var(--accent-color);
 				};
 			}
 			paper-button.secondary:hover {
@@ -130,7 +127,7 @@
 				color: var(--dark-primary-color);
 			}
 			.actions paper-icon-button {
-				color: var(--primary-text-color);
+				color: var(--secondary-text-color);
 			}
 			.content {
 				background-position: center;
