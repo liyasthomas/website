@@ -4,8 +4,7 @@
 <link rel="import" href="app-grid-style.html">
 <dom-module id="my-saap">
   <template>
-		<style include="app-grid-style">
-		</style>
+		<style include="app-grid-style"></style>
     <style include="shared-styles">
       :host {
         display: block;
@@ -104,7 +103,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section1.icon]]"></iron-icon>
 						<span>{{section1.title}}</span>
 					</div>
 					<paper-icon-button
@@ -151,7 +149,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section2.icon]]"></iron-icon>
 						<span>{{section2.title}}</span>
 					</div>
 					<paper-icon-button
@@ -198,7 +195,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[section3.icon]]"></iron-icon>
 						<span>{{section3.title}}</span>
 					</div>
 					<paper-icon-button
@@ -245,7 +241,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions">
 					<div class="title">
-						<iron-icon icon="my-icons:[[similar.icon]]"></iron-icon>
 						<span>{{similar.title}}</span>
 					</div>
 				</div>
@@ -283,8 +278,8 @@
 				<span>Contact</span>&nbsp;me
 			</div>
 			<p>
-				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
   </template>

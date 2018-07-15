@@ -166,18 +166,6 @@
 				text-transform: none;
 				margin: 8px;
 			}
-			footer {
-				@apply --layout-horizontal;
-				@apply --layout-center;
-    		@apply --layout-justified;
-				background-color: var(--paper-grey-200);
-				color: var(--secondary-text-color);
-				font-size: 16px;
-				padding: 32px;
-			}
-			footer paper-icon-button {
-				margin: 4px;
-			}
 			#fab {
 				@apply --shadow-elevation-4dp;
 				--paper-fab-background: inherit;
@@ -258,7 +246,7 @@
 						</a>
 						<a id="projects" tabindex="-1">
 							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
-								<iron-icon icon="my-icons:favorite" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
@@ -367,7 +355,7 @@
 							</paper-tab>
 							<paper-tab id="projects">
 								<a href="projects" tabindex="-1">
-									<iron-icon icon="my-icons:favorite"></iron-icon>
+									<iron-icon icon="my-icons:work"></iron-icon>
 								</a>
 							</paper-tab>
 							<paper-tab id="about">
@@ -400,22 +388,6 @@
 						<my-404 name="404"></my-404>
 					</neon-animated-pages>
 				</div>
-				<footer>
-					<div>
-						<a href="https://www.facebook.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/facebook.svg"></paper-icon-button>
-						</a>
-						<a href="https://twitter.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/twitter.svg"></paper-icon-button>
-						</a>
-						<a href="https://plus.google.com/+liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/google-plus.svg"></paper-icon-button>
-						</a>
-						<a href="https://github.com/liyasthomas" target="_blank">
-							<paper-icon-button src="../images/assets/social/github.svg"></paper-icon-button>
-						</a>
-					</div>
-				</footer>
 				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank"><paper-fab id="fab" icon="my-icons:mail"></paper-fab></a>
 			</app-header-layout>
 		</app-drawer-layout>

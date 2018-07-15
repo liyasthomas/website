@@ -4,8 +4,7 @@
 <link rel="import" href="app-grid-style.html">
 <dom-module id="my-projects">
   <template>
-		<style include="app-grid-style">
-		</style>
+		<style include="app-grid-style"></style>
     <style include="shared-styles">
       :host {
         display: block;
@@ -52,21 +51,15 @@
 			}
 			@media all and (min-width: 961px) {
 				:host {
-					--app-grid-columns: 4;
+					--app-grid-columns: 2;
 					--app-grid-gutter: 32px;
-					--app-grid-item-height: 40vw;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
 					width: 60vw;
 				}
-				.item:nth-child(5n+1) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(5n+2) {
-					@apply --app-grid-expandible-item;
-				}
-				.item:nth-child(5n+4) {
+				.item:nth-child(5n+3) {
 					@apply --app-grid-expandible-item;
 				}
 			}
@@ -81,7 +74,7 @@
 				Saap! is my final year project.
 			</div>
 			<p>
-				<a href="saap"><paper-button raised class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
 				<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 			</p>
 		</div>
@@ -103,8 +96,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[android.icon]]"></iron-icon>
-						popular&nbsp;<span>{{android.title}}</span>&nbsp;
+						Popular&nbsp;<span>{{android.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -142,7 +134,7 @@
 				</template>
 			</div>
 			<div class="actions flex-center-center">
-				<a href="projects">
+				<a href="android">
 					<paper-button raised class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -151,8 +143,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[web.icon]]"></iron-icon>
-						popular&nbsp;<span>{{web.title}}</span>&nbsp;
+						Popular&nbsp;<span>{{web.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -190,7 +181,7 @@
 				</template>
 			</div>
 			<div class="actions flex-center-center">
-				<a href="projects">
+				<a href="web">
 					<paper-button raised class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -199,8 +190,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[other.icon]]"></iron-icon>
-						popular&nbsp;<span>{{other.title}}</span>&nbsp;
+						Popular&nbsp;<span>{{other.title}}</span>&nbsp;projects
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -238,7 +228,7 @@
 				</template>
 			</div>
 			<div class="actions flex-center-center">
-				<a href="projects">
+				<a href="other">
 					<paper-button raised class="primary">View all Other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -248,8 +238,8 @@
 				<span>Contact</span>&nbsp;me
 			</div>
 			<p>
-				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
   </template>

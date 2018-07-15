@@ -4,8 +4,7 @@
 <link rel="import" href="app-grid-style.html">
 <dom-module id="my-home">
 	<template>
-		<style include="app-grid-style">
-		</style>
+		<style include="app-grid-style"></style>
     <style include="shared-styles">
       :host {
         display: block;
@@ -74,8 +73,8 @@
 				A designer, developer, and an entrepreneur.
 			</div>
 			<p>
-				<a href="saap"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
-				<a href="about"><paper-button raised class="secondary">Read more<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 		<iron-ajax auto url="data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -96,7 +95,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[recent.icon]]"></iron-icon>
 						<span>{{recent.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
@@ -139,7 +137,6 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[popular.icon]]"></iron-icon>
 						<span>{{popular.title}}</span>&nbsp;posts
 					</div>
 					<paper-icon-button
@@ -182,8 +179,7 @@
 			<template is="dom-if" if="{{!error0}}">
 				<div class="actions flex-justified">
 					<div class="title">
-						<iron-icon icon="my-icons:[[projects.icon]]"></iron-icon>
-						my&nbsp;<span>{{projects.title}}</span>
+						My&nbsp;<span>{{projects.title}}</span>
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -231,8 +227,8 @@
 				<span>Contact</span>&nbsp;me
 			</div>
 			<p>
-				<a href="projects"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-				<a href="about"><paper-button raised class="secondary">Social<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+				<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+				<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 			</p>
 		</div>
 	</template>

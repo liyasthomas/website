@@ -1,7 +1,7 @@
 {
 	"recent": [
 		{
-			"title": "recent",
+			"title": "Recent",
 			"icon": "star",
 			"sub": [
 				{
@@ -27,7 +27,7 @@
 ],
 	"popular": [
 		{
-			"title": "popular",
+			"title": "Popular",
 			"icon": "whatshot",
 			"sub": [
 				{
