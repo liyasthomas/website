@@ -41,7 +41,7 @@
       :host {
         display: block;
 				--primary-color: #fff;
-				--light-primary-color: rgba(0,0,0,.12);
+				--light-primary-color: rgba(0,0,0,.05);
 				--dark-primary-color: rgba(0,0,0,.54);
 				--accent-color: var(--paper-blue-a400);
 				--light-accent-color: var(--paper-blue-500);
@@ -69,13 +69,16 @@
 			}
 			app-drawer {
 				--app-drawer-scrim-background: rgba(0,0,0,.4);
+				color: var(--secondary-text-color);
 				--app-drawer-content-container: {
       		@apply --shadow-elevation-12dp;
 				}
 			}
       .drawer-contents {
 				height: 100%;
-				overflow: auto;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+				
       }
 			span.expand {
 				width: calc(100% - 80px);
@@ -205,11 +208,19 @@
 		<paper-toast id="updateToast" duration="3000" text="App cached. Browse offline!">
 			<paper-button onclick="window.location.reload(true)">Okay</paper-button>
 		</paper-toast>
-		<paper-toast id="ready_toast" duration="5000" text="Page cached. Browse offline."></paper-toast>
+		<paper-toast id="ready_toast" duration="0" text="Light / Dark mode">
+					<paper-icon-button
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getModeIcon(UI)]]"
+							class="toast-button">
+					</paper-icon-button>
+		</paper-toast>
 		<paper-toast id="sharehome" duration="0">
 			<div class="flex-vertical">
 				<div class="flex-horizontal">
-					<div class="flexchild">Share via</div><paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
+					<div class="flexchild">Share via</div>
+					<paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
 				</div>
 				<div on-tap="openShare">
 					<template is="dom-repeat" items="[[social]]">
@@ -230,7 +241,7 @@
 		<app-drawer-layout fullbleed force-narrow>
 			<!-- Drawer content -->
 			<app-drawer id="drawer" slot="drawer" swipe-open>
-				<div class="drawer-contents">
+				<div class$="[[getUIMode(UI)]] drawer-contents">
 					<app-toolbar class="drawer">
 						<div class="logo">▲▼</div>
 					</app-toolbar>
@@ -341,7 +352,7 @@
 			</app-drawer>
       <!-- Main content -->
 			<app-header-layout fullbleed>
-				<app-header id="header" slot="header" fixed condenses effects="waterfall resize-title">
+				<app-header id="header" class$="[[getUIMode(UI)]]" slot="header" fixed condenses effects="waterfall resize-title">
 					<app-toolbar sticky class="tab-nav">
 						<paper-icon-button icon="my-icons:sort" drawer-toggle></paper-icon-button>
 						<span condensed-title><div class="logo">▲▼</div></span>
@@ -366,6 +377,7 @@
 							<paper-icon-button icon="my-icons:mail"></paper-icon-button>
 						</a>
 						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
+						<paper-icon-button icon="my-icons:colorize" on-tap="openTheme"></paper-icon-button>
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>
@@ -400,6 +412,12 @@
 		class MyApp extends Polymer.Element {
 			static get is() {
 				return 'my-app';
+			}
+			getUIMode(UI) {
+				return UI ? 'dark' : 'light';
+			}
+			getModeIcon(icon) {
+				return icon ? 'tonality' : 'view-agenda';
 			}
 			static get properties() {
 				return {
@@ -504,6 +522,9 @@
 			}
 			openShare() {
 				this.$.sharehome.toggle();
+			}
+			openTheme() {
+				this.$.ready_toast.toggle();
 			}
 			toggle() {
 				this.$.collapse.toggle();

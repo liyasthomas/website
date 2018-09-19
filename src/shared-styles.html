@@ -36,7 +36,8 @@
 				margin: 0;
 			}
 			.listbox {
-				color: var(--secondary-text-color);
+				background: none;
+				color: inherit;
 			}
 			paper-item, paper-icon-item {
 				font-family: 'Rubik', 'Product Sans', 'Roboto', 'Noto', sans-serif;
@@ -124,7 +125,7 @@
 				font-size: 32px;
 			}
 			.title span {
-				color: var(--dark-primary-color);
+				color: var(--accent-color);
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -140,6 +141,15 @@
 				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
 				font-size: 14px;
 				color: var(--secondary-text-color);
+			}
+			.dark {
+				background-color: #222;
+				color: rgba(255,255,255,.7);
+			}
+			.green {
+				--accent-color: var(--paper-green-a400);
+				--light-accent-color: var(--paper-green-500);
+				--dark-accent-color: var(--paper-green-a700);
 			}
 /*
 			@media (max-width: 640px) {
