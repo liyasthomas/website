@@ -77,17 +77,7 @@ class MyHome extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="content banner" style="background-image: url(../images/assets/feeds/banner_1.svg);">
-				<div class="title">
-					Hi, I'm&nbsp;<span>Liyas Thomas</span>
-				</div>
-				<div class="description">
-					A designer, developer, and an entrepreneur.
-				</div>
-				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-					<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
-				</p>
+			<div class="content banner" style="background-image: url(../images/assets/home/banner.svg);">
 			</div>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>

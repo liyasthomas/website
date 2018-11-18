@@ -9,7 +9,7 @@
 					"title": "Other #1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
@@ -18,7 +18,7 @@
 					"title": "Other #2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "note",
 					"link": "saap"
 }
@@ -35,7 +35,7 @@
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "bubble-chart",
 					"link": ""
 },
@@ -44,7 +44,7 @@
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "note",
 					"link": ""
 }

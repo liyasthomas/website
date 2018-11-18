@@ -80,18 +80,7 @@ class MyProjects extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="content banner" style="background-image: url(../images/assets/feeds/banner_2.svg);">
-				<div class="title">
-					My&nbsp;<span>projects</span>
-				</div>
-				<div class="description">
-					Not your ordinary camera.
-					Saap! is my final year project.
-				</div>
-				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
-					<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
-				</p>
+			<div class="content banner" style="background-image: url(../images/assets/projects/banner.svg);">
 			</div>
 			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>

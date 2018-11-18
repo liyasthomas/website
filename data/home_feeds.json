@@ -9,7 +9,7 @@
 					"title": "AEIOU",
 					"description": "Augmented reality platform to make education fun and interactive.",
 					"info": "Type / TAG",
-					"img": "../images/assets/home/Workspace.svg",
+					"img": "../images/assets/home/puff.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
@@ -18,7 +18,7 @@
 					"title": "Lvr",
 					"description": "Virtual reality for everyone",
 					"info": "Type / TAG",
-					"img": "../images/assets/home/ar.svg",
+					"img": "../images/assets/home/puff.svg",
 					"icon": "note",
 					"link": "saap"
 },
@@ -27,7 +27,7 @@
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "star",
 					"link": "https://github.com/fuseorg/feedie"
 }
@@ -44,7 +44,7 @@
 					"title": "Award + 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "camera-alt",
 					"link": "https://liyasthomas.github.io/saapshot"
 },
@@ -53,7 +53,7 @@
 					"title": "Saap",
 					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
 },
@@ -62,7 +62,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 },
@@ -71,7 +71,7 @@
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "note",
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
@@ -80,7 +80,7 @@
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
 }
@@ -97,7 +97,7 @@
 					"title": "Camion Info Tech",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "layers",
 					"link": "https://www.camioninfotech.com/"
 },
@@ -106,7 +106,7 @@
 					"title": "Fuse Org",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "code",
 					"link": "https://fuse-org.firebaseapp.com"
 },
@@ -115,7 +115,7 @@
 					"title": "Konnect",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "code",
 					"link": "https://fuse-org.firebaseapp.com"
 }

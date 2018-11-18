@@ -357,10 +357,10 @@ class MyApp extends PolymerElement {
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
-              <div condensed-title>lt</div>
+              <div condensed-title>lt ~ {{page}}</div>
             </app-toolbar>
             <app-toolbar>
-              <div main-title>liyas thomas</div>
+              <div main-title>liyas thomas ~ {{page}}</div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden\$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
@@ -387,19 +387,17 @@ class MyApp extends PolymerElement {
 							</template>
             </app-toolbar>
           </app-header>
-					<div id="pages" class="pages">
-						<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
-							<my-home name="home"></my-home>
-							<my-projects name="projects"></my-projects>
-							<my-about name="about"></my-about>
-							<my-android name="android"></my-android>
-							<my-web name="web"></my-web>
-							<my-others name="others"></my-others>
-							<my-saap name="saap"></my-saap>
-							<my-view4 name="view4"></my-view4>
-							<my-404 name="404"></my-404>
-						</iron-pages>
-					</div>
+					<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
+						<my-home name="home"></my-home>
+						<my-projects name="projects"></my-projects>
+						<my-about name="about"></my-about>
+						<my-android name="android"></my-android>
+						<my-web name="web"></my-web>
+						<my-others name="others"></my-others>
+						<my-saap name="saap"></my-saap>
+						<my-view4 name="view4"></my-view4>
+						<my-404 name="404"></my-404>
+					</iron-pages>
           <footer>
 						&copy; Polymer project
           </footer>

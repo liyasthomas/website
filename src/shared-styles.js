@@ -161,7 +161,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 
 			.banner {
 				height: calc(100vh - 128px);
-				margin-bottom: 16px;
 			}
 
 			.actions {
@@ -185,7 +184,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.content {
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				padding: 32px;
 			}
 

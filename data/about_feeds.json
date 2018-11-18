@@ -79,7 +79,7 @@
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "twitter",
 					"link": ""
 },
@@ -88,7 +88,7 @@
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "linkedin",
 					"link": ""
 },
@@ -97,7 +97,7 @@
 					"title": "Similar 3",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "facebook",
 					"link": ""
 },
@@ -106,7 +106,7 @@
 					"title": "Similar 4",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "linkedin",
 					"link": ""
 },
@@ -115,7 +115,7 @@
 					"title": "Similar 5",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "facebook",
 					"link": ""
 },
@@ -124,7 +124,7 @@
 					"title": "Similar 6",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "instagram",
 					"link": ""
 },
@@ -133,7 +133,7 @@
 					"title": "Similar 7",
 					"description": "blah",
 					"info": "View photo",
-					"img": "../images/assets/about",
+					"img": "../images/assets/about/puff.svg",
 					"icon": "google-plus",
 					"link": ""
 }

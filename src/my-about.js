@@ -79,6 +79,9 @@ class MyAbout extends PolymerElement {
 					}
 				}
       </style>
+			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+			<div class="content banner" style="background-image: url(../images/assets/about/banner.svg);">
+			</div>
 			<div class="content">
 				<div class="title">
 					About&nbsp;<span>me</span>
@@ -172,7 +175,7 @@ class MyAbout extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
