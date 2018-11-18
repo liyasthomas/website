@@ -82,6 +82,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       }
     </script>
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function() {
+					navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+
+						var app = document.querySelector('#app');
+						if (registration.waiting) {
+							app.update(registration);
+							return;
+						}
+
+						if (registration.installing) {
+							registration.installing.addEventListener('statechange', function() {
+								app.update(registration);
+							});
+							return;
+						}
+
+						registration.addEventListener('updatefound', function() {
+							app.update(registration);
+						});
+
+						console.info('ServiceWorker registration successful with scope: ', registration.scope);
+					}, function(err) {
+						console.info('ServiceWorker registration failed: ', err);
+					});;
+				});
+			}
+		</script>
 
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -100,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
   </head>
   <body>
-    <my-app></my-app>
+    <my-app id="app"></my-app>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>

@@ -37,7 +37,7 @@ import '@polymer/paper-progress/paper-progress.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-item/paper-icon-item.js';
-//<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+import '@polymer/paper-toast/paper-toast.js';
 //<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
 import './shared-styles.js';
 import './my-icons.js';
@@ -125,7 +125,7 @@ class MyApp extends PolymerElement {
 				font-size: 44px;
 				color: var(--primary-text-color);
 				font-weight: 700;
-margin-left: 16px;
+				margin-left: 16px;
 				}
 
 				[condensed-title] {
@@ -134,29 +134,29 @@ margin-left: 16px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 				font-weight: 700;
-margin-left: 16px;
+				margin-left: 16px;
 				}
 
-      paper-tabs {
-        height: 100%;
-				--paper-tab-content-unselected: {
-					opacity: 1;
+				paper-tabs {
+					height: 100%;
+					--paper-tab-content-unselected: {
+						opacity: 1;
+					}
 				}
-      }
-      paper-tab {
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				text-transform: capitalize;
-				padding: 0;
-      }
-			paper-tab a {
-				@apply --layout-vertical;
-				@apply --layout-center-center;
-				padding: 0 16px;
-				font-weight: 500;
-  		}
-      .pages {
-        @apply --layout-flex;
-      }
+				paper-tab {
+					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+					text-transform: capitalize;
+					padding: 0;
+				}
+				paper-tab a {
+					@apply --layout-vertical;
+					@apply --layout-center-center;
+					padding: 0 16px;
+					font-weight: 500;
+				}
+				.pages {
+					@apply --layout-flex;
+				}
 				paper-progress {
 					display: block;
 					width: 100%;
@@ -171,9 +171,38 @@ margin-left: 16px;
 					background-color: white;
 					font-size: 14px;
 				}
+			paper-toast {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				@apply --layout-justified;
+			}
+			.toast-button {
+				text-transform: none;
+				margin: 8px;
+			}
+
+			#sharehome {
+				@apply --shadow-elevation-12dp;
+				max-width: 320px;
+				background-color: #fff !important;
+				color: var(--paper-grey-500);
+			}
 			@media (max-width: 640px) {
 				app-drawer {
 					--app-drawer-width: 80%;
+				}
+				paper-toast {
+					margin: 0;
+					max-width: none;
+					width: 100%;
+				}
+
+				#sharehome {
+					max-width: none;
+				}
+
+				.toast-button {
+					margin: 16px 8px;
 				}
 			}
       </style>
@@ -186,6 +215,33 @@ margin-left: 16px;
 
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 
+			<paper-toast id="updateToast" duration="0" text="New update is here!">
+				<paper-button onclick="window.location.reload(true)">Update</paper-button>
+			</paper-toast>
+			<paper-toast id="sharehome" duration="0">
+				<div class="flex-vertical">
+					<div class="flex-horizontal">
+						<div class="flexchild">Share via</div>
+						<paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
+					</div>
+					<div on-tap="openShare">
+						<template is="dom-repeat" items="[[social]]">
+							<a href="{{item.link}}" target="_blank">
+								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button>
+							</a>
+						</template>
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank">
+							<paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button>
+						</a>
+						<a href="tel:+919539653962">
+							<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
+						</a>
+						<a href="about">
+							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"></paper-icon-button>
+						</a>
+					</div>
+				</div>
+			</paper-toast>
       <app-drawer-layout fullbleed narrow="{{narrow}}" force-narrow>
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
@@ -364,6 +420,44 @@ margin-left: 16px;
 				type: Boolean,
 				reflectToAttribute: true
 			},
+			social: {
+				type: Array,
+				value: function () {
+					return [{
+							link: "https://www.facebook.com/liyasthomas",
+							icon: "facebook"
+						},
+						{
+							link: "https://twitter.com/liyasthomas",
+							icon: "twitter"
+						},
+						{
+							link: "https://plus.google.com/liyasthomas",
+							icon: "google-plus"
+						},
+						{
+							link: "https://github.com/liyasthomas",
+							icon: "github"
+						},
+						{
+							link: "https://www.linkedin.com/in/liyasthomas",
+							icon: "linkedin"
+						},
+						{
+							link: "https://www.linkedin.com/in/liyasthomas",
+							icon: "behance"
+						},
+						{
+							link: "https://www.linkedin.com/in/liyasthomas",
+							icon: "dribbble"
+						},
+						{
+							link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
+							icon: "whatsapp"
+						}
+					]
+				}
+			},
 			routeData: Object,
 			subroute: Object
 		};
@@ -377,8 +471,16 @@ margin-left: 16px;
 		}
 	}
 
+	update(worker) {
+		this.$.updateToast.show();
+	}
+
 	toggle() {
 		this.$.collapse.toggle();
+	}
+
+	openShare() {
+		this.$.sharehome.toggle();
 	}
 
 	_getIcon(opened) {
