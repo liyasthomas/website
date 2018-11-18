@@ -1,189 +1,86 @@
-```
-When I wrote this, only God and I understood what I was doing. Now, only God knows.
-```
-<div align="center">
-  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
-  <br>
-  <h1>Liyas Thomas</h1>
-  <sub>Built with ❤︎ by
-  <a href="https://github.com/liyasthomas">liyasthomas</a> and
-  <a href="https://github.com/liyasthomas/templates/graphs/contributors">contributors</a>
-	</sub>
-</div>
+# Polymer App Toolbox - Starter Kit
 
----
+[![Build Status](https://travis-ci.org/Polymer/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/polymer-starter-kit)
 
-[![Build Status](https://travis-ci.org/liyasthomas/liyasthomas.svg?branch=master)](https://travis-ci.org/liyasthomas/liyasthomas) [![GitHub release](https://img.shields.io/github/release/liyasthomas/liyasthomas/all.svg)](https://github.com/liyasthomas/liyasthomas/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/liyasthomas/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/liyasthomas.svg)](https://github.com/liyasthomas/liyasthomas/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+This template is a starting point for building apps using a drawer-based
+layout. The layout is provided by `app-layout` elements.
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/liyasthomas/master/assets/images/favicon.png" alt="Liyas Thomas" width="32"> Liyas Thomas
+This template, along with the `polymer-cli` toolchain, also demonstrates use
+of the "PRPL pattern" This pattern allows fast first delivery and interaction with
+the content at the initial route requested by the user, along with fast subsequent
+navigation by pre-caching the remaining components required by the app and
+progressively loading them on-demand as the user navigates through the app.
 
-### My official website by [Liyas Thomas](https://github.com/liyasthomas)
+The PRPL pattern, in a nutshell:
 
-<div align="center">
-  <br>
-  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png" alt="Templates" width="100%">
-  <br>
-</div>
+* **Push** components required for the initial route
+* **Render** initial route ASAP
+* **Pre-cache** components for remaining routes
+* **Lazy-load** and progressively upgrade next routes on-demand
 
-### Features :sparkles:
+### Setup
 
-:eyeglasses: **Virtual Reality made simple**: Description 1
+##### Prerequisites
 
-:heart: **Declarative HTML**: Description 2
+Install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
+[npm](https://www.npmjs.com) (we assume you have pre-installed [node.js](https://nodejs.org)).
 
-:electric_plug: **Entity-Component Architecture**: Description 3
+    npm install -g polymer-cli@next
 
-:zap: **Performance**: Description 4
+##### Initialize project from template
 
-:globe_with_meridians: **Cross-Platform**: Description 5
+    mkdir my-app
+    cd my-app
+    polymer init polymer-3-starter-kit
 
----
+### Start the development server
 
-## Getting started
+This command serves the app at `http://127.0.0.1:8081` and provides basic URL
+routing for the app:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+    npm start
 
-<div align="center">
-  <br>
-  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline-option3.jpg" alt="Templates" width="100%">
-  <br>
-</div>
+### Build
 
-### Prerequisites
+The `npm run build` command builds your Polymer application for production, using build configuration options provided by the command line or in your project's `polymer.json` file.
 
-What things you need to install the software and how to install them.
+You can configure your `polymer.json` file to create multiple builds. This is necessary if you will be serving different builds optimized for different browsers. You can define your own named builds, or use presets. See the documentation on [building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production) for more information.
 
-* A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input
-* Internet connection
-* A web browser
-* [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
-
-<div align="center">
-  <br>
-  <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="Templates" width="100%">
-  <br>
-  <br>
-</div>
-
-### Demo: Try it on mobile :iphone:
-
-It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream)** (for iOS, you need to update to iOS 11).
-
-Try on your phone in only two easy steps, check it out!
-
-1. Step 1
-2. Step 2
-
-You're done!
-
-<div align="center">
-  <br>
-  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline2-option1.png" alt="Templates" width="100%">
-  <br>
-</div>
-
-### Installing
-
-A step by step series of examples that tell you've to get a development environment running.
-
-1. Download the whole zip/clone the repository.
-2. Unzip and make changes.
-3. Save and deploy to any hosting platforms like Firebase, GitHub pages etc.
-
----
-
-## Running the tests
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why.
+The Polymer Starter Kit is configured to create three builds. These builds will be output to a subdirectory under the `build/` directory as follows:
 
 ```
-Will be explained later
+build/
+  es5-bundled/
+  es6-bundled/
+  esm-bundled/
 ```
 
-### And coding style tests
+* `es5-bundled` is a bundled, minified build with a service worker. ES6 code is compiled to ES5 for compatibility with older browsers.
+* `es6-bundled` is a bundled, minified build with a service worker. ES6 code is served as-is. This build is for browsers that can handle ES6 code - see [building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production#compiling) for a list.
+* `esm-bundled` is a bundled, minified build with a service worker. It uses standard ES module import/export statements for browsers that support them.
 
-Explain what these tests test and why.
+Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](https://www.polymer-project.org/3.0/docs/tools/polymer-json) and [building your Polymer application for production](https://www.polymer-project.org/3.0/toolbox/build-for-production).
 
-```
-Will be explained later
-```
+### Preview the build
 
----
+This command serves your app. Replace `build-folder-name` with the folder name of the build you want to serve.
 
-## Deployment
+    npm start build/build-folder-name/
 
-Add additional notes about how to deploy this on a live system.
+### Run tests
 
-```
-Will be explained later
-```
+This command will run [Web Component Tester](https://github.com/Polymer/web-component-tester)
+against the browsers currently installed on your machine:
 
----
+    npm test
 
-## Built with
+If running Windows you will need to set the following environment variables:
 
-* **[Sample](https://www.google.com)** - Sample
-	* [Sample](https://www.google.com) - Sample
-* **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
-* HTML - For the web framework
-* CSS - For styling components
+- LAUNCHPAD_BROWSERS
+- LAUNCHPAD_CHROME
+
+Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-variables-impacting-local-browsers-detection)
 
 ---
 
-## Contributing
-
-Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
----
-
-## Continuous Integration
-
-We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/liyasthomas).
-
----
-
-## Versioning
-
-This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/liyasthomas/releases).
-
----
-
-## Change log
-
-See the [CHANGELOG](CHANGELOG.md) file for details.
-
----
-
-## Authors
-
-### Lead Developers
-* [**Liyas Thomas**](https://github.com/liyasthomas) - *Author*
-
-### Testing and Debugging
-* [Liyas Thomas](https://github.com/liyasthomas)
-
-### Contributors
-* [Liyas Thomas](https://github.com/liyasthomas)
-
-### Thanks
-* [Sample](https://www.google.com) - For [Sample](https://www.google.com)
-
-See the list of [contributors](https://github.com/liyasthomas/liyasthomas/graphs/contributors) who participated in this project.
-
----
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspirations:
-	* [Sample](https://www.google.com)
+Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md).

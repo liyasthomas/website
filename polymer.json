@@ -1,40 +1,74 @@
 {
-	"entrypoint": "index.html",
-	"shell": "src/my-app.html",
-	"fragments": [
-    "src/my-home.html",
-    "src/my-projects.html",
-    "src/my-about.html",
-    "src/my-android.html",
-    "src/my-web.html",
-    "src/my-other.html",
-    "src/my-saap.html",
-    "src/my-404.html"
+  "entrypoint": "index.html",
+  "shell": "src/my-app.js",
+  "sources": [
+    "images/**/*"
   ],
-	"sources": [
-    "src/**/*",
-    "images/**/*",
-    "data/**/*"
-  ],
-	"extraDependencies": [
+  "extraDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/*.js"
+    "node_modules/@webcomponents/webcomponentsjs/*.js",
+    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
   ],
-	"lint": {
-		"rules": ["polymer-2"]
-	},
-	"builds": [{
-		"bundle": true,
-		"addServiceWorker": true,
-		"js": {
-			"compile": true,
-			"minify": true
-		},
-		"css": {
-			"minify": true
-		},
-		"html": {
-			"minify": true
-		}
-	}]
+  "builds": [
+    {
+      "name": "esm-bundled",
+      "browserCapabilities": [
+        "es2015",
+        "modules"
+      ],
+      "js": {
+        "minify": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true
+    },
+    {
+      "name": "es6-bundled",
+      "browserCapabilities": [
+        "es2015"
+      ],
+      "js": {
+        "minify": true,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true
+    },
+    {
+      "name": "es5-bundled",
+      "js": {
+        "minify": true,
+        "compile": true,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  }
 }

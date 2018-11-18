@@ -31,7 +31,7 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "white",
+					"color": "green",
 					"title": "Award + 1",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -40,20 +40,20 @@
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "white",
+					"color": "blue",
 					"title": "Saap",
 					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
-					"img": "../images/assets/home/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "black",
+					"color": "yellow",
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
-					"img": "../images/assets/home/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 },
@@ -62,7 +62,7 @@
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "star",
 					"link": "https://github.com/fuseorg/feedie"
 },
@@ -71,7 +71,7 @@
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "note",
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
@@ -80,7 +80,7 @@
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
 },
@@ -89,7 +89,7 @@
 					"title": "Form Face",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "tag-faces",
 					"link": "https://form-face.firebaseapp.com"
 }
@@ -106,7 +106,7 @@
 					"title": "Camion Info Tech",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "layers",
 					"link": "https://www.camioninfotech.com/"
 },
@@ -115,7 +115,7 @@
 					"title": "Fuse Org",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/home",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "code",
 					"link": "https://fuse-org.firebaseapp.com"
 }
