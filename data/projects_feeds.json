@@ -9,16 +9,16 @@
 					"title": "PWA Wrapper",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "bubble-chart",
 					"link": ""
 },
 				{
-					"color": "white",
+					"color": "red",
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "note",
 					"link": ""
 }
@@ -31,65 +31,65 @@
 			"icon": "language",
 			"sub": [
 				{
-					"color": "white",
+					"color": "blue",
 					"title": "Saapshot",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "camera-alt",
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "white",
+					"color": "green",
 					"title": "Saap",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "white",
+					"color": "yellow",
 					"title": "Lvr",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "visibility",
 					"link": "https://liyas-vr.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "teal",
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "star",
 					"link": "https://github.com/fuseorg/feedie"
 },
 				{
-					"color": "white",
+					"color": "cyan",
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "note",
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "red",
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "black",
 					"title": "Form Face",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "tag-faces",
 					"link": "https://form-face.firebaseapp.com"
 }
@@ -102,11 +102,11 @@
 			"icon": "group",
 			"sub": [
 				{
-					"color": "white",
+					"color": "orange",
 					"title": "Camion Info Tech",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "layers",
 					"link": "https://www.camioninfotech.com/"
 },
@@ -115,7 +115,7 @@
 					"title": "Fuse Org",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/projects/placeholder.svg",
 					"icon": "code",
 					"link": "https://fuse-org.firebaseapp.com"
 }
