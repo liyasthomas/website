@@ -315,15 +315,15 @@ class MyApp extends PolymerElement {
 									</a>
 								</template>
 							</template>
-							<template is="dom-repeat" items="[[ajaxResponse.other]]" as="other">
-								<a href="other" tabindex="-1">
+							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
+								<a href="others" tabindex="-1">
 									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[other.icon]]" item-icon slot="item-icon"></iron-icon>
-										<span class="expand">{{other.title}}</span>
+										<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
+										<span class="expand">{{others.title}}</span>
 										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 									</paper-icon-item>
 								</a>
-								<template is="dom-repeat" items="[[other.sub]]" as="sub">
+								<template is="dom-repeat" items="[[others.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
@@ -392,6 +392,10 @@ class MyApp extends PolymerElement {
 							<my-home name="home"></my-home>
 							<my-projects name="projects"></my-projects>
 							<my-about name="about"></my-about>
+							<my-android name="android"></my-android>
+							<my-web name="web"></my-web>
+							<my-others name="others"></my-others>
+							<my-saap name="saap"></my-saap>
 							<my-view4 name="view4"></my-view4>
 							<my-404 name="404"></my-404>
 						</iron-pages>
@@ -510,7 +514,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'android', 'web', 'others', 'saap', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -536,6 +540,18 @@ class MyApp extends PolymerElement {
 				break;
 			case 'about':
 				import('./my-about.js');
+				break;
+			case 'android':
+				import('./my-android.js');
+				break;
+			case 'web':
+				import('./my-web.js');
+				break;
+			case 'others':
+				import('./my-others.js');
+				break;
+			case 'saap':
+				import('./my-saap.js');
 				break;
 			case 'view4':
 				import('./my-view4.js');

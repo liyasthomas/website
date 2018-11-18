@@ -1,24 +1,24 @@
 {
-	"other": [
+	"others": [
 		{
-			"title": "other",
+			"title": "Others",
 			"icon": "language",
 			"sub": [
 				{
 					"color": "white",
-					"title": "PWA Wrapper",
+					"title": "Other #1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
 				{
 					"color": "white",
-					"title": "Pineapple Notes",
+					"title": "Other #2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "note",
 					"link": "saap"
 }
@@ -27,7 +27,7 @@
 ],
 	"similar": [
 		{
-			"title": "similar",
+			"title": "Similar",
 			"icon": "group",
 			"sub": [
 				{
@@ -35,7 +35,7 @@
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "bubble-chart",
 					"link": ""
 },
@@ -44,7 +44,7 @@
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/projects/",
+					"img": "../images/assets/feeds/award.svg",
 					"icon": "note",
 					"link": ""
 }

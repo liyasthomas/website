@@ -8,13 +8,16 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import {
+	PolymerElement,
+	html
+} from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
 class MyAbout extends PolymerElement {
-  static get template() {
-    return html`
+	static get template() {
+		return html `
       <style include="app-grid-style">
       </style>
       <style include="shared-styles">
@@ -188,7 +191,8 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
     `;
-  }
+	}
+
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();

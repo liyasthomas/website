@@ -15,7 +15,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyProjects extends PolymerElement {
+class MyOthers extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -38,16 +38,13 @@ class MyProjects extends PolymerElement {
 				}
 				@media all and (min-width: 361px) and (max-width: 640px) {
 					:host {
-						--app-grid-columns: 2;
+						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
 						--app-grid-item-height: 80vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
 						width: 100%;
-					}
-					.item:nth-child(3n+1) {
-						@apply --app-grid-expandible-item;
 					}
 				}
 				@media all and (min-width: 641px) and (max-width: 960px) {
@@ -60,7 +57,7 @@ class MyProjects extends PolymerElement {
 					.list {
 						width: 80vw;
 					}
-					.item:nth-child(5n+1) {
+					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;
 					}
 				}
@@ -68,7 +65,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 50vw;
+						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -80,20 +77,20 @@ class MyProjects extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="content banner" style="background-image: url(../images/assets/feeds/banner_2.svg);">
+			<div class="content" style="background-image: url(../images/assets/projects/);">
 				<div class="title">
-					My&nbsp;<span>projects</span>
+					<span>Other</span>&nbsp;projects
 				</div>
 				<div class="description">
 					Not your ordinary camera.
 					Saap! is my final year project.
 				</div>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
+					<a href="saap"><paper-button raised class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
 					<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/others_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class="actions flex-center-center" hidden$="[[!loading0]]">
@@ -107,105 +104,11 @@ class MyProjects extends PolymerElement {
 					<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
 				</div>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{android.title}}</span>
-						</div>
-						<paper-icon-button
-								hidden$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[android.sub]]" as="sub">
-						<div class="item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class="actions flex-center-center">
-					<a href="android">
-						<paper-button raised class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{web.title}}</span>
-						</div>
-						<paper-icon-button
-								hidden$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub">
-						<div class="item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class="actions flex-center-center">
-					<a href="web">
-						<paper-button raised class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 				<template is="dom-if" if="{{!error0}}">
 					<div class="actions flex-justified">
 						<div class="title">
-							<span>{{others.title}}</span>
+							All&nbsp;<span>{{others.title}}</span>&nbsp;projects ({{others.sub.length}})
 						</div>
 						<paper-icon-button
 								hidden$="{{!wideLayout}}"
@@ -242,10 +145,41 @@ class MyProjects extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class="actions flex-center-center">
-					<a href="others">
-						<paper-button raised class="primary">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-					</a>
+			</template>
+			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
+				<template is="dom-if" if="{{!error0}}">
+					<div class="actions">
+						<div class="title">
+							<span>{{similar.title}}</span>
+						</div>
+					</div>
+				</template>
+				<div class="app-grid" has-aspect-ratio>
+					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
+						<div class="item">
+							<div class="container">
+								<div class="block top">
+									<div class="title">{{sub.title}}</div>
+								</div>
+								<div class="block mid">
+									<div class="description">{{sub.description}}</div>
+								</div>
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+								</div>
+								<div class="block bottom">
+									<div class="info">
+										<div class="flexchild">
+											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</template>
 				</div>
 			</template>
 			<div class="content">
@@ -288,4 +222,4 @@ class MyProjects extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-projects', MyProjects);
+window.customElements.define('my-others', MyOthers);

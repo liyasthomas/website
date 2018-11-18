@@ -6,8 +6,8 @@
 			"sub": [
 				{
 					"color": "purple",
-					"title": "Redesign. Refresh. Reinvent.",
-					"description": "Meet the all new material designed website for a refreshing experiences with eye candy colors and animations with ease",
+					"title": "AEIOU",
+					"description": "Augmented reality platform to make education fun and interactive.",
 					"info": "Type / TAG",
 					"img": "../images/assets/home/Workspace.svg",
 					"icon": "bubble-chart",
@@ -21,6 +21,15 @@
 					"img": "../images/assets/home/ar.svg",
 					"icon": "note",
 					"link": "saap"
+},
+				{
+					"color": "cyan",
+					"title": "Feedie",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/feeds/award.svg",
+					"icon": "star",
+					"link": "https://github.com/fuseorg/feedie"
 }
 ]
 }
@@ -58,15 +67,6 @@
 					"link": "wallpapers"
 },
 				{
-					"color": "cyan",
-					"title": "Feedie",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
-					"icon": "star",
-					"link": "https://github.com/fuseorg/feedie"
-},
-				{
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "blah",
@@ -83,22 +83,13 @@
 					"img": "../images/assets/feeds/award.svg",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
-},
-				{
-					"color": "red",
-					"title": "Form Face",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/award.svg",
-					"icon": "tag-faces",
-					"link": "https://form-face.firebaseapp.com"
 }
 ]
 }
 ],
 	"projects": [
 		{
-			"title": "projects",
+			"title": "Projects",
 			"icon": "work",
 			"sub": [
 				{
@@ -113,6 +104,15 @@
 				{
 					"color": "white",
 					"title": "Fuse Org",
+					"description": "blah",
+					"info": "Type / TAG",
+					"img": "../images/assets/feeds/award.svg",
+					"icon": "code",
+					"link": "https://fuse-org.firebaseapp.com"
+},
+				{
+					"color": "white",
+					"title": "Konnect",
 					"description": "blah",
 					"info": "Type / TAG",
 					"img": "../images/assets/feeds/award.svg",

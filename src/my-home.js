@@ -191,7 +191,7 @@ class MyHome extends PolymerElement {
 				<template is="dom-if" if="{{!error0}}">
 					<div class="actions flex-justified">
 						<div class="title">
-							My&nbsp;<span>{{projects.title}}</span>
+							<span>{{projects.title}}</span>
 						</div>
 						<paper-icon-button
 								hidden$="{{!wideLayout}}"
@@ -245,6 +245,7 @@ class MyHome extends PolymerElement {
 			</div>
     `;
 	}
+
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();

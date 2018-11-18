@@ -1,7 +1,7 @@
 {
 	"android": [
 		{
-			"title": "android",
+			"title": "Android",
 			"icon": "android",
 			"sub": [
 				{
@@ -27,7 +27,7 @@
 ],
 	"web": [
 		{
-			"title": "web",
+			"title": "Web",
 			"icon": "language",
 			"sub": [
 				{
@@ -96,9 +96,9 @@
 ]
 }
 ],
-	"other": [
+	"others": [
 		{
-			"title": "other",
+			"title": "Others",
 			"icon": "group",
 			"sub": [
 				{
