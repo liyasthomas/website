@@ -228,7 +228,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       	@apply --layout-vertical;
 			}
 			.bg {
-@apply --layout-flex;
+				@apply --layout-flex;
 				--iron-image-placeholder: {
 					background-color: #ddd;
 				}
@@ -304,44 +304,44 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: #fff;
 			}
 			.purple-bg {
-				background-color: var(--paper-purple-a700);
+				background-color: var(--paper-purple-a400);
 				color: #fff;
 			}
 			.deep-purple-bg {
-				background-color: var(--paper-deep-purple-a700);
+				background-color: var(--paper-deep-purple-a400);
 				color: #fff;
 			}
 			.red-bg {
 				color: #fff;
-				background-color: var(--paper-red-a700);
+				background-color: var(--paper-red-a400);
 			}
 			.deep-orange-bg {
 				color: #fff;
-				background-color: var(--paper-orange-a700);
+				background-color: var(--paper-orange-a400);
 			}
 			.cyan-bg {
-				background-color: var(--paper-cyan-a700);
+				background-color: var(--paper-cyan-a400);
 				color: #fff;
 			}
 			.green-bg {
-				background-color: var(--paper-green-a700);
-				color: var(--paper-green-a700);
+				background-color: var(--paper-green-a400);
+				color: var(--paper-green-a400);
 			}
 			.yellow-bg {
 				color: var(--paper-grey-900);
 				background-color: var(--paper-yellow-a200);
 			}
 			.blue-bg {
-				background-color: var(--paper-blue-a700);
+				background-color: var(--paper-blue-a400);
 				color: #fff;
 			}
 			.teal-bg {
-				background-color: var(--paper-teal-a700);
-				color: var(--paper-teal-a700);
+				background-color: var(--paper-teal-a400);
+				color: var(--paper-teal-a400);
 			}
 			.indigo-bg {
-				background-color: var(--paper-indigo-a700);
-				color: var(--paper-purple-a700);
+				background-color: var(--paper-indigo-a400);
+				color: var(--paper-purple-a400);
 			}
 
 			.white-fg {
@@ -354,31 +354,31 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--paper-grey-900);
 			}
 			.purple-fg {
-				color: var(--paper-purple-a700);
+				color: var(--paper-purple-a400);
 			}
 			.deep-purple-fg {
-				color: var(--paper-deep-purple-a700);
+				color: var(--paper-deep-purple-a400);
 			}
 			.red-fg {
-				color: var(--paper-red-a700);
+				color: var(--paper-red-a400);
 			}
 			.yellow-fg {
 				color: var(--paper-yellow-a200);
 			}
 			.cyan-fg {
-				color: var(--paper-cyan-a700);
+				color: var(--paper-cyan-a400);
 			}
 			.green-fg {
-				color: var(--paper-green-a700);
+				color: var(--paper-green-a400);
 			}
 			.deep-orange-fg {
-				color: var(--paper-deep-orange-a700);
+				color: var(--paper-deep-orange-a400);
 			}
 			.blue-fg {
-				color: var(--paper-blue-a700);
+				color: var(--paper-blue-a400);
 			}
 			.teal-fg {
-				color: var(--paper-teal-a700);
+				color: var(--paper-teal-a400);
 			}
 			.indigo-fg {
 				color: var(--paper-indigo-900);

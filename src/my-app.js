@@ -59,7 +59,7 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: #000;
+					--accent-color: var(--paper-teal-a400);
 					--light-accent-color: var(--paper-grey-500);
 					--dark-accent-color: var(--paper-grey-800);
 					--primary-text-color: rgba(0, 0, 0, .87);
@@ -360,7 +360,7 @@ class MyApp extends PolymerElement {
               <div condensed-title>lt ~ {{page}}</div>
             </app-toolbar>
             <app-toolbar>
-              <div main-title>liyas thomas ~ {{page}}</div>
+              <div main-title>liyas thomas</div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden\$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">

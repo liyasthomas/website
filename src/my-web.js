@@ -51,7 +51,7 @@ class MyWeb extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 70vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -65,7 +65,7 @@ class MyWeb extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 35vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -79,7 +79,7 @@ class MyWeb extends PolymerElement {
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="content" style="background-image: url(../images/assets/feeds/banner_1.svg);">
 				<div class="title">
-					<span>Web</span>&nbsp;projects
+					<span>Web</span> projects
 				</div>
 				<div class="description">
 					Not your ordinary camera.
@@ -93,8 +93,8 @@ class MyWeb extends PolymerElement {
 			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class="actions flex-center-center" hidden$="[[!loading0]]">
-					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+				<div class="actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
@@ -108,17 +108,17 @@ class MyWeb extends PolymerElement {
 				<template is="dom-if" if="{{!error0}}">
 					<div class="actions flex-justified">
 						<div class="title">
-							All&nbsp;<span>{{web.title}}</span>&nbsp;projects ({{web.sub.length}})
+							<span>{{web.title}}</span> projects ({{web.sub.length}})
 						</div>
 						<paper-icon-button
-								hidden$="{{!wideLayout}}"
+								hidden\$="{{!wideLayout}}"
 								toggles
 								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
+								icon\$="my-icons:[[getUIIcon(UI)]]">
 						</paper-icon-button>
 					</div>
 				</template>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub">
 						<div class="item">
 							<div class="container">
@@ -128,16 +128,16 @@ class MyWeb extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
 										</div>
 									</div>
 								</div>
@@ -150,7 +150,7 @@ class MyWeb extends PolymerElement {
 				<template is="dom-if" if="{{!error0}}">
 					<div class="actions">
 						<div class="title">
-							<span>{{similar.title}}</span>
+							<span>{{similar.title}}</span> projects
 						</div>
 					</div>
 				</template>
@@ -164,16 +164,16 @@ class MyWeb extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
 										</div>
 									</div>
 								</div>
@@ -184,7 +184,7 @@ class MyWeb extends PolymerElement {
 			</template>
 			<div class="content">
 				<div class="title">
-					<span>Contact</span>&nbsp;me
+					<span>Contact</span> me
 				</div>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>

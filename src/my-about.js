@@ -38,43 +38,40 @@ class MyAbout extends PolymerElement {
 				}
 				@media all and (min-width: 361px) and (max-width: 640px) {
 					:host {
-						--app-grid-columns: 2;
+						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
 						--app-grid-item-height: 80vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
 						width: 100%;
-					}
-					.item:nth-child(3n+1) {
-						@apply --app-grid-expandible-item;
 					}
 				}
 				@media all and (min-width: 641px) and (max-width: 960px) {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 70vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 80vw;
 					}
-					.item:nth-child(5n+1) {
+					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;
 					}
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 4;
+						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 35vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(7n+2) {
+					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;
 					}
 				}
@@ -84,7 +81,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class="content">
 				<div class="title">
-					About&nbsp;<span>me</span>
+					About <span>me</span>
 				</div>
 				<div class="description">
 					Hi, My name is Liyas Thomas - a designer, developer, and an entrepreneur.
@@ -103,7 +100,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class="content">
 				<div class="title">
-					Buy me a&nbsp;<span>coffee!</span>
+					Buy me a <span>coffee!</span>
 				</div>
 				<div class="description">
 					Appreciate my works by making a donation.
@@ -114,7 +111,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class="content">
 				<div class="title">
-					<span>Open source</span>&nbsp;projects
+					<span>Open source</span> projects
 				</div>
 				<div class="description">
 					Open sourcing our projects, or part of it, can help inspire other coders.
@@ -128,8 +125,8 @@ class MyAbout extends PolymerElement {
 			<iron-ajax auto url="data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class="actions flex-center-center" hidden$="[[!loading0]]">
-					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+				<div class="actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
@@ -143,7 +140,7 @@ class MyAbout extends PolymerElement {
 				<div class="content">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="title">
-							I'm&nbsp;<span>{{social.title}}</span>
+							I'm <span>{{social.title}}</span>
 						</div>
 						<div class="description">
 							Follow me on:
@@ -175,13 +172,13 @@ class MyAbout extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
 											<iron-icon src="../images/assets/social/{{sub.icon}}.svg"></iron-icon>
