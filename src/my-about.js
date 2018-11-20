@@ -89,13 +89,13 @@ class MyAbout extends PolymerElement {
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="primary">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button raised class="secondary">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class="content">
@@ -106,7 +106,7 @@ class MyAbout extends PolymerElement {
 					Appreciate my works by making a donation.
 				</div>
 				<p>
-					<a href="https://paypal.me/liyascthomas/50" target="_blank"><paper-button raised class="secondary">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
+					<a href="https://paypal.me/liyascthomas/50" target="_blank"><paper-button class="secondary">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class="content">
@@ -117,7 +117,7 @@ class MyAbout extends PolymerElement {
 					Open sourcing our projects, or part of it, can help inspire other coders.
 				</div>
 				<p>
-					<a href="projects"><paper-button raised class="secondary">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 					<a href="https://dribbble.com/liyasthomas"><paper-button class="secondary">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas"><paper-button class="secondary">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>

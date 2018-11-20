@@ -136,7 +136,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="android">
-						<paper-button raised class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -183,7 +183,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="web">
-						<paper-button raised class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -230,7 +230,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="others">
-						<paper-button raised class="primary">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="primary">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -239,8 +239,8 @@ class MyProjects extends PolymerElement {
 					<span>Contact</span> me
 				</div>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-					<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+					<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 				</p>
 			</div>
     `;

@@ -86,8 +86,8 @@ class MyOthers extends PolymerElement {
 					Saap! is my final year project.
 				</div>
 				<p>
-					<a href="saap"><paper-button raised class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
-					<a href="saap"><paper-button raised class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+					<a href="saap"><paper-button class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
+					<a href="saap"><paper-button class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<iron-ajax auto url="../data/others_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -187,8 +187,8 @@ class MyOthers extends PolymerElement {
 					<span>Contact</span> me
 				</div>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-					<a href="about"><paper-button raised class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+					<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 				</p>
 			</div>
     `;

@@ -90,7 +90,7 @@
 	"projects": [
 		{
 			"title": "Projects",
-			"icon": "work",
+			"icon": "lightbulb-outline",
 			"sub": [
 				{
 					"color": "white",

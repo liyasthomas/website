@@ -38,7 +38,7 @@ import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-toast/paper-toast.js';
-//<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+import '@polymer/paper-fab/paper-fab.js';
 import './shared-styles.js';
 import './my-icons.js';
 
@@ -60,8 +60,8 @@ class MyApp extends PolymerElement {
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
 					--accent-color: var(--paper-teal-a400);
-					--light-accent-color: var(--paper-grey-500);
-					--dark-accent-color: var(--paper-grey-800);
+					--light-accent-color: var(--paper-teal-a200);
+					--dark-accent-color: var(--paper-teal-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
@@ -75,59 +75,55 @@ class MyApp extends PolymerElement {
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
         }
-
 				[hidden] {
 					display: none !important;
 				}
-
-			app-drawer {
-				--app-drawer-scrim-background: rgba(0,0,0,.4);
-				color: var(--secondary-text-color);
-				--app-drawer-content-container: {
-      		@apply --shadow-elevation-12dp;
+				app-drawer {
+					--app-drawer-scrim-background: rgba(0,0,0,.4);
+					color: var(--secondary-text-color);
+					--app-drawer-content-container: {
+						@apply --shadow-elevation-12dp;
+					}
 				}
-			}
-      .drawer-contents {
-				height: 100%;
-				overflow-y: auto;
-				-webkit-overflow-scrolling: touch;
-      }
-			span.expand {
-				width: calc(100% - 80px);
-			}
-			.category {
-				background-color: var(--light-primary-color);
-			}
-			#home.iron-selected {
-				color: var(--accent-color);
-			}
-			#projects.iron-selected {
-				color: var(--accent-color);
-			}
-			#about.iron-selected {
-				color: var(--accent-color);
-			}
-      app-header {
-				background-color: var(--primary-color);
-				color: var(--secondary-text-color);
-				--app-header-shadow: {
-					box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
-				};
-      }
-			[drawer-toggle] {
-				margin-right: 8px;
-			}
-			app-toolbar paper-icon-button {
-				margin: 0 4px;
-			}
-
+				.drawer-contents {
+					height: 100%;
+					overflow-y: auto;
+					-webkit-overflow-scrolling: touch;
+				}
+				span.expand {
+					width: calc(100% - 80px);
+				}
+				.category {
+					background-color: var(--light-primary-color);
+				}
+				#home.iron-selected {
+					color: var(--accent-color);
+				}
+				#projects.iron-selected {
+					color: var(--accent-color);
+				}
+				#about.iron-selected {
+					color: var(--accent-color);
+				}
+				app-header {
+					background-color: var(--primary-color);
+					color: var(--secondary-text-color);
+					--app-header-shadow: {
+						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
+					};
+				}
+				[drawer-toggle] {
+					margin-right: 8px;
+				}
+				app-toolbar paper-icon-button {
+					margin: 0 4px;
+				}
 				[main-title] {
 				font-size: 44px;
 				color: var(--primary-text-color);
 				font-weight: 700;
 				margin-left: 16px;
 				}
-
 				[condensed-title] {
 				font-size: 22px;
 				color: var(--primary-text-color);
@@ -136,7 +132,6 @@ class MyApp extends PolymerElement {
 				font-weight: 700;
 				margin-left: 16px;
 				}
-
 				paper-tabs {
 					height: 100%;
 					--paper-tab-content-unselected: {
@@ -163,48 +158,51 @@ class MyApp extends PolymerElement {
 					--paper-progress-active-color: rgba(0, 0, 0, 0.5);
 					--paper-progress-container-color: rgba(0, 0, 0, 0.2);
 				}
-
 				footer {
-					height: 50px;
-					line-height: 50px;
 					text-align: center;
-					background-color: white;
 					font-size: 14px;
-				}
-			paper-toast {
-				@apply --layout-horizontal;
-				@apply --layout-center;
-				@apply --layout-justified;
-			}
-			.toast-button {
-				text-transform: none;
-				margin: 8px;
-			}
-
-			#sharehome {
-				@apply --shadow-elevation-12dp;
-				max-width: 320px;
-				background-color: #fff !important;
-				color: var(--paper-grey-500);
-			}
-			@media (max-width: 640px) {
-				app-drawer {
-					--app-drawer-width: 80%;
+					color: var(--secondary-text-color);
 				}
 				paper-toast {
-					margin: 0;
-					max-width: none;
-					width: 100%;
+					@apply --layout-horizontal;
+					@apply --layout-center;
+					@apply --layout-justified;
 				}
-
-				#sharehome {
-					max-width: none;
-				}
-
 				.toast-button {
-					margin: 16px 8px;
+					text-transform: none;
+					margin: 8px;
 				}
-			}
+				#fab {
+					@apply --shadow-elevation-4dp;
+					position: fixed;
+					z-index: 6;
+					right: 20px;
+					bottom: 20px;
+				}
+				#sharehome {
+					@apply --shadow-elevation-12dp;
+					max-width: 320px;
+					background-color: #fff !important;
+					color: var(--paper-grey-500);
+				}
+				@media (max-width: 640px) {
+					app-drawer {
+						--app-drawer-width: 80%;
+					}
+					paper-toast {
+						margin: 0;
+						max-width: none;
+						width: 100%;
+					}
+
+					#sharehome {
+						max-width: none;
+					}
+
+					.toast-button {
+						margin: 16px 8px;
+					}
+				}
       </style>
 
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -231,7 +229,7 @@ class MyApp extends PolymerElement {
 							</a>
 						</template>
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank">
-							<paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:mail-outline"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
@@ -257,7 +255,7 @@ class MyApp extends PolymerElement {
 						</a>
 						<a id="projects" tabindex="-1">
 							<paper-icon-item on-click="toggle" aria-expanded\$="[[opened]]" aria-controls="collapse">
-								<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:lightbulb-outline" item-icon slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
@@ -335,7 +333,7 @@ class MyApp extends PolymerElement {
 							</template>
 							<a href="projects" tabindex="-1">
 								<paper-icon-item class="category">
-									<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
+									<iron-icon icon="my-icons:lightbulb-outline" item-icon slot="item-icon"></iron-icon>
 										<span class="expand">View all projects</span>
 										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 									<paper-ripple></paper-ripple>
@@ -369,7 +367,7 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 								<paper-tab id="projects">
 									<a href="projects" tabindex="-1">
-										<iron-icon icon="my-icons:work"></iron-icon>
+										<iron-icon icon="my-icons:lightbulb-outline"></iron-icon>
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
@@ -379,7 +377,7 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 							</paper-tabs>
 							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank">
-								<paper-icon-button icon="my-icons:mail"></paper-icon-button>
+								<paper-icon-button icon="my-icons:mail-outline"></paper-icon-button>
 							</a>
 						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
 							<template is="dom-if" if="{{loading}}">
@@ -399,8 +397,11 @@ class MyApp extends PolymerElement {
 						<my-404 name="404"></my-404>
 					</iron-pages>
           <footer>
-						&copy; Polymer project
+						&copy;Liyas Thomas
           </footer>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank">
+						<paper-fab id="fab" icon="my-icons:mail-outline"></paper-fab>
+					</a>
         </app-header-layout>
       </app-drawer-layout>
     `;
