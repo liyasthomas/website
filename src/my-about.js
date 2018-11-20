@@ -65,7 +65,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 35vw;
+						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -181,7 +181,7 @@ class MyAbout extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon src="../images/assets/social/{{sub.icon}}.svg"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" src="../images/assets/social/{{sub.icon}}.svg">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>

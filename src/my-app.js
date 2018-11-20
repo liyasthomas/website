@@ -59,18 +59,18 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-teal-a400);
-					--light-accent-color: var(--paper-teal-a200);
-					--dark-accent-color: var(--paper-teal-a700);
+					--accent-color: var(--paper-blue-a400);
+					--light-accent-color: var(--paper-blue-a200);
+					--dark-accent-color: var(--paper-blue-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
 					--paper-tabs-selection-bar-color: var(--accent-color);
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
-					--paper-progress-active-color: var(--light-accent-color);
+					--paper-progress-active-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
-					--paper-progress-container-color: var(--accent-color);
+					--paper-progress-container-color: var(--light-accent-color);
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
@@ -139,7 +139,7 @@ class MyApp extends PolymerElement {
 					}
 				}
 				paper-tab {
-					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+        	font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
 				}
@@ -155,8 +155,6 @@ class MyApp extends PolymerElement {
 				paper-progress {
 					display: block;
 					width: 100%;
-					--paper-progress-active-color: rgba(0, 0, 0, 0.5);
-					--paper-progress-container-color: rgba(0, 0, 0, 0.2);
 				}
 				footer {
 					text-align: center;
@@ -229,7 +227,7 @@ class MyApp extends PolymerElement {
 							</a>
 						</template>
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank">
-							<paper-icon-button class="toast-button" icon="my-icons:mail-outline"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
@@ -255,7 +253,7 @@ class MyApp extends PolymerElement {
 						</a>
 						<a id="projects" tabindex="-1">
 							<paper-icon-item on-click="toggle" aria-expanded\$="[[opened]]" aria-controls="collapse">
-								<iron-icon icon="my-icons:lightbulb-outline" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
@@ -356,6 +354,9 @@ class MyApp extends PolymerElement {
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
               <div condensed-title>lt ~ {{page}}</div>
+							<template is="dom-if" if="{{loading}}">
+								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
+							</template>
             </app-toolbar>
             <app-toolbar>
               <div main-title>liyas thomas</div>
@@ -367,7 +368,7 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 								<paper-tab id="projects">
 									<a href="projects" tabindex="-1">
-										<iron-icon icon="my-icons:lightbulb-outline"></iron-icon>
+										<iron-icon icon="my-icons:work"></iron-icon>
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
@@ -377,12 +378,9 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 							</paper-tabs>
 							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank">
-								<paper-icon-button icon="my-icons:mail-outline"></paper-icon-button>
+								<paper-icon-button icon="my-icons:mail"></paper-icon-button>
 							</a>
 						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
-							<template is="dom-if" if="{{loading}}">
-								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" bottom-item></paper-progress>
-							</template>
             </app-toolbar>
           </app-header>
 					<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
@@ -400,7 +398,7 @@ class MyApp extends PolymerElement {
 						&copy;Liyas Thomas
           </footer>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank">
-						<paper-fab id="fab" icon="my-icons:mail-outline"></paper-fab>
+						<paper-fab id="fab" icon="my-icons:mail"></paper-fab>
 					</a>
         </app-header-layout>
       </app-drawer-layout>

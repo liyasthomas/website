@@ -65,7 +65,7 @@ class MySaap extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 35vw;
+						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -77,7 +77,7 @@ class MySaap extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="content banner" style="background-image: url(../images/assets/projects/ab1.svg);">
+			<div class="content banner" style="background-image: url(../images/assets/feeds/aeiou.jpg);">
 			</div>
 			<div class="content">
 				<div class="title"><span>Saap!</span></div>
@@ -133,7 +133,7 @@ class MySaap extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -179,7 +179,7 @@ class MySaap extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -225,7 +225,7 @@ class MySaap extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -265,7 +265,7 @@ class MySaap extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>

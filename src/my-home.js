@@ -65,7 +65,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 35vw;
+						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -126,7 +126,7 @@ class MyHome extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -168,7 +168,7 @@ class MyHome extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -210,7 +210,7 @@ class MyHome extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}" class\$="[[_computeFgClass(sub.color)]]"></iron-icon>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>

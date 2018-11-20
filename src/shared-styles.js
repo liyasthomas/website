@@ -55,6 +55,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
+        font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
@@ -70,15 +71,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-button {
 				margin: 4px;
-				padding: .7em 1.4em;
+				padding: .6em 1.2em;
+        font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 				font-weight: 700;
 				text-transform: none;
-				transition: all .2s;
+				transition: all .1s ease;
 				border-radius: 48px;
 			}
 			paper-button.primary {
 				background-color: var(--accent-color);
-				background-image: linear-gradient(120deg, #2B86A6, #742DA8);
 				color: #fff;
 				--paper-button-raised-keyboard-focus: {
 					background-color: var(--dark-accent-color);
@@ -148,20 +149,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.content {
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: contain;
+				background-size: cover;
 				padding: 32px;
 			}
 			.error {
 				padding: 16px;
-				font-family: 'Roboto Mono', Consolas, Menlo, Monaco, monospace;
+				font-family: "Roboto Mono", Consolas, Menlo, Monaco, monospace;
 				font-size: 14px;
 				color: var(--secondary-text-color);
 			}
-			.grid {
-				transition: all .1s ease;
-				width: 100%;
-			}
-			.list {
+			.grid, .list {
 				transition: all .1s ease;
 			}
 			.list .item {
@@ -176,7 +173,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item {
 				transition: all .1s ease;
 				border-radius: 8px;
-				border: 1px solid #eee;
+				border: 1px solid #ddd;
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -201,14 +198,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: #fff;
 			}
 			.top {
-				padding: 16px;
+				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
 			}
 			.mid {
-				padding: 0 16px 16px 16px;
+				padding: 4px 32px 32px 32px;
 			}
 			.bottom {
-				padding: 8px 16px;
+				padding: 16px 24px 16px 16px;
 				border-radius: 0 0 8px 8px;
 			}
 			.title {
@@ -217,7 +214,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 22px;
+				font-size: 26px;
 				line-height: 1.25;
 				font-weight: 700;
 			}
@@ -227,8 +224,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				color: var(--secondary-text-color);
-				font-size: 20px;
+				font-size: 22px;
 				line-height: 1.2;
 			}
 			.info {
@@ -236,7 +232,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				font-weight: 700;
-				font-size: 16px;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
@@ -247,14 +242,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					display: none;
 				}
 				.title {
-					font-size: 20px;
+					font-size: 24px;
 				}
 				.description {
-					font-size: 18px;
+					font-size: 20px;
 				}
 			}
 			.white-bg {
-				background-color: var(--paper-grey-100);
+				background-color: #fff;
 				color: var(--paper-grey-800);
 			}
 			.grey-bg {
@@ -307,7 +302,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 
 			.white-fg {
-				color: var(--paper-grey-100);
+				color: var(--paper-grey-800);
 			}
 			.grey-fg {
 				color: var(--paper-grey-800);

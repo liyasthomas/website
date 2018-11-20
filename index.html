@@ -59,6 +59,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="msapplication-TileColor" content="#3f51b5">
     <meta name="msapplication-tap-highlight" content="no">
 
+		<!-- OpenGraph -->
+		<meta property="og:site_name" content="Liyas Thomas">
+		<meta property="og:url" content="https://liyas-thomas.firebaseapp.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Liyas Thomas">
+		<meta property="og:description" content="Developer">
+		<meta property="og:image" content="images/manifest/icon-144x144.png">
+
+		<!-- Twitter -->
+		<meta name="twitter:site" content="@liyasthomas">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Liyas Thomas">
+		<meta name="twitter:description" content="Developer">
+		<meta name="twitter:image" content="images/manifest/icon-144x144.png">
+		<meta name="twitter:url" content="https://liyas-thomas.firebaseapp.com">
+
+		<!-- Web Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet'>
+
     <script>
       /**
       * [polymer-root-path]
@@ -122,14 +141,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       body {
         margin: 0;
-        font-family: "Roboto", "Noto", sans-serif;
+				padding: 0;
+        font-family: "Product Sans", "Roboto", "Noto", sans-serif;
         line-height: 1.5;
         min-height: 100vh;
+				font-size: 18px;
+				color: #212121;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				user-select: none;
       }
+			#preloader {
+				height: 100%;
+				width: 100%;
+				z-index: 1000;
+				background: #fff;
+				position: fixed;
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.loader {
+				color: #2979ff;
+				font-family: Consolas, Menlo, Monaco, monospace;
+				font-weight: bold;
+				font-size: 20vh;
+			}
+			.loader span {
+				display: inline-block;
+				animation: pulse 0.4s alternate infinite ease-in-out;
+			}
+			.loader span:nth-child(odd) {
+				animation-delay: 0.4s;
+			}
+			@keyframes pulse {
+				to {
+					transform: scale(0.8);
+					opacity: 0.5;
+				}
+			}
     </style>
   </head>
   <body>
-    <my-app id="app"></my-app>
+    <my-app id="app">
+			<div id="preloader">
+				<div class="loader">
+					<span>{</span><span>}</span>
+				</div>
+			</div>
+   </my-app>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
