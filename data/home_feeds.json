@@ -5,29 +5,29 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "purple",
+					"color": "white",
 					"title": "AEIOU",
 					"description": "Augmented reality platform to make education fun and interactive.",
-					"info": "Type / TAG",
-					"img": "../images/assets/home/puff.svg",
+					"info": "Read more",
+					"img": "../images/assets/home/aeiou.jpg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
 				{
-					"color": "purple",
+					"color": "white",
 					"title": "Lvr",
 					"description": "Virtual reality for everyone",
-					"info": "Type / TAG",
+					"info": "Download app",
 					"img": "../images/assets/home/puff.svg",
-					"icon": "note",
+					"icon": "get-app",
 					"link": "saap"
 },
 				{
-					"color": "cyan",
+					"color": "white",
 					"title": "Feedie",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/home/feedie.jpg",
 					"icon": "star",
 					"link": "https://github.com/fuseorg/feedie"
 }
@@ -40,7 +40,7 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "green",
+					"color": "white",
 					"title": "Award + 1",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -49,7 +49,7 @@
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "blue",
+					"color": "white",
 					"title": "Saap",
 					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
@@ -58,7 +58,7 @@
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "yellow",
+					"color": "white",
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
@@ -67,7 +67,7 @@
 					"link": "wallpapers"
 },
 				{
-					"color": "yellow",
+					"color": "white",
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -76,7 +76,7 @@
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
 				{
-					"color": "green",
+					"color": "white",
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",

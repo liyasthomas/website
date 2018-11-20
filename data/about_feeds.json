@@ -75,7 +75,7 @@
 			"title": "Gallery",
 			"sub": [
 				{
-					"color": "teal",
+					"color": "white",
 					"title": "Similar 1",
 					"description": "blah",
 					"info": "View photo",
@@ -84,7 +84,7 @@
 					"link": ""
 },
 				{
-					"color": "purple",
+					"color": "white",
 					"title": "Similar 2",
 					"description": "blah",
 					"info": "View photo",
@@ -93,7 +93,7 @@
 					"link": ""
 },
 				{
-					"color": "cyan",
+					"color": "white",
 					"title": "Similar 3",
 					"description": "blah",
 					"info": "View photo",
@@ -102,7 +102,7 @@
 					"link": ""
 },
 				{
-					"color": "blue",
+					"color": "white",
 					"title": "Similar 4",
 					"description": "blah",
 					"info": "View photo",
@@ -111,7 +111,7 @@
 					"link": ""
 },
 				{
-					"color": "green",
+					"color": "white",
 					"title": "Similar 5",
 					"description": "blah",
 					"info": "View photo",
@@ -120,7 +120,7 @@
 					"link": ""
 },
 				{
-					"color": "red",
+					"color": "white",
 					"title": "Similar 6",
 					"description": "blah",
 					"info": "View photo",
@@ -129,7 +129,7 @@
 					"link": ""
 },
 				{
-					"color": "cyan",
+					"color": "white",
 					"title": "Similar 7",
 					"description": "blah",
 					"info": "View photo",
