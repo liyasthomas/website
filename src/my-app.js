@@ -119,18 +119,18 @@ class MyApp extends PolymerElement {
 					margin: 0 4px;
 				}
 				[main-title] {
-				font-size: 44px;
-				color: var(--primary-text-color);
-				font-weight: 700;
-				margin-left: 16px;
+					font-size: 44px;
+					color: var(--primary-text-color);
+					font-weight: 700;
+					margin-left: 16px;
 				}
 				[condensed-title] {
-				font-size: 22px;
-				color: var(--primary-text-color);
+					font-size: 22px;
+					color: var(--primary-text-color);
 					overflow: hidden;
 					text-overflow: ellipsis;
-				font-weight: 700;
-				margin-left: 16px;
+					font-weight: 700;
+					margin-left: 16px;
 				}
 				paper-tabs {
 					height: 100%;
@@ -192,11 +192,9 @@ class MyApp extends PolymerElement {
 						max-width: none;
 						width: 100%;
 					}
-
 					#sharehome {
 						max-width: none;
 					}
-
 					.toast-button {
 						margin: 16px 8px;
 					}
@@ -397,9 +395,7 @@ class MyApp extends PolymerElement {
           <footer>
 						&copy;Liyas Thomas
           </footer>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," taget="_blank">
-						<paper-fab id="fab" icon="my-icons:mail"></paper-fab>
-					</a>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>
     `;
@@ -489,7 +485,7 @@ class MyApp extends PolymerElement {
 	}
 
 	scrollTop() {
-		var scrollDuration = 200;
+		var scrollDuration = 300;
 		var scrollStep = -window.scrollY / (scrollDuration / 15),
 			scrollInterval = setInterval(function () {
 				if (window.scrollY != 0) {

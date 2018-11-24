@@ -63,32 +63,25 @@ class MyOthers extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 2;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 30vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(5n+3) {
+					.item:nth-child(10n+4) {
+						@apply --app-grid-expandible-item;
+					}
+					.item:nth-child(10n+10) {
 						@apply --app-grid-expandible-item;
 					}
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="content" style="background-image: url(../images/assets/projects/);">
-				<div class="title">
-					<span>Other</span> projects
-				</div>
-				<div class="description">
-					Not your ordinary camera.
-					Saap! is my final year project.
-				</div>
-				<p>
-					<a href="saap"><paper-button class="primary">View project<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button></a>
-					<a href="saap"><paper-button class="secondary">View on GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
-				</p>
+			<div class="banner flexchild flex-vertical">
+				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/others_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
