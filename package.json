@@ -1,10 +1,10 @@
 {
-  "name": "polymer-starter-kit",
+  "name": "liyasthomas",
   "version": "4.0.0",
-  "description": "A starting point for Polymer apps",
-  "author": "The Polymer Authors",
+  "description": "Developer, Designer, Entrepreneur, Artist",
+  "author": "Liyas Thomas",
   "license": "BSD-3-Clause",
-  "repository": "Polymer/polymer-starter-kit",
+  "repository": "liyasthomas/liyasthomas",
   "scripts": {
     "start": "polymer serve",
     "build": "polymer build",
