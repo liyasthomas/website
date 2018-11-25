@@ -1,74 +1,75 @@
 {
-  "entrypoint": "index.html",
-  "shell": "src/my-app.js",
-  "sources": [
-    "images/**/*"
+	"entrypoint": "index.html",
+	"shell": "src/my-app.js",
+	"sources": [
+    "images/**/*",
+    "data/**/*"
   ],
-  "extraDependencies": [
+	"extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
     "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
   ],
-  "builds": [
-    {
-      "name": "esm-bundled",
-      "browserCapabilities": [
+	"builds": [
+		{
+			"name": "esm-bundled",
+			"browserCapabilities": [
         "es2015",
         "modules"
       ],
-      "js": {
-        "minify": true
-      },
-      "css": {
-        "minify": true
-      },
-      "html": {
-        "minify": true
-      },
-      "bundle": true,
-      "addServiceWorker": true
+			"js": {
+				"minify": true
+			},
+			"css": {
+				"minify": true
+			},
+			"html": {
+				"minify": true
+			},
+			"bundle": true,
+			"addServiceWorker": true
     },
-    {
-      "name": "es6-bundled",
-      "browserCapabilities": [
+		{
+			"name": "es6-bundled",
+			"browserCapabilities": [
         "es2015"
       ],
-      "js": {
-        "minify": true,
-        "transformModulesToAmd": true
-      },
-      "css": {
-        "minify": true
-      },
-      "html": {
-        "minify": true
-      },
-      "bundle": true,
-      "addServiceWorker": true
+			"js": {
+				"minify": true,
+				"transformModulesToAmd": true
+			},
+			"css": {
+				"minify": true
+			},
+			"html": {
+				"minify": true
+			},
+			"bundle": true,
+			"addServiceWorker": true
     },
-    {
-      "name": "es5-bundled",
-      "js": {
-        "minify": true,
-        "compile": true,
-        "transformModulesToAmd": true
-      },
-      "css": {
-        "minify": true
-      },
-      "html": {
-        "minify": true
-      },
-      "bundle": true,
-      "addServiceWorker": true
+		{
+			"name": "es5-bundled",
+			"js": {
+				"minify": true,
+				"compile": true,
+				"transformModulesToAmd": true
+			},
+			"css": {
+				"minify": true
+			},
+			"html": {
+				"minify": true
+			},
+			"bundle": true,
+			"addServiceWorker": true
     }
   ],
-  "moduleResolution": "node",
-  "npm": true,
-  "lint": {
-    "rules": [
+	"moduleResolution": "node",
+	"npm": true,
+	"lint": {
+		"rules": [
       "polymer-3"
     ]
-  }
+	}
 }
