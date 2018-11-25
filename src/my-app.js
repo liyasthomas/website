@@ -80,7 +80,7 @@ class MyApp extends PolymerElement {
 				}
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
-					color: var(--secondary-text-color);
+					font-weight: 700;
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
 					}
@@ -90,11 +90,14 @@ class MyApp extends PolymerElement {
 					overflow-y: auto;
 					-webkit-overflow-scrolling: touch;
 				}
+				paper-icon-item {
+					font-weight: 700;
+				}
 				span.expand {
 					width: calc(100% - 80px);
 				}
 				.category {
-					background-color: var(--light-primary-color);
+					border-top: 1px solid #eee;
 				}
 				#home.iron-selected {
 					color: var(--accent-color);
@@ -107,7 +110,6 @@ class MyApp extends PolymerElement {
 				}
 				app-header {
 					background-color: var(--primary-color);
-					color: var(--secondary-text-color);
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
@@ -120,13 +122,11 @@ class MyApp extends PolymerElement {
 				}
 				[main-title] {
 					font-size: 44px;
-					color: var(--primary-text-color);
 					font-weight: 700;
 					margin-left: 16px;
 				}
 				[condensed-title] {
 					font-size: 22px;
-					color: var(--primary-text-color);
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 700;
@@ -155,11 +155,6 @@ class MyApp extends PolymerElement {
 				paper-progress {
 					display: block;
 					width: 100%;
-				}
-				footer {
-					text-align: center;
-					font-size: 14px;
-					color: var(--secondary-text-color);
 				}
 				paper-toast {
 					@apply --layout-horizontal;
@@ -240,24 +235,32 @@ class MyApp extends PolymerElement {
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-          <app-toolbar>Menu</app-toolbar>
+          <app-toolbar>Liyas Thomas</app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>
-								<iron-icon icon="my-icons:home" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:home" slot="item-icon"></iron-icon>
 								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
 						<a id="projects" tabindex="-1">
 							<paper-icon-item on-click="toggle" aria-expanded\$="[[opened]]" aria-controls="collapse">
-								<iron-icon icon="my-icons:work" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
 						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
+							<a href="projects" tabindex="-1">
+								<paper-icon-item class="category">
+									<iron-icon icon="my-icons:lightbulb-outline" slot="item-icon"></iron-icon>
+										<span class="expand">View all projects</span>
+										<iron-icon icon="my-icons:chevron-right"></iron-icon>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+							</a>
 							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class="actions flex-center-center" hidden\$="[[!loading]]">
@@ -274,7 +277,7 @@ class MyApp extends PolymerElement {
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
 								<a href="android" tabindex="-1">
 									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[android.icon]]" item-icon slot="item-icon"></iron-icon>
+										<iron-icon icon="my-icons:[[android.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{android.title}}</span>
 										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 										<paper-ripple></paper-ripple>
@@ -283,7 +286,7 @@ class MyApp extends PolymerElement {
 								<template is="dom-repeat" items="[[android.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
-											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
@@ -293,7 +296,7 @@ class MyApp extends PolymerElement {
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
 								<a href="web" tabindex="-1">
 									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[web.icon]]" item-icon slot="item-icon"></iron-icon>
+										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
 										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 										<paper-ripple></paper-ripple>
@@ -302,7 +305,7 @@ class MyApp extends PolymerElement {
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
-											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
@@ -312,7 +315,7 @@ class MyApp extends PolymerElement {
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
 								<a href="others" tabindex="-1">
 									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[others.icon]]" item-icon slot="item-icon"></iron-icon>
+										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
 										<iron-icon icon="my-icons:chevron-right"></iron-icon>
 									</paper-icon-item>
@@ -320,25 +323,17 @@ class MyApp extends PolymerElement {
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
 									<a href="[[sub.link]]" tabindex="-1">
 										<paper-icon-item>
-											<iron-icon icon="my-icons:[[sub.icon]]" item-icon slot="item-icon"></iron-icon>
+											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
 									</a>
 								</template>
 							</template>
-							<a href="projects" tabindex="-1">
-								<paper-icon-item class="category">
-									<iron-icon icon="my-icons:lightbulb-outline" item-icon slot="item-icon"></iron-icon>
-										<span class="expand">View all projects</span>
-										<iron-icon icon="my-icons:chevron-right"></iron-icon>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
-							</a>
 						</iron-collapse>
 						<a id="about" href="about" tabindex="-1">
 							<paper-icon-item>
-								<iron-icon icon="my-icons:face" item-icon slot="item-icon"></iron-icon>
+								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
 								<span>About</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
@@ -351,7 +346,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
-              <div condensed-title>lt ~ {{page}}</div>
+              <div condensed-title>lt · {{page}}</div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
 							</template>
@@ -392,9 +387,6 @@ class MyApp extends PolymerElement {
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
-          <footer>
-						&copy;Liyas Thomas
-          </footer>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>

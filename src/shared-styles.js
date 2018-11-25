@@ -77,10 +77,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-transform: none;
 				transition: all .1s ease;
 				border-radius: 48px;
+				border: 1px solid #eee;
 			}
 			paper-button.primary {
 				background-color: var(--accent-color);
 				color: #fff;
+				border: 1px solid var(--accent-color);
 				--paper-button-raised-keyboard-focus: {
 					background-color: var(--dark-accent-color);
 				};
