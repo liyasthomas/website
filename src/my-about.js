@@ -51,7 +51,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 70vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -63,25 +63,22 @@ class MyAbout extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 3;
+						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 30vw;
+						--app-grid-item-height: 35vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(10n+4) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(10n+10) {
+					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;
 					}
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/about/banner.svg"  alt="{{sub.title}}"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<div class="content">
 				<div class="title">

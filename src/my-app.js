@@ -59,9 +59,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-blue-a400);
-					--light-accent-color: var(--paper-blue-a200);
-					--dark-accent-color: var(--paper-blue-a700);
+					--accent-color: var(--paper-teal-a700);
+					--light-accent-color: var(--paper-teal-a200);
+					--dark-accent-color: var(--paper-teal-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
@@ -69,8 +69,8 @@ class MyApp extends PolymerElement {
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
-					--paper-progress-secondary-color: var(--dark-accent-color);
-					--paper-progress-container-color: var(--light-accent-color);
+//					--paper-progress-secondary-color: var(--dark-accent-color);
+//					--paper-progress-container-color: var(--light-accent-color);
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
@@ -81,6 +81,7 @@ class MyApp extends PolymerElement {
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;
+					color: var(--secondary-text-color);
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
 					}
@@ -92,6 +93,7 @@ class MyApp extends PolymerElement {
 				}
 				paper-icon-item {
 					font-weight: 700;
+					font-size: 18px;
 				}
 				span.expand {
 					width: calc(100% - 80px);
@@ -110,22 +112,22 @@ class MyApp extends PolymerElement {
 				}
 				app-header {
 					background-color: var(--primary-color);
+					color: var(--secondary-text-color);
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
-				}
-				[drawer-toggle] {
-					margin-right: 8px;
 				}
 				app-toolbar paper-icon-button {
 					margin: 0 4px;
 				}
 				[main-title] {
+					color: var(--accent-color);
 					font-size: 44px;
 					font-weight: 700;
-					margin-left: 16px;
+					margin-left: 12px;
 				}
 				[condensed-title] {
+					color: var(--accent-color);
 					font-size: 22px;
 					overflow: hidden;
 					text-overflow: ellipsis;
@@ -142,12 +144,16 @@ class MyApp extends PolymerElement {
         	font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
+					font-size: 18px;
+					font-weight: 700;
+					padding: 0 16px;
 				}
 				paper-tab a {
-					@apply --layout-vertical;
+					@apply --layout-horizontal;
 					@apply --layout-center-center;
-					padding: 0 16px;
-					font-weight: 500;
+				}
+				paper-tab span {
+					margin-left: 12px;
 				}
 				.pages {
 					@apply --layout-flex;
@@ -176,7 +182,7 @@ class MyApp extends PolymerElement {
 					@apply --shadow-elevation-12dp;
 					max-width: 320px;
 					background-color: #fff !important;
-					color: var(--paper-grey-500);
+					color: var(--secondary-text-color);
 				}
 				@media (max-width: 640px) {
 					app-drawer {
@@ -346,27 +352,30 @@ class MyApp extends PolymerElement {
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
-              <div condensed-title>lt · {{page}}</div>
+              <div condensed-title>Liyas Thomas</div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
 							</template>
             </app-toolbar>
             <app-toolbar>
-              <div main-title>liyas thomas</div>
+              <div main-title>Liyas Thomas</div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden\$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
 										<iron-icon icon="my-icons:home"></iron-icon>
+										<span>Home</span>
 									</a>
 								</paper-tab>
 								<paper-tab id="projects">
 									<a href="projects" tabindex="-1">
 										<iron-icon icon="my-icons:work"></iron-icon>
+										<span>Projects</span>
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
 									<a href="about" tabindex="-1">
 										<iron-icon icon="my-icons:face"></iron-icon>
+										<span>About</span>
 									</a>
 								</paper-tab>
 							</paper-tabs>
@@ -387,6 +396,15 @@ class MyApp extends PolymerElement {
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
+					<div class="content">
+						<div class="title">
+							<span>Contact</span> me
+						</div>
+						<p>
+							<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+							<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
+						</p>
+					</div>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>

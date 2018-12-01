@@ -8,22 +8,32 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import {
+	PolymerElement,
+	html
+} from '@polymer/polymer/polymer-element.js';
 
-class MyView404 extends PolymerElement {
-  static get template() {
-    return html`
+class My404 extends PolymerElement {
+	static get template() {
+		return html `
       <style>
-        :host {
-          display: block;
-
-          padding: 10px 20px;
-        }
+				:host {
+					display: flex;
+					text-align: center;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					padding: 32px;
+					height: calc(100vh - 128px);
+				}
+				h1 {
+					font-size: 3em;
+				}
       </style>
-
-      Oops you hit a 404. <a href="[[rootPath]]">Head back to home.</a>
+			<h1>4😕4</h1>
+			<div><a href="[[rootPath]]"><paper-fab icon="my-icons:arrow-back"></paper-fab></a></div>
     `;
-  }
+	}
 }
 
-window.customElements.define('my-view404', MyView404);
+window.customElements.define('my-404', My404);

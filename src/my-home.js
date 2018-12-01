@@ -51,7 +51,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 70vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -63,25 +63,22 @@ class MyHome extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 3;
+						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 30vw;
+						--app-grid-item-height: 35vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(10n+4) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(10n+10) {
+					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;
 					}
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/home/banner.svg"  alt="{{sub.title}}"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/home/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -228,15 +225,6 @@ class MyHome extends PolymerElement {
 					</a>
 				</div>
 			</template>
-			<div class="content">
-				<div class="title">
-					<span>Contact</span> me
-				</div>
-				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-					<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
-				</p>
-			</div>
     `;
 	}
 
