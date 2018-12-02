@@ -5,31 +5,31 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "white",
+					"color": "indigo",
+					"title": "Polymer 3",
+					"description": "Refractored all web projects to Polymer 3!",
+					"info": "Type / TAG",
+					"img": "../images/assets/home/polymer.svg",
+					"icon": "star",
+					"link": "https://github.com/fuseorg/feedie"
+},
+				{
+					"color": "light-blue",
 					"title": "AEIOU",
 					"description": "Augmented reality platform to make education fun and interactive.",
 					"info": "Read more",
-					"img": "../images/assets/home/aeiou.jpg",
+					"img": "../images/assets/home/lvr.svg",
 					"icon": "bubble-chart",
 					"link": "saap"
 },
 				{
-					"color": "white",
+					"color": "purple",
 					"title": "Lvr",
 					"description": "Virtual reality for everyone",
 					"info": "Download app",
 					"img": "../images/assets/home/puff.svg",
 					"icon": "get-app",
 					"link": "saap"
-},
-				{
-					"color": "white",
-					"title": "Feedie",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/home/feedie.jpg",
-					"icon": "star",
-					"link": "https://github.com/fuseorg/feedie"
 }
 ]
 }
@@ -40,7 +40,7 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "white",
+					"color": "red",
 					"title": "Award + 1",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -49,7 +49,7 @@
 					"link": "https://liyasthomas.github.io/saapshot"
 },
 				{
-					"color": "white",
+					"color": "deep-orange",
 					"title": "Saap",
 					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
@@ -58,7 +58,7 @@
 					"link": "https://liyasthomas.github.io/lvr"
 },
 				{
-					"color": "white",
+					"color": "cyan",
 					"title": "Wallpapers",
 					"description": "Curated list of HD wallpapers.",
 					"info": "Wallpapers / SCREEN",
@@ -67,7 +67,7 @@
 					"link": "wallpapers"
 },
 				{
-					"color": "white",
+					"color": "green",
 					"title": "Pineapple Notes",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -76,7 +76,7 @@
 					"link": "https://pineapple-notes.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "yellow",
 					"title": "Recycle Mix",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -93,7 +93,7 @@
 			"icon": "lightbulb-outline",
 			"sub": [
 				{
-					"color": "white",
+					"color": "blue",
 					"title": "Camion Info Tech",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -102,7 +102,7 @@
 					"link": "https://www.camioninfotech.com/"
 },
 				{
-					"color": "white",
+					"color": "teal",
 					"title": "Fuse Org",
 					"description": "blah",
 					"info": "Type / TAG",
@@ -111,7 +111,7 @@
 					"link": "https://fuse-org.firebaseapp.com"
 },
 				{
-					"color": "white",
+					"color": "black",
 					"title": "Konnect",
 					"description": "blah",
 					"info": "Type / TAG",
