@@ -59,9 +59,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-indigo-a400);
-					--light-accent-color: var(--paper-indigo-a200);
-					--dark-accent-color: var(--paper-indigo-a700);
+					--accent-color: var(--paper-grey-900);
+					--light-accent-color: var(--paper-grey-500);
+					--dark-accent-color: var(--paper-grey-800);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
@@ -102,13 +102,13 @@ class MyApp extends PolymerElement {
 					border-top: 1px solid #eee;
 				}
 				#home.iron-selected {
-					color: var(--paper-indigo-a400);
+					color: var(--accent-color);
 				}
 				#projects.iron-selected {
-					color: var(--paper-deep-purple-a400);
+					color: var(--accent-color);
 				}
 				#about.iron-selected {
-					color: var(--paper-blue-a400);
+					color: var(--accent-color);
 				}
 				app-header {
 					background-color: var(--primary-color);
@@ -133,6 +133,8 @@ class MyApp extends PolymerElement {
 					text-overflow: ellipsis;
 					font-weight: 700;
 					margin-left: 16px;
+				}
+				.logo {
 				}
 				paper-tabs {
 					height: 100%;
@@ -347,13 +349,13 @@ class MyApp extends PolymerElement {
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
-              <div condensed-title>Liyas Thomas</div>
+              <div condensed-title><span class="logo">LT</span></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
 							</template>
             </app-toolbar>
             <app-toolbar>
-              <div main-title>Liyas Thomas</div>
+              <div main-title><span class="logo">Liyas Thomas</span></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden\$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
