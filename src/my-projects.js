@@ -78,7 +78,7 @@ class MyProjects extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -119,7 +119,7 @@ class MyProjects extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -166,7 +166,7 @@ class MyProjects extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -213,7 +213,7 @@ class MyProjects extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">

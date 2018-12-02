@@ -200,14 +200,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: #fff;
 			}
 			.top {
-				padding: 32px 32px 4px 32px;
+				padding: 16px 16px 4px 16px;
 				border-radius: 16px 16px 0 0;
 			}
 			.mid {
-				padding: 4px 32px 32px 32px;
+				padding: 4px 16px 16px 16px;
 			}
 			.bottom {
-				padding: 16px 24px 16px 16px;
+				padding: 16px;
 				border-radius: 0 0 16px 16px;
 			}
 			.title {
@@ -237,12 +237,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
-				.app-grid {
-					width: 100%;
-				}
-				paper-ripple {
-					display: none;
-				}
 				.title {
 					font-size: 24px;
 				}

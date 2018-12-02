@@ -59,9 +59,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-pink-a400);
-					--light-accent-color: var(--paper-pink-a200);
-					--dark-accent-color: var(--paper-pink-500);
+					--accent-color: var(--paper-indigo-a400);
+					--light-accent-color: var(--paper-indigo-a200);
+					--dark-accent-color: var(--paper-indigo-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
@@ -93,7 +93,7 @@ class MyApp extends PolymerElement {
 				}
 				paper-icon-item {
 					font-weight: 700;
-					font-size: 18px;
+					font-size: 16px;
 				}
 				span.expand {
 					width: calc(100% - 80px);
@@ -102,13 +102,13 @@ class MyApp extends PolymerElement {
 					border-top: 1px solid #eee;
 				}
 				#home.iron-selected {
-					color: #FF2F2F;
+					color: var(--paper-indigo-a400);
 				}
 				#projects.iron-selected {
-					color: #6700DF;
+					color: var(--paper-deep-purple-a400);
 				}
 				#about.iron-selected {
-					color: #00A3E6;
+					color: var(--paper-blue-a400);
 				}
 				app-header {
 					background-color: var(--primary-color);
@@ -144,7 +144,7 @@ class MyApp extends PolymerElement {
         	font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
-					font-size: 18px;
+					font-size: 16px;
 					font-weight: 700;
 					padding: 0 16px;
 				}
@@ -169,7 +169,6 @@ class MyApp extends PolymerElement {
 					border-radius: 16px;
 				}
 				.toast-button {
-					text-transform: none;
 					margin: 8px;
 				}
 				#fab {
@@ -190,13 +189,10 @@ class MyApp extends PolymerElement {
 					}
 					paper-toast {
 						max-width: none;
-						width: calc(100% - 16px);
+						width: calc(100% - 24px);
 					}
 					#sharehome {
 						max-width: none;
-					}
-					.toast-button {
-						margin: 16px 8px;
 					}
 				}
       </style>
@@ -210,7 +206,7 @@ class MyApp extends PolymerElement {
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button onclick="window.location.reload(true)">Update</paper-button>
+				<paper-button class="primary" onclick="window.location.reload(true)">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">

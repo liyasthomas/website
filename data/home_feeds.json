@@ -5,7 +5,7 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "indigo",
+					"color": "white",
 					"title": "Polymer 3",
 					"description": "Refractored all web projects to Polymer 3!",
 					"info": "Type / TAG",
