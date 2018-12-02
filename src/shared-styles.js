@@ -76,8 +76,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
-				border-radius: 48px;
-				border: 1px solid #eee;
+				border-radius: 32px;
+				border: 1px solid var(--light-text-color);
 			}
 			paper-button.primary {
 				background-color: var(--accent-color);
@@ -174,8 +174,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.item {
 				transition: all .1s ease;
-				border-radius: 8px;
-				border: 1px solid #eee;
+				border-radius: 16px;
+				border: 1px solid var(--light-text-color);
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -201,14 +201,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.top {
 				padding: 32px 32px 4px 32px;
-				border-radius: 8px 8px 0 0;
+				border-radius: 16px 16px 0 0;
 			}
 			.mid {
 				padding: 4px 32px 32px 32px;
 			}
 			.bottom {
 				padding: 16px 24px 16px 16px;
-				border-radius: 0 0 8px 8px;
+				border-radius: 0 0 16px 16px;
 			}
 			.title {
 				display: -webkit-box;
@@ -292,6 +292,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.blue-bg {
 				background-color: var(--paper-blue-a400);
+				color: #fff;
+			}
+			.light-blue-bg {
+				background: #00A3E6;
+				background: linear-gradient(315deg, #3FC7FF 0%, #00A3E6 100%);
 				color: #fff;
 			}
 			.teal-bg {

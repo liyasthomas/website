@@ -59,9 +59,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-teal-a700);
-					--light-accent-color: var(--paper-teal-a200);
-					--dark-accent-color: var(--paper-teal-a700);
+					--accent-color: var(--paper-pink-a400);
+					--light-accent-color: var(--paper-pink-a200);
+					--dark-accent-color: var(--paper-pink-500);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
@@ -102,13 +102,13 @@ class MyApp extends PolymerElement {
 					border-top: 1px solid #eee;
 				}
 				#home.iron-selected {
-					color: var(--accent-color);
+					color: #FF2F2F;
 				}
 				#projects.iron-selected {
-					color: var(--accent-color);
+					color: #6700DF;
 				}
 				#about.iron-selected {
-					color: var(--accent-color);
+					color: #00A3E6;
 				}
 				app-header {
 					background-color: var(--primary-color);
@@ -166,6 +166,7 @@ class MyApp extends PolymerElement {
 					@apply --layout-horizontal;
 					@apply --layout-center;
 					@apply --layout-justified;
+					border-radius: 16px;
 				}
 				.toast-button {
 					text-transform: none;
@@ -179,7 +180,6 @@ class MyApp extends PolymerElement {
 					bottom: 20px;
 				}
 				#sharehome {
-					@apply --shadow-elevation-12dp;
 					max-width: 320px;
 					background-color: #fff !important;
 					color: var(--secondary-text-color);
@@ -189,9 +189,8 @@ class MyApp extends PolymerElement {
 						--app-drawer-width: 80%;
 					}
 					paper-toast {
-						margin: 0;
 						max-width: none;
-						width: 100%;
+						width: calc(100% - 16px);
 					}
 					#sharehome {
 						max-width: none;

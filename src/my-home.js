@@ -119,7 +119,7 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -161,7 +161,7 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -203,7 +203,7 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
