@@ -77,8 +77,8 @@ class MySaap extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/feeds/aeiou.jpg"  alt="{{sub.title}}"></iron-image>
+			<div class="banner flexchild flex-vertical deep-purple-bg">
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<div class="content">
 				<div class="title"><span>Saap!</span></div>

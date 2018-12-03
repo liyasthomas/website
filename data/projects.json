@@ -35,12 +35,12 @@
 				{
 					"title": "Lvr",
 					"icon": "visibility",
-					"link": "https://liyas-vr.firebaseapp.com"
+					"link": "lvr"
 },
 				{
 					"title": "Feedie",
 					"icon": "star",
-					"link": "https://github.com/fuseorg/feedie"
+					"link": "feedie"
 },
 				{
 					"title": "Pineapple Notes",
@@ -51,6 +51,11 @@
 					"title": "Recycle Mix",
 					"icon": "filter-vintage",
 					"link": "https://recycle-mix.firebaseapp.com"
+},
+				{
+					"title": "Form Face",
+					"icon": "tag-faces",
+					"link": "https://form-face.firebaseapp.com"
 },
 				{
 					"title": "Form Face",

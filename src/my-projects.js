@@ -77,7 +77,7 @@ class MyProjects extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="banner flexchild flex-vertical grey-bg">
+			<div class="banner flexchild flex-vertical black-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -137,7 +137,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="android">
-						<paper-button class="primary">View all Android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="primary">View all android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -184,7 +184,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="web">
-						<paper-button class="primary">View all Web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="primary">View all web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

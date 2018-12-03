@@ -5,22 +5,22 @@
 			"icon": "star",
 			"sub": [
 				{
-					"color": "white",
-					"title": "Polymer 3",
-					"description": "Refractored all web projects to Polymer 3!",
-					"info": "Type / TAG",
-					"img": "../images/assets/home/polymer.svg",
-					"icon": "star",
-					"link": "https://github.com/fuseorg/feedie"
-},
-				{
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
-					"link": "saap"
+					"link": "aeiou"
+},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
 }
 ]
 }
@@ -31,25 +31,16 @@
 			"icon": "whatshot",
 			"sub": [
 				{
-					"color": "red",
+					"color": "cyan",
 					"title": "Award + 1",
 					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/puff.svg",
+					"info": "Read more",
+					"img": "../images/assets/projects/award.svg",
 					"icon": "camera-alt",
 					"link": "saapshot"
 },
 				{
-					"color": "deep-orange",
-					"title": "Saap",
-					"description": "Imagination is the only limit",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/saap.svg",
-					"icon": "adjust",
-					"link": "saap"
-},
-				{
-					"color": "cyan",
+					"color": "orange",
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
@@ -75,18 +66,18 @@
 					"link": "konnect"
 },
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
+					"color": "blue",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "group",
-					"link": "fuseorg"
+					"img": "../images/assets/projects/feedie.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
 },
 				{
 					"color": "light-blue",
 					"title": "Lvr",
-					"description": "Virtual reality for everyone!",
+					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
