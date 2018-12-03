@@ -14,21 +14,12 @@
 					"link": "https://github.com/fuseorg/feedie"
 },
 				{
-					"color": "light-blue",
+					"color": "indigo",
 					"title": "AEIOU",
-					"description": "Augmented reality platform to make education fun and interactive.",
+					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/home/lvr.svg",
-					"icon": "bubble-chart",
-					"link": "saap"
-},
-				{
-					"color": "purple",
-					"title": "Lvr",
-					"description": "Virtual reality for everyone",
-					"info": "Download app",
-					"img": "../images/assets/home/puff.svg",
-					"icon": "get-app",
+					"img": "../images/assets/projects/aeiou.svg",
+					"icon": "arrow-forward",
 					"link": "saap"
 }
 ]
@@ -44,45 +35,27 @@
 					"title": "Award + 1",
 					"description": "blah",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/projects/puff.svg",
 					"icon": "camera-alt",
-					"link": "https://liyasthomas.github.io/saapshot"
+					"link": "saapshot"
 },
 				{
 					"color": "deep-orange",
 					"title": "Saap",
 					"description": "Imagination is the only limit",
 					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/projects/saap.svg",
 					"icon": "adjust",
-					"link": "https://liyasthomas.github.io/lvr"
+					"link": "saap"
 },
 				{
 					"color": "cyan",
 					"title": "Wallpapers",
-					"description": "Curated list of HD wallpapers.",
-					"info": "Wallpapers / SCREEN",
-					"img": "../images/assets/feeds/puff.svg",
+					"description": "Curated list of wallpapers",
+					"info": "View all",
+					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
-				{
-					"color": "green",
-					"title": "Pineapple Notes",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "note",
-					"link": "https://pineapple-notes.firebaseapp.com"
-},
-				{
-					"color": "yellow",
-					"title": "Recycle Mix",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "filter-vintage",
-					"link": "https://recycle-mix.firebaseapp.com"
 }
 ]
 }
@@ -93,31 +66,31 @@
 			"icon": "lightbulb-outline",
 			"sub": [
 				{
-					"color": "blue",
-					"title": "Camion Info Tech",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "layers",
-					"link": "https://www.camioninfotech.com/"
-},
-				{
 					"color": "teal",
-					"title": "Fuse Org",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "code",
-					"link": "https://fuse-org.firebaseapp.com"
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "konnect"
 },
 				{
-					"color": "black",
-					"title": "Konnect",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "code",
-					"link": "https://fuse-org.firebaseapp.com"
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
+},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "saap"
 }
 ]
 }

@@ -168,7 +168,7 @@ class MyApp extends PolymerElement {
 					@apply --layout-horizontal;
 					@apply --layout-center;
 					@apply --layout-justified;
-					border-radius: 16px;
+					border-radius: 8px;
 				}
 				.toast-button {
 					margin: 8px;

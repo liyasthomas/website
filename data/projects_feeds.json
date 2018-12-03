@@ -31,6 +31,33 @@
 			"icon": "language",
 			"sub": [
 				{
+					"color": "teal",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "konnect"
+},
+				{
+					"color": "indigo",
+					"title": "AEIOU",
+					"description": "Augmented Reality platform to make education fun and interactive",
+					"info": "Read more",
+					"img": "../images/assets/projects/aeiou.svg",
+					"icon": "arrow-forward",
+					"link": "saap"
+},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "saap"
+},
+				{
 					"color": "white",
 					"title": "Saapshot",
 					"description": "blah",
@@ -47,15 +74,6 @@
 					"img": "../images/assets/projects/puff.svg",
 					"icon": "adjust",
 					"link": "https://liyasthomas.github.io/lvr"
-},
-				{
-					"color": "white",
-					"title": "Lvr",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyas-vr.firebaseapp.com"
 },
 				{
 					"color": "white",
@@ -102,22 +120,13 @@
 			"icon": "group",
 			"sub": [
 				{
-					"color": "white",
-					"title": "Camion Info Tech",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/puff.svg",
-					"icon": "layers",
-					"link": "https://www.camioninfotech.com/"
-},
-				{
-					"color": "white",
+					"color": "deep-purple",
 					"title": "Fuse Org",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/projects/puff.svg",
-					"icon": "code",
-					"link": "https://fuse-org.firebaseapp.com"
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
 }
 ]
 }

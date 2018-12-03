@@ -77,7 +77,7 @@ class MyProjects extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="banner flexchild flex-vertical">
+			<div class="banner flexchild flex-vertical grey-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">

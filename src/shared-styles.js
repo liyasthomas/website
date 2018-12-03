@@ -76,7 +76,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
-				border-radius: 32px;
+				border-radius: 8px;
 				border: 1px solid var(--light-text-color);
 			}
 			paper-button.primary {
@@ -140,7 +140,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.actions .title,
 			.content .title {
-				font-size: 32px;
+				font-size: 28px;
 			}
 			.title span {
 				color: var(--accent-color);
@@ -149,6 +149,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--secondary-text-color);
 			}
 			.content {
+				background-color: none;
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -174,7 +175,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.item {
 				transition: all .1s ease;
-				border-radius: 16px;
+				border-radius: 8px;
 				border: 1px solid var(--light-text-color);
 			}
 			.item:hover {
@@ -201,14 +202,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.top {
 				padding: 16px 16px 4px 16px;
-				border-radius: 16px 16px 0 0;
+				border-radius: 8px 8px 0 0;
 			}
 			.mid {
 				padding: 4px 16px 16px 16px;
 			}
 			.bottom {
-				padding: 16px;
-				border-radius: 0 0 16px 16px;
+				padding: 8px 16px 8px 8px;
+				border-radius: 0 0 8px 8px;
 			}
 			.title {
 				display: -webkit-box;
@@ -216,7 +217,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 26px;
+				font-size: 24px;
 				line-height: 1.25;
 				font-weight: 700;
 			}
@@ -226,7 +227,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 22px;
+				font-size: 20px;
 				line-height: 1.2;
 			}
 			.info {
@@ -238,10 +239,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			@media (max-width: 640px) {
 				.title {
-					font-size: 24px;
+					font-size: 20px;
 				}
 				.description {
-					font-size: 20px;
+					font-size: 18px;
 				}
 			}
 			.white-bg {
@@ -249,7 +250,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--paper-grey-800);
 			}
 			.grey-bg {
-				background-color: var(--paper-grey-300);
+				background-color: var(--paper-grey-700);
 				color: var(--paper-grey-800);
 			}
 			.black-bg {
@@ -262,6 +263,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.deep-purple-bg {
 				background-color: var(--paper-deep-purple-a400);
+				background-image: linear-gradient(315deg, var(--paper-deep-purple-a200), var(--paper-deep-purple-a400), var(--paper-deep-purple-a700));
 				color: #fff;
 			}
 			.red-bg {
@@ -286,19 +288,22 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.blue-bg {
 				background-color: var(--paper-blue-a400);
+				background-image: linear-gradient(315deg, var(--paper-blue-a200), var(--paper-blue-a400), var(--paper-blue-a700));
 				color: #fff;
 			}
 			.light-blue-bg {
-				background: #00A3E6;
-				background: linear-gradient(315deg, #3FC7FF 0%, #00A3E6 100%);
+				background-color: var(--paper-light-blue-a400);
+				background-image: linear-gradient(315deg, var(--paper-light-blue-a200), var(--paper-light-blue-a400), var(--paper-light-blue-a700));
 				color: #fff;
 			}
 			.teal-bg {
 				background-color: var(--paper-teal-a400);
+				background-image: linear-gradient(315deg, var(--paper-teal-a200), var(--paper-teal-a400), var(--paper-teal-a700));
 				color: var(--paper-teal-a400);
 			}
 			.indigo-bg {
 				background-color: var(--paper-indigo-a400);
+				background-image: linear-gradient(315deg, var(--paper-indigo-a200), var(--paper-indigo-a400), var(--paper-indigo-a700));
 				color: var(--paper-purple-a400);
 			}
 
@@ -335,11 +340,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.blue-fg {
 				color: var(--paper-blue-a400);
 			}
+			.light-blue-fg {
+				color: var(--paper-light-blue-a400);
+			}
 			.teal-fg {
 				color: var(--paper-teal-a400);
 			}
 			.indigo-fg {
-				color: var(--paper-indigo-900);
+				color: var(--paper-indigo-a400);
 			}
     </style>
   </template>
