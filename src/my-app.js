@@ -155,7 +155,7 @@ class MyApp extends PolymerElement {
 					@apply --layout-center-center;
 				}
 				paper-tab span {
-					margin-left: 12px;
+					margin-left: 8px;
 				}
 				.pages {
 					@apply --layout-flex;
