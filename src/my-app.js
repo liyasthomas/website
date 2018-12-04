@@ -525,6 +525,8 @@ class MyApp extends PolymerElement {
 			this.page = '404';
 		}
 
+		document.title = 'Liyas Thomas · ' + this.page.charAt(0).toUpperCase() + this.page.slice(1);
+
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {
 			this.$.drawer.close();
