@@ -157,12 +157,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-size: 14px;
 				color: var(--secondary-text-color);
 			}
+			.grid {
+				width: 90%;
+			}
 			.grid, .list {
+				margin: 0 auto;
 				transition: all .1s ease;
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 30vw;
+				--app-grid-item-height: 35vw;
 			}
 			.app-grid {
 				margin: 0 auto;
@@ -244,6 +248,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 				.description {
 					font-size: 18px;
+				}
+				.grid {
+					width: 100%;
+				}
+				.list .item {
+					--app-grid-item-height: 100vw;
 				}
 			}
 			.white-bg {

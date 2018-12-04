@@ -40,7 +40,7 @@ class MySaap extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 110vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MySaap extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -80,7 +80,7 @@ class MySaap extends PolymerElement {
 			<div class="banner flexchild flex-vertical deep-purple-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<div class="title"><span>Saap!</span></div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
@@ -102,19 +102,21 @@ class MySaap extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{section1.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{section1.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
 						<div class="item">
@@ -143,24 +145,26 @@ class MySaap extends PolymerElement {
 					</template>
 				</div>
 			</template>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{section2.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{section2.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
 						<div class="item">
@@ -189,24 +193,26 @@ class MySaap extends PolymerElement {
 					</template>
 				</div>
 			</template>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{section3.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{section3.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
 						<div class="item">
@@ -235,19 +241,21 @@ class MySaap extends PolymerElement {
 					</template>
 				</div>
 			</template>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions">
-						<div class="title">
-							<span>{{similar.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions">
+							<div class="title">
+								<span>{{similar.title}}</span>
+							</div>
 						</div>
-					</div>
-				</template>
-				<div class="app-grid" has-aspect-ratio>
+					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 						<div class="item">
 							<div class="container">

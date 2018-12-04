@@ -190,6 +190,10 @@ class MyApp extends PolymerElement {
 					background-color: #fff !important;
 					color: var(--secondary-text-color);
 				}
+				footer {
+					padding: 32px;
+					text-align: center;
+				}
 				@media (max-width: 640px) {
 					app-drawer {
 						--app-drawer-width: 80%;
@@ -398,15 +402,9 @@ class MyApp extends PolymerElement {
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
-					<div class="content">
-						<div class="title">
-							<span>Contact</span> me
-						</div>
-						<p>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
-							<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
-						</p>
-					</div>
+					<footer>
+						&copy; Liyas Thomas
+					</footer>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>

@@ -40,7 +40,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 110vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -80,7 +80,7 @@ class MyAbout extends PolymerElement {
 			<div class="banner flexchild flex-vertical">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="{{sub.title}}"></iron-image>
 			</div>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
 					About <span>me</span>
 				</div>
@@ -99,7 +99,7 @@ class MyAbout extends PolymerElement {
 					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
 					Buy me a <span>coffee!</span>
 				</div>
@@ -110,7 +110,7 @@ class MyAbout extends PolymerElement {
 					<a href="https://paypal.me/liyascthomas/50" target="_blank"><paper-button class="secondary">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<div class="content">
+			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
 					<span>Open source</span> projects
 				</div>
@@ -138,7 +138,7 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.social]]" as="social">
-				<div class="content">
+				<div class\$="[[getUIType(UI)]] content">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="title">
 							I'm <span>{{social.title}}</span>
@@ -156,14 +156,22 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="content">
-						<div class="title">
-							<span>{{gallery.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{gallery.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-					</div>
-				</template>
-				<div class="app-grid" has-aspect-ratio>
+					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[gallery.sub]]" as="sub">
 						<div class="item">
 							<div class="container">
@@ -203,6 +211,14 @@ class MyAbout extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	getUIType(UI) {
+		return UI ? 'list' : 'grid';
+	}
+
+	getUIIcon(icon) {
+		return icon ? 'dashboard' : 'view-agenda';
 	}
 
 	_computeBgClass(color) {

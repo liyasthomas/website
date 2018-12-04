@@ -40,7 +40,7 @@ class MyAndroid extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 110vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyAndroid extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -95,19 +95,21 @@ class MyAndroid extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{android.title}}</span> projects ({{android.sub.length}})
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{android.title}}</span> projects ({{android.sub.length}})
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[android.sub]]" as="sub">
 						<div class="item">
@@ -137,14 +139,16 @@ class MyAndroid extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions">
-						<div class="title">
-							<span>{{similar.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions">
+							<div class="title">
+								<span>{{similar.title}}</span>
+							</div>
 						</div>
-					</div>
-				</template>
-				<div class="app-grid" has-aspect-ratio>
+					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
 						<div class="item">
 							<div class="container">

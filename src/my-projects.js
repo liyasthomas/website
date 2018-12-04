@@ -40,7 +40,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 110vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -95,19 +95,21 @@ class MyProjects extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.android]]" as="android">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{android.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{android.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[android.sub]]" as="sub">
 						<div class="item">
@@ -142,19 +144,21 @@ class MyProjects extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{web.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{web.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub">
 						<div class="item">
@@ -189,19 +193,21 @@ class MyProjects extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
-				<template is="dom-if" if="{{!error0}}">
-					<div class="actions flex-justified">
-						<div class="title">
-							<span>{{others.title}}</span>
+				<div class\$="[[getUIType(UI)]]">
+					<template is="dom-if" if="{{!error0}}">
+						<div class="actions flex-justified">
+							<div class="title">
+								<span>{{others.title}}</span>
+							</div>
+							<paper-icon-button
+									hidden\$="{{!wideLayout}}"
+									toggles
+									active="{{UI}}"
+									icon\$="my-icons:[[getUIIcon(UI)]]">
+							</paper-icon-button>
 						</div>
-						<paper-icon-button
-								hidden\$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon\$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
-				</template>
+					</template>
+				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[others.sub]]" as="sub">
 						<div class="item">
