@@ -40,7 +40,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 70vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -113,7 +113,7 @@ class MyProjects extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -137,7 +137,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="android">
-						<paper-button class="primary">View all android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class="primary">View all android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -160,7 +160,7 @@ class MyProjects extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -184,7 +184,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="web">
-						<paper-button class="primary">View all web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class="primary">View all web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -207,7 +207,7 @@ class MyProjects extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -231,7 +231,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class="actions flex-center-center">
 					<a href="others">
-						<paper-button class="primary">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class="primary">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

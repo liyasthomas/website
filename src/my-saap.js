@@ -40,7 +40,7 @@ class MySaap extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MySaap extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 70vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -120,7 +120,7 @@ class MySaap extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -166,7 +166,7 @@ class MySaap extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -212,7 +212,7 @@ class MySaap extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -252,7 +252,7 @@ class MySaap extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>

@@ -76,13 +76,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
-				border-radius: 8px;
-				border: 1px solid var(--light-text-color);
+				border-radius: 32px;
 			}
 			paper-button.primary {
 				background-color: var(--accent-color);
 				color: #fff;
-				border: 1px solid var(--accent-color);
 				--paper-button-raised-keyboard-focus: {
 					background-color: var(--dark-accent-color);
 				};
@@ -141,9 +139,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.actions .title,
 			.content .title {
 				font-size: 28px;
-			}
-			.title span {
-				color: var(--accent-color);
+				color: var(--secondary-text-color);
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -174,12 +170,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding-bottom: 0;
 			}
 			.item {
+				border: 1px solid var(--light-text-color);
 				transition: all .1s ease;
 				border-radius: 8px;
-				border: 1px solid var(--light-text-color);
+				border-radius: 8px;
 			}
 			.item:hover {
-//				@apply --shadow-elevation-2dp;
+//				@apply --shadow-elevation-4dp;
 			}
 			.lightbox {
 				width: 100%;
@@ -221,6 +218,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				line-height: 1.25;
 				font-weight: 700;
 			}
+			.title span {
+				color: var(--accent-color);
+			}
 			.description {
 				display: -webkit-box;
 				overflow: hidden;
@@ -229,6 +229,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-line-clamp: 2;
 				font-size: 20px;
 				line-height: 1.2;
+				color: var(--secondary-text-color);
 			}
 			.info {
 				@apply --layout-flex;

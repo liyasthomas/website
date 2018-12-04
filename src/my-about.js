@@ -40,7 +40,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 70vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -90,12 +90,12 @@ class MyAbout extends PolymerElement {
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="primary">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
 					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
@@ -168,7 +168,7 @@ class MyAbout extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class="title">{{sub.title}}</div>
+									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>

@@ -59,11 +59,12 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-grey-900);
-					--light-accent-color: var(--paper-grey-500);
-					--dark-accent-color: var(--paper-grey-800);
+					--accent-color: var(--paper-teal-a400);
+					--light-accent-color: var(--paper-teal-a200);
+					--dark-accent-color: var(--paper-teal-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
-					--secondary-text-color: rgba(0, 0, 0, .38);
+					--secondary-text-color: rgba(0, 0, 0, .54);
+					--divider-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
 					--paper-tabs-selection-bar-color: var(--accent-color);
 					--paper-tab-ink: var(--light-text-color);
@@ -99,7 +100,11 @@ class MyApp extends PolymerElement {
 					width: calc(100% - 80px);
 				}
 				.category {
-					border-top: 1px solid #eee;
+					border-top: 1px solid var(--paper-grey-100);
+				}
+				iron-collapse {
+					border-bottom: 1px solid var(--paper-grey-100);
+					background-color: var(--paper-grey-50);
 				}
 				#home.iron-selected {
 					color: var(--accent-color);
@@ -208,7 +213,7 @@ class MyApp extends PolymerElement {
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button class="primary" onclick="window.location.reload(true)">Update</paper-button>
+				<paper-button raised class="primary" onclick="window.location.reload(true)">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
@@ -260,7 +265,7 @@ class MyApp extends PolymerElement {
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:lightbulb-outline" slot="item-icon"></iron-icon>
 										<span class="expand">View all projects</span>
-										<iron-icon icon="my-icons:chevron-right"></iron-icon>
+										<iron-icon icon="my-icons:input"></iron-icon>
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
@@ -282,7 +287,7 @@ class MyApp extends PolymerElement {
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[android.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{android.title}}</span>
-										<iron-icon icon="my-icons:chevron-right"></iron-icon>
+										<iron-icon icon="my-icons:input"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -301,7 +306,7 @@ class MyApp extends PolymerElement {
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
-										<iron-icon icon="my-icons:chevron-right"></iron-icon>
+										<iron-icon icon="my-icons:input"></iron-icon>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -320,7 +325,7 @@ class MyApp extends PolymerElement {
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
-										<iron-icon icon="my-icons:chevron-right"></iron-icon>
+										<iron-icon icon="my-icons:input"></iron-icon>
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
@@ -398,7 +403,7 @@ class MyApp extends PolymerElement {
 							<span>Contact</span> me
 						</div>
 						<p>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
+							<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi,"><paper-button raised class="primary">Email<iron-icon icon="my-icons:mail"></iron-icon></paper-button></a>
 							<a href="about"><paper-button class="secondary">Read more<iron-icon icon="my-icons:face"></iron-icon></paper-button></a>
 						</p>
 					</div>
