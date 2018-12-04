@@ -90,13 +90,13 @@ class MyAbout extends PolymerElement {
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary" aria-label="Say hello!">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button raised class="primary" aria-label="Hire me">Hire me<iron-icon icon="my-icons:flash-on"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
@@ -107,7 +107,7 @@ class MyAbout extends PolymerElement {
 					Appreciate my works by making a donation.
 				</div>
 				<p>
-					<a href="https://paypal.me/liyascthomas/50" target="_blank"><paper-button class="secondary">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
+					<a href="https://paypal.me/liyascthomas/50" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
@@ -118,9 +118,9 @@ class MyAbout extends PolymerElement {
 					Open sourcing our projects, or part of it, can help inspire other coders.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="secondary">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
-					<a href="https://dribbble.com/liyasthomas"><paper-button class="secondary">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
-					<a href="https://github.com/liyasthomas"><paper-button class="secondary">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="https://dribbble.com/liyasthomas"><paper-button class="secondary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
+					<a href="https://github.com/liyasthomas"><paper-button class="secondary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<iron-ajax auto url="data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -134,7 +134,7 @@ class MyAbout extends PolymerElement {
 				<div class="error">
 					<div>Failed to load feeds.</div>
 					<div>Make sure you're connected to internet.</div>
-					<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+					<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh" aria-label="Refresh"></paper-icon-button></a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.social]]" as="social">
@@ -149,7 +149,7 @@ class MyAbout extends PolymerElement {
 					</template>
 					<p>
 						<template is="dom-repeat" items="[[social.sub]]" as="sub">
-							<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg"></paper-icon-button></a>
+							<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon"></paper-icon-button></a>
 						</template>
 					</p>
 					<p><a href="🏹.to/👦💻">🏹.to/👦💻</a></p>
@@ -187,10 +187,10 @@ class MyAbout extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]" aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" src="../images/assets/social/{{sub.icon}}.svg">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>

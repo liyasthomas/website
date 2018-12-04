@@ -217,28 +217,28 @@ class MyApp extends PolymerElement {
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button raised class="primary" onclick="window.location.reload(true)">Update</paper-button>
+				<paper-button raised class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
 						<div class="flexchild">Share via</div>
-						<paper-icon-button icon="my-icons:close" on-tap="openShare"></paper-icon-button>
+						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
 					</div>
 					<div on-tap="openShare">
 						<template is="dom-repeat" items="[[social]]">
-							<a href="{{item.link}}" target="_blank">
-								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"></paper-icon-button>
+							<a href="{{item.link}}" target="_blank" rel="noopener">
+								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"  aria-label="Icon"></paper-icon-button>
 							</a>
 						</template>
-						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank">
-							<paper-icon-button class="toast-button" icon="my-icons:mail"></paper-icon-button>
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank" rel="noopener">
+							<paper-icon-button class="toast-button" icon="my-icons:mail"  aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
-							<paper-icon-button class="toast-button" icon="my-icons:phone"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:phone"  aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="about">
-							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"  aria-label="Icon"></paper-icon-button>
 						</a>
 					</div>
 				</div>
@@ -283,7 +283,7 @@ class MyApp extends PolymerElement {
 								<div class="error">
 									<div>Failed to load projects list. Make sure you're connected to internet.</div>
 									<span>🙁😢😒</span>
-									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh"></paper-icon-button></a>
+									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh" aria-label="Refresh"></paper-icon-button></a>
 								</div>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
@@ -357,7 +357,7 @@ class MyApp extends PolymerElement {
         <app-header-layout>
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}"></paper-icon-button>
+              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
               <div condensed-title><span class="logo">LT</span></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
@@ -385,10 +385,10 @@ class MyApp extends PolymerElement {
 									</a>
 								</paper-tab>
 							</paper-tabs>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank">
-								<paper-icon-button icon="my-icons:mail"></paper-icon-button>
+							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank" rel="noopener">
+								<paper-icon-button icon="my-icons:mail" aria-label="E-mail"></paper-icon-button>
 							</a>
-						<paper-icon-button icon="my-icons:share" on-tap="openShare"></paper-icon-button>
+							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
             </app-toolbar>
           </app-header>
 					<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
@@ -405,7 +405,7 @@ class MyApp extends PolymerElement {
 					<footer>
 						&copy; Liyas Thomas
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop"></paper-fab>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop" aria-label="Scroll top"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>
     `;

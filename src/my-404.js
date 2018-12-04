@@ -31,7 +31,7 @@ class My404 extends PolymerElement {
 				}
       </style>
 			<h1>4😕4</h1>
-			<div><a href="[[rootPath]]"><paper-fab icon="my-icons:arrow-back"></paper-fab></a></div>
+			<div><a href="[[rootPath]]"><paper-fab icon="my-icons:arrow-back" aria-label="Back"></paper-fab></a></div>
     `;
 	}
 }
