@@ -1,7 +1,7 @@
 {
 	"recent": [
 		{
-			"title": "Recent",
+			"title": "recent",
 			"icon": "star",
 			"sub": [
 				{
@@ -27,7 +27,7 @@
 ],
 	"popular": [
 		{
-			"title": "Popular",
+			"title": "popular",
 			"icon": "whatshot",
 			"sub": [
 				{
@@ -53,8 +53,8 @@
 ],
 	"projects": [
 		{
-			"title": "Projects",
-			"icon": "lightbulb-outline",
+			"title": "projects",
+			"icon": "work",
 			"sub": [
 				{
 					"color": "teal",

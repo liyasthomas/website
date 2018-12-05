@@ -136,6 +136,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 				padding: 32px;
 			}
+			.actions:nth-child(even) {
+				margin-bottom: 16px;
+			}
 			.actions .title,
 			.content .title {
 				font-size: 28px;
@@ -224,6 +227,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.title span {
 				color: var(--accent-color);
+			}
+			iron-icon.big {
+				margin-right: 16px;
+				--iron-icon-height: 32px;
+				--iron-icon-width: 32px;
 			}
 			.description {
 				display: -webkit-box;

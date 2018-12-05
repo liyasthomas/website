@@ -82,10 +82,10 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					About <span>me</span>
+					<span><iron-icon class="big" icon="my-icons:face"></iron-icon></span>about me
 				</div>
 				<div class="description">
-					Hi, My name is Liyas Thomas - a designer, developer, and an entrepreneur.
+					hi, my name is Liyas Thomas, i'm a designer, developer, and an entrepreneur.
 				</div>
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
@@ -101,10 +101,10 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					Buy me a <span>coffee!</span>
+					<span><iron-icon class="big" icon="my-icons:local-cafe"></iron-icon></span>buy me a coffee!
 				</div>
 				<div class="description">
-					Appreciate my works by making a donation.
+					appreciate my works by making a donation.
 				</div>
 				<p>
 					<a href="https://paypal.me/liyascthomas/50" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
@@ -112,10 +112,10 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					<span>Open source</span> projects
+					<span><iron-icon class="big" icon="my-icons:favorite"></iron-icon></span>open source projects
 				</div>
 				<div class="description">
-					Open sourcing our projects, or part of it, can help inspire other coders.
+					open sourcing our projects, or part of it, can help inspire other coders.
 				</div>
 				<p>
 					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
@@ -141,10 +141,10 @@ class MyAbout extends PolymerElement {
 				<div class\$="[[getUIType(UI)]] content">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="title">
-							I'm <span>{{social.title}}</span>
+							<span><iron-icon class="big" icon="my-icons:{{social.icon}}"></iron-icon></span>{{social.title}}
 						</div>
 						<div class="description">
-							Follow me on:
+							follow me on
 						</div>
 					</template>
 					<p>
@@ -160,7 +160,7 @@ class MyAbout extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{gallery.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{gallery.icon}}"></iron-icon></span>{{gallery.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"

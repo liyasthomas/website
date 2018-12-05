@@ -99,7 +99,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{recent.title}}</span> posts
+								<span><iron-icon class="big" icon="my-icons:{{recent.icon}}"></iron-icon></span>{{recent.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -143,7 +143,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{popular.title}}</span> posts
+								<span><iron-icon class="big" icon="my-icons:{{popular.icon}}"></iron-icon></span>{{popular.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -187,7 +187,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{projects.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{projects.icon}}"></iron-icon></span>{{projects.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -225,7 +225,7 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class="actions flex-center-center">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="projects">
 						<paper-button raised class="primary" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
