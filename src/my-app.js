@@ -70,6 +70,7 @@ class MyApp extends PolymerElement {
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
+					--paper-spinner-color: var(--accent-color);
 //					--paper-progress-secondary-color: var(--dark-accent-color);
 //					--paper-progress-container-color: var(--light-accent-color);
 					color: var(--primary-text-color);
@@ -193,6 +194,7 @@ class MyApp extends PolymerElement {
 				footer {
 					padding: 32px;
 					text-align: center;
+					color: var(--secondary-text-color);
 				}
 				@media (max-width: 640px) {
 					app-drawer {
