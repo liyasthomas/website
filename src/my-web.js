@@ -99,7 +99,7 @@ class MyWeb extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{web.title}}</span> projects ({{web.sub.length}})
+								<span><iron-icon class="big" icon="my-icons:{{web.icon}}"></iron-icon></span>{{web.title}} ({{web.sub.length}})
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -144,7 +144,7 @@ class MyWeb extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions">
 							<div class="title">
-								<span>{{similar.title}}</span> projects
+								<span><iron-icon class="big" icon="my-icons:{{similar.icon}}"></iron-icon></span>{{similar.title}}
 							</div>
 						</div>
 					</template>

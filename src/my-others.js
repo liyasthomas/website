@@ -99,7 +99,7 @@ class MyOthers extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{others.title}}</span> projects ({{others.sub.length}})
+								<span><iron-icon class="big" icon="my-icons:{{others.icon}}"></iron-icon></span>{{others.title}} ({{others.sub.length}})
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -143,7 +143,7 @@ class MyOthers extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions">
 							<div class="title">
-								<span>{{similar.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{similar.icon}}"></iron-icon></span>{{similar.title}}
 							</div>
 						</div>
 					</template>

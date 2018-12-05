@@ -1,7 +1,7 @@
 {
 	"web": [
 		{
-			"title": "Web",
+			"title": "web",
 			"icon": "language",
 			"sub": [
 				{
@@ -54,8 +54,8 @@
 ],
 	"similar": [
 		{
-			"title": "Similar",
-			"icon": "group",
+			"title": "similar",
+			"icon": "star",
 			"sub": [
 				{
 					"color": "deep-purple",
