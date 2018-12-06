@@ -8,11 +8,6 @@
 					"title": "PWA Wrapper",
 					"icon": "bubble-chart",
 					"link": ""
-},
-				{
-					"title": "Pineapple Notes",
-					"icon": "note",
-					"link": ""
 }
 ]
 }
@@ -23,16 +18,6 @@
 			"icon": "language",
 			"sub": [
 				{
-					"title": "Saapshot",
-					"icon": "camera-alt",
-					"link": "https://liyasthomas.github.io/saapshot"
-},
-				{
-					"title": "Saap",
-					"icon": "adjust",
-					"link": "https://liyasthomas.github.io/lvr"
-},
-				{
 					"title": "Lvr",
 					"icon": "visibility",
 					"link": "lvr"
@@ -41,26 +26,6 @@
 					"title": "Feedie",
 					"icon": "star",
 					"link": "feedie"
-},
-				{
-					"title": "Pineapple Notes",
-					"icon": "note",
-					"link": "https://pineapple-notes.firebaseapp.com"
-},
-				{
-					"title": "Recycle Mix",
-					"icon": "filter-vintage",
-					"link": "https://recycle-mix.firebaseapp.com"
-},
-				{
-					"title": "Form Face",
-					"icon": "tag-faces",
-					"link": "https://form-face.firebaseapp.com"
-},
-				{
-					"title": "Form Face",
-					"icon": "tag-faces",
-					"link": "https://form-face.firebaseapp.com"
 }
 ]
 }
@@ -71,14 +36,14 @@
 			"icon": "group",
 			"sub": [
 				{
-					"title": "Camion Info Tech",
-					"icon": "layers",
-					"link": "https://www.camioninfotech.com/"
+					"title": "Wallpapers",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"title": "Fuse Org",
-					"icon": "code",
-					"link": "https://fuse-org.firebaseapp.com"
+					"icon": "group",
+					"link": "fuseorg"
 }
 ]
 }

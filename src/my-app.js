@@ -275,7 +275,7 @@ class MyApp extends PolymerElement {
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
-							<iron-ajax auto id="ajax" url="..//projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
+							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading]]">
 									<paper-spinner-lite active\$="[[loading]]"></paper-spinner-lite>
