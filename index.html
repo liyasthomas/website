@@ -183,13 +183,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 		.loader span {
 			display: inline-block;
-			animation: pulse 0.5s alternate infinite ease-in-out;
+			width: 64px;
+			height: 64px;
+			background: #b2b2b2;
+			border-radius: 50%;
+			animation: pulse 1.5s infinite;
 		}
 
 		@keyframes pulse {
-			to {
+			30% {
+				transform: scale(0.7);
+			}
+
+			50% {
+				transform: scale(1.1);
+			}
+
+			70% {
 				transform: scale(0.8);
-				opacity: 0.5;
 			}
 		}
 
@@ -200,7 +211,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	<my-app id="app">
 		<div id="preloader">
 			<div class="loader">
-				<span>.</span>
+				<span></span>
 			</div>
 		</div>
 	</my-app>
