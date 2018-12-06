@@ -275,17 +275,16 @@ class MyApp extends PolymerElement {
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
-							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
+							<iron-ajax auto id="ajax" url="..//projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
-								<div class="actions flex-center-center" hidden\$="[[!loading]]">
+								<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading]]">
 									<paper-spinner-lite active\$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
 							<template is="dom-if" if="{{error}}">
-								<div class="error">
-									<div>Failed to load projects list. Make sure you're connected to internet.</div>
-									<span>🙁😢😒</span>
-									<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh" aria-label="Refresh"></paper-icon-button></a>
+								<div class\$="[[getUIType(UI)]] error">
+									<div>Failed to load feeds. Make sure you're connected to internet.</div>
+									<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
 								</div>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
@@ -400,7 +399,7 @@ class MyApp extends PolymerElement {
 						<my-android name="android"></my-android>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
-						<my-saap name="saap"></my-saap>
+						<my-feedie name="feedie"></my-feedie>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
@@ -519,7 +518,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'android', 'web', 'others', 'saap', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'android', 'web', 'others', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -557,8 +556,8 @@ class MyApp extends PolymerElement {
 			case 'others':
 				import('./my-others.js');
 				break;
-			case 'saap':
-				import('./my-saap.js');
+			case 'feedie':
+				import('./my-feedie.js');
 				break;
 			case 'view4':
 				import('./my-view4.js');

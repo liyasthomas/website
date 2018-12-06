@@ -1,7 +1,7 @@
 {
 	"section1": [
 		{
-			"title": "Screenshots",
+			"title": "screenshots",
 			"icon": "wallpaper",
 			"sub": [
 				{
@@ -27,7 +27,7 @@
 ],
 	"section2": [
 		{
-			"title": "Prototyping",
+			"title": "prototyping",
 			"icon": "language",
 			"sub": [
 				{
@@ -98,7 +98,7 @@
 ],
 	"section3": [
 		{
-			"title": "Architecture",
+			"title": "architecture",
 			"icon": "group",
 			"sub": [
 				{
@@ -124,7 +124,7 @@
 ],
 	"similar": [
 		{
-			"title": "Similar",
+			"title": "similar",
 			"icon": "group",
 			"sub": [
 				{

@@ -15,7 +15,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MySaap extends PolymerElement {
+class MyFeedie extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -77,28 +77,28 @@ class MySaap extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="banner flexchild flex-vertical deep-purple-bg">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="{{sub.title}}"></iron-image>
+			<div class="banner flexchild flex-vertical blue-bg">
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
-				<div class="title"><span>Saap!</span></div>
+				<div class="title"><span>Feedie</span></div>
+				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
-			<iron-ajax auto url="../data/saap_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/feedie_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class="actions flex-center-center" hidden\$="[[!loading0]]">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
 					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class="error">
-					<div>Failed to load feeds.</div>
-					<div>Make sure you're connected to internet.</div>
-					<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh" aria-label="Refresh"></paper-icon-button></a>
+				<div class\$="[[getUIType(UI)]] error">
+					<div>Failed to load feeds. Make sure you're connected to internet.</div>
+					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
@@ -106,7 +106,7 @@ class MySaap extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{section1.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{section1.icon}}"></iron-icon></span>{{section1.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -149,12 +149,23 @@ class MySaap extends PolymerElement {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
+			<template is="dom-if" if="{{loading0}}">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				</div>
+			</template>
+			<template is="dom-if" if="{{error0}}">
+				<div class\$="[[getUIType(UI)]] error">
+					<div>Failed to load feeds. Make sure you're connected to internet.</div>
+					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
+				</div>
+			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{section2.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{section2.icon}}"></iron-icon></span>{{section2.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -197,12 +208,23 @@ class MySaap extends PolymerElement {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
+			<template is="dom-if" if="{{loading0}}">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				</div>
+			</template>
+			<template is="dom-if" if="{{error0}}">
+				<div class\$="[[getUIType(UI)]] error">
+					<div>Failed to load feeds. Make sure you're connected to internet.</div>
+					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
+				</div>
+			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span>{{section3.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{section3.icon}}"></iron-icon></span>{{section3.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -245,12 +267,23 @@ class MySaap extends PolymerElement {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
+			<template is="dom-if" if="{{loading0}}">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				</div>
+			</template>
+			<template is="dom-if" if="{{error0}}">
+				<div class\$="[[getUIType(UI)]] error">
+					<div>Failed to load feeds. Make sure you're connected to internet.</div>
+					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
+				</div>
+			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions">
 							<div class="title">
-								<span>{{similar.title}}</span>
+								<span><iron-icon class="big" icon="my-icons:{{similar.icon}}"></iron-icon></span>{{similar.title}}
 							</div>
 						</div>
 					</template>
@@ -314,4 +347,4 @@ class MySaap extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-saap', MySaap);
+window.customElements.define('my-feedie', MyFeedie);

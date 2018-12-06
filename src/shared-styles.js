@@ -34,6 +34,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			a.link:hover {
 				color: var(--dark-accent-color);
 			}
+			a iron-icon {
+				margin-left: 8px;
+			}
 			p {
 				margin: 16px 0;
 			}
@@ -142,7 +145,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.actions .title,
 			.content .title {
 				font-size: 28px;
-				color: var(--secondary-text-color);
+				color: var(--primary-text-color);
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -155,9 +158,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 32px;
 			}
 			.error {
-				padding: 16px;
+				padding: 32px;
 				font-family: "Roboto Mono", Consolas, Menlo, Monaco, monospace;
 				font-size: 14px;
+				font-weight: 700;
 				color: var(--secondary-text-color);
 			}
 			.grid {
@@ -240,6 +244,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
 				font-size: 20px;
+				font-weight: 700;
 				line-height: 1.2;
 				color: var(--secondary-text-color);
 			}

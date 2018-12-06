@@ -14,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <head>
 	<meta charset="utf-8">
 	<meta name="generator" content="Polymer Starter Kit">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
 
 	<title>Liyas Thomas</title>
 	<meta name="description" content="Developer, Designer, Entrepreneur, Artist">
@@ -186,10 +186,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			animation: pulse 0.5s alternate infinite ease-in-out;
 		}
 
-		.loader span:nth-child(odd) {
-			animation-delay: 0.5s;
-		}
-
 		@keyframes pulse {
 			to {
 				transform: scale(0.8);
@@ -204,7 +200,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	<my-app id="app">
 		<div id="preloader">
 			<div class="loader">
-				<span>·</span><span>·</span>
+				<span>.</span>
 			</div>
 		</div>
 	</my-app>

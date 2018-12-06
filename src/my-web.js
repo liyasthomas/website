@@ -78,20 +78,19 @@ class MyWeb extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="{{sub.title}}"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class="actions flex-center-center" hidden\$="[[!loading0]]">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
 					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class="error">
-					<div>Failed to load feeds.</div>
-					<div>Make sure you're connected to internet.</div>
-					<a href="javascript:location.reload();"><paper-icon-button icon="my-icons:refresh" aria-label="Refresh"></paper-icon-button></a>
+				<div class\$="[[getUIType(UI)]] error">
+					<div>Failed to load feeds. Make sure you're connected to internet.</div>
+					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
