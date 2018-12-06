@@ -113,6 +113,9 @@ class MyApp extends PolymerElement {
 				#projects.iron-selected {
 					color: var(--accent-color);
 				}
+				#blog.iron-selected {
+					color: var(--accent-color);
+				}
 				#about.iron-selected {
 					color: var(--accent-color);
 				}
@@ -344,6 +347,13 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
+						<a id="blog" href="blog" tabindex="-1">
+							<paper-icon-item>
+								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
+								<span>Blog</span>
+								<paper-ripple></paper-ripple>
+							</paper-icon-item>
+						</a>
 						<a id="about" href="about" tabindex="-1">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
@@ -379,6 +389,12 @@ class MyApp extends PolymerElement {
 										<span>Projects</span>
 									</a>
 								</paper-tab>
+								<paper-tab id="blog">
+									<a href="blog" tabindex="-1">
+										<iron-icon icon="my-icons:favorite"></iron-icon>
+										<span>Blog</span>
+									</a>
+								</paper-tab>
 								<paper-tab id="about">
 									<a href="about" tabindex="-1">
 										<iron-icon icon="my-icons:face"></iron-icon>
@@ -395,6 +411,7 @@ class MyApp extends PolymerElement {
 					<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
+						<my-blog name="blog"></my-blog>
 						<my-about name="about"></my-about>
 						<my-android name="android"></my-android>
 						<my-web name="web"></my-web>
@@ -518,7 +535,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'android', 'web', 'others', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'blog', 'about', 'android', 'web', 'others', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -543,6 +560,9 @@ class MyApp extends PolymerElement {
 				break;
 			case 'projects':
 				import('./my-projects.js');
+				break;
+			case 'blog':
+				import('./my-blog.js');
 				break;
 			case 'about':
 				import('./my-about.js');
