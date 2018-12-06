@@ -81,16 +81,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 32px;
 			}
-			paper-button.primary {
-				background-color: var(--accent-color);
-				color: #fff;
-				--paper-button-raised-keyboard-focus: {
-					background-color: var(--dark-accent-color);
-				};
-			}
-			paper-button.primary:hover {
-				background-color: var(--dark-accent-color);
-			}
 			paper-button.secondary {
 				background-color: #fff;
 				color: var(--secondary-text-color);
@@ -230,7 +220,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-weight: 700;
 			}
 			.title span {
-				color: var(--accent-color);
+				color: var(--secondary-text-color);
 			}
 			iron-icon.big {
 				margin-right: 16px;
@@ -296,6 +286,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-image: linear-gradient(315deg, var(--paper-red-a200), var(--paper-red-a400), var(--paper-red-a700));
 				color: #fff;
 			}
+			.pink-bg {
+				background-color: var(--paper-pink-a400);
+				background-image: linear-gradient(315deg, var(--paper-pink-a200), var(--paper-pink-a400), var(--paper-pink-a700));
+				color: #fff;
+			}
 			.orange-bg {
 				background-color: var(--paper-orange-a400);
 				background-image: linear-gradient(315deg, var(--paper-orange-a200), var(--paper-orange-a400), var(--paper-orange-a700));
@@ -314,7 +309,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.green-bg {
 				background-color: var(--paper-green-a400);
 				background-image: linear-gradient(315deg, var(--paper-green-a200), var(--paper-green-a400), var(--paper-green-a700));
-				color: var(--paper-green-a400);
+				color: #fff;
 			}
 			.yellow-bg {
 				background-color: var(--paper-yellow-a400);
@@ -339,7 +334,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.indigo-bg {
 				background-color: var(--paper-indigo-a400);
 				background-image: linear-gradient(315deg, var(--paper-indigo-a200), var(--paper-indigo-a400), var(--paper-indigo-a700));
-				color: var(--paper-purple-a400);
+				color: #fff;
 			}
 			.blue-grey-bg {
 				background-color: var(--paper-blue-grey-500);
@@ -364,6 +359,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.red-fg {
 				color: var(--paper-red-a400);
+			}
+			.pink-fg {
+				color: var(--paper-pink-a400);
 			}
 			.yellow-fg {
 				color: var(--paper-yellow-a400);

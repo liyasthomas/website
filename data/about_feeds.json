@@ -3,6 +3,8 @@
 		{
 			"title": "social",
 			"icon": "share",
+			"color": "green",
+			"link": "blog",
 			"sub": [
 				{
 					"link": "https://www.facebook.com/liyasthomas",
@@ -75,6 +77,8 @@
 		{
 			"title": "gallery",
 			"icon": "camera-alt",
+			"color": "blue",
+			"link": "blog",
 			"sub": [
 				{
 					"color": "white",

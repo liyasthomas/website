@@ -81,7 +81,7 @@ class MyFeedie extends PolymerElement {
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
-				<div class="title"><span>Feedie</span></div>
+				<div class="title">Feedie<span> (web)</span></div>
 				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
@@ -106,7 +106,7 @@ class MyFeedie extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{section1.icon}}"></iron-icon></span>{{section1.title}}
+								<iron-icon class\$="[[_computeFgClass(section1.color)]] big" icon="my-icons:{{section1.icon}}"></iron-icon>{{section1.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -165,7 +165,7 @@ class MyFeedie extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{section2.icon}}"></iron-icon></span>{{section2.title}}
+								<iron-icon class\$="[[_computeFgClass(section2.color)]] big" icon="my-icons:{{section2.icon}}"></iron-icon>{{section2.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -224,7 +224,7 @@ class MyFeedie extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{section3.icon}}"></iron-icon></span>{{section3.title}}
+								<iron-icon class\$="[[_computeFgClass(section3.color)]] big" icon="my-icons:{{section3.icon}}"></iron-icon>{{section3.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -283,7 +283,7 @@ class MyFeedie extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{similar.icon}}"></iron-icon></span>{{similar.title}}
+								<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
 							</div>
 						</div>
 					</template>
@@ -314,6 +314,11 @@ class MyFeedie extends PolymerElement {
 							</div>
 						</div>
 					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{similar.link}}">
+						<paper-button raised class\$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
     `;

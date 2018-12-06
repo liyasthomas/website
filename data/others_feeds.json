@@ -2,7 +2,9 @@
 	"others": [
 		{
 			"title": "others",
-			"icon": "language",
+			"icon": "group",
+			"color": "indigo",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "orange",
@@ -29,6 +31,8 @@
 		{
 			"title": "similar",
 			"icon": "star",
+			"color": "blue-grey",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "blue",

@@ -3,6 +3,8 @@
 		{
 			"title": "android",
 			"icon": "android",
+			"color": "green",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "white",
@@ -29,6 +31,8 @@
 		{
 			"title": "similar",
 			"icon": "star",
+			"color": "blue-grey",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "white",

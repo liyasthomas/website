@@ -98,7 +98,7 @@ class MyProjects extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{android.icon}}"></iron-icon></span>{{android.title}}
+								<iron-icon class\$="[[_computeFgClass(android.color)]] big" icon="my-icons:{{android.icon}}"></iron-icon>{{android.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -137,8 +137,8 @@ class MyProjects extends PolymerElement {
 					</template>
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="android">
-						<paper-button raised class="primary" aria-label="View all">View all android projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<a href="{{android.link}}">
+						<paper-button raised class\$="[[_computeBgClass(android.color)]]" aria-label="View all">View all {{android.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -147,7 +147,7 @@ class MyProjects extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{web.icon}}"></iron-icon></span>{{web.title}}
+								<iron-icon class\$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -186,8 +186,8 @@ class MyProjects extends PolymerElement {
 					</template>
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="web">
-						<paper-button raised class="primary" aria-label="View all">View all web projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<a href="{{web.link}}">
+						<paper-button raised class\$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -196,7 +196,7 @@ class MyProjects extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{others.icon}}"></iron-icon></span>{{others.title}}
+								<iron-icon class\$="[[_computeFgClass(others.color)]] big" icon="my-icons:{{others.icon}}"></iron-icon>{{others.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -235,8 +235,8 @@ class MyProjects extends PolymerElement {
 					</template>
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="others">
-						<paper-button raised class="primary" aria-label="View all">View all other projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<a href="{{others.link}}">
+						<paper-button raised class\$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

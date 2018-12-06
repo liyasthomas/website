@@ -82,7 +82,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					<span><iron-icon class="big" icon="my-icons:face"></iron-icon></span>about me
+					<iron-icon class="deep-orange-fg big" icon="my-icons:face"></iron-icon>about me
 				</div>
 				<div class="description">
 					hi, my name is Liyas Thomas, i'm a designer, developer, and an entrepreneur.
@@ -101,7 +101,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					<span><iron-icon class="big" icon="my-icons:local-cafe"></iron-icon></span>buy me a coffee!
+					<iron-icon class="orange-fg big" icon="my-icons:local-cafe"></iron-icon>buy me a coffee!
 				</div>
 				<div class="description">
 					appreciate my works by making a donation.
@@ -112,7 +112,7 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
 				<div class="title">
-					<span><iron-icon class="big" icon="my-icons:favorite"></iron-icon></span>open source projects
+					<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>open source projects
 				</div>
 				<div class="description">
 					open sourcing our projects, or part of it, can help inspire other coders.
@@ -140,7 +140,7 @@ class MyAbout extends PolymerElement {
 				<div class\$="[[getUIType(UI)]] content">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="title">
-							<span><iron-icon class="big" icon="my-icons:{{social.icon}}"></iron-icon></span>{{social.title}}
+							<iron-icon class\$="[[_computeFgClass(social.color)]] big" icon="my-icons:{{social.icon}}"></iron-icon>{{social.title}}
 						</div>
 						<div class="description">
 							follow me on
@@ -151,7 +151,12 @@ class MyAbout extends PolymerElement {
 							<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon"></paper-icon-button></a>
 						</template>
 					</p>
-					<p><a href="🏹.to/👦💻">🏹.to/👦💻</a></p>
+					<p><a href="https://🏹.to/👦💻">🏹.to/👦💻</a></p>
+				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{social.link}}">
+						<paper-button raised class\$="[[_computeBgClass(social.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
@@ -159,7 +164,7 @@ class MyAbout extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{gallery.icon}}"></iron-icon></span>{{gallery.title}}
+							<iron-icon class\$="[[_computeFgClass(gallery.color)]] big" icon="my-icons:{{gallery.icon}}"></iron-icon>{{gallery.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -196,6 +201,11 @@ class MyAbout extends PolymerElement {
 							</div>
 						</div>
 					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{gallery.link}}">
+						<paper-button raised class\$="[[_computeBgClass(gallery.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
     `;

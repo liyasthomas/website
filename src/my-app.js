@@ -233,7 +233,7 @@ class MyApp extends PolymerElement {
 								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"  aria-label="Icon"></paper-icon-button>
 							</a>
 						</template>
-						<a href="mailto:liyascthomas@gmail.com?&subject=Hello%20Liyas!&body=Hi," target="_blank" rel="noopener">
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 							<paper-icon-button class="toast-button" icon="my-icons:mail"  aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
@@ -386,7 +386,7 @@ class MyApp extends PolymerElement {
 									</a>
 								</paper-tab>
 							</paper-tabs>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," taget="_blank" rel="noopener">
+							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 								<paper-icon-button icon="my-icons:mail" aria-label="E-mail"></paper-icon-button>
 							</a>
 							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>

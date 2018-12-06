@@ -98,7 +98,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{recent.icon}}"></iron-icon></span>{{recent.title}}
+								<span><iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon></span>{{recent.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -136,13 +136,18 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{recent.link}}">
+						<paper-button raised class\$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{popular.icon}}"></iron-icon></span>{{popular.title}}
+								<span><iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon></span>{{popular.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -180,13 +185,18 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{popular.link}}">
+						<paper-button raised class\$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.projects]]" as="projects">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{projects.icon}}"></iron-icon></span>{{projects.title}}
+								<span><iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon></span>{{projects.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -225,8 +235,8 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="projects">
-						<paper-button raised class="primary" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<a href="{{projects.link}}">
+						<paper-button raised class\$="[[_computeBgClass(projects.color)]]" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -3,6 +3,8 @@
 		{
 			"title": "recent",
 			"icon": "star",
+			"color": "deep-orange",
+			"link": "blog",
 			"sub": [
 				{
 					"color": "indigo",
@@ -29,6 +31,8 @@
 		{
 			"title": "popular",
 			"icon": "whatshot",
+			"color": "red",
+			"link": "blog",
 			"sub": [
 				{
 					"color": "cyan",
@@ -55,6 +59,8 @@
 		{
 			"title": "projects",
 			"icon": "work",
+			"color": "blue",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "teal",

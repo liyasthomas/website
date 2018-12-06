@@ -3,6 +3,8 @@
 		{
 			"title": "web",
 			"icon": "language",
+			"color": "light-blue",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "teal",
@@ -56,6 +58,8 @@
 		{
 			"title": "similar",
 			"icon": "star",
+			"color": "blue-grey",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "deep-purple",

@@ -3,6 +3,8 @@
 		{
 			"title": "screenshots",
 			"icon": "wallpaper",
+			"color": "blue",
+			"link": "feedie",
 			"sub": [
 				{
 					"color": "white",
@@ -29,6 +31,8 @@
 		{
 			"title": "prototyping",
 			"icon": "language",
+			"color": "blue",
+			"link": "feedie",
 			"sub": [
 				{
 					"color": "white",
@@ -99,7 +103,9 @@
 	"section3": [
 		{
 			"title": "architecture",
-			"icon": "group",
+			"icon": "code",
+			"color": "blue",
+			"link": "feedie",
 			"sub": [
 				{
 					"color": "white",
@@ -126,6 +132,8 @@
 		{
 			"title": "similar",
 			"icon": "group",
+			"color": "blue-grey",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "white",

@@ -98,7 +98,7 @@ class MyWeb extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{web.icon}}"></iron-icon></span>{{web.title}} ({{web.sub.length}})
+								<iron-icon class\$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}<span> ({{web.sub.length}})</span>
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -137,13 +137,18 @@ class MyWeb extends PolymerElement {
 						</div>
 					</template>
 				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{web.link}}">
+						<paper-button raised class\$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 				<div class\$="[[getUIType(UI)]]">
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions">
 							<div class="title">
-								<span><iron-icon class="big" icon="my-icons:{{similar.icon}}"></iron-icon></span>{{similar.title}}
+								<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
 							</div>
 						</div>
 					</template>
@@ -174,6 +179,11 @@ class MyWeb extends PolymerElement {
 							</div>
 						</div>
 					</template>
+				</div>
+				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+					<a href="{{similar.link}}">
+						<paper-button raised class\$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
     `;
