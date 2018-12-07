@@ -65,7 +65,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 35vw;
+						--app-grid-item-height: 30vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -227,7 +227,7 @@ class MyAbout extends PolymerElement {
 	}
 
 	getUIType(UI) {
-		return UI ? 'list' : 'grid';
+		return UI ? 'grid' : 'list';
 	}
 
 	getUIIcon(icon) {

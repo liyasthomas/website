@@ -28,7 +28,7 @@ class MyBlog extends PolymerElement {
 			<div class="banner flexchild flex-vertical deep-purple-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="../data/blog_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="ajaxResponse0">
+			<iron-ajax auto url="../data/test.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="ajaxResponse0">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
@@ -42,8 +42,9 @@ class MyBlog extends PolymerElement {
 				</div>
 			</template>
       <template is="dom-repeat" id="list" items="[]" as="blog" scroll-target="document">
-				<div>[[blog.title]]</div>
-				<div>[[blog.icon]]</div>
+				<a href="[[blog.post_url]]">View post ([[blog.post_url]])</p>
+				<p>[[blog.title]]</p>
+				<p>[[blog.body]]</p>
       </template>
       <iron-scroll-threshold id="scrollTheshold"
 				lower-threshold="50"
@@ -58,7 +59,7 @@ class MyBlog extends PolymerElement {
 	}
 
 	ajaxResponse0(e) {
-		var blogs = e.detail.response.blogs;
+		var blogs = e.detail.response.response.posts;
 		blogs.forEach(function (blog) {
 			this.$.list.push('items', blog);
 		}, this);
