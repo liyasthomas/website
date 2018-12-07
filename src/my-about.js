@@ -107,7 +107,7 @@ class MyAbout extends PolymerElement {
 					appreciate my works by making a donation.
 				</div>
 				<p>
-					<a href="https://paypal.me/liyascthomas/50" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
+					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">

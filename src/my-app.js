@@ -474,8 +474,16 @@ class MyApp extends PolymerElement {
 							icon: "twitter"
 						},
 						{
+							link: "https://instagram.com/liyasthomas",
+							icon: "instagram"
+						},
+						{
 							link: "https://plus.google.com/liyasthomas",
 							icon: "google-plus"
+						},
+						{
+							link: "https://liyasthomas.tumblr.com",
+							icon: "tumblr"
 						},
 						{
 							link: "https://github.com/liyasthomas",
@@ -484,14 +492,6 @@ class MyApp extends PolymerElement {
 						{
 							link: "https://www.linkedin.com/in/liyasthomas",
 							icon: "linkedin"
-						},
-						{
-							link: "https://www.linkedin.com/in/liyasthomas",
-							icon: "behance"
-						},
-						{
-							link: "https://www.linkedin.com/in/liyasthomas",
-							icon: "dribbble"
 						},
 						{
 							link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",

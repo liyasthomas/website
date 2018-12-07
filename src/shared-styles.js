@@ -180,13 +180,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item:hover {
 //				@apply --shadow-elevation-4dp;
 			}
-			.lightbox {
-				width: 100%;
-				height: 100%;
-			}
 			.container {
       	@apply --layout-flex;
       	@apply --layout-vertical;
+				height: 100%;
 			}
 			.bg {
 				@apply --layout-flex;

@@ -98,7 +98,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon></span>{{recent.title}}
+								<iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon>{{recent.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -147,7 +147,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon></span>{{popular.title}}
+								<iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon>{{popular.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
@@ -196,7 +196,7 @@ class MyHome extends PolymerElement {
 					<template is="dom-if" if="{{!error0}}">
 						<div class="actions flex-justified">
 							<div class="title">
-								<span><iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon></span>{{projects.title}}
+								<iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon>{{projects.title}}
 							</div>
 							<paper-icon-button
 									hidden\$="{{!wideLayout}}"
