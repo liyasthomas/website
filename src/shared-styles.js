@@ -149,6 +149,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.error {
 				padding: 32px;
+				text-align: center;
 				font-family: "Roboto Mono", Consolas, Menlo, Monaco, monospace;
 				font-size: 14px;
 				font-weight: 700;

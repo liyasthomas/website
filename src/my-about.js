@@ -132,8 +132,8 @@ class MyAbout extends PolymerElement {
 			</template>
 			<template is="dom-if" if="{{error0}}">
 				<div class\$="[[getUIType(UI)]] error">
-					<div>Failed to load feeds. Make sure you're connected to internet.</div>
-					<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
+					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
+					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.social]]" as="social">
@@ -220,6 +220,10 @@ class MyAbout extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	tryAgain() {
+		this.$.ajax0.generateRequest();
 	}
 
 	getUIType(UI) {

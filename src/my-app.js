@@ -278,7 +278,7 @@ class MyApp extends PolymerElement {
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
-							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
+							<iron-ajax auto id="ajax" url="..//projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading]]">
 									<paper-spinner-lite active\$="[[loading]]"></paper-spinner-lite>
@@ -286,8 +286,8 @@ class MyApp extends PolymerElement {
 							</template>
 							<template is="dom-if" if="{{error}}">
 								<div class\$="[[getUIType(UI)]] error">
-									<div>Failed to load feeds. Make sure you're connected to internet.</div>
-									<a class="link" href="javascript:location.reload();">Refresh<iron-icon icon="my-icons:refresh"></iron-icon></a>
+									<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
+									<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
 								</div>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
@@ -486,6 +486,10 @@ class MyApp extends PolymerElement {
 			routeData: Object,
 			subroute: Object
 		};
+	}
+
+	tryAgain() {
+		this.$.ajax.generateRequest();
 	}
 
 	onLayoutChange(wide) {

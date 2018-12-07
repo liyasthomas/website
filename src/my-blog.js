@@ -13,6 +13,7 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import '@polymer/iron-scroll-threshold/iron-scroll-threshold.js';
 
 class MyBlog extends PolymerElement {
 	static get template() {
@@ -22,7 +23,9 @@ class MyBlog extends PolymerElement {
           display: block;
         }
       </style>
+
 Blog
+
     `;
 	}
 }
