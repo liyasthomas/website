@@ -13,59 +13,144 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import '@polymer/iron-scroll-threshold/iron-scroll-threshold.js';
-import '@polymer/iron-list/iron-list.js';
+import '@polymer/app-layout/app-grid/app-grid-style.js';
 
 class MyBlog extends PolymerElement {
 	static get template() {
 		return html `
+      <style include="app-grid-style">
+      </style>
       <style include="shared-styles">
         :host {
           display: block;
+          --app-grid-item-height: 100%;
         }
+				@media all and (min-width: 0) and (max-width: 360px) {
+					:host {
+						--app-grid-columns: 1;
+						--app-grid-gutter: 16px;
+						--app-grid-item-height: auto;
+						--app-grid-expandible-item-columns: 1;
+					}
+					.list {
+						width: 100%;
+					}
+				}
+				@media all and (min-width: 361px) and (max-width: 640px) {
+					:host {
+						--app-grid-columns: 1;
+						--app-grid-gutter: 16px;
+						--app-grid-item-height: auto;
+						--app-grid-expandible-item-columns: 1;
+					}
+					.list {
+						width: 100%;
+					}
+				}
+				@media all and (min-width: 641px) and (max-width: 960px) {
+					:host {
+						--app-grid-columns: 2;
+						--app-grid-gutter: 32px;
+						--app-grid-item-height: auto;
+						--app-grid-expandible-item-columns: 2;
+					}
+					.list {
+						width: 80vw;
+					}
+					.item:nth-child(5n+3) {
+						@apply --app-grid-expandible-item;
+					}
+				}
+				@media all and (min-width: 961px) {
+					:host {
+						--app-grid-columns: 4;
+						--app-grid-gutter: 32px;
+						--app-grid-item-height: auto;
+						--app-grid-expandible-item-columns: 2;
+					}
+					.list {
+						width: 60vw;
+					}
+					.item:nth-child(5n+3) {
+						@apply --app-grid-expandible-item;
+					}
+				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical deep-purple-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="../data/test.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="ajaxResponse0">
+			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts/text?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
+				<div class="grid actions flex-center-center" hidden\$="[[!loading0]]">
 					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
+				<div class="grid error">
 					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="_load"></paper-icon-button></p>
+					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
 				</div>
 			</template>
-      <template is="dom-repeat" id="list" items="[]" as="blog" scroll-target="document">
-				<a href="[[blog.post_url]]">View post ([[blog.post_url]])</p>
-				<p>[[blog.title]]</p>
-				<p>[[blog.body]]</p>
-      </template>
-      <iron-scroll-threshold id="scrollTheshold"
-				lower-threshold="50"
-				on-lower-threshold="_load"
-				scroll-target="document">
-			</iron-scroll-threshold>
+			<div class="grid">
+				<template is="dom-if" if="{{!error0}}">
+					<div class="actions flex-justified">
+						<div class="title">
+							<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>tumblr<span> @liyasthomas</span>
+						</div>
+					</div>
+				</template>
+			</div>
+			<div class="grid app-grid">
+				<template is="dom-repeat" items="[[ajaxResponse0.response.posts]]" as="posts">
+					<div class="item">
+						<a href="{{posts.post_url}}" target="_blank" rel="noopener">
+							<div class="container">
+								<div class="block top">
+									<div class="title">{{posts.title}}</div>
+								</div>
+								<div class="block mid">
+									<div class="description">{{posts.summary}}</div>
+								</div>
+								<div class="flexchild flex-vertical">
+								</div>
+								<div class="block bottom">
+									<div class="info">
+										<div class="flexchild">
+										</div>
+										<div>
+											{{posts.note_count}}<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</template>
+			</div>
+			<div class="grid actions flex-center-center">
+				<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+					<paper-button raised class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+			</div>
     `;
 	}
 
-	_load() {
+	attached() {
+		this._updateGridStyles = this._updateGridStyles || function () {
+			this.updateStyles();
+		}.bind(this);
+		window.addEventListener('resize', this._updateGridStyles);
+	}
+
+	detached() {
+		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	tryAgain() {
 		this.$.ajax0.generateRequest();
 	}
-
-	ajaxResponse0(e) {
-		var blogs = e.detail.response.response.posts;
-		blogs.forEach(function (blog) {
-			this.$.list.push('items', blog);
-		}, this);
-		this.$.scrollTheshold.clearTriggers();
-	}
-
 }
 
 window.customElements.define('my-blog', MyBlog);
