@@ -35,22 +35,22 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "white",
-					"title": "Similar 1",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "bubble-chart",
-					"link": ""
+					"color": "orange",
+					"title": "Wallpapers",
+					"description": "Curated list of wallpapers",
+					"info": "View all",
+					"img": "../images/assets/projects/wallpapers.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
-					"color": "white",
-					"title": "Similar 2",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "note",
-					"link": ""
+					"color": "blue",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
+					"info": "Read more",
+					"img": "../images/assets/projects/feedie.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
 }
 ]
 }

@@ -136,22 +136,22 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "white",
-					"title": "Similar 1",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "bubble-chart",
-					"link": ""
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
 },
 				{
-					"color": "white",
-					"title": "Similar 2",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "note",
-					"link": ""
+					"color": "orange",
+					"title": "Wallpapers",
+					"description": "Curated list of wallpapers",
+					"info": "View all",
+					"img": "../images/assets/projects/wallpapers.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 }
 ]
 }
