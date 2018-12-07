@@ -23,6 +23,10 @@ class MyBlog extends PolymerElement {
           display: block;
         }
       </style>
+			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+			<div class="banner flexchild flex-vertical pink-bg">
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
+			</div>
 
 Blog
 

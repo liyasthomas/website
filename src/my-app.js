@@ -80,6 +80,33 @@ class MyApp extends PolymerElement {
 				[hidden] {
 					display: none !important;
 				}
+
+
+				:host([page=projects]) app-header {
+					background-color: var(--paper-grey-800);
+					color: #fff;
+				}
+				:host([page=blog]) app-header {
+					background-color: var(--paper-pink-a400);
+					color: #fff;
+				}
+				:host([page=android]) app-header {
+					background-color: var(--paper-green-a400);
+					color: #fff;
+				}
+				:host([page=web]) app-header {
+					background-color: var(--paper-light-blue-a400);
+					color: #fff;
+				}
+				:host([page=others]) app-header {
+					background-color: var(--paper-indigo-a400);
+					color: #fff;
+				}
+				:host([page=feedie]) app-header {
+					background-color: var(--paper-blue-a400);
+					color: #fff;
+				}
+
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;

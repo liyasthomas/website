@@ -265,7 +265,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--paper-grey-800);
 			}
 			.black-bg {
-				background-color: var(--paper-grey-700);
+				background-color: var(--paper-grey-800);
 				color: #fff;
 			}
 			.grey-bg {
@@ -274,72 +274,72 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.purple-bg {
 				background-color: var(--paper-purple-a400);
-				background-image: linear-gradient(315deg, var(--paper-purple-a200), var(--paper-purple-a400), var(--paper-purple-a700));
+				background-image: linear-gradient(180deg, var(--paper-purple-a400), var(--paper-purple-a700));
 				color: #fff;
 			}
 			.deep-purple-bg {
 				background-color: var(--paper-deep-purple-a400);
-				background-image: linear-gradient(315deg, var(--paper-deep-purple-a200), var(--paper-deep-purple-a400), var(--paper-deep-purple-a700));
+				background-image: linear-gradient(180deg, var(--paper-deep-purple-a400), var(--paper-deep-purple-a700));
 				color: #fff;
 			}
 			.red-bg {
 				background-color: var(--paper-red-a400);
-				background-image: linear-gradient(315deg, var(--paper-red-a200), var(--paper-red-a400), var(--paper-red-a700));
+				background-image: linear-gradient(180deg, var(--paper-red-a400), var(--paper-red-a700));
 				color: #fff;
 			}
 			.pink-bg {
 				background-color: var(--paper-pink-a400);
-				background-image: linear-gradient(315deg, var(--paper-pink-a200), var(--paper-pink-a400), var(--paper-pink-a700));
+				background-image: linear-gradient(180deg, var(--paper-pink-a400), var(--paper-pink-a700));
 				color: #fff;
 			}
 			.orange-bg {
 				background-color: var(--paper-orange-a400);
-				background-image: linear-gradient(315deg, var(--paper-orange-a200), var(--paper-orange-a400), var(--paper-orange-a700));
+				background-image: linear-gradient(180deg, var(--paper-orange-a400), var(--paper-orange-a700));
 				color: #fff;
 			}
 			.deep-orange-bg {
 				background-color: var(--paper-deep-orange-a400);
-				background-image: linear-gradient(315deg, var(--paper-deep-orange-a200), var(--paper-deep-orange-a400), var(--paper-deep-orange-a700));
+				background-image: linear-gradient(180deg, var(--paper-deep-orange-a400), var(--paper-deep-orange-a700));
 				color: #fff;
 			}
 			.cyan-bg {
 				background-color: var(--paper-cyan-a400);
-				background-image: linear-gradient(315deg, var(--paper-cyan-a200), var(--paper-cyan-a400), var(--paper-cyan-a700));
+				background-image: linear-gradient(180deg, var(--paper-cyan-a400), var(--paper-cyan-a700));
 				color: #fff;
 			}
 			.green-bg {
 				background-color: var(--paper-green-a400);
-				background-image: linear-gradient(315deg, var(--paper-green-a200), var(--paper-green-a400), var(--paper-green-a700));
+				background-image: linear-gradient(180deg, var(--paper-green-a400), var(--paper-green-a700));
 				color: #fff;
 			}
 			.yellow-bg {
 				background-color: var(--paper-yellow-a400);
-				background-image: linear-gradient(315deg, var(--paper-yellow-a200), var(--paper-yellow-a400), var(--paper-yellow-a700));
+				background-image: linear-gradient(180deg, var(--paper-yellow-a400), var(--paper-yellow-a700));
 				color: var(--paper-grey-900);
 			}
 			.blue-bg {
 				background-color: var(--paper-blue-a400);
-				background-image: linear-gradient(315deg, var(--paper-blue-a200), var(--paper-blue-a400), var(--paper-blue-a700));
+				background-image: linear-gradient(180deg, var(--paper-blue-a400), var(--paper-blue-a700));
 				color: #fff;
 			}
 			.light-blue-bg {
 				background-color: var(--paper-light-blue-a400);
-				background-image: linear-gradient(315deg, var(--paper-light-blue-a200), var(--paper-light-blue-a400), var(--paper-light-blue-a700));
+				background-image: linear-gradient(180deg, var(--paper-light-blue-a400), var(--paper-light-blue-a700));
 				color: #fff;
 			}
 			.teal-bg {
 				background-color: var(--paper-teal-a400);
-				background-image: linear-gradient(315deg, var(--paper-teal-a200), var(--paper-teal-a400), var(--paper-teal-a700));
+				background-image: linear-gradient(180deg, var(--paper-teal-a400), var(--paper-teal-a700));
 				color: var(--paper-teal-a400);
 			}
 			.indigo-bg {
 				background-color: var(--paper-indigo-a400);
-				background-image: linear-gradient(315deg, var(--paper-indigo-a200), var(--paper-indigo-a400), var(--paper-indigo-a700));
+				background-image: linear-gradient(180deg, var(--paper-indigo-a400), var(--paper-indigo-a700));
 				color: #fff;
 			}
 			.blue-grey-bg {
 				background-color: var(--paper-blue-grey-500);
-				background-image: linear-gradient(315deg, var(--paper-blue-grey-500), var(--paper-blue-grey-600), var(--paper-blue-grey-700));
+				background-image: linear-gradient(180deg, var(--paper-blue-grey-600), var(--paper-blue-grey-700));
 				color: #fff;
 			}
 
