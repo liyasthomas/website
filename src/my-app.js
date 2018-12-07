@@ -112,7 +112,11 @@ class MyApp extends PolymerElement {
 					color: #fff;
 				}
 				:host([page=blog]) app-header {
-					background-color: var(--paper-pink-a400);
+					background-color: var(--paper-deep-purple-a400);
+					color: #fff;
+				}
+				:host([page=about]) app-header {
+					background-color: var(--paper-blue-grey-700);
 					color: #fff;
 				}
 				:host([page=android]) app-header {
@@ -145,13 +149,11 @@ class MyApp extends PolymerElement {
 					margin: 0 4px;
 				}
 				[main-title] {
-					color: var(--accent-color);
 					font-size: 44px;
 					font-weight: 700;
 					margin-left: 12px;
 				}
 				[condensed-title] {
-					color: var(--accent-color);
 					font-size: 22px;
 					overflow: hidden;
 					text-overflow: ellipsis;
