@@ -12,10 +12,10 @@
    version="1.1"
    id="svg2"
    xml:space="preserve"
-   width="666.66669"
-   height="666.66669"
-   viewBox="0 0 666.66669 666.66669"
-   sodipodi:docname="393094-PCQ7YW-679.svg"
+   width="666"
+   height="666"
+   viewBox="0 0 666 666"
+   sodipodi:docname="award.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -488,7 +488,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.50063159"
-     inkscape:cx="322.52094"
+     inkscape:cx="-18.048859"
      inkscape:cy="317.67281"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -497,9 +497,9 @@
      id="g10"
      inkscape:groupmode="layer"
      inkscape:label="393094-PCQ7YW-679"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,666.66667)"><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,665.99998)"><g
        id="g14"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g16"
          clip-path="url(#clipPath20)"><g
            id="g22"><g
@@ -512,7 +512,7 @@
                  id="path62"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g64"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g66"
          clip-path="url(#clipPath70)"><g
            id="g72"><g
@@ -525,7 +525,7 @@
                  id="path112"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g114"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g116"
          clip-path="url(#clipPath120)"><g
            id="g122"><g
@@ -538,7 +538,7 @@
                  id="path162"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g164"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g166"
          clip-path="url(#clipPath170)"><g
            id="g172"><g
@@ -551,7 +551,7 @@
                  id="path212"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g214"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g216"
          clip-path="url(#clipPath220)"><g
            id="g222"><g
@@ -564,7 +564,7 @@
                  id="path262"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g264"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g266"
          clip-path="url(#clipPath270)"><g
            id="g272"><g
@@ -577,7 +577,7 @@
                  id="path312"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g314"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g316"
          clip-path="url(#clipPath320)"><g
            id="g322"><g
@@ -590,7 +590,7 @@
                  id="path362"
                  inkscape:connector-curvature="0" /></g></g></g></g></g><g
        id="g364"
-       transform="translate(1.3879395e-5,1.1206054e-6)"><g
+       transform="translate(-0.24999376,-0.25000876)"><g
          id="g366"
          clip-path="url(#clipPath370)"><g
            id="g372"><g
@@ -605,7 +605,8 @@
        id="g414"
        transform="translate(1.3879395e-5,1.1206054e-6)"><g
          id="g416"
-         clip-path="url(#clipPath420)"><g
+         clip-path="url(#clipPath420)"
+         transform="translate(-0.25000764,-0.25000988)"><g
            id="g422"
            transform="translate(270.6562,344.8281)"><path
              d="m 0,0 c 0,0 4.815,8.604 10.833,4.917 9.792,-6 6.667,-19.5 6.667,-19.5 l -2.25,6 c 0,0 3,-9.5 -1.75,-16 l 0.5,6.25 c 0,0 -3.75,-9 -10.5,-10 -6.75,-1 -7.75,-1 -8.5,-5 -0.75,-4 4.738,-6.659 3,-6.375 -6.125,1 -5.5,8.75 -5.5,8.75 l -1,-5.625 c 0,0 -7.75,15 -7.25,22 0.5,7 3.75,11.75 3.75,11.75 l -4,-1.5 c 0,0 12,19.083 16,4.333"
