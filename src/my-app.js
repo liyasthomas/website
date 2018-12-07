@@ -80,33 +80,6 @@ class MyApp extends PolymerElement {
 				[hidden] {
 					display: none !important;
 				}
-
-
-				:host([page=projects]) app-header {
-					background-color: var(--paper-grey-800);
-					color: #fff;
-				}
-				:host([page=blog]) app-header {
-					background-color: var(--paper-pink-a400);
-					color: #fff;
-				}
-				:host([page=android]) app-header {
-					background-color: var(--paper-green-a400);
-					color: #fff;
-				}
-				:host([page=web]) app-header {
-					background-color: var(--paper-light-blue-a400);
-					color: #fff;
-				}
-				:host([page=others]) app-header {
-					background-color: var(--paper-indigo-a400);
-					color: #fff;
-				}
-				:host([page=feedie]) app-header {
-					background-color: var(--paper-blue-a400);
-					color: #fff;
-				}
-
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;
@@ -134,16 +107,31 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				#home.iron-selected {
-					color: var(--accent-color);
+				:host([page=projects]) app-header {
+					background-color: var(--paper-grey-800);
+					color: #fff;
 				}
-				#projects.iron-selected {
-					color: var(--accent-color);
+				:host([page=blog]) app-header {
+					background-color: var(--paper-pink-a400);
+					color: #fff;
 				}
-				#blog.iron-selected {
-					color: var(--accent-color);
+				:host([page=android]) app-header {
+					background-color: var(--paper-green-a400);
+					color: #fff;
 				}
-				#about.iron-selected {
+				:host([page=web]) app-header {
+					background-color: var(--paper-light-blue-a400);
+					color: #fff;
+				}
+				:host([page=others]) app-header {
+					background-color: var(--paper-indigo-a400);
+					color: #fff;
+				}
+				:host([page=feedie]) app-header {
+					background-color: var(--paper-blue-a400);
+					color: #fff;
+				}
+				#home.iron-selected, #projects.iron-selected, #blog.iron-selected, #about.iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
@@ -170,10 +158,10 @@ class MyApp extends PolymerElement {
 					font-weight: 700;
 					margin-left: 16px;
 				}
-				.logo {
-				}
 				paper-tabs {
 					height: 100%;
+				}
+				paper-tab:hover {
 					--paper-tab-content-unselected: {
 						opacity: 1;
 					}
@@ -305,7 +293,7 @@ class MyApp extends PolymerElement {
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
-							<iron-ajax auto id="ajax" url="..//projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
+							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading]]">
 									<paper-spinner-lite active\$="[[loading]]"></paper-spinner-lite>
@@ -318,7 +306,7 @@ class MyApp extends PolymerElement {
 								</div>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
-								<a href="android" tabindex="-1">
+								<a href="{{android.link}}" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[android.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{android.title}}</span>
@@ -337,7 +325,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a href="web" tabindex="-1">
+								<a href="{{web.link}}" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -356,7 +344,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a href="others" tabindex="-1">
+								<a href="{{others.link}}" tabindex="-1">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>

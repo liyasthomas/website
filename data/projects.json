@@ -3,6 +3,7 @@
 		{
 			"title": "Android",
 			"icon": "android",
+			"link": "android",
 			"sub": [
 				{
 					"title": "PWA Wrapper",
@@ -16,6 +17,7 @@
 		{
 			"title": "Web",
 			"icon": "language",
+			"link": "web",
 			"sub": [
 				{
 					"title": "Lvr",
@@ -34,6 +36,7 @@
 		{
 			"title": "Others",
 			"icon": "group",
+			"link": "others",
 			"sub": [
 				{
 					"title": "Wallpapers",

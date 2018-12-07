@@ -14,6 +14,7 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/iron-scroll-threshold/iron-scroll-threshold.js';
+import '@polymer/iron-list/iron-list.js';
 
 class MyBlog extends PolymerElement {
 	static get template() {
@@ -27,11 +28,43 @@ class MyBlog extends PolymerElement {
 			<div class="banner flexchild flex-vertical pink-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
 			</div>
-
-Blog
-
+			<iron-ajax auto url="../data/blog_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="ajaxResponse0">
+			</iron-ajax>
+			<template is="dom-if" if="{{loading0}}">
+				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
+					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				</div>
+			</template>
+			<template is="dom-if" if="{{error0}}">
+				<div class\$="[[getUIType(UI)]] error">
+					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
+					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="_load"></paper-icon-button></p>
+				</div>
+			</template>
+      <template is="dom-repeat" id="list" items="[]" as="blog" scroll-target="document">
+				<div>[[blog.title]]</div>
+				<div>[[blog.icon]]</div>
+      </template>
+      <iron-scroll-threshold id="scrollTheshold"
+				lower-threshold="50"
+				on-lower-threshold="_load"
+				scroll-target="document">
+			</iron-scroll-threshold>
     `;
 	}
+
+	_load() {
+		this.$.ajax0.generateRequest();
+	}
+
+	ajaxResponse0(e) {
+		var blogs = e.detail.response.blogs;
+		blogs.forEach(function (blog) {
+			this.$.list.push('items', blog);
+		}, this);
+		this.$.scrollTheshold.clearTriggers();
+	}
+
 }
 
 window.customElements.define('my-blog', MyBlog);

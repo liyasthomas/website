@@ -1,416 +1,68 @@
 {
-	"blog": [
+	"blogs": [
 		{
-			"title": "blog",
-			"icon": "camera-alt",
-			"color": "blue",
-			"link": "blog",
-			"sub": [
-				{
-					"color": "white",
-					"title": "Similar 1",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "twitter",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 2",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "linkedin",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 3",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "facebook",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 4",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "linkedin",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 5",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "facebook",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 6",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "instagram",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-}
-]
-},
+			"title": "1",
+			"icon": "language"
+		},
 		{
-			"title": "blog",
-			"icon": "camera-alt",
-			"color": "blue",
-			"link": "blog",
-			"sub": [
-				{
-					"color": "white",
-					"title": "Similar 1",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "twitter",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 2",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "linkedin",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 3",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "facebook",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 4",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "linkedin",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 5",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "facebook",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 6",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "instagram",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
-}
-]
-}
-]
+			"title": "2",
+			"icon": "language"
+		},
+		{
+			"title": "3",
+			"icon": "language"
+		},
+		{
+			"title": "4",
+			"icon": "language"
+		},
+		{
+			"title": "5",
+			"icon": "language"
+		},
+		{
+			"title": "6",
+			"icon": "language"
+		},
+		{
+			"title": "7",
+			"icon": "language"
+		},
+		{
+			"title": "8",
+			"icon": "language"
+		},
+		{
+			"title": "9",
+			"icon": "language"
+		},
+		{
+			"title": "10",
+			"icon": "language"
+		},
+		{
+			"title": "11",
+			"icon": "language"
+		},
+		{
+			"title": "12",
+			"icon": "language"
+		},
+		{
+			"title": "13",
+			"icon": "language"
+		},
+		{
+			"title": "14",
+			"icon": "language"
+		},
+		{
+			"title": "15",
+			"icon": "language"
+		},
+		{
+			"title": "16",
+			"icon": "language"
+		}
+	]
 }
