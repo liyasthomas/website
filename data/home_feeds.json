@@ -35,13 +35,13 @@
 			"link": "blog",
 			"sub": [
 				{
-					"color": "cyan",
-					"title": "Award + 1",
-					"description": "blah",
-					"info": "Read more",
-					"img": "../images/assets/projects/award.svg",
-					"icon": "camera-alt",
-					"link": "saapshot"
+					"color": "grey",
+					"title": "Art",
+					"description": "Doodles and drawings",
+					"info": "View all",
+					"img": "../images/assets/projects/art.svg",
+					"icon": "create",
+					"link": "art"
 },
 				{
 					"color": "orange",

@@ -264,6 +264,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.grey-bg {
 				background-color: var(--paper-grey-200);
+				background-image: linear-gradient(var(--paper-grey-200), var(--paper-grey-300));
 				color: var(--paper-grey-800);
 			}
 			.purple-bg {
