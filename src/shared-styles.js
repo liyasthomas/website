@@ -150,9 +150,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.error {
 				padding: 32px;
 				text-align: center;
-				font-family: "Roboto Mono", Consolas, Menlo, Monaco, monospace;
-				font-size: 14px;
-				font-weight: 700;
 				color: var(--secondary-text-color);
 			}
 			.grid {
@@ -178,7 +175,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 8px;
 			}
 			.item:hover {
-//				@apply --shadow-elevation-4dp;
+//				@apply --shadow-elevation-2dp;
 			}
 			.container {
       	@apply --layout-flex;
@@ -232,7 +229,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
 				font-size: 20px;
-				font-weight: 700;
 				line-height: 1.2;
 				color: var(--secondary-text-color);
 			}

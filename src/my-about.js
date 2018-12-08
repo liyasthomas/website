@@ -131,21 +131,20 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.social]]" as="social">
 				<div class\$="[[getUIType(UI)]] content">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="title">
-							<iron-icon class\$="[[_computeFgClass(social.color)]] big" icon="my-icons:{{social.icon}}"></iron-icon>{{social.title}}
-						</div>
-						<div class="description">
-							follow me on
-						</div>
-					</template>
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(social.color)]] big" icon="my-icons:{{social.icon}}"></iron-icon>{{social.title}}
+					</div>
+					<div class="description">
+						follow me on
+					</div>
 					<p>
 						<template is="dom-repeat" items="[[social.sub]]" as="sub">
 							<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon"></paper-icon-button></a>
@@ -160,20 +159,16 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-							<iron-icon class\$="[[_computeFgClass(gallery.color)]] big" icon="my-icons:{{gallery.icon}}"></iron-icon>{{gallery.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+					<iron-icon class\$="[[_computeFgClass(gallery.color)]] big" icon="my-icons:{{gallery.icon}}"></iron-icon>{{gallery.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[gallery.sub]]" as="sub">

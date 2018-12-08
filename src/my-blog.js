@@ -75,12 +75,15 @@ class MyBlog extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
+				.item:hover {
+					@apply --shadow-elevation-2dp;
+				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical deep-purple-bg">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts/text?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class="grid actions flex-center-center" hidden\$="[[!loading0]]">
@@ -88,52 +91,54 @@ class MyBlog extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class="grid error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class="grid error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
-			<div class="grid">
-				<template is="dom-if" if="{{!error0}}">
+			<template is="dom-if" if="{{!error0}}">
+				<div class="grid">
 					<div class="actions flex-justified">
 						<div class="title">
 							<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>tumblr<span> @liyasthomas</span>
 						</div>
 					</div>
-				</template>
-			</div>
-			<div class="grid app-grid">
-				<template is="dom-repeat" items="[[ajaxResponse0.response.posts]]" as="posts">
-					<div class="item">
-						<a href="{{posts.post_url}}" target="_blank" rel="noopener">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{posts.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{posts.summary}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-										</div>
-										<div>
-											{{posts.note_count}}<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
+				</div>
+				<div class="grid app-grid">
+					<template is="dom-repeat" items="[[ajaxResponse0.response.posts]]" as="posts">
+						<div class="item">
+							<a href="{{posts.post_url}}" target="_blank" rel="noopener">
+								<div class="container">
+									<div class="block top">
+										<div class="title">{{posts.title}}</div>
+									</div>
+									<div class="block mid">
+										<div class="description">{{posts.summary}}</div>
+									</div>
+									<div class="flexchild flex-vertical">
+									</div>
+									<div class="block bottom">
+										<div class="info">
+											<div class="flexchild">
+												<iron-icon icon="my-icons:open-in-new">
+											</div>
+											<div>
+												{{posts.note_count}}<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</a>
-					</div>
-				</template>
-			</div>
-			<div class="grid actions flex-center-center">
-				<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
-					<paper-button raised class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-				</a>
-			</div>
+							</a>
+						</div>
+					</template>
+				</div>
+				<div class="grid actions flex-center-center">
+					<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+						<paper-button raised class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+				</div>
+			</template>
     `;
 	}
 

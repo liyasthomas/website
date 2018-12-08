@@ -72,7 +72,7 @@ class MyApp extends PolymerElement {
 					--paper-progress-active-color: var(--accent-color);
 					--paper-spinner-color: var(--accent-color);
 //					--paper-progress-secondary-color: var(--dark-accent-color);
-//					--paper-progress-container-color: var(--light-accent-color);
+					--paper-progress-container-color: var(--light-text-color);
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
@@ -244,7 +244,7 @@ class MyApp extends PolymerElement {
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
-						<div class="flexchild">Share via</div>
+						<div class="flexchild">Connect via</div>
 						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
 					</div>
 					<div on-tap="openShare">
@@ -302,10 +302,11 @@ class MyApp extends PolymerElement {
 								</div>
 							</template>
 							<template is="dom-if" if="{{error}}">
-								<div class\$="[[getUIType(UI)]] error">
-									<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-									<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-								</div>
+								<template is="dom-if" if="{{!loading}}">
+									<div class\$="[[getUIType(UI)]] error">
+										<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+									</div>
+								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
 								<a href="{{android.link}}" tabindex="-1">
@@ -386,7 +387,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
-              <div condensed-title><span class="logo">LT</span></div>
+              <div condensed-title><span class="logo">Liyas Thomas</span></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
 							</template>
@@ -438,7 +439,7 @@ class MyApp extends PolymerElement {
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<footer>
-						&copy; Liyas Thomas
+						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop" aria-label="Scroll top"></paper-fab>
         </app-header-layout>
@@ -484,10 +485,6 @@ class MyApp extends PolymerElement {
 						{
 							link: "https://liyasthomas.tumblr.com",
 							icon: "tumblr"
-						},
-						{
-							link: "https://github.com/liyasthomas",
-							icon: "github"
 						},
 						{
 							link: "https://www.linkedin.com/in/liyasthomas",

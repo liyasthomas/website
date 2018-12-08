@@ -88,27 +88,24 @@ class MyWeb extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}<span> ({{web.sub.length}})</span>
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]"
-									aria-label="Toggle Grid/List">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}<span> ({{web.sub.length}})</span>
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]"
+							aria-label="Toggle Grid/List">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub">
@@ -144,14 +141,10 @@ class MyWeb extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
-							</div>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
+					</div>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">

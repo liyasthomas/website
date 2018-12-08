@@ -88,26 +88,23 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon>{{recent.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon>{{recent.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
@@ -143,20 +140,16 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon>{{popular.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon>{{popular.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
@@ -192,20 +185,16 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.projects]]" as="projects">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon>{{projects.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon>{{projects.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">

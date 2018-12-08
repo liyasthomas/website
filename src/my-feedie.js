@@ -96,26 +96,23 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(section1.color)]] big" icon="my-icons:{{section1.icon}}"></iron-icon>{{section1.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(section1.color)]] big" icon="my-icons:{{section1.icon}}"></iron-icon>{{section1.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
@@ -155,26 +152,23 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(section2.color)]] big" icon="my-icons:{{section2.icon}}"></iron-icon>{{section2.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(section2.color)]] big" icon="my-icons:{{section2.icon}}"></iron-icon>{{section2.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
@@ -214,26 +208,23 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions flex-justified">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(section3.color)]] big" icon="my-icons:{{section3.icon}}"></iron-icon>{{section3.title}}
-							</div>
-							<paper-icon-button
-									hidden\$="{{!wideLayout}}"
-									toggles
-									active="{{UI}}"
-									icon\$="my-icons:[[getUIIcon(UI)]]">
-							</paper-icon-button>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions flex-justified">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(section3.color)]] big" icon="my-icons:{{section3.icon}}"></iron-icon>{{section3.title}}
+					</div>
+					<paper-icon-button
+							hidden\$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon\$="my-icons:[[getUIIcon(UI)]]">
+					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
@@ -273,20 +264,17 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
-				<div class\$="[[getUIType(UI)]] error">
-					<iron-icon icon="my-icons:sentiment-dissatisfied"></iron-icon>
-					<p>Try again<paper-icon-button icon="my-icons:refresh" on-click="tryAgain"></paper-icon-button></p>
-				</div>
+				<template is="dom-if" if="{{!loading0}}">
+					<div class\$="[[getUIType(UI)]] error">
+						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+					</div>
+				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
-				<div class\$="[[getUIType(UI)]]">
-					<template is="dom-if" if="{{!error0}}">
-						<div class="actions">
-							<div class="title">
-								<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
-							</div>
-						</div>
-					</template>
+				<div class\$="[[getUIType(UI)]] actions">
+					<div class="title">
+						<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
+					</div>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
