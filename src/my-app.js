@@ -83,7 +83,7 @@ class MyApp extends PolymerElement {
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;
-					color: var(--secondary-text-color);
+					color: #000;
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
 					}
@@ -140,7 +140,7 @@ class MyApp extends PolymerElement {
 				}
 				app-header {
 					background-color: var(--primary-color);
-					color: var(--secondary-text-color);
+					color: #000;
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
@@ -154,11 +154,14 @@ class MyApp extends PolymerElement {
 					margin-left: 12px;
 				}
 				[condensed-title] {
-					font-size: 22px;
+					font-size: 24px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 700;
 					margin-left: 16px;
+				}
+				.logo {
+        	font-family: "Lobster", "Roboto", "Noto", sans-serif;
 				}
 				paper-tabs {
 					height: 100%;
@@ -169,7 +172,6 @@ class MyApp extends PolymerElement {
 					}
 				}
 				paper-tab {
-        	font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
 					font-size: 16px;
@@ -269,7 +271,7 @@ class MyApp extends PolymerElement {
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-          <app-toolbar>Liyas Thomas</app-toolbar>
+          <app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>

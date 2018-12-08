@@ -58,7 +58,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
-        font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
@@ -75,7 +74,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button {
 				margin: 4px;
 				padding: .6em 1.2em;
-        font-family: "Product Sans", "Roboto", "Noto", sans-serif;
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
@@ -136,6 +134,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.content .title {
 				font-size: 28px;
 				color: var(--primary-text-color);
+        font-family: "Lobster", "Roboto", "Noto", sans-serif;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
