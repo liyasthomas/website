@@ -1,18 +1,4 @@
 {
-	"android": [
-		{
-			"title": "Android",
-			"icon": "android",
-			"link": "android",
-			"sub": [
-				{
-					"title": "PWA Wrapper",
-					"icon": "bubble-chart",
-					"link": ""
-}
-]
-}
-],
 	"web": [
 		{
 			"title": "Web",

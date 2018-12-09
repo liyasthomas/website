@@ -29,7 +29,7 @@ class MyFeedie extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 120vw;
+						--app-grid-item-height: 90vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -40,7 +40,7 @@ class MyFeedie extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
+						--app-grid-item-height: 80vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -51,7 +51,7 @@ class MyFeedie extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 50vw;
+						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -63,21 +63,27 @@ class MyFeedie extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 2;
+						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 35vw;
+						--app-grid-item-height: 20vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(5n+3) {
+					.item:nth-child(9n+2) {
+						@apply --app-grid-expandible-item;
+					}
+					.item:nth-child(9n+4) {
+						@apply --app-grid-expandible-item;
+					}
+					.item:nth-child(9n+9) {
 						@apply --app-grid-expandible-item;
 					}
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<div class="banner flexchild flex-vertical blue-bg">
+			<div class="banner flexchild flex-vertical">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
@@ -98,7 +104,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
 					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
@@ -116,7 +122,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
-						<div class="item">
+						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
@@ -124,16 +130,16 @@ class MyFeedie extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]" aria-label="Info">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -154,7 +160,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
 					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
@@ -172,7 +178,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
-						<div class="item">
+						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
@@ -180,16 +186,16 @@ class MyFeedie extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]" aria-label="Info">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -210,7 +216,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
 					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
@@ -228,7 +234,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
-						<div class="item">
+						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
@@ -236,16 +242,16 @@ class MyFeedie extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]" aria-label="Info">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>
@@ -266,7 +272,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
 					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
@@ -278,7 +284,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class="item">
+						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
@@ -286,16 +292,16 @@ class MyFeedie extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class\$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button class\$="[[_computeFgClass(sub.color)]]" aria-label="Info">{{sub.info}}</paper-button></a>
+											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button class\$="[[_computeFgClass(sub.color)]]" icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
 										</div>
 									</div>
 								</div>

@@ -160,7 +160,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 35vw;
+				--app-grid-item-height: 25vw;
 			}
 			.app-grid {
 				margin: 0 auto;
@@ -168,10 +168,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding-bottom: 0;
 			}
 			.item {
-				border: 1px solid var(--light-text-color);
 				transition: all .1s ease;
 				border-radius: 8px;
 				border-radius: 8px;
+				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -190,7 +190,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.block {
       	@apply --layout-horizontal;
-				background-color: #fff;
 			}
 			.top {
 				padding: 16px 16px 4px 16px;
@@ -229,7 +228,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-line-clamp: 2;
 				font-size: 20px;
 				line-height: 1.2;
-				color: var(--secondary-text-color);
 			}
 			.info {
 				@apply --layout-flex;
@@ -258,82 +256,66 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.black-bg {
 				background-color: var(--paper-grey-800);
-				background-image: linear-gradient(var(--paper-grey-800), var(--paper-grey-900));
 				color: #fff;
 			}
 			.grey-bg {
 				background-color: var(--paper-grey-200);
-				background-image: linear-gradient(var(--paper-grey-200), var(--paper-grey-300));
 				color: var(--paper-grey-800);
 			}
 			.purple-bg {
 				background-color: var(--paper-purple-a400);
-				background-image: linear-gradient(var(--paper-purple-a400), var(--paper-purple-a700));
 				color: #fff;
 			}
 			.deep-purple-bg {
 				background-color: var(--paper-deep-purple-a400);
-				background-image: linear-gradient(var(--paper-deep-purple-a400), var(--paper-deep-purple-a700));
 				color: #fff;
 			}
 			.red-bg {
 				background-color: var(--paper-red-a400);
-				background-image: linear-gradient(var(--paper-red-a400), var(--paper-red-a700));
 				color: #fff;
 			}
 			.pink-bg {
 				background-color: var(--paper-pink-a400);
-				background-image: linear-gradient(var(--paper-pink-a400), var(--paper-pink-a700));
 				color: #fff;
 			}
 			.orange-bg {
 				background-color: var(--paper-orange-a400);
-				background-image: linear-gradient(var(--paper-orange-a400), var(--paper-orange-a700));
 				color: #fff;
 			}
 			.deep-orange-bg {
 				background-color: var(--paper-deep-orange-a400);
-				background-image: linear-gradient(var(--paper-deep-orange-a400), var(--paper-deep-orange-a700));
 				color: #fff;
 			}
 			.cyan-bg {
 				background-color: var(--paper-cyan-a400);
-				background-image: linear-gradient(var(--paper-cyan-a400), var(--paper-cyan-a700));
 				color: #fff;
 			}
 			.green-bg {
 				background-color: var(--paper-green-a400);
-				background-image: linear-gradient(var(--paper-green-a400), var(--paper-green-a700));
 				color: #fff;
 			}
 			.yellow-bg {
 				background-color: var(--paper-yellow-a400);
-				background-image: linear-gradient(var(--paper-yellow-a400), var(--paper-yellow-a700));
 				color: var(--paper-grey-900);
 			}
 			.blue-bg {
 				background-color: var(--paper-blue-a400);
-				background-image: linear-gradient(var(--paper-blue-a400), var(--paper-blue-a700));
 				color: #fff;
 			}
 			.light-blue-bg {
 				background-color: var(--paper-light-blue-a400);
-				background-image: linear-gradient(var(--paper-light-blue-a400), var(--paper-light-blue-a700));
 				color: #fff;
 			}
 			.teal-bg {
 				background-color: var(--paper-teal-a400);
-				background-image: linear-gradient(var(--paper-teal-a400), var(--paper-teal-a700));
-				color: var(--paper-teal-a400);
+				color: #fff;
 			}
 			.indigo-bg {
 				background-color: var(--paper-indigo-a400);
-				background-image: linear-gradient(var(--paper-indigo-a400), var(--paper-indigo-a700));
 				color: #fff;
 			}
 			.blue-grey-bg {
 				background-color: var(--paper-blue-grey-700);
-				background-image: linear-gradient(var(--paper-blue-grey-700), var(--paper-blue-grey-800));
 				color: #fff;
 			}
 

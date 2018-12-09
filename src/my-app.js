@@ -107,34 +107,6 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				:host([page=projects]) app-header {
-					background-color: var(--paper-grey-800);
-					color: #fff;
-				}
-				:host([page=blog]) app-header {
-					background-color: var(--paper-deep-purple-a400);
-					color: #fff;
-				}
-				:host([page=about]) app-header {
-					background-color: var(--paper-blue-grey-700);
-					color: #fff;
-				}
-				:host([page=android]) app-header {
-					background-color: var(--paper-green-a400);
-					color: #fff;
-				}
-				:host([page=web]) app-header {
-					background-color: var(--paper-light-blue-a400);
-					color: #fff;
-				}
-				:host([page=others]) app-header {
-					background-color: var(--paper-indigo-a400);
-					color: #fff;
-				}
-				:host([page=feedie]) app-header {
-					background-color: var(--paper-blue-a400);
-					color: #fff;
-				}
 				#home.iron-selected, #projects.iron-selected, #blog.iron-selected, #about.iron-selected {
 					color: var(--accent-color);
 				}
@@ -306,27 +278,8 @@ class MyApp extends PolymerElement {
 							<template is="dom-if" if="{{error}}">
 								<template is="dom-if" if="{{!loading}}">
 									<div class\$="[[getUIType(UI)]] error">
-										<paper-button on-click="tryAgain">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 									</div>
-								</template>
-							</template>
-							<template is="dom-repeat" items="[[ajaxResponse.android]]" as="android">
-								<a href="{{android.link}}" tabindex="-1">
-									<paper-icon-item class="category">
-										<iron-icon icon="my-icons:[[android.icon]]" slot="item-icon"></iron-icon>
-										<span class="expand">{{android.title}}</span>
-										<iron-icon icon="my-icons:input"></iron-icon>
-										<paper-ripple></paper-ripple>
-									</paper-icon-item>
-								</a>
-								<template is="dom-repeat" items="[[android.sub]]" as="sub">
-									<a href="[[sub.link]]" tabindex="-1">
-										<paper-icon-item>
-											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
-											<span>{{sub.title}}</span>
-											<paper-ripple></paper-ripple>
-										</paper-icon-item>
-									</a>
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
@@ -433,7 +386,6 @@ class MyApp extends PolymerElement {
 						<my-projects name="projects"></my-projects>
 						<my-blog name="blog"></my-blog>
 						<my-about name="about"></my-about>
-						<my-android name="android"></my-android>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
 						<my-feedie name="feedie"></my-feedie>
@@ -555,7 +507,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'android', 'web', 'others', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -586,9 +538,6 @@ class MyApp extends PolymerElement {
 				break;
 			case 'about':
 				import('./my-about.js');
-				break;
-			case 'android':
-				import('./my-android.js');
 				break;
 			case 'web':
 				import('./my-web.js');

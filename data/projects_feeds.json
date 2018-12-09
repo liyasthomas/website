@@ -1,32 +1,4 @@
 {
-	"android": [
-		{
-			"title": "android",
-			"icon": "android",
-			"color": "green",
-			"link": "android",
-			"sub": [
-				{
-					"color": "white",
-					"title": "PWA Wrapper",
-					"description": "Android wrapper to create native android apps from offline-capable progressive web apps",
-					"info": "Read more",
-					"img": "../images/assets/projects/puff.svg",
-					"icon": "bubble-chart",
-					"link": ""
-},
-				{
-					"color": "white",
-					"title": "PWA Wrapper",
-					"description": "Android wrapper to create native android apps from offline-capable progressive web apps",
-					"info": "Read more",
-					"img": "../images/assets/projects/puff.svg",
-					"icon": "bubble-chart",
-					"link": ""
-}
-]
-}
-],
 	"web": [
 		{
 			"title": "web",
