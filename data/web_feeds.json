@@ -50,6 +50,42 @@
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
+},
+				{
+					"color": "grey",
+					"title": "Snake",
+					"description": "Snakes! Snakes everywhere!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
+},
+				{
+					"color": "teal",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "konnect"
+},
+				{
+					"color": "black",
+					"title": "Shooter",
+					"description": "Shoot em down!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
+},
+				{
+					"color": "grey",
+					"title": "Snake",
+					"description": "Snakes! Snakes everywhere!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
 }
 ]
 }
@@ -78,6 +114,15 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
+},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "lvr"
 }
 ]
 }

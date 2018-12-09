@@ -16,20 +16,20 @@
 					"link": "aeiou"
 },
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "group",
-					"link": "fuseorg"
-},
-				{
 					"color": "blue-grey",
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
 					"img": "../images/assets/projects/materialthings.svg",
+					"icon": "group",
+					"link": "fuseorg"
+},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
 }
@@ -69,6 +69,33 @@
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
+},
+				{
+					"color": "grey",
+					"title": "Snake",
+					"description": "Snakes! Snakes everywhere!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
+},
+				{
+					"color": "black",
+					"title": "Shooter",
+					"description": "Shoot em down!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
+},
+				{
+					"color": "teal",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "konnect"
 }
 ]
 }

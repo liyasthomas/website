@@ -171,7 +171,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 8px;
 				border-radius: 8px;
-				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -184,7 +183,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.bg {
 				@apply --layout-flex;
 				--iron-image-placeholder: {
-					background-color: #fff;
+					background-color: rgba(0, 0, 0, .1);
 				}
 				transition: all .1s ease;
 			}

@@ -141,7 +141,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button raised class\$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class\$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -186,7 +186,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
-						<paper-button raised class\$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class\$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -23,6 +23,15 @@
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
+},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "lvr"
 }
 ]
 }
@@ -51,6 +60,15 @@
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "saap"
+},
+				{
+					"color": "teal",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "konnect"
 }
 ]
 }

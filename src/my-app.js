@@ -70,7 +70,7 @@ class MyApp extends PolymerElement {
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
-					--paper-spinner-color: var(--accent-color);
+					--paper-spinner-color: #000;
 //					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--light-text-color);
 					color: var(--primary-text-color);
@@ -213,7 +213,7 @@ class MyApp extends PolymerElement {
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button raised class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
+				<paper-button class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
