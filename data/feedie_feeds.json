@@ -4,98 +4,125 @@
 			"title": "screenshots",
 			"icon": "wallpaper",
 			"color": "blue",
-			"link": "feedie",
+			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
 				{
 					"color": "white",
-					"title": "PWA Wrapper",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "bubble-chart",
-					"link": ""
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Pineapple Notes",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "note",
-					"link": ""
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 }
 ]
 }
 ],
 	"section2": [
 		{
-			"title": "prototyping",
+			"title": "prototypiny",
 			"icon": "language",
-			"color": "blue",
-			"link": "feedie",
+			"color": "red",
+			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
 				{
 					"color": "white",
-					"title": "Saapshot",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "camera-alt",
-					"link": "https://liyasthomas.github.io/saapshot"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Saap",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "adjust",
-					"link": "https://liyasthomas.github.io/lvr"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Lvr",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyas-vr.firebaseapp.com"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Feedie",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "star",
-					"link": "https://github.com/fuseorg/feedie"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Pineapple Notes",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "note",
-					"link": "https://pineapple-notes.firebaseapp.com"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Recycle Mix",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "filter-vintage",
-					"link": "https://recycle-mix.firebaseapp.com"
-},
-				{
-					"color": "white",
-					"title": "Form Face",
-					"description": "blah",
-					"info": "Type / TAG",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "tag-faces",
-					"link": "https://form-face.firebaseapp.com"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 }
 ]
 }
@@ -104,26 +131,62 @@
 		{
 			"title": "architecture",
 			"icon": "code",
-			"color": "blue",
-			"link": "feedie",
+			"color": "black",
+			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
 				{
 					"color": "white",
-					"title": "Camion Info Tech",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "layers",
-					"link": "https://www.camioninfotech.com/"
+					"icon": "wallpaper",
+					"link": "wallpapers"
 },
 				{
 					"color": "white",
-					"title": "Fuse Org",
+					"title": "Wall",
 					"description": "blah",
-					"info": "Type / TAG",
+					"info": "View album",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "code",
-					"link": "https://fuse-org.firebaseapp.com"
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
 }
 ]
 }
@@ -151,7 +214,16 @@
 					"info": "View all",
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+					"link": "wallpapers"
+},
+				{
+					"color": "pink",
+					"title": "ily",
+					"description": "Sharing is better than getting Likes",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
 }
 ]
 }

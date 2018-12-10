@@ -15,7 +15,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyFeedie extends PolymerElement {
+class MyWallpapers extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -84,20 +84,20 @@ class MyFeedie extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/wallpapers.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class\$="[[getUIType(UI)]] content">
-				<div class="title">Feedie<span> (web)</span></div>
-				<div class="description">Faculty feedback system</div>
+				<div class="title">Wallpapers<span> (web)</span></div>
+				<div class="description">Curated list of wallpapers</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<div class\$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/feedie">
-					<paper-button raised class="blue-bg" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
+					<paper-button raised class="blue-bg" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
-			<iron-ajax auto url="../data/feedie_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
@@ -111,10 +111,10 @@ class MyFeedie extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
+			<template is="dom-repeat" items="[[ajaxResponse0.wallpapers]]" as="wallpapers">
 				<div class\$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(section1.color)]] big" icon="my-icons:{{section1.icon}}"></iron-icon>{{section1.title}}
+						<iron-icon class\$="[[_computeFgClass(wallpapers.color)]] big" icon="my-icons:{{wallpapers.icon}}"></iron-icon>{{wallpapers.title}}
 					</div>
 					<paper-icon-button
 							hidden\$="{{!wideLayout}}"
@@ -124,7 +124,7 @@ class MyFeedie extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
+					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
 						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -151,137 +151,11 @@ class MyFeedie extends PolymerElement {
 					</template>
 				</div>
 				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section1.link}}">
-						<paper-button raised class\$="[[_computeBgClass(section1.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<a href="{{wallpapers.link}}">
+						<paper-button raised class\$="[[_computeBgClass(wallpapers.color)]]" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
-			<div class\$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-			</div>
-			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
-					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
-				</div>
-			</template>
-			<template is="dom-if" if="{{error0}}">
-				<template is="dom-if" if="{{!loading0}}">
-					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
-					</div>
-				</template>
-			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
-					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(section2.color)]] big" icon="my-icons:{{section2.icon}}"></iron-icon>{{section2.title}}
-					</div>
-					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
-							<div class="container">
-								<div class="block top">
-									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section2.link}}">
-						<paper-button raised class\$="[[_computeBgClass(section2.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
-			<div class\$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-			</div>
-			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
-					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
-				</div>
-			</template>
-			<template is="dom-if" if="{{error0}}">
-				<template is="dom-if" if="{{!loading0}}">
-					<div class\$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
-					</div>
-				</template>
-			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
-					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(section3.color)]] big" icon="my-icons:{{section3.icon}}"></iron-icon>{{section3.title}}
-					</div>
-					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
-							<div class="container">
-								<div class="block top">
-									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section3.link}}">
-						<paper-button raised class\$="[[_computeBgClass(section3.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
-			<div class\$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
-			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
 					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
@@ -368,4 +242,4 @@ class MyFeedie extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-feedie', MyFeedie);
+window.customElements.define('my-wallpapers', MyWallpapers);
