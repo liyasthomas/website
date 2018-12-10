@@ -71,13 +71,13 @@ class MyProjects extends PolymerElement {
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(9n+2) {
+					.item:nth-child(5n+1) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(9n+4) {
+					.item:nth-child(5n+2) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(9n+9) {
+					.item:nth-child(5n+4) {
 						@apply --app-grid-expandible-item;
 					}
 				}

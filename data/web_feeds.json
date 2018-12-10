@@ -141,15 +141,6 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
-				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
-					"link": "lvr"
 }
 ]
 }

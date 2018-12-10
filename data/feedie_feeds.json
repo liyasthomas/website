@@ -50,35 +50,17 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
-				{
-					"color": "white",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
-					"link": "wallpapers"
 }
 ]
 }
 ],
 	"section2": [
 		{
-			"title": "prototypiny",
+			"title": "prototyping",
 			"icon": "language",
 			"color": "red",
 			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
-				{
-					"color": "white",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
-					"link": "wallpapers"
-},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -178,15 +160,6 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
-				{
-					"color": "white",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
-					"link": "wallpapers"
 }
 ]
 }
@@ -215,15 +188,6 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
-				{
-					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
-					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
-					"link": "ily"
 }
 ]
 }

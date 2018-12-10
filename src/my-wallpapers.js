@@ -71,13 +71,13 @@ class MyWallpapers extends PolymerElement {
 					.list {
 						width: 60vw;
 					}
-					.item:nth-child(9n+2) {
+					.item:nth-child(5n+1) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(9n+4) {
+					.item:nth-child(5n+2) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(9n+9) {
+					.item:nth-child(5n+4) {
 						@apply --app-grid-expandible-item;
 					}
 				}
@@ -179,7 +179,7 @@ class MyWallpapers extends PolymerElement {
 						<div class\$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
-									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
+									<div class="title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
