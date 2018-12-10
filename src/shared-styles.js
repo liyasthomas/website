@@ -171,6 +171,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 8px;
 				border-radius: 8px;
+				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -198,8 +199,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 4px 16px 16px 16px;
 			}
 			.bottom {
-				padding: 8px 16px 8px 8px;
+				padding: 8px;
 				border-radius: 0 0 8px 8px;
+				background-color: rgba(0,0,0,.1);
 			}
 			.title {
 				display: -webkit-box;
@@ -224,7 +226,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 2;
+				-webkit-line-clamp: 3;
 				font-size: 20px;
 				line-height: 1.2;
 			}
