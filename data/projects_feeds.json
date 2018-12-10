@@ -56,18 +56,18 @@
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/snake.svg",
 					"icon": "arrow-forward",
-					"link": "ily"
+					"link": "snake"
 },
 				{
-					"color": "teal",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
+					"color": "pink",
+					"title": "ily",
+					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
-					"icon": "language",
-					"link": "konnect"
+					"img": "../images/assets/projects/ily.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
 }
 ]
 }

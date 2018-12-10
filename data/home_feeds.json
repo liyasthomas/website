@@ -16,13 +16,13 @@
 					"link": "aeiou"
 },
 				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
+					"color": "blue",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/materialthings.svg",
-					"icon": "group",
-					"link": "fuseorg"
+					"img": "../images/assets/projects/feedie.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
 }
 ]
 }
@@ -35,13 +35,13 @@
 			"link": "blog",
 			"sub": [
 				{
-					"color": "grey",
-					"title": "Art",
-					"description": "Doodles and drawings",
-					"info": "View all",
-					"img": "../images/assets/projects/art.svg",
-					"icon": "create",
-					"link": "art"
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
 },
 				{
 					"color": "orange",
@@ -53,31 +53,31 @@
 					"link": "wallpapers"
 },
 				{
-					"color": "black",
-					"title": "Shooter",
-					"description": "Shoot em down!",
-					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
-					"link": "ily"
-},
-				{
 					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
+					"title": "Art",
+					"description": "Doodles and drawings",
+					"info": "View all",
+					"img": "../images/assets/projects/art.svg",
+					"icon": "create",
+					"link": "art"
+},
+				{
+					"color": "yellow",
+					"title": "Pineapple Notes",
+					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "arrow-forward",
-					"link": "ily"
+					"link": "pineapplenotes"
 },
 				{
 					"color": "black",
 					"title": "Shooter",
 					"description": "Shoot em down!",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/shooter.svg",
 					"icon": "arrow-forward",
-					"link": "ily"
+					"link": "shooter"
 }
 ]
 }
@@ -114,25 +114,25 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
-					"link": "saap"
+					"link": "lvr"
 },
 				{
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/ily.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
 },
 				{
-					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
+					"color": "indigo",
+					"title": "AEIOU",
+					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
-					"link": "ily"
+					"link": "aeiou"
 }
 ]
 }
