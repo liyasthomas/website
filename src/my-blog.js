@@ -77,6 +77,10 @@ class MyBlog extends PolymerElement {
 				}
 				.item {
 					border: 1px solid var(--light-text-color);
+					box-shadow: none;
+				}
+				.bottom {
+					background-color: transparent;
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
