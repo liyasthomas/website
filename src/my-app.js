@@ -253,7 +253,7 @@ class MyApp extends PolymerElement {
 							</paper-icon-item>
 						</a>
 						<a id="projects" tabindex="-1">
-							<paper-icon-item on-click="toggle" aria-expanded\$="[[opened]]" aria-controls="collapse">
+							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
 								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
@@ -271,13 +271,13 @@ class MyApp extends PolymerElement {
 							</a>
 							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
-								<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading]]">
-									<paper-spinner-lite active\$="[[loading]]"></paper-spinner-lite>
+								<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading]]">
+									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
 							<template is="dom-if" if="{{error}}">
 								<template is="dom-if" if="{{!loading}}">
-									<div class\$="[[getUIType(UI)]] error">
+									<div class$="[[getUIType(UI)]] error">
 										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 									</div>
 								</template>
@@ -339,17 +339,17 @@ class MyApp extends PolymerElement {
         </app-drawer>
         <!-- Main content -->
         <app-header-layout>
-          <app-header slot="header" fixed condenses effects="waterfall resize-title">
+          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden\$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
+              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
               <div condensed-title><span class="logo">Liyas Thomas</span></div>
 							<template is="dom-if" if="{{loading}}">
-								<paper-progress value="{{progress}}" indeterminate active\$="[[loading]]" top-item></paper-progress>
+								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 							</template>
             </app-toolbar>
             <app-toolbar>
               <div main-title><span class="logo">Liyas Thomas</span></div>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden\$="{{!wideLayout}}">
+							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
 										<iron-icon icon="my-icons:home"></iron-icon>
@@ -455,6 +455,20 @@ class MyApp extends PolymerElement {
 			routeData: Object,
 			subroute: Object
 		};
+	}
+
+	show() {
+		const animation = this.$.toolbar.animate([
+			{
+				transform: 'translateY(-100%)'
+			},
+			{
+				transform: 'translateY(0)'
+			}
+		], {
+			duration: 800,
+			easing: 'ease-in-out'
+		});
 	}
 
 	tryAgain() {

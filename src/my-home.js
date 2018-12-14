@@ -89,32 +89,32 @@ class MyHome extends PolymerElement {
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
-					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
+					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
-					<div class\$="[[getUIType(UI)]] error">
+					<div class$="[[getUIType(UI)]] error">
 						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon>{{recent.title}}
+						<iron-icon class$="[[_computeFgClass(recent.color)]] big" icon="my-icons:{{recent.icon}}"></iron-icon>{{recent.title}}
 					</div>
 					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
+							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -139,27 +139,27 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button raised class\$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon>{{popular.title}}
+						<iron-icon class$="[[_computeFgClass(popular.color)]] big" icon="my-icons:{{popular.icon}}"></iron-icon>{{popular.title}}
 					</div>
 					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
+							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -184,27 +184,27 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button raised class\$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.projects]]" as="projects">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon>{{projects.title}}
+						<iron-icon class$="[[_computeFgClass(projects.color)]] big" icon="my-icons:{{projects.icon}}"></iron-icon>{{projects.title}}
 					</div>
 					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
+							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -229,9 +229,9 @@ class MyHome extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{projects.link}}">
-						<paper-button raised class\$="[[_computeBgClass(projects.color)]]" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(projects.color)]]" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

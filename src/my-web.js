@@ -89,33 +89,33 @@ class MyWeb extends PolymerElement {
 			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
-					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
+					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
-					<div class\$="[[getUIType(UI)]] error">
+					<div class$="[[getUIType(UI)]] error">
 						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}<span> ({{web.sub.length}})</span>
+						<iron-icon class$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}<span> ({{web.sub.length}})</span>
 					</div>
 					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
+							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]"
+							icon$="my-icons:[[getUIIcon(UI)]]"
 							aria-label="Toggle Grid/List">
 					</paper-icon-button>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -140,21 +140,21 @@ class MyWeb extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button raised class\$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
-				<div class\$="[[getUIType(UI)]] actions">
+				<div class$="[[getUIType(UI)]] actions">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
+						<iron-icon class$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
 					</div>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -179,9 +179,9 @@ class MyWeb extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button raised class\$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

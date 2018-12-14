@@ -86,7 +86,7 @@ class MyAbout extends PolymerElement {
 			<div class="banner flexchild flex-vertical">
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
 			</div>
-			<div class\$="[[getUIType(UI)]] content">
+			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
 					<iron-icon class="deep-orange-fg big" icon="my-icons:face"></iron-icon>about me
 				</div>
@@ -105,7 +105,7 @@ class MyAbout extends PolymerElement {
 					<a href="projects"><paper-button raised class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<div class\$="[[getUIType(UI)]] content">
+			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
 					<iron-icon class="orange-fg big" icon="my-icons:local-cafe"></iron-icon>buy me a coffee!
 				</div>
@@ -116,7 +116,7 @@ class MyAbout extends PolymerElement {
 					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button raised class="primary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<div class\$="[[getUIType(UI)]] content">
+			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
 					<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>open source projects
 				</div>
@@ -132,21 +132,21 @@ class MyAbout extends PolymerElement {
 			<iron-ajax auto url="../data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
-				<div class\$="[[getUIType(UI)]] actions flex-center-center" hidden\$="[[!loading0]]">
-					<paper-spinner-lite active\$="[[loading0]]"></paper-spinner-lite>
+				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
+					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
 				</div>
 			</template>
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
-					<div class\$="[[getUIType(UI)]] error">
+					<div class$="[[getUIType(UI)]] error">
 						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 					</div>
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.social]]" as="social">
-				<div class\$="[[getUIType(UI)]] content">
+				<div class$="[[getUIType(UI)]] content">
 					<div class="title">
-						<iron-icon class\$="[[_computeFgClass(social.color)]] big" icon="my-icons:{{social.icon}}"></iron-icon>{{social.title}}
+						<iron-icon class$="[[_computeFgClass(social.color)]] big" icon="my-icons:{{social.icon}}"></iron-icon>{{social.title}}
 					</div>
 					<div class="description">
 						follow me on
@@ -158,30 +158,30 @@ class MyAbout extends PolymerElement {
 					</p>
 					<p><a href="https://🏹.to/👦💻">🏹.to/👦💻</a></p>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{social.link}}">
-						<paper-button raised class\$="[[_computeBgClass(social.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(social.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
-				<div class\$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-					<iron-icon class\$="[[_computeFgClass(gallery.color)]] big" icon="my-icons:{{gallery.icon}}"></iron-icon>{{gallery.title}}
+					<iron-icon class$="[[_computeFgClass(gallery.color)]] big" icon="my-icons:{{gallery.icon}}"></iron-icon>{{gallery.title}}
 					</div>
 					<paper-icon-button
-							hidden\$="{{!wideLayout}}"
+							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon\$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class\$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[gallery.sub]]" as="sub">
-						<div class\$="[[_computeBgClass(sub.color)]] item">
+						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
-									<div class\$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
+									<div class$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -203,9 +203,9 @@ class MyAbout extends PolymerElement {
 						</div>
 					</template>
 				</div>
-				<div class\$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{gallery.link}}">
-						<paper-button raised class\$="[[_computeBgClass(gallery.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button raised class$="[[_computeBgClass(gallery.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
