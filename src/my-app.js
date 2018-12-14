@@ -39,9 +39,6 @@ import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-fab/paper-fab.js';
-import '@polymer/neon-animation/neon-animated-pages.js';
-import '@polymer/neon-animation/neon-animatable.js';
-import '@polymer/neon-animation/neon-animations.js';
 import './shared-styles.js';
 import './my-icons.js';
 
@@ -162,11 +159,6 @@ class MyApp extends PolymerElement {
 				}
 				#pages {
 					@apply --layout-flex;
-					overflow: hidden;
-				}
-				neon-animated-pages > .iron-selected {
-					@apply --layout-flex;
-					position: relative;
 				}
 				paper-progress {
 					display: block;
@@ -385,7 +377,7 @@ class MyApp extends PolymerElement {
 							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
             </app-toolbar>
           </app-header>
-					<neon-animated-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main" entry-animation="slide-from-left-animation" exit-animation="slide-right-animation">
+					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-blog name="blog"></my-blog>
@@ -396,11 +388,11 @@ class MyApp extends PolymerElement {
 						<my-feedie name="feedie"></my-feedie>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
-					</neon-animated-pages>
+					</iron-pages>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 					<footer>
 						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>
     `;
@@ -462,25 +454,15 @@ class MyApp extends PolymerElement {
 	}
 
 	show() {
-		const hanimation = this.$.toolbar.animate([
-			{
-				transform: 'translateY(-100%)'
-			},
-			{
-				transform: 'translateY(0)'
-			}
-		], {
-			duration: 800,
+		this.$.toolbar.animate({
+			transform: ['translateY(-100%)', 'translateY(0)']
+		}, {
+			duration: 600,
 			easing: 'ease-in-out'
 		});
-		const panimation = this.$.pages.animate([
-			{
-				transform: 'translateY(64px)'
-			},
-			{
-				transform: 'translateY(0)'
-			}
-		], {
+		this.$.fab.animate({
+			transform: ['scale(0)', 'scale(1)']
+		}, {
 			duration: 1000,
 			easing: 'ease-in-out'
 		});
@@ -492,7 +474,6 @@ class MyApp extends PolymerElement {
 
 	onLayoutChange(wide) {
 		var drawer = this.$.drawer;
-
 		if (wide && drawer.opened) {
 			drawer.opened = false;
 		}
@@ -531,6 +512,7 @@ class MyApp extends PolymerElement {
 	}
 
 	_routePageChanged(page) {
+		// Reset scroll position
 		this.scrollTop();
 
 		// Show the corresponding page according to the route.
@@ -552,6 +534,21 @@ class MyApp extends PolymerElement {
 		if (!this.$.drawer.persistent) {
 			this.$.drawer.close();
 		}
+
+		// Animations
+		this.animate({
+			opacity: [0, 1],
+			transform: ['translateY(-32px)', 'translateY(0)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.fab.animate({
+			transform: ['scale(0)', 'scale(1)']
+		}, {
+			duration: 1000,
+			easing: 'ease-in-out'
+		});
 	}
 
 	_pageChanged(page) {
