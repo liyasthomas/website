@@ -143,6 +143,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 	<!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
 	<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+	<script src="node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
 
 	<!-- Load your application shell -->
 	<script type="module" src="src/my-app.js"></script>
@@ -209,6 +210,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			</div>
 		</div>
 	</my-app>
+	<script>
+		window.addEventListener('WebComponentsReady', function() {
+			document.querySelector('my-app').show();
+		});
+
+	</script>
 	<noscript>
 		Please enable JavaScript to view this website.
 	</noscript>
