@@ -458,7 +458,7 @@ class MyApp extends PolymerElement {
 	}
 
 	show() {
-		const animation = this.$.toolbar.animate([
+		const hanimation = this.$.toolbar.animate([
 			{
 				transform: 'translateY(-100%)'
 			},
