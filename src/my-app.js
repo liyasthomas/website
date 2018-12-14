@@ -211,15 +211,11 @@ class MyApp extends PolymerElement {
 					}
 				}
       </style>
-
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
       </app-location>
-
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
-
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
 				<paper-button class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
@@ -549,7 +545,8 @@ class MyApp extends PolymerElement {
 			this.page = '404';
 		}
 
-		document.title = 'Liyas Thomas · ' + this.page.charAt(0).toUpperCase() + this.page.slice(1);
+		// Change page title
+		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · Liyas Thomas';
 
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {
