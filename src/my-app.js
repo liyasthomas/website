@@ -404,7 +404,7 @@ class MyApp extends PolymerElement {
 					<footer>
 						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top"></paper-fab>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>
     `;
@@ -535,6 +535,8 @@ class MyApp extends PolymerElement {
 	}
 
 	_routePageChanged(page) {
+		this.scrollTop();
+
 		// Show the corresponding page according to the route.
 		//
 		// If no page was found in the route data, page will be an empty string.
@@ -556,7 +558,6 @@ class MyApp extends PolymerElement {
 	}
 
 	_pageChanged(page) {
-		this.scrollTop();
 		// Import the page component on demand.
 		//
 		// Note: `polymer build` doesn't like string concatenation in the import
