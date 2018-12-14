@@ -172,13 +172,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 8px;
 				border-radius: 8px;
 				@apply --shadow-elevation-2dp;
-				transform: translateY(16px);
-				animation: raise .3s ease-in-out forwards;
-			}
-			@keyframes raise {
-				100% {
-					transform: translateY(0);
-				}
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;

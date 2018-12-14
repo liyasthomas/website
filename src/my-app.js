@@ -39,6 +39,9 @@ import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-fab/paper-fab.js';
+import '@polymer/neon-animation/neon-animated-pages.js';
+import '@polymer/neon-animation/neon-animatable.js';
+import '@polymer/neon-animation/neon-animations.js';
 import './shared-styles.js';
 import './my-icons.js';
 
@@ -157,8 +160,13 @@ class MyApp extends PolymerElement {
 				paper-tab span {
 					margin-left: 8px;
 				}
-				.pages {
+				neon-animated-pages {
 					@apply --layout-flex;
+					overflow-y: hidden;
+				}
+				neon-animated-pages > .iron-selected {
+					@apply --layout-flex;
+					position: relative;
 				}
 				paper-progress {
 					display: block;
@@ -381,7 +389,7 @@ class MyApp extends PolymerElement {
 							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
             </app-toolbar>
           </app-header>
-					<iron-pages selected="[[page]]" attr-for-selected="name" role="main">
+					<neon-animated-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main" entry-animation="slide-from-left-animation" exit-animation="slide-right-animation">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-blog name="blog"></my-blog>
@@ -392,7 +400,7 @@ class MyApp extends PolymerElement {
 						<my-feedie name="feedie"></my-feedie>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
-					</iron-pages>
+					</neon-animated-pages>
 					<footer>
 						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
@@ -467,6 +475,17 @@ class MyApp extends PolymerElement {
 			}
 		], {
 			duration: 800,
+			easing: 'ease-in-out'
+		});
+		const panimation = this.$.pages.animate([
+			{
+				transform: 'translateY(64px)'
+			},
+			{
+				transform: 'translateY(0)'
+			}
+		], {
+			duration: 1000,
 			easing: 'ease-in-out'
 		});
 	}
