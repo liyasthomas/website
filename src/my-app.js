@@ -160,9 +160,9 @@ class MyApp extends PolymerElement {
 				paper-tab span {
 					margin-left: 8px;
 				}
-				neon-animated-pages {
+				#pages {
 					@apply --layout-flex;
-					overflow-y: hidden;
+					overflow: hidden;
 				}
 				neon-animated-pages > .iron-selected {
 					@apply --layout-flex;
@@ -252,7 +252,7 @@ class MyApp extends PolymerElement {
         <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
           <app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
-					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox" on-click="scrollTop">
+					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:home" slot="item-icon"></iron-icon>
@@ -357,7 +357,7 @@ class MyApp extends PolymerElement {
             </app-toolbar>
             <app-toolbar>
               <div main-title><span class="logo">Liyas Thomas</span></div>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar on-click="scrollTop" hidden$="{{!wideLayout}}">
+							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
 										<iron-icon icon="my-icons:home"></iron-icon>
@@ -404,7 +404,7 @@ class MyApp extends PolymerElement {
 					<footer>
 						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" on-click="scrollTop" aria-label="Scroll top"></paper-fab>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top"></paper-fab>
         </app-header-layout>
       </app-drawer-layout>
     `;
@@ -520,12 +520,12 @@ class MyApp extends PolymerElement {
 
 	scrollTop() {
 		var scrollDuration = 300;
-		var scrollStep = -window.scrollY / (scrollDuration / 15),
+		var scrollStep = -window.scrollY / (scrollDuration / 10),
 			scrollInterval = setInterval(function () {
 				if (window.scrollY != 0) {
 					window.scrollBy(0, scrollStep);
 				} else clearInterval(scrollInterval);
-			}, 15);
+			}, 10);
 	}
 
 	static get observers() {
@@ -556,6 +556,7 @@ class MyApp extends PolymerElement {
 	}
 
 	_pageChanged(page) {
+		this.scrollTop();
 		// Import the page component on demand.
 		//
 		// Note: `polymer build` doesn't like string concatenation in the import
