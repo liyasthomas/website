@@ -14,7 +14,7 @@
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
-},
+				},
 				{
 					"color": "blue",
 					"title": "Feedie",
@@ -23,10 +23,10 @@
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"popular": [
 		{
 			"title": "popular",
@@ -42,7 +42,7 @@
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
-},
+				},
 				{
 					"color": "orange",
 					"title": "Wallpapers",
@@ -51,7 +51,7 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "grey",
 					"title": "Art",
@@ -60,7 +60,7 @@
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
 					"link": "art"
-},
+				},
 				{
 					"color": "yellow",
 					"title": "Pineapple Notes",
@@ -69,7 +69,7 @@
 					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
-},
+				},
 				{
 					"color": "black",
 					"title": "Shooter",
@@ -78,10 +78,10 @@
 					"img": "../images/assets/projects/shooter.svg",
 					"icon": "arrow-forward",
 					"link": "shooter"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"projects": [
 		{
 			"title": "projects",
@@ -97,7 +97,7 @@
 					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
 					"link": "konnect"
-},
+				},
 				{
 					"color": "blue",
 					"title": "Feedie",
@@ -106,7 +106,7 @@
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
-},
+				},
 				{
 					"color": "light-blue",
 					"title": "Lvr",
@@ -115,7 +115,7 @@
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
-},
+				},
 				{
 					"color": "pink",
 					"title": "ily",
@@ -124,7 +124,7 @@
 					"img": "../images/assets/projects/ily.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
-},
+				},
 				{
 					"color": "indigo",
 					"title": "AEIOU",
@@ -133,8 +133,8 @@
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
-}
-]
-}
-]
+				}
+			]
+		}
+	]
 }

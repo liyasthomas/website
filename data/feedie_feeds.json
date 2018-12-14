@@ -14,7 +14,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -23,7 +23,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -32,7 +32,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -41,7 +41,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -50,10 +50,10 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"section2": [
 		{
 			"title": "prototyping",
@@ -69,7 +69,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -78,7 +78,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -87,7 +87,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -96,7 +96,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -105,10 +105,10 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"section3": [
 		{
 			"title": "architecture",
@@ -124,7 +124,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -133,7 +133,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -142,7 +142,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -151,7 +151,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -160,10 +160,10 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"similar": [
 		{
 			"title": "similar",
@@ -179,7 +179,7 @@
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
-},
+				},
 				{
 					"color": "orange",
 					"title": "Wallpapers",
@@ -188,8 +188,8 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-}
-]
-}
-]
+				}
+			]
+		}
+	]
 }

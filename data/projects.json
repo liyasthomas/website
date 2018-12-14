@@ -9,15 +9,15 @@
 					"title": "Lvr",
 					"icon": "visibility",
 					"link": "lvr"
-},
+				},
 				{
 					"title": "Feedie",
 					"icon": "star",
 					"link": "feedie"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"others": [
 		{
 			"title": "Others",
@@ -28,13 +28,13 @@
 					"title": "Wallpapers",
 					"icon": "wallpaper",
 					"link": "wallpapers"
-},
+				},
 				{
 					"title": "Fuse Org",
 					"icon": "group",
 					"link": "fuseorg"
-}
-]
-}
-]
+				}
+			]
+		}
+	]
 }

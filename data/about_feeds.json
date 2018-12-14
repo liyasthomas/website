@@ -9,70 +9,90 @@
 				{
 					"link": "https://www.facebook.com/liyasthomas",
 					"icon": "facebook"
-}, {
+				},
+				{
 					"link": "https://twitter.com/liyasthomas",
 					"icon": "twitter"
-}, {
+				},
+				{
 					"link": "https://plus.google.com/liyasthomas",
 					"icon": "google-plus"
-}, {
+				},
+				{
 					"link": "https://instagram.com/liyasthomas",
 					"icon": "instagram"
-}, {
+				},
+				{
 					"link": "https://www.youtube.com/liyasthomas",
 					"icon": "youtube"
-}, {
+				},
+				{
 					"link": "https://liyasthomas.blogspot.com",
 					"icon": "blogger"
-}, {
+				},
+				{
 					"link": "https://liyasthomas.wordpress.com",
 					"icon": "wordpress"
-}, {
+				},
+				{
 					"link": "https://www.wattpad.com/liyasthomas",
 					"icon": "wattpad"
-}, {
+				},
+				{
 					"link": "https://github.com/liyasthomas",
 					"icon": "github"
-}, {
+				},
+				{
 					"link": "https://liyasthomas.tumblr.com",
 					"icon": "tumblr"
-}, {
+				},
+				{
 					"link": "https://www.linkedin.com/in/liyasthomas",
 					"icon": "linkedin"
-}, {
+				},
+				{
 					"link": "https://in.pinterest.com/liyasthomas",
 					"icon": "pinterest"
-}, {
+				},
+				{
 					"link": "https://www.behance.com/liyasthomas",
 					"icon": "behance"
-}, {
+				},
+				{
 					"link": "https://www.dribbble.com/liyasthomas",
 					"icon": "dribbble"
-}, {
+				},
+				{
 					"link": "https://www.kickstarter.com/liyasthomas",
 					"icon": "kickstarter"
-}, {
+				},
+				{
 					"link": "https://medium.com/@liyasthomas",
 					"icon": "medium"
-}, {
+				},
+				{
 					"link": "https://www.snapchat.com/liyasthomas",
 					"icon": "snapchat"
-}, {
+				},
+				{
 					"link": "https://www.skype.com/liyasthomas",
 					"icon": "skype"
-}, {
+				},
+				{
 					"link": "https://www.reddit.com/liyasthomas",
 					"icon": "reddit"
-}, {
+				},
+				{
 					"link": "https://paypal.me/liyascthomas/",
 					"icon": "paypal"
-}, {
+				},
+				{
 					"link": "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
 					"icon": "whatsapp"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"gallery": [
 		{
 			"title": "gallery",
@@ -88,7 +108,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "twitter",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 2",
@@ -97,7 +117,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "linkedin",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 3",
@@ -106,7 +126,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "facebook",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 4",
@@ -115,7 +135,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "linkedin",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 5",
@@ -124,7 +144,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "facebook",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 6",
@@ -133,7 +153,7 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "instagram",
 					"link": ""
-},
+				},
 				{
 					"color": "white",
 					"title": "Similar 7",
@@ -142,8 +162,8 @@
 					"img": "../images/assets/about/puff.svg",
 					"icon": "google-plus",
 					"link": ""
-}
-]
-}
-]
+				}
+			]
+		}
+	]
 }

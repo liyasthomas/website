@@ -14,7 +14,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -23,7 +23,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -32,7 +32,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -41,7 +41,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -50,7 +50,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -59,7 +59,7 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-},
+				},
 				{
 					"color": "white",
 					"title": "Wall",
@@ -68,10 +68,10 @@
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-}
-]
-}
-],
+				}
+			]
+		}
+	],
 	"similar": [
 		{
 			"title": "similar",
@@ -87,7 +87,7 @@
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
-},
+				},
 				{
 					"color": "orange",
 					"title": "Wallpapers",
@@ -96,8 +96,8 @@
 					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-}
-]
-}
-]
+				}
+			]
+		}
+	]
 }
