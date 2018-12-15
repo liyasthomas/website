@@ -20,14 +20,15 @@ import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-image/iron-image.js';
+import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/paper-menu-button/paper-menu-button.js';
+import '@polymer/paper-listbox/paper-listbox.js';
+import '@polymer/paper-item/paper-icon-item.js';
+import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
 import '@polymer/paper-progress/paper-progress.js';
-import '@polymer/paper-spinner/paper-spinner-lite.js';
-import '@polymer/paper-listbox/paper-listbox.js';
-import '@polymer/paper-item/paper-icon-item.js';
-import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-fab/paper-fab.js';
 import './shared-styles.js';
 import './my-icons.js';
@@ -49,9 +50,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-teal-a400);
-					--light-accent-color: var(--paper-teal-a200);
-					--dark-accent-color: var(--paper-teal-a700);
+					--accent-color: var(--paper-blue-a400);
+					--light-accent-color: var(--paper-blue-a200);
+					--dark-accent-color: var(--paper-blue-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .54);
 					--divider-text-color: rgba(0, 0, 0, .38);
@@ -73,7 +74,7 @@ class MyApp extends PolymerElement {
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;
-					color: #000;
+					color: var(--secondary-text-color);
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
 					}
@@ -102,13 +103,16 @@ class MyApp extends PolymerElement {
 				}
 				app-header {
 					background-color: var(--primary-color);
-					color: #000;
+					color: var(--secondary-text-color);
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
 				}
 				app-toolbar paper-icon-button {
 					margin: 0 4px;
+				}
+				app-toolbar paper-menu-button {
+					padding: 0;
 				}
 				[main-title] {
 					font-size: 44px;
@@ -124,6 +128,7 @@ class MyApp extends PolymerElement {
 				}
 				.logo {
         	font-family: "Lobster", "Roboto", "Noto", sans-serif;
+					color: #000;
 				}
 				paper-tabs {
 					height: 100%;
@@ -365,6 +370,25 @@ class MyApp extends PolymerElement {
 								<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
 							</a>
 							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
+							<paper-menu-button vertical-align="top" horizontal-align="right">
+								<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
+								<paper-listbox class="listbox" slot="dropdown-content">
+									<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+										<paper-icon-item>
+											<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
+											<span>Hire&nbsp;me</span>
+											<paper-ripple></paper-ripple>
+										</paper-icon-item>
+									</a>
+									<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener">
+										<paper-icon-item>
+											<iron-icon src="../images/assets/social/paypal.svg" slot="item-icon"></iron-icon>
+											<span>Donate</span>
+											<paper-ripple></paper-ripple>
+										</paper-icon-item>
+									</a>
+								</paper-listbox>
+							</paper-menu-button>
             </app-toolbar>
           </app-header>
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
