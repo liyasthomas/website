@@ -105,7 +105,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -113,10 +113,10 @@ class MyWeb extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -132,7 +132,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button raised class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -144,7 +144,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -152,10 +152,10 @@ class MyWeb extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -171,7 +171,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button raised class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

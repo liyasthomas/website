@@ -104,7 +104,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -112,10 +112,10 @@ class MyHome extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="block flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -131,7 +131,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button raised class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -149,7 +149,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -157,10 +157,10 @@ class MyHome extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -176,7 +176,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button raised class$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -194,7 +194,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -202,10 +202,10 @@ class MyHome extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -221,7 +221,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{projects.link}}">
-						<paper-button raised class$="[[_computeBgClass(projects.color)]]" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(projects.color)]]" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

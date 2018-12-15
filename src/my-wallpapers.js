@@ -84,7 +84,7 @@ class MyWallpapers extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
-					<paper-button raised class="blue-bg" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<paper-button class="blue-bg" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -115,7 +115,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
@@ -123,10 +123,10 @@ class MyWallpapers extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -142,7 +142,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{wallpapers.link}}">
-						<paper-button raised class$="[[_computeBgClass(wallpapers.color)]]" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(wallpapers.color)]]" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -166,7 +166,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -174,10 +174,10 @@ class MyWallpapers extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class="flexchild flex-vertical">
+								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class="block bottom">
+								<div class$="[[_computeFgClass(sub.color)]] block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -193,7 +193,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button raised class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

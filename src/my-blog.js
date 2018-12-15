@@ -65,13 +65,6 @@ class MyBlog extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
-				.item {
-					border: 1px solid var(--light-text-color);
-					box-shadow: none;
-				}
-				.bottom {
-					background-color: transparent;
-				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
@@ -110,9 +103,9 @@ class MyBlog extends PolymerElement {
 									<div class="block mid">
 										<div class="description">{{posts.summary}}</div>
 									</div>
-									<div class="flexchild flex-vertical">
+									<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
 									</div>
-									<div class="block bottom">
+									<div class$="[[_computeFgClass(sub.color)]] block bottom">
 										<div class="info">
 											<div class="flexchild">
 												<iron-icon icon="my-icons:open-in-new">
@@ -129,7 +122,7 @@ class MyBlog extends PolymerElement {
 				</div>
 				<div class="grid actions flex-center-center">
 					<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
-						<paper-button raised class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

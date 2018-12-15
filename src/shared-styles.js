@@ -161,7 +161,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 8px;
 				border-radius: 8px;
-				@apply --shadow-elevation-2dp;
+				border: 1px solid var(--light-text-color);
 			}
 			.item:hover {
 //				@apply --shadow-elevation-2dp;
@@ -191,7 +191,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.bottom {
 				padding: 8px;
 				border-radius: 0 0 8px 8px;
-				background-color: rgba(0,0,0,.1);
 			}
 			.title {
 				display: -webkit-box;
