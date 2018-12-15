@@ -2,22 +2,23 @@
 	"entrypoint": "index.html",
 	"shell": "src/my-app.js",
 	"sources": [
-    "images/**/*",
-    "data/**/*"
-  ],
+		"images/**/*",
+		"data/**/*"
+	],
 	"extraDependencies": [
-    "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/*.js",
-    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
-    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
-  ],
+		"manifest.json",
+		"node_modules/@webcomponents/webcomponentsjs/*.js",
+		"!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+		"node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+		"node_modules/web-animations-js/web-animations-next-lite.min.js"
+	],
 	"builds": [
 		{
 			"name": "esm-bundled",
 			"browserCapabilities": [
-        "es2015",
-        "modules"
-      ],
+				"es2015",
+				"modules"
+			],
 			"js": {
 				"minify": true
 			},
@@ -29,12 +30,12 @@
 			},
 			"bundle": true,
 			"addServiceWorker": true
-    },
+		},
 		{
 			"name": "es6-bundled",
 			"browserCapabilities": [
-        "es2015"
-      ],
+				"es2015"
+			],
 			"js": {
 				"minify": true,
 				"transformModulesToAmd": true
@@ -47,7 +48,7 @@
 			},
 			"bundle": true,
 			"addServiceWorker": true
-    },
+		},
 		{
 			"name": "es5-bundled",
 			"js": {
@@ -63,13 +64,13 @@
 			},
 			"bundle": true,
 			"addServiceWorker": true
-    }
-  ],
+		}
+	],
 	"moduleResolution": "node",
 	"npm": true,
 	"lint": {
 		"rules": [
-      "polymer-3"
-    ]
+			"polymer-3"
+		]
 	}
 }
