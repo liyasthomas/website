@@ -1,54 +1,54 @@
 {
-  "name": "liyasthomas",
-  "version": "3.0.0",
-  "description": "Developer, Designer, Entrepreneur, Artist",
-  "author": "Liyas Thomas",
-  "license": "BSD-3-Clause",
-  "repository": "liyasthomas/liyasthomas",
-  "scripts": {
-    "start": "polymer serve",
-    "build": "polymer build",
-    "lint": "polymer lint",
-    "test": "polymer test",
-    "test:integration": "polymer build # test that psk builds without error with the CLI"
-  },
-  "dependencies": {
-    "@polymer/app-layout": "^3.0.2",
-    "@polymer/app-route": "^3.0.2",
-    "@polymer/iron-ajax": "^3.0.1",
-    "@polymer/iron-collapse": "^3.0.1",
-    "@polymer/iron-demo-helpers": "^3.0.2",
-    "@polymer/iron-dropdown": "^3.0.1",
-    "@polymer/iron-flex-layout": "^3.0.1",
-    "@polymer/iron-icons": "^3.0.1",
-    "@polymer/iron-iconset-svg": "^3.0.1",
-    "@polymer/iron-image": "^3.0.1",
-    "@polymer/iron-list": "^3.0.1",
-    "@polymer/iron-media-query": "^3.0.1",
-    "@polymer/iron-pages": "^3.0.1",
-    "@polymer/iron-scroll-threshold": "^3.0.1",
-    "@polymer/iron-selector": "^3.0.1",
-    "@polymer/paper-button": "^3.0.1",
-    "@polymer/paper-dialog": "^3.0.1",
-    "@polymer/paper-dialog-scrollable": "^3.0.1",
-    "@polymer/paper-fab": "^3.0.1",
-    "@polymer/paper-icon-button": "^3.0.1",
-    "@polymer/paper-item": "^3.0.1",
-    "@polymer/paper-listbox": "^3.0.1",
-    "@polymer/paper-progress": "^3.0.1",
-    "@polymer/paper-spinner": "^3.0.1",
-    "@polymer/paper-tabs": "^3.0.1",
-    "@polymer/paper-toast": "^3.0.1",
-    "@polymer/paper-tooltip": "^3.0.1",
-    "@polymer/polymer": "^3.1.0",
-    "@webcomponents/webcomponentsjs": "^2.2.1",
-    "web-animations-js": "^2.3.1"
-  },
-  "devDependencies": {
-    "polymer-cli": "^1.9.2",
-    "wct-browser-legacy": "^1.0.2"
-  },
-  "engines": {
-    "node": ">=8.0"
-  }
+	"name": "liyasthomas",
+	"version": "3.0.0",
+	"description": "Developer, Designer, Entrepreneur, Artist",
+	"author": "Liyas Thomas <liyascthomas@gmail.com> (https://liyas-thomas.firebaseapp.com)",
+	"license": "MIT",
+	"repository": "github:liyasthomas/liyasthomas",
+	"scripts": {
+		"start": "polymer serve",
+		"build": "polymer build",
+		"lint": "polymer lint",
+		"test": "polymer test",
+		"test:integration": "polymer build # test that psk builds without error with the CLI"
+	},
+	"dependencies": {
+		"@polymer/app-layout": "^3.0.2",
+		"@polymer/app-route": "^3.0.2",
+		"@polymer/iron-ajax": "^3.0.1",
+		"@polymer/iron-collapse": "^3.0.1",
+		"@polymer/iron-demo-helpers": "^3.0.2",
+		"@polymer/iron-dropdown": "^3.0.1",
+		"@polymer/iron-flex-layout": "^3.0.1",
+		"@polymer/iron-icons": "^3.0.1",
+		"@polymer/iron-iconset-svg": "^3.0.1",
+		"@polymer/iron-image": "^3.0.1",
+		"@polymer/iron-list": "^3.0.1",
+		"@polymer/iron-media-query": "^3.0.1",
+		"@polymer/iron-pages": "^3.0.1",
+		"@polymer/iron-scroll-threshold": "^3.0.1",
+		"@polymer/iron-selector": "^3.0.1",
+		"@polymer/paper-button": "^3.0.1",
+		"@polymer/paper-dialog": "^3.0.1",
+		"@polymer/paper-dialog-scrollable": "^3.0.1",
+		"@polymer/paper-fab": "^3.0.1",
+		"@polymer/paper-icon-button": "^3.0.1",
+		"@polymer/paper-item": "^3.0.1",
+		"@polymer/paper-listbox": "^3.0.1",
+		"@polymer/paper-progress": "^3.0.1",
+		"@polymer/paper-spinner": "^3.0.1",
+		"@polymer/paper-tabs": "^3.0.1",
+		"@polymer/paper-toast": "^3.0.1",
+		"@polymer/paper-tooltip": "^3.0.1",
+		"@polymer/polymer": "^3.1.0",
+		"@webcomponents/webcomponentsjs": "^2.2.1",
+		"web-animations-js": "^2.3.1"
+	},
+	"devDependencies": {
+		"polymer-cli": "^1.9.2",
+		"wct-browser-legacy": "^1.0.2"
+	},
+	"engines": {
+		"node": ">=8.0"
+	}
 }
