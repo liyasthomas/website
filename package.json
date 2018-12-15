@@ -35,6 +35,7 @@
 		"@polymer/paper-icon-button": "^3.0.1",
 		"@polymer/paper-item": "^3.0.1",
 		"@polymer/paper-listbox": "^3.0.1",
+		"@polymer/paper-menu-button": "^3.0.1",
 		"@polymer/paper-progress": "^3.0.1",
 		"@polymer/paper-spinner": "^3.0.1",
 		"@polymer/paper-tabs": "^3.0.1",
