@@ -103,7 +103,7 @@ class MyBlog extends PolymerElement {
 									<div class="block mid">
 										<div class="description">{{posts.summary}}</div>
 									</div>
-									<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+									<div class="flexchild flex-vertical">
 									</div>
 									<div class$="[[_computeFgClass(sub.color)]] block bottom">
 										<div class="info">

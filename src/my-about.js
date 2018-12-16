@@ -176,7 +176,7 @@ class MyAbout extends PolymerElement {
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
-								<div class$="[[_computeBgClass(sub.color)]] flexchild flex-vertical">
+								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class$="[[_computeFgClass(sub.color)]] block bottom">
