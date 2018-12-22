@@ -185,7 +185,7 @@ class MyAbout extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon">{{sub.info}}</paper-icon-button></a>
+											<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>
