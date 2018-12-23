@@ -48,6 +48,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
+				white-space: nowrap;
+				font-size: 18px;
+				cursor: pointer;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};

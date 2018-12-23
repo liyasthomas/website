@@ -376,7 +376,7 @@ class MyApp extends PolymerElement {
 									<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
-											<span>Hire&nbsp;me</span>
+											<span>Hire me</span>
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
 									</a>
