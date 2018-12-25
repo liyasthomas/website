@@ -61,7 +61,7 @@ class MyApp extends PolymerElement {
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
-					--paper-spinner-color: #000;
+					--paper-spinner-color: var(--accent-color);
 //					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--light-text-color);
 					color: var(--primary-text-color);
@@ -236,14 +236,14 @@ class MyApp extends PolymerElement {
 					<div class="drawer-contents">
           <app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
-						<a id="home" href="[[rootPath]]" tabindex="-1">
+						<a id="home" href="[[rootPath]]">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:home" slot="item-icon"></iron-icon>
 								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<a id="projects" tabindex="-1">
+						<a id="projects">
 							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
 								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
@@ -251,8 +251,8 @@ class MyApp extends PolymerElement {
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
-							<a href="projects" tabindex="-1">
+						<iron-collapse id="collapse" opened="{{opened}}">
+							<a href="projects">
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:lightbulb-outline" slot="item-icon"></iron-icon>
 										<span class="expand">View all projects</span>
@@ -274,7 +274,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a href="{{web.link}}" tabindex="-1">
+								<a href="{{web.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -283,7 +283,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
-									<a href="[[sub.link]]" tabindex="-1">
+									<a href="[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -293,7 +293,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a href="{{others.link}}" tabindex="-1">
+								<a href="{{others.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
@@ -301,7 +301,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
-									<a href="[[sub.link]]" tabindex="-1">
+									<a href="[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -311,14 +311,14 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a id="blog" href="blog" tabindex="-1">
+						<a id="blog" href="blog">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
 								<span>Blog</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<a id="about" href="about" tabindex="-1">
+						<a id="about" href="about">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
 								<span>About</span>
@@ -342,25 +342,25 @@ class MyApp extends PolymerElement {
               <div main-title><span class="logo">Liyas Thomas</span></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}">
 								<paper-tab id="home">
-									<a href="[[rootPath]]" tabindex="-1">
+									<a href="[[rootPath]]">
 										<iron-icon icon="my-icons:home"></iron-icon>
 										<span>Home</span>
 									</a>
 								</paper-tab>
 								<paper-tab id="projects">
-									<a href="projects" tabindex="-1">
+									<a href="projects">
 										<iron-icon icon="my-icons:work"></iron-icon>
 										<span>Projects</span>
 									</a>
 								</paper-tab>
 								<paper-tab id="blog">
-									<a href="blog" tabindex="-1">
+									<a href="blog">
 										<iron-icon icon="my-icons:favorite"></iron-icon>
 										<span>Blog</span>
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
-									<a href="about" tabindex="-1">
+									<a href="about">
 										<iron-icon icon="my-icons:face"></iron-icon>
 										<span>About</span>
 									</a>

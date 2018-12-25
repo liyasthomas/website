@@ -89,6 +89,23 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				display: block;
 				width: 100%;
 			}
+			paper-input.searchInput {
+				border: 1px solid var(--light-text-color);
+				border-radius: 32px;
+				--paper-input-container: {
+					padding: 4px 8px;
+				};
+				--paper-input-container-underline: {
+					display: none;
+					height: 0;
+				};
+				--paper-input-container-underline-focus: {
+					display: none;
+				};
+				--paper-input-container-input: {
+					padding: 4px 8px;
+				};
+			}
 			iron-collapse {
 				outline: none;
 			}
