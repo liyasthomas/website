@@ -4,6 +4,7 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@polymer/paper-input/paper-input.js';
 
 class MyProjects extends PolymerElement {
 	static get template() {
@@ -91,19 +92,35 @@ class MyProjects extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+				<div class$="[[getUIType(UI)]] content flex-justified">
+					<paper-input class="searchInput" value="{{filterVal}}" no-label-float>
+						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
+						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
+					</paper-input>
+				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
 						<iron-icon class$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-menu-button horizontal-align="right">
+ 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="description"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="none"><iron-icon icon="my-icons:close" slot="item-icon"></iron-icon>None<paper-ripple></paper-ripple></paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub">
+					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
 						<div class="item">
 							<div class="container">
 								<div class="block top">
@@ -127,6 +144,9 @@ class MyProjects extends PolymerElement {
 								</div>
 							</div>
 						</div>
+					</template>
+					<template is="dom-if" if="{{!renderedCount}}">
+						Nothing found for '{{filterVal}}'
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
@@ -192,6 +212,34 @@ class MyProjects extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	_filter(val) {
+		return function (sub) {
+			if (!val) return true;
+			if (!sub) return false;
+			return (sub.title && ~sub.title.toLowerCase().indexOf(val.toLowerCase())) ||
+				(sub.description && ~sub.description.toLowerCase().indexOf(val.toLowerCase()));
+		};
+	}
+
+	_sort(val) {
+		switch (val) {
+			case 'title':
+				return function (a, b) {
+					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
+					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+				};
+			case 'description':
+				return function (a, b) {
+					if (a.description.toLowerCase() === b.description.toLowerCase()) return 0;
+					return a.description.toLowerCase() < b.description.toLowerCase() ? -1 : 1;
+				};
+		}
+	}
+
+	clearInput() {
+		this.filterVal = null;
 	}
 
 	tryAgain() {
