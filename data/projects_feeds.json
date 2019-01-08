@@ -7,65 +7,72 @@
 			"link": "web",
 			"sub": [
 				{
+					"bg": "8ad6c2",
 					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
+					"img": "../images/assets/projects/5.png",
 					"icon": "language",
 					"link": "konnect"
 				},
 				{
+					"bg": "d9719e",
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
+					"img": "../images/assets/projects/30.png",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
 				{
+					"bg": "aec6fe",
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/19.png",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
 				{
+					"bg": "f3df37",
 					"color": "blue-grey",
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/materialthings.svg",
+					"img": "../images/assets/projects/20.png",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				},
 				{
+					"bg": "eabed3",
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
+					"img": "../images/assets/projects/32.png",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
 				{
+					"bg": "aec6fe",
 					"color": "grey",
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Read more",
-					"img": "../images/assets/projects/snake.svg",
+					"img": "../images/assets/projects/snake.png",
 					"icon": "arrow-forward",
 					"link": "snake"
 				},
 				{
+					"bg": "8ad6c2",
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/ily.svg",
+					"img": "../images/assets/projects/5.png",
 					"icon": "arrow-forward",
 					"link": "ily"
 				}
@@ -80,20 +87,22 @@
 			"link": "others",
 			"sub": [
 				{
+					"bg": "aec6fe",
 					"color": "orange",
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/wallpapers.svg",
+					"img": "../images/assets/projects/wallpapers.png",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
 				{
+					"bg": "aec6fe",
 					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
+					"img": "../images/assets/projects/fuseorg.png",
 					"icon": "group",
 					"link": "fuseorg"
 				}

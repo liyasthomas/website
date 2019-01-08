@@ -7,22 +7,34 @@
 			"link": "blog",
 			"sub": [
 				{
+					"bg": "d9719e",
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
+					"img": "../images/assets/projects/1.png",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
 				{
+					"bg": "aec6fe",
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
+					"img": "../images/assets/projects/2.png",
 					"icon": "arrow-forward",
 					"link": "feedie"
+				},
+				{
+					"bg": "eabed3",
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/3.png",
+					"icon": "group",
+					"link": "fuseorg"
 				}
 			]
 		}
@@ -35,49 +47,34 @@
 			"link": "blog",
 			"sub": [
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "group",
-					"link": "fuseorg"
-				},
-				{
+					"bg": "aec6fe",
 					"color": "orange",
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/wallpapers.svg",
+					"img": "../images/assets/projects/4.png",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
 				{
+					"bg": "d9719e",
 					"color": "grey",
 					"title": "Art",
 					"description": "Doodles and drawings",
 					"info": "View all",
-					"img": "../images/assets/projects/art.svg",
+					"img": "../images/assets/projects/5.png",
 					"icon": "create",
 					"link": "art"
 				},
 				{
+					"bg": "d9719e",
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/pineapplenotes.svg",
+					"img": "../images/assets/projects/6.png",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
-				},
-				{
-					"color": "black",
-					"title": "Shooter",
-					"description": "Shoot em down!",
-					"info": "Read more",
-					"img": "../images/assets/projects/shooter.svg",
-					"icon": "arrow-forward",
-					"link": "shooter"
 				}
 			]
 		}
@@ -90,47 +87,62 @@
 			"link": "projects",
 			"sub": [
 				{
+					"bg": "d9719e",
 					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
+					"img": "../images/assets/projects/7.png",
 					"icon": "language",
 					"link": "konnect"
 				},
 				{
+					"bg": "d9719e",
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
+					"img": "../images/assets/projects/8.png",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
 				{
+					"bg": "d9719e",
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/9.png",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
 				{
+					"bg": "d9719e",
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/ily.svg",
+					"img": "../images/assets/projects/10.png",
 					"icon": "arrow-forward",
 					"link": "ily"
 				},
 				{
+					"bg": "d9719e",
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
+					"img": "../images/assets/projects/11.png",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"bg": "d9719e",
+					"color": "indigo",
+					"title": "AEIOU",
+					"description": "Augmented Reality platform to make education fun and interactive",
+					"info": "Read more",
+					"img": "../images/assets/projects/12.png",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				}
