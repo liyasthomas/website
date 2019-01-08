@@ -14,6 +14,8 @@ class MyWeb extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
+					background-color: #f9e8c3;
+					margin-top: -128px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -132,7 +134,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View all projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -171,7 +173,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

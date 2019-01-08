@@ -14,6 +14,8 @@ class MyBlog extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
+					background-color: #f9e8c3;
+					margin-top: -128px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -108,7 +110,6 @@ class MyBlog extends PolymerElement {
 									<div class$="[[_computeFgClass(sub.color)]] block bottom">
 										<div class="info">
 											<div class="flexchild">
-												<iron-icon icon="my-icons:open-in-new">
 											</div>
 											<div>
 												{{posts.note_count}}<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
@@ -122,7 +123,7 @@ class MyBlog extends PolymerElement {
 				</div>
 				<div class="grid actions flex-center-center">
 					<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
-						<paper-button class="red-bg" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -90,7 +90,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				border: 1px solid var(--light-text-color);
+				@apply --shadow-elevation-4dp;
+				background-color: #fff;
 				border-radius: 32px;
 				--paper-input-container: {
 					padding: 4px 8px;
@@ -131,7 +132,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: calc(100vh - 128px);
+				height: 100vh;
 			}
 			.actions {
 				@apply --layout-horizontal;
@@ -144,7 +145,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.content .title {
 				font-size: 28px;
 				color: var(--primary-text-color);
-        font-family: "Lobster", "Roboto", "Noto", sans-serif;
+				text-transform: uppercase;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -181,10 +182,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 8px;
 				border-radius: 8px;
-				border: 1px solid var(--light-text-color);
+				background-color: #fff;
+				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
-//				@apply --shadow-elevation-2dp;
+				@apply --shadow-elevation-4dp;
 			}
 			.container {
       	@apply --layout-flex;
@@ -193,23 +195,23 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.bg {
 				@apply --layout-flex;
+				transition: all .1s ease;
 				--iron-image-placeholder: {
 					background-color: rgba(0, 0, 0, .1);
 				}
-				transition: all .1s ease;
 			}
 			.block {
       	@apply --layout-horizontal;
 			}
 			.top {
-				padding: 16px 16px 4px 16px;
+				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
 			}
 			.mid {
-				padding: 4px 16px 16px 16px;
+				padding: 4px 32px 32px 32px;
 			}
 			.bottom {
-				padding: 8px;
+				padding: 16px;
 				border-radius: 0 0 8px 8px;
 			}
 			.title {

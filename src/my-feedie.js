@@ -14,6 +14,8 @@ class MyFeedie extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
+					background-color: #f9e8c3;
+					margin-top: -128px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -142,7 +144,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
-						<paper-button class$="[[_computeBgClass(section1.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -203,7 +205,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section2.link}}">
-						<paper-button class$="[[_computeBgClass(section2.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -264,7 +266,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
-						<paper-button class$="[[_computeBgClass(section3.color)]]" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -319,7 +321,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

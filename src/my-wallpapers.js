@@ -14,6 +14,8 @@ class MyWallpapers extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
+					background-color: #f9e8c3;
+					margin-top: -128px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -84,7 +86,7 @@ class MyWallpapers extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
-					<paper-button class="blue-bg" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<paper-button raised class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -142,7 +144,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{wallpapers.link}}">
-						<paper-button class$="[[_computeBgClass(wallpapers.color)]]" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -193,7 +195,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class$="[[_computeBgClass(similar.color)]]" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button raised class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

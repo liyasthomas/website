@@ -14,6 +14,8 @@ class MyAbout extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
+					background-color: #f9e8c3;
+					margin-top: -128px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -74,7 +76,7 @@ class MyAbout extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">

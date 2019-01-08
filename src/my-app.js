@@ -50,9 +50,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-blue-a400);
-					--light-accent-color: var(--paper-blue-a200);
-					--dark-accent-color: var(--paper-blue-a700);
+					--accent-color: var(--paper-grey-700);
+					--light-accent-color: var(--paper-grey-400);
+					--dark-accent-color: var(--paper-grey-800);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .54);
 					--divider-text-color: rgba(0, 0, 0, .38);
@@ -102,8 +102,13 @@ class MyApp extends PolymerElement {
 					color: var(--accent-color);
 				}
 				app-header {
-					background-color: var(--primary-color);
 					color: var(--secondary-text-color);
+					--app-header-background-front-layer: {
+						background-color: transparent;
+					};
+					--app-header-background-rear-layer: {
+						background-color: #fff;
+					};
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
@@ -330,7 +335,7 @@ class MyApp extends PolymerElement {
         </app-drawer>
         <!-- Main content -->
         <app-header-layout>
-          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title">
+          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title blend-background parallax-background">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
               <div condensed-title><span class="logo">Liyas Thomas</span></div>
@@ -340,7 +345,7 @@ class MyApp extends PolymerElement {
             </app-toolbar>
             <app-toolbar>
               <div main-title><span class="logo">Liyas Thomas</span></div>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}">
+							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab id="home">
 									<a href="[[rootPath]]">
 										<iron-icon icon="my-icons:home"></iron-icon>
