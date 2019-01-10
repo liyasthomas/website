@@ -93,15 +93,14 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}
+						{{web.title}}
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
  							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
-								<paper-icon-item name="description"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
-								<paper-icon-item name="none"><iron-icon icon="my-icons:close" slot="item-icon"></iron-icon>None<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
 						</paper-menu-button>
 						<paper-icon-button
@@ -144,14 +143,14 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button raised class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(others.color)]] big" icon="my-icons:{{others.icon}}"></iron-icon>{{others.title}}
+						{{others.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -189,11 +188,21 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
-						<paper-button raised class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>
     `;
+	}
+
+	static get properties() {
+		return {
+			sortVal: {
+				type: String,
+				value: "none",
+				reflectToAttribute: true
+			}
+		};
 	}
 
 	attached() {
@@ -222,11 +231,6 @@ class MyProjects extends PolymerElement {
 				return function (a, b) {
 					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
 					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
-				};
-			case 'description':
-				return function (a, b) {
-					if (a.description.toLowerCase() === b.description.toLowerCase()) return 0;
-					return a.description.toLowerCase() < b.description.toLowerCase() ? -1 : 1;
 				};
 		}
 	}
