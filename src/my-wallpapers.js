@@ -86,7 +86,7 @@ class MyWallpapers extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
-					<paper-button raised class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<paper-button class="secondary" aria-label="View all">View album</paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -106,7 +106,7 @@ class MyWallpapers extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.wallpapers]]" as="wallpapers">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(wallpapers.color)]] big" icon="my-icons:{{wallpapers.icon}}"></iron-icon>{{wallpapers.title}}
+						{{wallpapers.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -144,7 +144,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{wallpapers.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View album</paper-button>
 					</a>
 				</div>
 			</template>
@@ -163,7 +163,7 @@ class MyWallpapers extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 				<div class$="[[getUIType(UI)]] actions">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
+						{{similar.title}}
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -195,7 +195,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>

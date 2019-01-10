@@ -86,7 +86,7 @@ class MyFeedie extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/feedie">
-					<paper-button class="blue-bg" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<paper-button class="blue-bg" aria-label="View all">View project</paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/feedie_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -106,7 +106,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.section1]]" as="section1">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(section1.color)]] big" icon="my-icons:{{section1.icon}}"></iron-icon>{{section1.title}}
+						{{section1.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -144,7 +144,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View project</paper-button>
 					</a>
 				</div>
 			</template>
@@ -167,7 +167,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.section2]]" as="section2">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(section2.color)]] big" icon="my-icons:{{section2.icon}}"></iron-icon>{{section2.title}}
+						{{section2.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -205,7 +205,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section2.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View project</paper-button>
 					</a>
 				</div>
 			</template>
@@ -228,7 +228,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.section3]]" as="section3">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(section3.color)]] big" icon="my-icons:{{section3.icon}}"></iron-icon>{{section3.title}}
+						{{section3.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -266,7 +266,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View project</paper-button>
 					</a>
 				</div>
 			</template>
@@ -289,7 +289,7 @@ class MyFeedie extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
 				<div class$="[[getUIType(UI)]] actions">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(similar.color)]] big" icon="my-icons:{{similar.icon}}"></iron-icon>{{similar.title}}
+						{{similar.title}}
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -321,7 +321,7 @@ class MyFeedie extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button raised class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>

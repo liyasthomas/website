@@ -185,11 +185,6 @@ class MyApp extends PolymerElement {
 					background-color: #fff !important;
 					color: var(--secondary-text-color);
 				}
-				footer {
-					padding: 32px;
-					text-align: center;
-					color: var(--secondary-text-color);
-				}
 				@media (max-width: 640px) {
 					app-drawer {
 						--app-drawer-width: 80%;
@@ -409,9 +404,6 @@ class MyApp extends PolymerElement {
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
-					<footer>
-						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
-					</footer>
         </app-header-layout>
       </app-drawer-layout>
     `;

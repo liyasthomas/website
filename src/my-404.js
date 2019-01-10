@@ -14,7 +14,9 @@ class My404 extends PolymerElement {
 					align-items: center;
 					justify-content: center;
 					padding: 32px;
-					height: calc(100vh - 128px);
+					background-color: #aaa;
+					margin-top: -128px;
+					height: 100vh;
 				}
 				h1 {
 					font-size: 3em;

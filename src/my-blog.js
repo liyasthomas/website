@@ -90,7 +90,7 @@ class MyBlog extends PolymerElement {
 				<div class="grid">
 					<div class="actions flex-justified">
 						<div class="title">
-							<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>tumblr<span> @liyasthomas</span>
+							tumblr<span> @liyasthomas</span>
 						</div>
 					</div>
 				</div>
@@ -123,7 +123,7 @@ class MyBlog extends PolymerElement {
 				</div>
 				<div class="grid actions flex-center-center">
 					<a href="http://liyasthomas.tumblr.com" target="_blank" rel="noopener">
-						<paper-button raised class="secondary" aria-label="View all">View all {{posts.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{posts.title}}</paper-button>
 					</a>
 				</div>
 			</template>

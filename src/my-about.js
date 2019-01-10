@@ -152,7 +152,7 @@ class MyAbout extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{social.link}}">
-						<paper-button class$="[[_computeBgClass(social.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(social.color)]]" aria-label="View all">View blog</paper-button>
 					</a>
 				</div>
 			</template>
@@ -197,7 +197,7 @@ class MyAbout extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{gallery.link}}">
-						<paper-button class$="[[_computeBgClass(gallery.color)]]" aria-label="View all">View blog<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(gallery.color)]]" aria-label="View all">View blog</paper-button>
 					</a>
 				</div>
 			</template>

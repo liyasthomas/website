@@ -90,7 +90,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				@apply --shadow-elevation-4dp;
+//				@apply --shadow-elevation-2dp;
 				background-color: #fff;
 				border-radius: 32px;
 				--paper-input-container: {
@@ -138,9 +138,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 				padding: 32px;
 			}
-			.actions:nth-child(even) {
-				margin-bottom: 16px;
-			}
 			.actions .title,
 			.content .title {
 				font-size: 28px;
@@ -183,10 +180,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 8px;
 				border-radius: 8px;
 				background-color: #fff;
-				@apply --shadow-elevation-2dp;
+//				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
-				@apply --shadow-elevation-4dp;
+//				@apply --shadow-elevation-4dp;
 			}
 			.container {
       	@apply --layout-flex;
