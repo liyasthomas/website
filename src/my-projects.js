@@ -15,14 +15,13 @@ class MyProjects extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
-					margin-top: -128px;
-					background-color: var(--paper-grey-100);
+					margin-top: 32px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -33,7 +32,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -44,7 +43,7 @@ class MyProjects extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -59,10 +58,10 @@ class MyProjects extends PolymerElement {
 						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
 						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
-						width: 60vw;
+						width: 50vw;
 					}
 				}
       </style>
@@ -113,7 +112,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
-						<div class="item" style="background-color: #{{sub.bg}}">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -124,7 +123,7 @@ class MyProjects extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -143,7 +142,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{web.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>
@@ -161,7 +160,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[others.sub]]" as="sub">
-						<div class="item" style="background-color: #{{sub.bg}}">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -172,7 +171,7 @@ class MyProjects extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -188,7 +187,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
-						<paper-button class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{others.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>

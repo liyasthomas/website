@@ -15,13 +15,13 @@ class MyWallpapers extends PolymerElement {
           display: block;
           --app-grid-item-height: 100%;
 					background-color: #f9e8c3;
-					margin-top: -128px;
+					margin-top: 32px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -32,7 +32,7 @@ class MyWallpapers extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -43,7 +43,7 @@ class MyWallpapers extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -55,22 +55,13 @@ class MyWallpapers extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 4;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 25vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-item-height: 30vw;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
-						width: 60vw;
-					}
-					.item:nth-child(5n+1) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+2) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+4) {
-						@apply --app-grid-expandible-item;
+						width: 50vw;
 					}
 				}
       </style>
@@ -120,7 +111,7 @@ class MyWallpapers extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
-									<div class$="[[_computeFgClass(sub.color)]] title">{{sub.title}}</div>
+									<div class=" title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -128,7 +119,7 @@ class MyWallpapers extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -179,7 +170,7 @@ class MyWallpapers extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>

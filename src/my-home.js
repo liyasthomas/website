@@ -14,14 +14,13 @@ class MyHome extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
-					margin-top: -128px;
-					background-color: var(--paper-grey-100);
+					margin-top: 32px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -32,7 +31,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -43,7 +42,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -57,17 +56,17 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 33vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-item-height: 30vw;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
-						width: 60vw;
+						width: 50vw;
 					}
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/home/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/home/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -97,7 +96,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
-						<div class="item" style="background-color: #{{sub.bg}}">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -108,7 +107,7 @@ class MyHome extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -124,7 +123,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{recent.title}}</paper-button>
 					</a>
 				</div>
 			</template>
@@ -142,7 +141,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
-						<div class="item" style="background-color: #{{sub.bg}}">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -153,7 +152,7 @@ class MyHome extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -169,7 +168,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{popular.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{popular.title}}</paper-button>
 					</a>
 				</div>
 			</template>
@@ -187,7 +186,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">
-						<div class="item" style="background-color: #{{sub.bg}}">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -198,7 +197,7 @@ class MyHome extends PolymerElement {
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
-								<div class$="[[_computeFgClass(sub.color)]] block bottom">
+								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
@@ -214,7 +213,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{projects.link}}">
-						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{projects.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{projects.title}}</paper-button>
 					</a>
 				</div>
 			</template>

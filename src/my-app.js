@@ -113,11 +113,8 @@ class MyApp extends PolymerElement {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
 				}
-				app-toolbar paper-icon-button {
-					margin: 0 4px;
-				}
-				app-toolbar paper-menu-button {
-					padding: 0;
+				app-toolbar {
+					padding: 0 8px;
 				}
 				[main-title] {
 					font-size: 44px;
@@ -125,11 +122,11 @@ class MyApp extends PolymerElement {
 					margin-left: 12px;
 				}
 				[condensed-title] {
-					font-size: 24px;
+					font-size: 28px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 700;
-					margin-left: 16px;
+					margin-left: 12px;
 				}
 				.logo {
         	font-family: "Lobster", "Roboto", "Noto", sans-serif;
@@ -204,7 +201,7 @@ class MyApp extends PolymerElement {
       </app-route>
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
+				<paper-button class="secondary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">

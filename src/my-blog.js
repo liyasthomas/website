@@ -15,7 +15,7 @@ class MyBlog extends PolymerElement {
           display: block;
           --app-grid-item-height: 100%;
 					background-color: #f9e8c3;
-					margin-top: -128px;
+					margin-top: 32px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -107,7 +107,7 @@ class MyBlog extends PolymerElement {
 									</div>
 									<div class="flexchild flex-vertical">
 									</div>
-									<div class$="[[_computeFgClass(sub.color)]] block bottom">
+									<div class="block bottom">
 										<div class="info">
 											<div class="flexchild">
 											</div>

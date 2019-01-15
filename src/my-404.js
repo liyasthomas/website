@@ -15,7 +15,7 @@ class My404 extends PolymerElement {
 					justify-content: center;
 					padding: 32px;
 					background-color: #aaa;
-					margin-top: -128px;
+					margin-top: 32px;
 					height: 100vh;
 				}
 				h1 {

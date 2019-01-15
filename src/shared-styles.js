@@ -46,6 +46,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background: none;
 				color: inherit;
 			}
+			paper-menu-button {
+				padding: 0;
+			}
 			paper-item,
 			paper-icon-item {
 				white-space: nowrap;
@@ -54,6 +57,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
+			}
+			paper-icon-button {
+				margin: 0 4px;
 			}
 			paper-icon-button.link {
 				margin: 4px;
@@ -132,7 +138,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: 100vh;
+				height: 30vh;
 			}
 			.actions {
 				@apply --layout-horizontal;
@@ -203,13 +209,21 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.top {
 				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
+				border-top: 2px solid var(--light-text-color);
+				border-left: 2px solid var(--light-text-color);
+				border-right: 2px solid var(--light-text-color);
 			}
 			.mid {
 				padding: 4px 32px 32px 32px;
+				border-left: 2px solid var(--light-text-color);
+				border-right: 2px solid var(--light-text-color);
 			}
 			.bottom {
 				padding: 16px;
 				border-radius: 0 0 8px 8px;
+				border-left: 2px solid var(--light-text-color);
+				border-right: 2px solid var(--light-text-color);
+				border-bottom: 2px solid var(--light-text-color);
 			}
 			.title {
 				display: -webkit-box;
