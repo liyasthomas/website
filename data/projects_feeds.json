@@ -12,7 +12,7 @@
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/5.png",
+					"img": "../images/assets/projects/5.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
@@ -22,7 +22,7 @@
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/30.png",
+					"img": "../images/assets/projects/30.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -32,7 +32,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/19.png",
+					"img": "../images/assets/projects/19.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
@@ -42,7 +42,7 @@
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/20.png",
+					"img": "../images/assets/projects/20.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				},
@@ -52,7 +52,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/32.png",
+					"img": "../images/assets/projects/32.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -62,7 +62,7 @@
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Read more",
-					"img": "../images/assets/projects/snake.png",
+					"img": "../images/assets/projects/snake.svg",
 					"icon": "arrow-forward",
 					"link": "snake"
 				},
@@ -72,7 +72,7 @@
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/5.png",
+					"img": "../images/assets/projects/5.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
 				}
@@ -92,7 +92,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/wallpapers.png",
+					"img": "../images/assets/projects/wallpapers.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
@@ -102,7 +102,7 @@
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.png",
+					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
 					"link": "fuseorg"
 				}

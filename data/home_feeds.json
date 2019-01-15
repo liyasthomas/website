@@ -12,7 +12,7 @@
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/1.png",
+					"img": "../images/assets/projects/1.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -22,7 +22,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/2.png",
+					"img": "../images/assets/projects/2.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -32,7 +32,7 @@
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/3.png",
+					"img": "../images/assets/projects/3.svg",
 					"icon": "group",
 					"link": "fuseorg"
 				}
@@ -52,7 +52,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/4.png",
+					"img": "../images/assets/projects/4.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
@@ -62,7 +62,7 @@
 					"title": "Art",
 					"description": "Doodles and drawings",
 					"info": "View all",
-					"img": "../images/assets/projects/5.png",
+					"img": "../images/assets/projects/5.svg",
 					"icon": "create",
 					"link": "art"
 				},
@@ -72,7 +72,7 @@
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/6.png",
+					"img": "../images/assets/projects/6.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
 				}
@@ -92,7 +92,7 @@
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/7.png",
+					"img": "../images/assets/projects/7.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
@@ -102,7 +102,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/8.png",
+					"img": "../images/assets/projects/8.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -112,7 +112,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/9.png",
+					"img": "../images/assets/projects/9.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
@@ -122,7 +122,7 @@
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/10.png",
+					"img": "../images/assets/projects/10.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
 				},
@@ -132,7 +132,7 @@
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/11.png",
+					"img": "../images/assets/projects/11.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -142,7 +142,7 @@
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/12.png",
+					"img": "../images/assets/projects/12.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				}

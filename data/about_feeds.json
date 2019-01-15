@@ -129,15 +129,6 @@
 				},
 				{
 					"color": "white",
-					"title": "Similar 4",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "linkedin",
-					"link": ""
-				},
-				{
-					"color": "white",
 					"title": "Similar 5",
 					"description": "blah",
 					"info": "View photo",
