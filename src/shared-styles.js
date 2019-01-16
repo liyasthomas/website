@@ -199,8 +199,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.bg {
 				@apply --layout-flex;
 				transition: all .1s ease;
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 				--iron-image-placeholder: {
-					background-color: rgba(0, 0, 0, .1);
+					background-color: rgba(0, 0, 0, .05);
 				}
 			}
 			.block {
@@ -209,21 +211,21 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.top {
 				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
-				border-top: 2px solid var(--light-text-color);
-				border-left: 2px solid var(--light-text-color);
-				border-right: 2px solid var(--light-text-color);
+				border-top: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 			}
 			.mid {
 				padding: 4px 32px 32px 32px;
-				border-left: 2px solid var(--light-text-color);
-				border-right: 2px solid var(--light-text-color);
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 			}
 			.bottom {
 				padding: 16px;
 				border-radius: 0 0 8px 8px;
-				border-left: 2px solid var(--light-text-color);
-				border-right: 2px solid var(--light-text-color);
-				border-bottom: 2px solid var(--light-text-color);
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
+				border-bottom: 1px solid var(--light-text-color);
 			}
 			.title {
 				display: -webkit-box;

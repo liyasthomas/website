@@ -14,7 +14,7 @@ class MyBlog extends PolymerElement {
         :host {
           display: block;
           --app-grid-item-height: 100%;
-					background-color: #f9e8c3;
+
 					margin-top: 32px;
         }
 				@media all and (min-width: 0) and (max-width: 360px) {

@@ -242,14 +242,6 @@ class MyHome extends PolymerElement {
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
 	}
-
-	_computeBgClass(color) {
-		return color + '-bg';
-	}
-
-	_computeFgClass(color) {
-		return color + '-fg';
-	}
 }
 
 window.customElements.define('my-home', MyHome);
