@@ -7,37 +7,33 @@
 			"link": "web",
 			"sub": [
 				{
-					"bg": "8ad6c2",
 					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/5.svg",
+					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
 				{
-					"bg": "d9719e",
 					"color": "indigo",
 					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
+					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/30.svg",
+					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
 				{
-					"bg": "aec6fe",
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/19.svg",
+					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
 				{
-					"bg": "f3df37",
 					"color": "blue-grey",
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
@@ -47,7 +43,6 @@
 					"link": "materialthings"
 				},
 				{
-					"bg": "eabed3",
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
@@ -57,7 +52,6 @@
 					"link": "feedie"
 				},
 				{
-					"bg": "aec6fe",
 					"color": "grey",
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
@@ -67,7 +61,6 @@
 					"link": "snake"
 				},
 				{
-					"bg": "8ad6c2",
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
@@ -87,22 +80,20 @@
 			"link": "others",
 			"sub": [
 				{
-					"bg": "aec6fe",
 					"color": "orange",
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/wallpapers.svg",
+					"img": "../images/assets/projects/undraw_photos_1nui.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
 				{
-					"bg": "aec6fe",
 					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
+					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
 					"icon": "group",
 					"link": "fuseorg"
 				}
