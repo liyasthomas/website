@@ -216,7 +216,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-right: 1px solid var(--light-text-color);
 			}
 			.mid {
-				padding: 4px 32px 32px 32px;
+				padding: 4px 32px 16px 32px;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
 			}
