@@ -75,14 +75,14 @@ class MyAbout extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="cover" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
 					about me
 				</div>
 				<div class="description">
-					hi, my name is Liyas Thomas, i'm a designer, developer, and an entrepreneur.
+					Hi!!, my name is Liyas Thomas, I'm a designer, developer, and an entrepreneur.
 				</div>
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
@@ -93,7 +93,7 @@ class MyAbout extends PolymerElement {
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Hire me">Hire me<iron-icon icon="my-icons:alternate-email"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -104,7 +104,7 @@ class MyAbout extends PolymerElement {
 					appreciate my works by making a donation.
 				</div>
 				<p>
-					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
+					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="primary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -115,9 +115,9 @@ class MyAbout extends PolymerElement {
 					open sourcing our projects, or part of it, can help inspire other coders.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
-					<a href="https://dribbble.com/liyasthomas"><paper-button class="secondary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
-					<a href="https://github.com/liyasthomas"><paper-button class="secondary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="https://dribbble.com/liyasthomas"><paper-button class="primary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
+					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<iron-ajax auto url="../data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">

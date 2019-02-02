@@ -70,7 +70,7 @@ class MyBlog extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/blog.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/social/tumblr.svg"  alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -105,7 +105,7 @@ class MyBlog extends PolymerElement {
 									<div class="block mid">
 										<div class="description">{{posts.summary}}</div>
 									</div>
-									<div class="flexchild flex-vertical">
+									<div class="bg flexchild flex-vertical">
 									</div>
 									<div class="block bottom">
 										<div class="info">

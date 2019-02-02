@@ -78,15 +78,26 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 32px;
 			}
-			paper-button.secondary {
+			paper-button.primary {
 				background-color: #fff;
-				color: var(--secondary-text-color);
+				color: var(--accent-color);
+				border: 1px solid var(--light-text-color);
 				--paper-button-raised-keyboard-focus: {
-					color: var(--accent-color);
+					color: var(--dark-accent-color);
+				};
+			}
+			paper-button.primary:hover {
+				color: var(--dark-accent-color);
+			}
+			paper-button.secondary {
+				background-color: var(--accent-color);
+				color: #fff;
+				--paper-button-raised-keyboard-focus: {
+					background-color: var(--dark-accent-color);
 				};
 			}
 			paper-button.secondary:hover {
-				color: var(--accent-color);
+				background-color: var(--dark-accent-color);
 			}
 			paper-button iron-icon {
 				margin-left: 8px;
@@ -96,9 +107,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-//				@apply --shadow-elevation-2dp;
 				background-color: #fff;
 				border-radius: 32px;
+				border: 1px solid var(--light-text-color);
 				--paper-input-container: {
 					padding: 4px 8px;
 				};
@@ -202,7 +213,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
 				--iron-image-placeholder: {
-					background-color: rgba(0, 0, 0, .05);
+					background-color: #fff;
 				}
 			}
 			.block {
