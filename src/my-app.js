@@ -142,7 +142,6 @@ class MyApp extends PolymerElement {
 				}
 				paper-tab {
 					text-transform: capitalize;
-					padding: 0;
 					font-size: 16px;
 					font-weight: 700;
 					padding: 0 16px;

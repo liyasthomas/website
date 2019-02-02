@@ -33,7 +33,7 @@
 		"@polymer/paper-dialog-scrollable": "^3.0.1",
 		"@polymer/paper-dropdown-menu": "^3.0.1",
 		"@polymer/paper-fab": "^3.0.1",
-		"@polymer/paper-icon-button": "^3.0.1",
+		"@polymer/paper-icon-button": "^3.0.2",
 		"@polymer/paper-item": "^3.0.1",
 		"@polymer/paper-listbox": "^3.0.1",
 		"@polymer/paper-menu-button": "^3.0.1",
@@ -43,13 +43,13 @@
 		"@polymer/paper-toast": "^3.0.1",
 		"@polymer/paper-tooltip": "^3.0.1",
 		"@polymer/polymer": "^3.1.0",
-		"@webcomponents/webcomponentsjs": "^2.2.1",
+		"@webcomponents/webcomponentsjs": "^2.2.6",
 		"web-animations-js": "^2.3.1"
 	},
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
-		"polymer-cli": "^1.9.3",
+		"polymer-cli": "^1.9.5",
 		"wct-browser-legacy": "^1.0.2"
 	},
 	"engines": {
