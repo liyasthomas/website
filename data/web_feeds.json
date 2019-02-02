@@ -8,19 +8,46 @@
 			"sub": [
 				{
 					"color": "teal",
+					"title": "HapSell",
+					"description": "Have a product? Sell it!",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
+					"icon": "language",
+					"link": "konnect"
+				},
+				{
+					"color": "teal",
+					"title": "threeJS Demos",
+					"description": "3D demos",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_3d_modeling_h60h.svg",
+					"icon": "language",
+					"link": "konnect"
+				},
+				{
+					"color": "teal",
+					"title": "Stack",
+					"description": "Keep on stackin'",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_confirmed_81ex.svg",
+					"icon": "language",
+					"link": "konnect"
+				},
+				{
+					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
+					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
 				{
 					"color": "indigo",
 					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
+					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
+					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -29,7 +56,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
+					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
@@ -38,7 +65,7 @@
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/materialthings.svg",
+					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				},
@@ -47,52 +74,61 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
+					"img": "../images/assets/projects/undraw_setup_obqo.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
 				{
-					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
+					"color": "blue",
+					"title": "Fuse Org",
+					"description": "Website for Fuse Org",
 					"info": "Read more",
-					"img": "../images/assets/projects/snake.svg",
+					"img": "../images/assets/projects/undraw_onboarding_o8mv.svg",
 					"icon": "arrow-forward",
-					"link": "snake"
-				},
-				{
-					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
-					"info": "Read more",
-					"img": "../images/assets/projects/ily.svg",
-					"icon": "arrow-forward",
-					"link": "ily"
-				},
-				{
-					"color": "black",
-					"title": "Shooter",
-					"description": "Shoot em down!",
-					"info": "Read more",
-					"img": "../images/assets/projects/shooter.svg",
-					"icon": "arrow-forward",
-					"link": "shooter"
+					"link": "feedie"
 				},
 				{
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/pineapplenotes.svg",
+					"img": "../images/assets/projects/undraw_Notebook_o571.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
+				},
+				{
+					"color": "grey",
+					"title": "Snake",
+					"description": "Snakes! Snakes everywhere!",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_gaming_6oy3.svg",
+					"icon": "arrow-forward",
+					"link": "snake"
+				},
+				{
+					"color": "black",
+					"title": "Shooter",
+					"description": "Shoot em down!",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_Taken_if77.svg",
+					"icon": "arrow-forward",
+					"link": "shooter"
+				},
+				{
+					"color": "pink",
+					"title": "ily",
+					"description": "Sharing is better than getting Likes",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_appreciation_2_v4bt.svg",
+					"icon": "arrow-forward",
+					"link": "ily"
 				},
 				{
 					"color": "green",
 					"title": "Recycle Mix",
 					"description": "Mix of eco-conscious recycling methodologies",
 					"info": "Read more",
-					"img": "../images/assets/projects/recyclemix.svg",
+					"img": "../images/assets/projects/undraw_confirmation_2uy0.svg",
 					"icon": "arrow-forward",
 					"link": "recyclemix"
 				},
@@ -101,7 +137,7 @@
 					"title": "Saapshot",
 					"description": "Camera app",
 					"info": "Read more",
-					"img": "../images/assets/projects/saapshot.svg",
+					"img": "../images/assets/projects/undraw_selfie1_kpqf.svg",
 					"icon": "arrow-forward",
 					"link": "saapshot"
 				}
@@ -116,22 +152,22 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "group",
-					"link": "fuseorg"
-				},
-				{
 					"color": "orange",
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/wallpapers.svg",
+					"img": "../images/assets/projects/undraw_photos_1nui.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
+				},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
+					"icon": "group",
+					"link": "fuseorg"
 				}
 			]
 		}

@@ -17,33 +17,6 @@
 				},
 				{
 					"color": "teal",
-					"title": "liyasthomas.design",
-					"description": "My website",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_portfolio_essv.svg",
-					"icon": "language",
-					"link": "konnect"
-				},
-				{
-					"color": "teal",
-					"title": "threeJS Demos",
-					"description": "3D demos",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_3d_modeling_h60h.svg",
-					"icon": "language",
-					"link": "konnect"
-				},
-				{
-					"color": "teal",
-					"title": "Stack",
-					"description": "Keep on stackin'",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_confirmed_81ex.svg",
-					"icon": "language",
-					"link": "konnect"
-				},
-				{
-					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
@@ -97,15 +70,6 @@
 					"link": "feedie"
 				},
 				{
-					"color": "blue",
-					"title": "FORM face",
-					"description": "Website for Fuse Org",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_gift1_sgf8.svg",
-					"icon": "arrow-forward",
-					"link": "feedie"
-				},
-				{
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
@@ -131,15 +95,6 @@
 					"img": "../images/assets/projects/undraw_Taken_if77.svg",
 					"icon": "arrow-forward",
 					"link": "shooter"
-				},
-				{
-					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_appreciation_2_v4bt.svg",
-					"icon": "arrow-forward",
-					"link": "ily"
 				},
 				{
 					"color": "green",
