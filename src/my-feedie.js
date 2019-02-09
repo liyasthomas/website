@@ -66,7 +66,7 @@ class MyFeedie extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/feedie.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Feedie<span> (web)</span></div>
@@ -76,7 +76,7 @@ class MyFeedie extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/feedie">
-					<paper-button class="blue-bg" aria-label="View all">View project</paper-button>
+					<paper-button class="secondary" aria-label="View all">View project</paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/feedie_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
