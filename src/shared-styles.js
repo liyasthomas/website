@@ -46,6 +46,19 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background: none;
 				color: inherit;
 			}
+			paper-item,
+			paper-icon-item {
+				white-space: nowrap;
+				font-size: 16px;
+				font-weight: normal;
+				cursor: pointer;
+				--paper-item-focused: {
+					color: var(--accent-color);
+				};
+				--paper-item-focused-before: {
+					opacity: 0;
+				};
+			}
 			paper-menu-button {
 				padding: 0;
 			}

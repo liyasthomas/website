@@ -75,7 +75,7 @@ class MyAbout extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/feeds/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
@@ -209,7 +209,7 @@ class MyAbout extends PolymerElement {
 	}
 
 	getUIType(UI) {
-		return UI ? 'grid' : 'list';
+		return UI ? 'list' : 'grid';
 	}
 
 	getUIIcon(icon) {
