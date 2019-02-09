@@ -88,6 +88,7 @@ class MyAbout extends PolymerElement {
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Say hello!">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
+					<a href="https://github.com/liyasthomas/liyasthomas/raw/master/data/Liyas%20Thomas%20-%20Resume.pdf"><paper-button class="primary" aria-label="Download my resume">Download my resume<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
