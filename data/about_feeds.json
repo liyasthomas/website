@@ -15,10 +15,6 @@
 					"icon": "twitter"
 				},
 				{
-					"link": "https://plus.google.com/liyasthomas",
-					"icon": "google-plus"
-				},
-				{
 					"link": "https://instagram.com/liyasthomas",
 					"icon": "instagram"
 				},
@@ -107,7 +103,7 @@
 					"info": "View photo",
 					"img": "../images/assets/about/puff.svg",
 					"icon": "twitter",
-					"link": ""
+					"link": "https://twitter.com/liyasthomas"
 				},
 				{
 					"color": "white",
@@ -116,7 +112,7 @@
 					"info": "View photo",
 					"img": "../images/assets/about/puff.svg",
 					"icon": "linkedin",
-					"link": ""
+					"link": "https://www.linkedin.com/in/liyasthomas"
 				},
 				{
 					"color": "white",
@@ -125,7 +121,16 @@
 					"info": "View photo",
 					"img": "../images/assets/about/puff.svg",
 					"icon": "facebook",
-					"link": ""
+					"link": "https://www.facebook.com/liyasthomas"
+				},
+				{
+					"color": "white",
+					"title": "Similar 4",
+					"description": "blah",
+					"info": "View photo",
+					"img": "../images/assets/about/puff.svg",
+					"icon": "instagram",
+					"link": "https://instagram.com/liyasthomas"
 				},
 				{
 					"color": "white",
@@ -133,26 +138,8 @@
 					"description": "blah",
 					"info": "View photo",
 					"img": "../images/assets/about/puff.svg",
-					"icon": "facebook",
-					"link": ""
-				},
-				{
-					"color": "white",
-					"title": "Similar 6",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
 					"icon": "instagram",
-					"link": ""
-				},
-				{
-					"color": "white",
-					"title": "Similar 7",
-					"description": "blah",
-					"info": "View photo",
-					"img": "../images/assets/about/puff.svg",
-					"icon": "google-plus",
-					"link": ""
+					"link": "https://liyasthomas.tumblr.com"
 				}
 			]
 		}
