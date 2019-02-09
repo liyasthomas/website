@@ -111,7 +111,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 32px;
 				border: 1px solid var(--light-text-color);
 				--paper-input-container: {
-					padding: 4px 8px;
+					padding: 4px;
 				};
 				--paper-input-container-underline: {
 					display: none;
@@ -121,7 +121,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					display: none;
 				};
 				--paper-input-container-input: {
-					padding: 4px 8px;
+					padding: 4px;
 				};
 			}
 			iron-collapse {

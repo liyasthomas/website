@@ -85,7 +85,7 @@ class MyProjects extends PolymerElement {
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 				<div class$="[[getUIType(UI)]] content flex-justified">
-					<paper-input class="searchInput" value="{{filterVal}}" no-label-float>
+					<paper-input class="searchInput" value="{{filterVal}}" placeholder="search for projects" no-label-float>
 						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>
@@ -97,7 +97,7 @@ class MyProjects extends PolymerElement {
 					<div>
 						<paper-menu-button horizontal-align="right">
  							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
-							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortWebVal}}">
 								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
@@ -111,7 +111,7 @@ class MyProjects extends PolymerElement {
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
+					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortWebVal)}}" rendered-item-count="{{renderedWebCount}}">
 						<div class="item">
 							<div class="container">
 								<div class="block top">
@@ -136,7 +136,7 @@ class MyProjects extends PolymerElement {
 							</div>
 						</div>
 					</template>
-					<template is="dom-if" if="{{!renderedCount}}">
+					<template is="dom-if" if="{{!renderedWebCount}}">
 						Nothing found for '{{filterVal}}'
 					</template>
 				</div>
@@ -151,15 +151,24 @@ class MyProjects extends PolymerElement {
 					<div class="title">
 						{{others.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-menu-button horizontal-align="right">
+ 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortOthersVal}}">
+								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[others.sub]]" as="sub">
+					<template is="dom-repeat" items="[[others.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortOthersVal)}}" rendered-item-count="{{renderedOthersCount}}">
 						<div class="item">
 							<div class="container">
 								<div class="block top">
@@ -184,6 +193,9 @@ class MyProjects extends PolymerElement {
 							</div>
 						</div>
 					</template>
+					<template is="dom-if" if="{{!renderedOthersCount}}">
+						Nothing found for '{{filterVal}}'
+					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
@@ -196,9 +208,14 @@ class MyProjects extends PolymerElement {
 
 	static get properties() {
 		return {
-			sortVal: {
+			sortWebVal: {
 				type: String,
-				value: "none",
+				value: "date",
+				reflectToAttribute: true
+			},
+			sortOthersVal: {
+				type: String,
+				value: "date",
 				reflectToAttribute: true
 			}
 		};
