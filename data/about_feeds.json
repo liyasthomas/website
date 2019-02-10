@@ -35,12 +35,12 @@
 					"icon": "wattpad"
 				},
 				{
-					"link": "https://github.com/liyasthomas",
-					"icon": "github"
-				},
-				{
 					"link": "https://liyasthomas.tumblr.com",
 					"icon": "tumblr"
+				},
+				{
+					"link": "https://github.com/liyasthomas",
+					"icon": "github"
 				},
 				{
 					"link": "https://www.linkedin.com/in/liyasthomas",
