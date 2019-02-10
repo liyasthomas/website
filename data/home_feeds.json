@@ -4,7 +4,7 @@
 			"title": "recent",
 			"icon": "star",
 			"color": "orange",
-			"link": "blog",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "teal",
@@ -41,7 +41,7 @@
 			"title": "popular",
 			"icon": "whatshot",
 			"color": "red",
-			"link": "blog",
+			"link": "projects",
 			"sub": [
 				{
 					"color": "orange",

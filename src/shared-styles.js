@@ -166,7 +166,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.content .title {
 				font-size: 28px;
 				color: var(--primary-text-color);
-				text-transform: uppercase;
+				text-transform: capitalize;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -291,6 +291,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 				.list .item {
 					--app-grid-item-height: 100vw;
+				}
+				.actions, .content {
+					padding: 16px;
 				}
 			}
 			.white-bg {
