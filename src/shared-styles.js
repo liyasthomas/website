@@ -48,8 +48,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				white-space: nowrap;
-				font-size: 16px;
+				font-size: 18px;
 				font-weight: normal;
 				cursor: pointer;
 				--paper-item-focused: {
@@ -61,15 +62,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-menu-button {
 				padding: 0;
-			}
-			paper-item,
-			paper-icon-item {
-				white-space: nowrap;
-				font-size: 18px;
-				cursor: pointer;
-				--paper-item-focused-before: {
-					opacity: 0;
-				};
 			}
 			paper-icon-button {
 				margin: 0 4px;
@@ -86,6 +78,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button {
 				margin: 4px;
 				padding: .6em 1.2em;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
@@ -135,6 +128,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				};
 				--paper-input-container-input: {
 					padding: 4px;
+					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				};
 			}
 			iron-collapse {

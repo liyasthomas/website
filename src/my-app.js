@@ -135,16 +135,17 @@ class MyApp extends PolymerElement {
 				paper-tabs {
 					height: 100%;
 				}
-				paper-tab:hover {
-					--paper-tab-content-unselected: {
-						opacity: 1;
-					}
-				}
 				paper-tab {
+					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 					text-transform: capitalize;
 					font-size: 16px;
 					font-weight: 700;
 					padding: 0 16px;
+				}
+				paper-tab:hover {
+					--paper-tab-content-unselected: {
+						opacity: 1;
+					}
 				}
 				paper-tab a {
 					@apply --layout-horizontal;
@@ -161,6 +162,7 @@ class MyApp extends PolymerElement {
 					width: 100%;
 				}
 				paper-toast {
+					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 					@apply --layout-horizontal;
 					@apply --layout-center;
 					@apply --layout-justified;
@@ -437,16 +439,24 @@ class MyApp extends PolymerElement {
 							icon: "instagram"
 						},
 						{
-							link: "https://plus.google.com/liyasthomas",
-							icon: "google-plus"
-						},
-						{
 							link: "https://liyasthomas.tumblr.com",
 							icon: "tumblr"
 						},
 						{
+							link: "https://github.com/liyasthomas",
+							icon: "github"
+						},
+						{
 							link: "https://www.linkedin.com/in/liyasthomas",
 							icon: "linkedin"
+						},
+						{
+							link: "https://in.pinterest.com/liyasthomas",
+							icon: "pinterest"
+						},
+						{
+							link: "https://www.dribbble.com/liyasthomas",
+							icon: "dribbble"
 						},
 						{
 							link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",

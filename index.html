@@ -76,60 +76,61 @@
 	<meta name="twitter:image" content="images/manifest/icon-144x144.png">
 
 	<!-- Web Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
 	<script>
 		/**
-      * [polymer-root-path]
-      *
-      * Leave this line unchanged if you intend to serve your app from the root
-      * path (e.g., with URLs like `my.domain/` and `my.domain/view1`).
-      *
-      * If you intend to serve your app from a non-root path (e.g., with URLs
-      * like `my.domain/my-app/` and `my.domain/my-app/view1`), edit this line
-      * to indicate the path from which you'll be serving, including leading
-      * and trailing slashes (e.g., `/my-app/`).
-      */
-      window.MyAppGlobals = { rootPath: '/' };
+		* [polymer-root-path]
+		*
+		* Leave this line unchanged if you intend to serve your app from the root
+		* path (e.g., with URLs like `my.domain/` and `my.domain/view1`).
+		*
+		* If you intend to serve your app from a non-root path (e.g., with URLs
+		* like `my.domain/my-app/` and `my.domain/my-app/view1`), edit this line
+		* to indicate the path from which you'll be serving, including leading
+		* and trailing slashes (e.g., `/my-app/`).
+		*/
+		window.MyAppGlobals = { rootPath: '/' };
 
-      // Load and register pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js', {
-            scope: MyAppGlobals.rootPath
-          });
-        });
-      }
-    </script>
+		// Load and register pre-caching Service Worker
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js', {
+					scope: MyAppGlobals.rootPath
+				});
+			});
+		}
+	</script>
 	<script>
 		if ('serviceWorker' in navigator) {
-				window.addEventListener('load', function() {
-					navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js').then(function(registration) {
 
-						var app = document.querySelector('#app');
-						if (registration.waiting) {
-							app.update(registration);
-							return;
-						}
+					var app = document.querySelector('#app');
+					if (registration.waiting) {
+						app.update(registration);
+						return;
+					}
 
-						if (registration.installing) {
-							registration.installing.addEventListener('statechange', function() {
-								app.update(registration);
-							});
-							return;
-						}
-
-						registration.addEventListener('updatefound', function() {
+					if (registration.installing) {
+						registration.installing.addEventListener('statechange', function() {
 							app.update(registration);
 						});
+						return;
+					}
 
-						console.info('ServiceWorker registration successful with scope: ', registration.scope);
-					}, function(err) {
+					registration.addEventListener('updatefound', function() {
+						app.update(registration);
+					});
+
+					console.info('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
 						console.info('ServiceWorker registration failed: ', err);
-					});;
-				});
-			}
-		</script>
+				});;
+			});
+		}
+	</script>
 
 	<!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
 	<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -143,7 +144,7 @@
 		body {
 			margin: 0;
 			padding: 0;
-			font-family: "Roboto", "Noto", sans-serif;
+			font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			line-height: 1.5;
 			min-height: 100vh;
 			font-size: 18px;
