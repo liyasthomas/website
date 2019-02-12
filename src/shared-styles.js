@@ -82,7 +82,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
-				border-radius: 32px;
+				border-radius: 8px;
 			}
 			paper-button.primary {
 				background-color: #fff;
@@ -113,9 +113,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				background-color: #fff;
+				background-color: rgba(0,0,0,.04);
 				border-radius: 32px;
-				border: 1px solid var(--light-text-color);
 				--paper-input-container: {
 					padding: 4px;
 				};
@@ -130,6 +129,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					padding: 4px;
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				};
+				--paper-input-container-input-focus: {
+				}
+			}
+			paper-input.searchInput[focused] {
+				background-color: var(--light-primary-color);
 			}
 			iron-collapse {
 				outline: none;
@@ -169,7 +173,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-transform: capitalize;
 			}
 			.actions paper-icon-button {
-				color: var(--secondary-text-color);
+				color: var(--divider-text-color);
 			}
 			.content {
 				background-color: none;
@@ -269,6 +273,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
+				color: var(--secondary-text-color);
 				font-size: 20px;
 				line-height: 1.2;
 			}
@@ -276,6 +281,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
+				color: var(--accent-color);
 				font-weight: 700;
 				text-overflow: ellipsis;
 			}

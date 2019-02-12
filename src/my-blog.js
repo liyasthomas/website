@@ -90,7 +90,7 @@ class MyBlog extends PolymerElement {
 				<div class="grid">
 					<div class="actions flex-justified">
 						<div class="title">
-							tumblr<span> @liyasthomas</span>
+							tumblr
 						</div>
 					</div>
 				</div>
