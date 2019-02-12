@@ -2,7 +2,7 @@
 	"section1": [
 		{
 			"title": "screenshots",
-			"icon": "wallpaper",
+			"icon": "get-app",
 			"color": "blue",
 			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
@@ -10,27 +10,27 @@
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				}
 			]
@@ -47,27 +47,27 @@
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				}
 			]
@@ -84,27 +84,27 @@
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				},
 				{
 					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
+					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"icon": "get-app",
 					"link": "wallpapers"
 				}
 			]
