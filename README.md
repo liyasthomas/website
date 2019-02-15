@@ -19,9 +19,19 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ### 🍭 My official website by [Liyas Thomas](https://github.com/liyasthomas)
 
+<div align="center">
+  <br>
+  <img src="images/assets/app/material.io_tools_resizer_.png" alt="Lvr" width="100%">
+  <br>
+</div>
+
 ### Features :sparkles:
 
-:eyeglasses: :heart: :electric_plug: :zap: :globe_with_meridians:
+:eyeglasses: PWA
+:electric_plug: Offline support
+:zap: Lightining fast
+:globe_with_meridians: Hosted in Firebase
+:heart: Made with love
 
 ---
 
