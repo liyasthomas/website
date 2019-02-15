@@ -50,9 +50,9 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-teal-a400);
-					--light-accent-color: var(--paper-teal-a400);
-					--dark-accent-color: var(--paper-teal-a700);
+					--accent-color: var(--paper-blue-a400);
+					--light-accent-color: var(--paper-blue-a200);
+					--dark-accent-color: var(--paper-blue-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .54);
 					--divider-text-color: rgba(0, 0, 0, .38);
