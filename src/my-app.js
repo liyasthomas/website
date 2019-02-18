@@ -602,6 +602,7 @@ class MyApp extends PolymerElement {
 				break;
 		}
 	}
+
 }
 
 window.customElements.define('my-app', MyApp);
