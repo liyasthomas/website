@@ -2,8 +2,8 @@ import '@polymer/polymer/polymer-element.js';
 
 const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `<dom-module id="shared-styles">
-  <template>
-    <style>
+	<template>
+		<style>
 			*,
 			*:focus,
 			*::before,
@@ -50,7 +50,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-icon-item {
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				white-space: nowrap;
-				font-size: 18px;
 				font-weight: normal;
 				cursor: pointer;
 				--paper-item-focused: {
@@ -79,7 +78,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 4px;
 				padding: .6em 1.2em;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				font-weight: 700;
 				text-transform: none;
 				transition: all .1s ease;
 				border-radius: 8px;
@@ -214,8 +212,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 //				@apply --shadow-elevation-4dp;
 			}
 			.container {
-      	@apply --layout-flex;
-      	@apply --layout-vertical;
+				@apply --layout-flex;
+				@apply --layout-vertical;
 				height: 100%;
 			}
 			.bg {
@@ -228,7 +226,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 			}
 			.block {
-      	@apply --layout-horizontal;
+				@apply --layout-horizontal;
 			}
 			.top {
 				padding: 32px 32px 4px 32px;
@@ -282,7 +280,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				color: var(--accent-color);
-				font-weight: 700;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
@@ -422,8 +419,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.indigo-fg {
 				color: var(--paper-indigo-a400);
 			}
-    </style>
-  </template>
+		</style>
+	</template>
 </dom-module>`;
 
 document.head.appendChild($_documentContainer.content);

@@ -6,7 +6,7 @@ import {
 class My404 extends PolymerElement {
 	static get template() {
 		return html `
-      <style>
+			<style>
 				:host {
 					display: flex;
 					text-align: center;
@@ -20,10 +20,10 @@ class My404 extends PolymerElement {
 				h1 {
 					font-size: 3em;
 				}
-      </style>
+			</style>
 			<h1>4😕4</h1>
 			<div><a href="[[rootPath]]"><paper-fab icon="my-icons:arrow-back" aria-label="Back"></paper-fab></a></div>
-    `;
+		`;
 	}
 }
 

@@ -9,14 +9,14 @@ import '@polymer/paper-input/paper-input.js';
 class MyOthers extends PolymerElement {
 	static get template() {
 		return html `
-      <style include="app-grid-style">
-      </style>
-      <style include="shared-styles">
-        :host {
-          display: block;
-          --app-grid-item-height: 100%;
+			<style include="app-grid-style">
+			</style>
+			<style include="shared-styles">
+				:host {
+					display: block;
+					--app-grid-item-height: 100%;
 					margin-top: 32px;
-        }
+				}
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
@@ -64,10 +64,10 @@ class MyOthers extends PolymerElement {
 						width: 50vw;
 					}
 				}
-      </style>
+			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/undraw_Specs_h9jt.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/undraw_Specs_h9jt.svg" alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/others_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -121,7 +121,7 @@ class MyOthers extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -163,7 +163,7 @@ class MyOthers extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -185,7 +185,7 @@ class MyOthers extends PolymerElement {
 					</a>
 				</div>
 			</template>
-    `;
+		`;
 	}
 
 	static get properties() {

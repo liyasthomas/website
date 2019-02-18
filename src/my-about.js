@@ -8,14 +8,14 @@ import '@polymer/app-layout/app-grid/app-grid-style.js';
 class MyAbout extends PolymerElement {
 	static get template() {
 		return html `
-      <style include="app-grid-style">
-      </style>
-      <style include="shared-styles">
-        :host {
-          display: block;
-          --app-grid-item-height: 100%;
+			<style include="app-grid-style">
+			</style>
+			<style include="shared-styles">
+				:host {
+					display: block;
+					--app-grid-item-height: 100%;
 					margin-top: 32px;
-        }
+				}
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
@@ -72,29 +72,29 @@ class MyAbout extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
-      </style>
+			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/feeds/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
 					about me
 				</div>
 				<div class="description">
-					Hi!!, my name is Liyas Thomas, I'm a designer, developer, and an entrepreneur.
+					Hi, my name is Liyas Thomas, I'm a designer, developer, and an entrepreneur.
 				</div>
 				<p>I'm a front end web designer/developer and 3D visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.</p>
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
-					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Say hello!">Say hello!<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
-					<a href="https://github.com/liyasthomas/liyasthomas/raw/master/data/Liyas%20Thomas%20-%20Resume.pdf"><paper-button class="primary" aria-label="Download my resume">Download my resume<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Say hello!">Say hello<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
+					<a href="https://github.com/liyasthomas/liyasthomas/raw/master/data/Liyas%20Thomas%20-%20Resume.pdf"><paper-button class="primary" aria-label="Download my resume">Download my resume</paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Hire me">Hire me<iron-icon icon="my-icons:alternate-email"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -116,7 +116,7 @@ class MyAbout extends PolymerElement {
 					open sourcing our projects, or part of it, can help inspire other coders.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
 					<a href="https://dribbble.com/liyasthomas"><paper-button class="primary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
@@ -174,7 +174,7 @@ class MyAbout extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -191,7 +191,7 @@ class MyAbout extends PolymerElement {
 					</template>
 				</div>
 			</template>
-    `;
+		`;
 	}
 
 	attached() {

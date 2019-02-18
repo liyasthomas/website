@@ -8,15 +8,15 @@ import '@polymer/app-layout/app-grid/app-grid-style.js';
 class MyBlog extends PolymerElement {
 	static get template() {
 		return html `
-      <style include="app-grid-style">
-      </style>
-      <style include="shared-styles">
-        :host {
-          display: block;
-          --app-grid-item-height: 100%;
+			<style include="app-grid-style">
+			</style>
+			<style include="shared-styles">
+				:host {
+					display: block;
+					--app-grid-item-height: 100%;
 
 					margin-top: 32px;
-        }
+				}
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
 						--app-grid-columns: 1;
@@ -67,10 +67,10 @@ class MyBlog extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
-      </style>
+			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/social/tumblr.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/social/tumblr.svg" alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -127,7 +127,7 @@ class MyBlog extends PolymerElement {
 					</a>
 				</div>
 			</template>
-    `;
+		`;
 	}
 
 	attached() {

@@ -44,9 +44,9 @@ setRootPath(MyAppGlobals.rootPath);
 class MyApp extends PolymerElement {
 	static get template() {
 		return html `
-      <style include="shared-styles">
-        :host {
-          display: block;
+			<style include="shared-styles">
+				:host {
+					display: block;
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
@@ -67,7 +67,7 @@ class MyApp extends PolymerElement {
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
-        }
+				}
 				[hidden] {
 					display: none !important;
 				}
@@ -83,10 +83,6 @@ class MyApp extends PolymerElement {
 					height: 100%;
 					overflow-y: auto;
 					-webkit-overflow-scrolling: touch;
-				}
-				paper-icon-item {
-					font-weight: 700;
-					font-size: 16px;
 				}
 				span.expand {
 					width: calc(100% - 80px);
@@ -129,7 +125,7 @@ class MyApp extends PolymerElement {
 					margin-left: 12px;
 				}
 				.logo {
-        	font-family: "Lobster", "Roboto", "Noto", sans-serif;
+					font-family: "Lobster", "Roboto", "Noto", sans-serif;
 					color: #000;
 				}
 				paper-tabs {
@@ -195,12 +191,12 @@ class MyApp extends PolymerElement {
 						max-width: none;
 					}
 				}
-      </style>
-      <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
-      </app-location>
-      <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
-      </app-route>
-      <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+			</style>
+			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
+			</app-location>
+			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
+			</app-route>
+			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
 				<paper-button class="secondary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
@@ -213,26 +209,26 @@ class MyApp extends PolymerElement {
 					<div on-tap="openShare">
 						<template is="dom-repeat" items="[[social]]">
 							<a href="{{item.link}}" target="_blank" rel="noopener">
-								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"  aria-label="Icon"></paper-icon-button>
+								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"	aria-label="Icon"></paper-icon-button>
 							</a>
 						</template>
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-							<paper-icon-button class="toast-button" icon="my-icons:mail-outline"  aria-label="Icon"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:mail-outline"	aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
-							<paper-icon-button class="toast-button" icon="my-icons:phone"  aria-label="Icon"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:phone"	aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="about">
-							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"  aria-label="Icon"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"	aria-label="Icon"></paper-icon-button>
 						</a>
 					</div>
 				</div>
 			</paper-toast>
-      <app-drawer-layout fullbleed narrow="{{narrow}}" force-narrow>
-        <!-- Drawer content -->
-        <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
+			<app-drawer-layout fullbleed narrow="{{narrow}}" force-narrow>
+				<!-- Drawer content -->
+				<app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-          <app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
+					<app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
 						<a id="home" href="[[rootPath]]">
 							<paper-icon-item>
@@ -325,19 +321,19 @@ class MyApp extends PolymerElement {
 						</a>
 					</paper-listbox>
 					</div>
-        </app-drawer>
-        <!-- Main content -->
-        <app-header-layout>
-          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title blend-background parallax-background">
-            <app-toolbar sticky>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
-              <div condensed-title><span class="logo">Liyas Thomas</span></div>
+				</app-drawer>
+				<!-- Main content -->
+				<app-header-layout>
+					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title blend-background parallax-background">
+						<app-toolbar sticky>
+							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
+							<div condensed-title><span class="logo">Liyas Thomas</span></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 							</template>
-            </app-toolbar>
-            <app-toolbar>
-              <div main-title><span class="logo">Liyas Thomas</span></div>
+						</app-toolbar>
+						<app-toolbar>
+							<div main-title><span class="logo">Liyas Thomas</span></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab id="home">
 									<a href="[[rootPath]]">
@@ -387,8 +383,8 @@ class MyApp extends PolymerElement {
 									</a>
 								</paper-listbox>
 							</paper-menu-button>
-            </app-toolbar>
-          </app-header>
+						</app-toolbar>
+					</app-header>
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
@@ -402,9 +398,9 @@ class MyApp extends PolymerElement {
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
-        </app-header-layout>
-      </app-drawer-layout>
-    `;
+				</app-header-layout>
+			</app-drawer-layout>
+		`;
 	}
 
 	static get properties() {
@@ -524,8 +520,8 @@ class MyApp extends PolymerElement {
 
 	static get observers() {
 		return [
-      '_routePageChanged(routeData.page)'
-    ];
+			'_routePageChanged(routeData.page)'
+		];
 	}
 
 	_routePageChanged(page) {
