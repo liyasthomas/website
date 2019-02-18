@@ -24,11 +24,6 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
   <img src="images/assets/app/material.io_tools_resizer_.png" alt="Lvr" width="100%">
   <br>
 </div>
-<div align="center">
-  <br>
-  <img src="https://www.screenshotmachine.com/serve.php?img=liyas-thomas-firebaseapp-com-1024x768desktop-fcee64.png" alt="Lvr" width="100%">
-  <br>
-</div>
 
 ### Features :sparkles:
 
