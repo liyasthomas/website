@@ -23,6 +23,15 @@
 					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
 					"icon": "group",
 					"link": "fuseorg"
+				},
+				{
+					"color": "grey",
+					"title": "Art",
+					"description": "Doodles and drawings",
+					"info": "View all",
+					"img": "../images/assets/projects/art.svg",
+					"icon": "create",
+					"link": "art"
 				}
 			]
 		}

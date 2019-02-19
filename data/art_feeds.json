@@ -1,0 +1,103 @@
+{
+	"art": [
+		{
+			"title": "popular",
+			"icon": "create",
+			"color": "blue",
+			"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "visibility",
+					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+				}
+			]
+		}
+	],
+	"similar": [
+		{
+			"title": "similar",
+			"icon": "group",
+			"color": "blue-grey",
+			"link": "projects",
+			"sub": [
+				{
+					"color": "blue",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_setup_obqo.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
+				},
+				{
+					"color": "teal",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
+					"icon": "language",
+					"link": "konnect"
+				},
+				{
+					"color": "blue",
+					"title": "Fuse Org",
+					"description": "Website for Fuse Org",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_onboarding_o8mv.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
+				}
+			]
+		}
+	]
+}

@@ -5,7 +5,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyWallpapers extends PolymerElement {
+class MyArt extends PolymerElement {
 	static get template() {
 		return html `
 			<style include="app-grid-style">
@@ -69,8 +69,8 @@ class MyWallpapers extends PolymerElement {
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/undraw_photos_1nui.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Wallpapers</div>
-				<div class="description">Curated list of wallpapers</div>
+				<div class="title">Art</div>
+				<div class="description">Doodles and drawings</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
@@ -79,7 +79,7 @@ class MyWallpapers extends PolymerElement {
 					<paper-button class="secondary" aria-label="View all">View album</paper-button>
 				</a>
 			</div>
-			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/art_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -93,10 +93,10 @@ class MyWallpapers extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.wallpapers]]" as="wallpapers">
+			<template is="dom-repeat" items="[[ajaxResponse0.art]]" as="art">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{wallpapers.title}}
+						{{art.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -106,7 +106,7 @@ class MyWallpapers extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
+					<template is="dom-repeat" items="[[art.sub]]" as="sub">
 						<div class="item">
 							<div class="container">
 								<div class="block top">
@@ -133,7 +133,7 @@ class MyWallpapers extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{wallpapers.link}}">
+					<a href="{{art.link}}">
 						<paper-button class="secondary" aria-label="View all">View album</paper-button>
 					</a>
 				</div>
@@ -216,4 +216,4 @@ class MyWallpapers extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-wallpapers', MyWallpapers);
+window.customElements.define('my-art', MyArt);

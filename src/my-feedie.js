@@ -69,7 +69,7 @@ class MyFeedie extends PolymerElement {
 				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Feedie<span> (web)</span></div>
+				<div class="title">Feedie</div>
 				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>

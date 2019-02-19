@@ -396,6 +396,7 @@ class MyApp extends PolymerElement {
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
 						<my-wallpapers name="wallpapers"></my-wallpapers>
+						<my-art name="art"></my-art>
 						<my-feedie name="feedie"></my-feedie>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
@@ -537,7 +538,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -593,6 +594,9 @@ class MyApp extends PolymerElement {
 				break;
 			case 'wallpapers':
 				import('./my-wallpapers.js');
+				break;
+			case 'art':
+				import('./my-art.js');
 				break;
 			case 'feedie':
 				import('./my-feedie.js');
