@@ -14,15 +14,14 @@ class My404 extends PolymerElement {
 					align-items: center;
 					justify-content: center;
 					padding: 32px;
-					margin-top: 32px;
-					height: calc(100vh - 170px);
 				}
 				h1 {
 					font-size: 3em;
+					color: #b2b2b2;
 				}
 			</style>
-			<h1>4😕4</h1>
-			<div><a href="[[rootPath]]"><paper-fab icon="my-icons:arrow-back" aria-label="Back"></paper-fab></a></div>
+			<h1>404</h1>
+			<div><paper-fab icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-fab></div>
 		`;
 	}
 }

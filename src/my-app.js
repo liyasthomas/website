@@ -107,8 +107,18 @@ class MyApp extends PolymerElement {
 				app-toolbar {
 					padding: 0 8px;
 				}
+				.leftItem {
+					display: none;
+				}
+				:host(:not([page=home])) .leftItem {
+					display: block;
+				}
+				:host(:not([page=home])) [drawer-toggle] {
+					display: none;
+				}
 				[main-title] {
 					font-size: 32px;
+					margin-left: -12px;
 				}
 				[condensed-title] {
 					font-size: 24px;
@@ -176,7 +186,7 @@ class MyApp extends PolymerElement {
 						width: calc(100% - 24px);
 					}
 					[main-title] {
-						margin-left: -40px;
+						margin-left: -60px;
 					}
 					#sharehome {
 						max-width: none;
@@ -317,6 +327,7 @@ class MyApp extends PolymerElement {
 					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
+							<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
 							<div condensed-title class="logo">🦄</div>
 							<div class="flexchild" style="text-align:center;">
 								<div main-title class="logo">🦄</div>
