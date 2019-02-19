@@ -92,7 +92,7 @@ class MyOthers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{others.title}} ({{renderedCount}})
+						{{others.title}} <span>({{renderedCount}})</span>
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
