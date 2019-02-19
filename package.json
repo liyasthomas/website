@@ -43,13 +43,13 @@
 		"@polymer/paper-toast": "^3.0.1",
 		"@polymer/paper-tooltip": "^3.0.1",
 		"@polymer/polymer": "^3.1.0",
-		"@webcomponents/webcomponentsjs": "^2.2.6",
+		"@webcomponents/webcomponentsjs": "^2.2.7",
 		"web-animations-js": "^2.3.1"
 	},
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
-		"polymer-cli": "^1.9.5",
+		"polymer-cli": "^1.9.6",
 		"wct-browser-legacy": "^1.0.2"
 	},
 	"engines": {
