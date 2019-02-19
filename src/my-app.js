@@ -30,6 +30,8 @@ import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
 import '@polymer/paper-progress/paper-progress.js';
 import '@polymer/paper-fab/paper-fab.js';
+import '@polymer/paper-dialog/paper-dialog.js';
+import '@polymer/paper-dialog-scrollable/paper-dialog-scrollable.js';
 import './shared-styles.js';
 import './my-icons.js';
 
@@ -150,6 +152,7 @@ class MyApp extends PolymerElement {
 				}
 				#pages {
 					@apply --layout-flex;
+					min-height: calc(100vh - 219px);
 				}
 				paper-progress {
 					display: block;
@@ -172,6 +175,9 @@ class MyApp extends PolymerElement {
 					right: 20px;
 					bottom: 20px;
 				}
+				footer {
+					padding: 32px;
+				}
 				#sharehome {
 					max-width: 320px;
 					background-color: #fff !important;
@@ -193,6 +199,38 @@ class MyApp extends PolymerElement {
 					}
 				}
 			</style>
+			<paper-dialog id="scrolling" modal>
+				<h2>License</h2>
+				<paper-dialog-scrollable>
+					<code>
+						<p>MIT License</p>
+
+						<p>Copyright (c) 2019 Liyas Thomas</p>
+
+						<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+						of this software and associated documentation files (the "Software"), to deal
+						in the Software without restriction, including without limitation the rights
+						to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+						copies of the Software, and to permit persons to whom the Software is
+						furnished to do so, subject to the following conditions:</p>
+
+						<p>The above copyright notice and this permission notice shall be included in all
+						copies or substantial portions of the Software.</p>
+
+						<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+						IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+						FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+						AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+						LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+						OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+						SOFTWARE.</p>
+					</code>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button class="primary" aria-label="View all" dialog-dismiss>Cancel</paper-button>
+					<paper-button class="secondary" aria-label="View all" dialog-confirm autofocus>Ok</paper-button>
+				</div>
+			</paper-dialog>
 			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
 			</app-location>
 			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
@@ -401,6 +439,9 @@ class MyApp extends PolymerElement {
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
+					<footer>
+						<a class="link" on-click="openModal">&copy; 2019 Liyas Thomas</a>
+					</footer>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 				</app-header-layout>
 			</app-drawer-layout>
@@ -506,6 +547,10 @@ class MyApp extends PolymerElement {
 
 	openShare() {
 		this.$.sharehome.toggle();
+	}
+
+	openModal() {
+		this.$.scrolling.open();
 	}
 
 	_getIcon(opened) {

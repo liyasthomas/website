@@ -66,7 +66,7 @@ class MyHome extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/home/banner.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/home/banner.svg" alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
