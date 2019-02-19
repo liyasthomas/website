@@ -17,6 +17,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			a {
 				text-decoration: none;
 				color: inherit;
+				cursor: pointer;
 			}
 			a.link {
 				color: var(--accent-color);
@@ -41,6 +42,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h4 {
 				font-weight: normal;
 				margin: 0;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			}
 			.listbox {
 				background: none;
@@ -134,6 +136,20 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-input.searchInput[focused] {
 				background-color: var(--light-primary-color);
 			}
+			paper-dialog {
+				border-radius: 8px;
+				max-width: 360px;
+				max-width: 600px;
+				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				line-height: 1.25;
+			}
+			paper-dialog h2 {
+				padding: 24px 24px 0;
+				font-weight: 700;
+			}
+			code {
+				font-family: 'Roboto Mono', 'Noto', sans-serif;
+			}
 			iron-collapse {
 				outline: none;
 			}
@@ -205,7 +221,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item {
 				transition: all .1s ease;
 				border-radius: 8px;
-				border-radius: 8px;
 				background-color: #fff;
 //				@apply --shadow-elevation-2dp;
 			}
@@ -217,14 +232,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-vertical;
 				height: 100%;
 			}
-			.bg {
+			iron-image {
 				@apply --layout-flex;
 				transition: all .1s ease;
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
 				--iron-image-placeholder: {
 					background-color: #fff;
 				}
+			}
+			.bg {
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 			}
 			.block {
 				@apply --layout-horizontal;
