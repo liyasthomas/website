@@ -98,13 +98,8 @@ class MyApp extends PolymerElement {
 					color: var(--accent-color);
 				}
 				app-header {
+					background-color: #fff;
 					color: var(--secondary-text-color);
-					--app-header-background-front-layer: {
-						background-color: transparent;
-					};
-					--app-header-background-rear-layer: {
-						background-color: #fff;
-					};
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
@@ -113,19 +108,15 @@ class MyApp extends PolymerElement {
 					padding: 0 8px;
 				}
 				[main-title] {
-					font-size: 44px;
-					font-weight: 700;
-					margin-left: 12px;
+					font-size: 32px;
 				}
 				[condensed-title] {
-					font-size: 28px;
+					font-size: 24px;
 					overflow: hidden;
 					text-overflow: ellipsis;
-					font-weight: 700;
 					margin-left: 12px;
 				}
 				.logo {
-					font-family: "Lobster", "Roboto", "Noto", sans-serif;
 					color: #000;
 				}
 				paper-tabs {
@@ -146,9 +137,6 @@ class MyApp extends PolymerElement {
 				paper-tab a {
 					@apply --layout-horizontal;
 					@apply --layout-center-center;
-				}
-				paper-tab span {
-					margin-left: 8px;
 				}
 				#pages {
 					@apply --layout-flex;
@@ -186,6 +174,9 @@ class MyApp extends PolymerElement {
 					paper-toast {
 						max-width: none;
 						width: calc(100% - 24px);
+					}
+					[main-title] {
+						margin-left: -40px;
 					}
 					#sharehome {
 						max-width: none;
@@ -228,7 +219,6 @@ class MyApp extends PolymerElement {
 				<!-- Drawer content -->
 				<app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-					<app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
 						<a id="home" href="[[rootPath]]">
 							<paper-icon-item>
@@ -324,65 +314,67 @@ class MyApp extends PolymerElement {
 				</app-drawer>
 				<!-- Main content -->
 				<app-header-layout>
-					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title blend-background parallax-background">
+					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
-							<div condensed-title><span class="logo">Liyas Thomas</span></div>
+							<div condensed-title class="logo">🦄</div>
+							<div class="flexchild" style="text-align:center;">
+								<div main-title class="logo">🦄</div>
+							</div>
+							<div class="flexchild"></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 							</template>
 						</app-toolbar>
 						<app-toolbar>
-							<div main-title><span class="logo">Liyas Thomas</span></div>
+							<div class="flexchild"></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab id="home">
 									<a href="[[rootPath]]">
-										<iron-icon icon="my-icons:home"></iron-icon>
-										<span>Home</span>
+										Home
 									</a>
 								</paper-tab>
 								<paper-tab id="projects">
 									<a href="projects">
-										<iron-icon icon="my-icons:work"></iron-icon>
-										<span>Projects</span>
+										Projects
 									</a>
 								</paper-tab>
 								<paper-tab id="blog">
 									<a href="blog">
-										<iron-icon icon="my-icons:favorite"></iron-icon>
-										<span>Blog</span>
+										Blog
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
 									<a href="about">
-										<iron-icon icon="my-icons:face"></iron-icon>
-										<span>About</span>
+										About
 									</a>
 								</paper-tab>
 							</paper-tabs>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-								<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
-							</a>
-							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
-							<paper-menu-button vertical-align="top" horizontal-align="right">
-								<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
-								<paper-listbox class="listbox" slot="dropdown-content">
-									<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-										<paper-icon-item>
-											<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
-											<span>Hire me</span>
-											<paper-ripple></paper-ripple>
-										</paper-icon-item>
-									</a>
-									<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener">
-										<paper-icon-item>
-											<iron-icon src="../images/assets/social/paypal.svg" slot="item-icon"></iron-icon>
-											<span>Donate</span>
-											<paper-ripple></paper-ripple>
-										</paper-icon-item>
-									</a>
-								</paper-listbox>
-							</paper-menu-button>
+							<div class="flexchild" style="text-align:right;">
+								<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
+								</a>
+								<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
+								<paper-menu-button vertical-align="top" horizontal-align="right">
+									<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
+									<paper-listbox class="listbox" slot="dropdown-content">
+										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+											<paper-icon-item>
+												<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
+												<span>Hire me</span>
+												<paper-ripple></paper-ripple>
+											</paper-icon-item>
+										</a>
+										<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener">
+											<paper-icon-item>
+												<iron-icon src="../images/assets/social/paypal.svg" slot="item-icon"></iron-icon>
+												<span>Donate</span>
+												<paper-ripple></paper-ripple>
+											</paper-icon-item>
+										</a>
+									</paper-listbox>
+								</paper-menu-button>
+							</div>
 						</app-toolbar>
 					</app-header>
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
