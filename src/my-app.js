@@ -163,7 +163,10 @@ class MyApp extends PolymerElement {
 					@apply --layout-horizontal;
 					@apply --layout-center;
 					@apply --layout-justified;
+					background-color: #fff !important;
+					color: var(--secondary-text-color);
 					border-radius: 8px;
+					max-width: 320px;
 				}
 				.toast-button {
 					margin: 8px;
@@ -177,11 +180,6 @@ class MyApp extends PolymerElement {
 				}
 				footer {
 					padding: 32px;
-				}
-				#sharehome {
-					max-width: 320px;
-					background-color: #fff !important;
-					color: var(--secondary-text-color);
 				}
 				@media (max-width: 640px) {
 					app-drawer {
