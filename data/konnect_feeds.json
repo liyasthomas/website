@@ -1,0 +1,177 @@
+{
+	"section1": [
+		{
+			"title": "screenshots",
+			"icon": "get-app",
+			"color": "blue",
+			"link": "https://github.com/liyasthomas/konnect",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Sign in",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Home page",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_2.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Insights",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_3.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Pages",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_4.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Gallery",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_5.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "Directory",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_6.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"section2": [
+		{
+			"title": "prototyping",
+			"icon": "language",
+			"color": "red",
+			"link": "https://github.com/liyasthomas/konnect",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"section3": [
+		{
+			"title": "architecture",
+			"icon": "code",
+			"color": "black",
+			"link": "https://github.com/liyasthomas/konnect",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View",
+					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"icon": "get-app",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"similar": [
+		{
+			"title": "similar",
+			"icon": "group",
+			"color": "blue-grey",
+			"link": "projects",
+			"sub": [
+				{
+					"color": "blue-grey",
+					"title": "Material Things",
+					"description": "Reusable Material Design components",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
+					"icon": "arrow-forward",
+					"link": "materialthings"
+				},
+				{
+					"color": "indigo",
+					"title": "AEIOU",
+					"description": "Platform to make augmented reality fun and interactive",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
+					"icon": "arrow-forward",
+					"link": "lvr"
+				}
+			]
+		}
+	]
+}

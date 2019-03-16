@@ -13,7 +13,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "hapsell"
 				},
 				{
 					"color": "teal",
@@ -22,7 +22,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_3d_modeling_h60h.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "threejs"
 				},
 				{
 					"color": "teal",
@@ -31,7 +31,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_confirmed_81ex.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "stack"
 				},
 				{
 					"color": "teal",
@@ -85,7 +85,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_onboarding_o8mv.svg",
 					"icon": "arrow-forward",
-					"link": "feedie"
+					"link": "fuseorg"
 				},
 				{
 					"color": "yellow",

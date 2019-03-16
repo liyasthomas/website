@@ -102,7 +102,7 @@ class MyAbout extends PolymerElement {
 					buy me a coffee!
 				</div>
 				<div class="description">
-					appreciate my works by making a donation.
+					Appreciate my works by making a donation.
 				</div>
 				<p>
 					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="primary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
@@ -110,10 +110,10 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
-					open source projects
+					I 💙 open source
 				</div>
 				<div class="description">
-					open sourcing our projects, or part of it, can help inspire other coders.
+					Open sourcing my projects, or part of it, can help inspire others.
 				</div>
 				<p>
 					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
@@ -141,7 +141,7 @@ class MyAbout extends PolymerElement {
 						{{social.title}}
 					</div>
 					<div class="description">
-						follow me on
+						Follow me on
 					</div>
 					<p>
 						<template is="dom-repeat" items="[[social.sub]]" as="sub">

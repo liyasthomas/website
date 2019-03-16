@@ -434,11 +434,20 @@ class MyApp extends PolymerElement {
 						<my-wallpapers name="wallpapers"></my-wallpapers>
 						<my-art name="art"></my-art>
 						<my-feedie name="feedie"></my-feedie>
+						<my-hapsell name="hapsell"></my-hapsell>
+						<my-konnect name="konnect"></my-konnect>
+						<my-aeiou name="aeiou"></my-aeiou>
+						<my-fuseorg name="fuseorg"></my-fuseorg>
+						<my-lvr name="lvr"></my-lvr>
+						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
+						<my-materialthings name="materialthings"></my-materialthings>
+						<my-recyclemix name="recyclemix"></my-recyclemix>
+						<my-saapshot name="saapshot"></my-saapshot>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<footer>
-						<a class="link" on-click="openModal">&copy; 2019 Liyas Thomas</a>
+						&copy; 2019 Liyas Thomas &middot; <a class="link" on-click="openModal">License</a>
 					</footer>
 					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 				</app-header-layout>
@@ -581,7 +590,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -643,6 +652,33 @@ class MyApp extends PolymerElement {
 				break;
 			case 'feedie':
 				import('./my-feedie.js');
+				break;
+			case 'hapsell':
+				import('./my-hapsell.js');
+				break;
+			case 'konnect':
+				import('./my-konnect.js');
+				break;
+			case 'aeiou':
+				import('./my-aeiou.js');
+				break;
+			case 'fuseorg':
+				import('./my-fuseorg.js');
+				break;
+			case 'lvr':
+				import('./my-lvr.js');
+				break;
+			case 'pineapplenotes':
+				import('./my-pineapplenotes.js');
+				break;
+			case 'materialthings':
+				import('./my-materialthings.js');
+				break;
+			case 'recyclemix':
+				import('./my-recyclemix.js');
+				break;
+			case 'saapshot':
+				import('./my-saapshot.js');
 				break;
 			case 'view4':
 				import('./my-view4.js');
