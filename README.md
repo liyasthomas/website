@@ -27,10 +27,10 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ### Features :sparkles:
 
-:eyeglasses: PWA
-:electric_plug: Offline support
-:zap: Lightining fast
-:globe_with_meridians: Hosted in Firebase
+:eyeglasses: Progressive web app<br>
+:electric_plug: Offline support using Service Worker<br>
+:zap: Lightining fast loading and caching made with Polymer and Web Components<br>
+:globe_with_meridians: Hosted in Firebase<br>
 :heart: Made with love
 
 ---
@@ -43,7 +43,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-* Internet connection
+* NodeJS & npm
+* polymer-cli
 * A web browser
 * [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
 
@@ -57,49 +58,33 @@ A step by step series of examples that tell you've to get a development environm
 
 1. Download the whole zip/clone the repository.
 2. Unzip and make changes.
-3. Save and deploy to any hosting platforms like Firebase, GitHub pages etc.
+3. `polymer serve` to run locally.
+4. `polymer build` to build for deployment.
+5. Deploy `build/bundled` folder to any hosting platforms like Firebase, GitHub pages etc.
 
 ---
 
 ## Running the tests
 
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why.
-
-```
-Will be explained later
-```
-
-### And coding style tests
-
-Explain what these tests test and why.
-
-```
-Will be explained later
-```
+`polymer test` to run the automated tests for this system.
 
 ---
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system.
+Additional notes about how to deploy this on a live system.
 
 ```
-Will be explained later
+polymer build
 ```
 
 ---
 
 ## Built with
 
-* **[Polymer](https://polymer-project.org)** - Web Components
-	* [Web Components](https://webcomponents.org)
-* **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
-* HTML - For the web framework
-* CSS - For styling components
+* **[Polymer](https://polymer-project.org)**
+* **[Web Components](https://webcomponents.org)**
+* [Chromium](https://github.com/chromium/chromium) - Thanks for being so fast!
 
 ---
 
@@ -139,7 +124,7 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 * [Liyas Thomas](https://github.com/liyasthomas)
 
 ### Thanks
-* [Google](https://www.google.com) - for [Polymer](https://polymer-project.org)
+* [Google](https://www.google.com) for [Polymer](https://polymer-project.org)
 
 See the list of [contributors](https://github.com/liyasthomas/liyasthomas/graphs/contributors) who participated in this project.
 
