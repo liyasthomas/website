@@ -8,6 +8,15 @@
 			"sub": [
 				{
 					"color": "teal",
+					"title": "mnmlurl",
+					"description": "Minimal url - not the url you deserve, but the url you need",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_timeline_9u4u.svg",
+					"icon": "language",
+					"link": "mnmlurl"
+				},
+				{
+					"color": "teal",
 					"title": "HapSell",
 					"description": "Have a product? Sell it!",
 					"info": "Read more",

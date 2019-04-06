@@ -8,12 +8,12 @@
 			"sub": [
 				{
 					"color": "teal",
-					"title": "HapSell",
-					"description": "Have a product? Sell it!",
+					"title": "mnmlurl",
+					"description": "Minimal url - not the url you deserve, but the url you need",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
+					"img": "../images/assets/projects/undraw_timeline_9u4u.svg",
 					"icon": "language",
-					"link": "hapsell"
+					"link": "mnmlurl"
 				},
 				{
 					"color": "teal",
@@ -81,6 +81,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "teal",
+					"title": "HapSell",
+					"description": "Have a product? Sell it!",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
+					"icon": "language",
+					"link": "hapsell"
+				},
+				{
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
@@ -115,15 +124,6 @@
 					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
-				},
-				{
-					"color": "green",
-					"title": "Recycle Mix",
-					"description": "Mix of eco-conscious recycling methodologies",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_confirmation_2uy0.svg",
-					"icon": "arrow-forward",
-					"link": "recyclemix"
 				},
 				{
 					"color": "red",
