@@ -17,6 +17,8 @@ before_script:
   - npm install -g polymer-cli
 
 script:
+	- npm run test
+	- npm run report-coverage
   - polymer build
 
 after_success:

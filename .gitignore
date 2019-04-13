@@ -1,6 +1,10 @@
 # Firebase
 .firebase
 
+.nyc_output
+coverage
+*.lcov
+
 # Logs
 logs
 *.log
