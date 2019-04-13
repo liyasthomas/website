@@ -80,7 +80,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 4px;
 				padding: .6em 1.2em;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				font-weight: 600;
 				text-transform: none;
 				transition: all .1s ease;
 				border-radius: 8px;
