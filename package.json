@@ -10,9 +10,7 @@
 		"report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
 		"start": "polymer serve",
 		"build": "polymer build",
-		"lint": "polymer lint",
-		"test": "polymer test",
-		"test:integration": "polymer build # test that psk builds without error with the CLI"
+		"lint": "polymer lint"
 	},
 	"dependencies": {
 		"@polymer/app-layout": "^3.0.2",
@@ -51,6 +49,7 @@
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
+		"nyc": "^13.3.0",
 		"polymer-cli": "^1.9.8",
 		"wct-browser-legacy": "^1.0.2"
 	},
