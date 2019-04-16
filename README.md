@@ -21,62 +21,27 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 <div align="center">
   <br>
-  <img src="images/assets/app/material.io_tools_resizer_.png" alt="Lvr" width="100%">
+  <img src="images/assets/app/unicorn.svg" alt="Liyas Thomas" width="50%">
   <br>
 </div>
 
 ### Features :sparkles:
 
-:eyeglasses: Progressive web app<br>
-:electric_plug: Offline support using Service Worker<br>
-:zap: Lightining fast loading and caching made with Polymer and Web Components<br>
-:globe_with_meridians: Hosted in Firebase<br>
+:eyeglasses: Progressive web app
+
+:electric_plug: Offline support using Service Worker
+
+:zap: Lightining fast loading and caching made with Polymer and Web Components
+
+:globe_with_meridians: Hosted in Firebase
+
 :heart: Made with love
 
 ---
 
-## Getting started
+## Demo
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-* NodeJS & npm
-* polymer-cli
-* A web browser
-* [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
-
-### Demo
-
-[Demo](https://liyas-thomas.firebaseapp.com)
-
-### Installing
-
-A step by step series of examples that tell you've to get a development environment running.
-
-1. Download the whole zip/clone the repository.
-2. Unzip and make changes.
-3. `polymer serve` to run locally.
-4. `polymer build` to build for deployment.
-5. Deploy `build/bundled` folder to any hosting platforms like Firebase, GitHub pages etc.
-
----
-
-## Running the tests
-
-`polymer test` to run the automated tests for this system.
-
----
-
-## Deployment
-
-Additional notes about how to deploy this on a live system.
-
-```
-polymer build
-```
+[https://liyas-thomas.firebaseapp.com](https://liyas-thomas.firebaseapp.com)
 
 ---
 
@@ -85,6 +50,7 @@ polymer build
 * **[Polymer](https://polymer-project.org)**
 * **[Web Components](https://webcomponents.org)**
 * [Chromium](https://github.com/chromium/chromium) - Thanks for being so fast!
+* JavaScript - For magic!
 
 ---
 
