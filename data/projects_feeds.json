@@ -7,6 +7,24 @@
 			"link": "web",
 			"sub": [
 				{
+					"color": "black",
+					"title": "metadata",
+					"description": "File metadata viewer made in Electron",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
+					"icon": "arrow-forward",
+					"link": "metadata"
+				},
+				{
+					"color": "white",
+					"title": "mnmlurl extension",
+					"description": "Cross-browser extension for Minimal URL",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_mobile_browsers_lib5.svg",
+					"icon": "arrow-forward",
+					"link": "mnmlurlextension"
+				},
+				{
 					"color": "teal",
 					"title": "mnmlurl",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
@@ -43,24 +61,6 @@
 					"link": "aeiou"
 				},
 				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
-					"icon": "arrow-forward",
-					"link": "lvr"
-				},
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
-					"icon": "arrow-forward",
-					"link": "materialthings"
-				},
-				{
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
@@ -86,42 +86,6 @@
 					"img": "../images/assets/projects/undraw_Notebook_o571.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
-				},
-				{
-					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_gaming_6oy3.svg",
-					"icon": "arrow-forward",
-					"link": "snake"
-				},
-				{
-					"color": "black",
-					"title": "Shooter",
-					"description": "Shoot em down!",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Taken_if77.svg",
-					"icon": "arrow-forward",
-					"link": "shooter"
-				},
-				{
-					"color": "green",
-					"title": "Recycle Mix",
-					"description": "Mix of eco-conscious recycling methodologies",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_confirmation_2uy0.svg",
-					"icon": "arrow-forward",
-					"link": "recyclemix"
-				},
-				{
-					"color": "red",
-					"title": "Saapshot",
-					"description": "Camera app",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_selfie1_kpqf.svg",
-					"icon": "arrow-forward",
-					"link": "saapshot"
 				}
 			]
 		}

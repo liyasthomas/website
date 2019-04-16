@@ -7,6 +7,24 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "black",
+					"title": "metadata",
+					"description": "File metadata viewer made in Electron",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
+					"icon": "arrow-forward",
+					"link": "metadata"
+				},
+				{
+					"color": "white",
+					"title": "mnmlurl extension",
+					"description": "Cross-browser extension for Minimal URL",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_mobile_browsers_lib5.svg",
+					"icon": "arrow-forward",
+					"link": "mnmlurlextension"
+				},
+				{
 					"color": "teal",
 					"title": "mnmlurl",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",

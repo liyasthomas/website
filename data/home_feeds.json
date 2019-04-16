@@ -7,12 +7,21 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "black",
+					"title": "metadata",
+					"description": "File metadata viewer made in Electron",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
+					"icon": "arrow-forward",
+					"link": "metadata"
+				},
+				{
 					"color": "teal",
 					"title": "mnmlurl",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_timeline_9u4u.svg",
-					"icon": "language",
+					"icon": "arrow-forward",
 					"link": "mnmlurl"
 				},
 				{
@@ -23,15 +32,6 @@
 					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
 					"icon": "language",
 					"link": "konnect"
-				},
-				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Platform to make augmented reality fun and interactive",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
-					"icon": "arrow-forward",
-					"link": "aeiou"
 				}
 			]
 		}
@@ -81,6 +81,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "white",
+					"title": "mnmlurl extension",
+					"description": "Cross-browser extension for Minimal URL",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_mobile_browsers_lib5.svg",
+					"icon": "arrow-forward",
+					"link": "mnmlurlextension"
+				},
+				{
 					"color": "teal",
 					"title": "HapSell",
 					"description": "Have a product? Sell it!",
@@ -90,13 +99,13 @@
 					"link": "hapsell"
 				},
 				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
+					"color": "indigo",
+					"title": "AEIOU",
+					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
+					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
 					"icon": "arrow-forward",
-					"link": "lvr"
+					"link": "aeiou"
 				},
 				{
 					"color": "blue",
@@ -124,15 +133,6 @@
 					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
-				},
-				{
-					"color": "red",
-					"title": "Saapshot",
-					"description": "Camera app",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_selfie1_kpqf.svg",
-					"icon": "arrow-forward",
-					"link": "saapshot"
 				}
 			]
 		}
