@@ -440,6 +440,7 @@ class MyApp extends PolymerElement {
 						<my-mnmlurl name="mnmlurl"></my-mnmlurl>
 						<my-mnmlurlextension name="mnmlurlextension"></my-mnmlurlextension>
 						<my-metadata name="metadata"></my-metadata>
+						<my-marcdown name="marcdown"></my-marcdown>
 						<my-fuseorg name="fuseorg"></my-fuseorg>
 						<my-lvr name="lvr"></my-lvr>
 						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
@@ -593,7 +594,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -673,6 +674,9 @@ class MyApp extends PolymerElement {
 				break;
 			case 'metadata':
 				import('./my-metadata.js');
+				break;
+			case 'marcdown':
+				import('./my-marcdown.js');
 				break;
 			case 'fuseorg':
 				import('./my-fuseorg.js');

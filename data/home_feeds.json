@@ -8,7 +8,7 @@
 			"sub": [
 				{
 					"color": "black",
-					"title": "metadata",
+					"title": "Metadata",
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
@@ -81,6 +81,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "teal",
+					"title": "Marcdown",
+					"description": "Lightweight markdown viewer and editor",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_code_review_l1q9.svg",
+					"icon": "arrow-forward",
+					"link": "marcdown"
+				},
+				{
 					"color": "white",
 					"title": "mnmlurl extension",
 					"description": "Cross-browser extension for Minimal URL",
@@ -90,15 +99,6 @@
 					"link": "mnmlurlextension"
 				},
 				{
-					"color": "teal",
-					"title": "HapSell",
-					"description": "Have a product? Sell it!",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
-					"icon": "language",
-					"link": "hapsell"
-				},
-				{
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Platform to make augmented reality fun and interactive",
@@ -106,33 +106,6 @@
 					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
-				},
-				{
-					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_setup_obqo.svg",
-					"icon": "arrow-forward",
-					"link": "feedie"
-				},
-				{
-					"color": "yellow",
-					"title": "Pineapple Notes",
-					"description": "A simple, clean note app",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Notebook_o571.svg",
-					"icon": "arrow-forward",
-					"link": "pineapplenotes"
-				},
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
-					"icon": "arrow-forward",
-					"link": "materialthings"
 				}
 			]
 		}

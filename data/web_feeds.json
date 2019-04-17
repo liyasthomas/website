@@ -7,8 +7,17 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "teal",
+					"title": "Marcdown",
+					"description": "Lightweight markdown viewer and editor",
+					"info": "Read more",
+					"img": "../images/assets/projects/undraw_code_review_l1q9.svg",
+					"icon": "arrow-forward",
+					"link": "marcdown"
+				},
+				{
 					"color": "black",
-					"title": "metadata",
+					"title": "Metadata",
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
 					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
