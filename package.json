@@ -43,7 +43,7 @@
 		"@polymer/paper-toast": "^3.0.1",
 		"@polymer/paper-tooltip": "^3.0.1",
 		"@polymer/polymer": "^3.2.0",
-		"@webcomponents/webcomponentsjs": "^2.2.8",
+		"@webcomponents/webcomponentsjs": "^2.2.9",
 		"web-animations-js": "^2.3.1"
 	},
 	"devDependencies": {
