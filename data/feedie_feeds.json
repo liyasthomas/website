@@ -122,7 +122,7 @@
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
+					"img": "../images/assets/projects/materialthings.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				},
@@ -131,7 +131,7 @@
 					"title": "AEIOU",
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
+					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -140,7 +140,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
+					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				}

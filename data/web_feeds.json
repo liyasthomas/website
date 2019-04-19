@@ -11,7 +11,7 @@
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_code_review_l1q9.svg",
+					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "arrow-forward",
 					"link": "marcdown"
 				},
@@ -20,25 +20,25 @@
 					"title": "Metadata",
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
+					"img": "../images/assets/projects/metadata.svg",
 					"icon": "arrow-forward",
 					"link": "metadata"
 				},
 				{
 					"color": "white",
-					"title": "mnmlurl extension",
+					"title": "MNMLURL Extension",
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_mobile_browsers_lib5.svg",
+					"img": "../images/assets/projects/mnmlurlextension.svg",
 					"icon": "arrow-forward",
 					"link": "mnmlurlextension"
 				},
 				{
 					"color": "teal",
-					"title": "mnmlurl",
+					"title": "MNMLURL",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_timeline_9u4u.svg",
+					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "language",
 					"link": "mnmlurl"
 				},
@@ -47,7 +47,7 @@
 					"title": "HapSell",
 					"description": "Have a product? Sell it!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_online_shopping_ga73.svg",
+					"img": "../images/assets/projects/hapsell.svg",
 					"icon": "language",
 					"link": "hapsell"
 				},
@@ -56,7 +56,7 @@
 					"title": "threeJS Demos",
 					"description": "3D demos",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_3d_modeling_h60h.svg",
+					"img": "../images/assets/projects/threejs.svg",
 					"icon": "language",
 					"link": "threejs"
 				},
@@ -65,7 +65,7 @@
 					"title": "Stack",
 					"description": "Keep on stackin'",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_confirmed_81ex.svg",
+					"img": "../images/assets/projects/stack.svg",
 					"icon": "language",
 					"link": "stack"
 				},
@@ -74,7 +74,7 @@
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
+					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
@@ -83,7 +83,7 @@
 					"title": "AEIOU",
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
+					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
@@ -92,7 +92,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
+					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
@@ -101,7 +101,7 @@
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
+					"img": "../images/assets/projects/materialthings.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				},
@@ -110,7 +110,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_setup_obqo.svg",
+					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -119,7 +119,7 @@
 					"title": "Fuse Org",
 					"description": "Website for Fuse Org",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_onboarding_o8mv.svg",
+					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "arrow-forward",
 					"link": "fuseorg"
 				},
@@ -128,7 +128,7 @@
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Notebook_o571.svg",
+					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
 				},
@@ -137,7 +137,7 @@
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_gaming_6oy3.svg",
+					"img": "../images/assets/projects/snake.svg",
 					"icon": "arrow-forward",
 					"link": "snake"
 				},
@@ -146,7 +146,7 @@
 					"title": "Shooter",
 					"description": "Shoot em down!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Taken_if77.svg",
+					"img": "../images/assets/projects/shooter.svg",
 					"icon": "arrow-forward",
 					"link": "shooter"
 				},
@@ -155,7 +155,7 @@
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_appreciation_2_v4bt.svg",
+					"img": "../images/assets/projects/ily.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
 				},
@@ -164,7 +164,7 @@
 					"title": "Recycle Mix",
 					"description": "Mix of eco-conscious recycling methodologies",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_confirmation_2uy0.svg",
+					"img": "../images/assets/projects/recyclemix.svg",
 					"icon": "arrow-forward",
 					"link": "recyclemix"
 				},
@@ -173,7 +173,7 @@
 					"title": "Saapshot",
 					"description": "Camera app",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_selfie1_kpqf.svg",
+					"img": "../images/assets/projects/saapshot.svg",
 					"icon": "arrow-forward",
 					"link": "saapshot"
 				}
@@ -192,7 +192,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/undraw_photos_1nui.svg",
+					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
@@ -201,9 +201,18 @@
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
+					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
 					"link": "fuseorg"
+				},
+				{
+					"color": "grey",
+					"title": "Art",
+					"description": "Doodles and drawings",
+					"info": "View all",
+					"img": "../images/assets/projects/art.svg",
+					"icon": "create",
+					"link": "art"
 				}
 			]
 		}

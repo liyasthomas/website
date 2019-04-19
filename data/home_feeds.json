@@ -11,16 +11,16 @@
 					"title": "Metadata",
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_charts_jj6t.svg",
+					"img": "../images/assets/projects/metadata.svg",
 					"icon": "arrow-forward",
 					"link": "metadata"
 				},
 				{
 					"color": "teal",
-					"title": "mnmlurl",
+					"title": "MNMLURL",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_timeline_9u4u.svg",
+					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "arrow-forward",
 					"link": "mnmlurl"
 				},
@@ -29,7 +29,7 @@
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
+					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
 					"link": "konnect"
 				}
@@ -48,7 +48,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/undraw_photos_1nui.svg",
+					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
@@ -66,7 +66,7 @@
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
+					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
 					"link": "fuseorg"
 				}
@@ -85,16 +85,16 @@
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_code_review_l1q9.svg",
+					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "arrow-forward",
 					"link": "marcdown"
 				},
 				{
 					"color": "white",
-					"title": "mnmlurl extension",
+					"title": "MNMLURL Extension",
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_mobile_browsers_lib5.svg",
+					"img": "../images/assets/projects/mnmlurlextension.svg",
 					"icon": "arrow-forward",
 					"link": "mnmlurlextension"
 				},
@@ -103,7 +103,7 @@
 					"title": "AEIOU",
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_startman1_h7l9.svg",
+					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				}

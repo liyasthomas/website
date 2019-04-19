@@ -66,7 +66,7 @@ class MyHapsell extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/hapsell.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Hapsell</div>

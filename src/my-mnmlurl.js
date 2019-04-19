@@ -66,10 +66,10 @@ class MyMnmlurl extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/mnmlurl.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Mnmlurl</div>
+				<div class="title">MNMLURL</div>
 				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>

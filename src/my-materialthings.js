@@ -66,16 +66,16 @@ class MyMaterialthings extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/materialthings.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Materialthings</div>
+				<div class="title">Material Things</div>
 				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/materialthings">
+				<a href="https://github.com/liyasthomas/material-things">
 					<paper-button class="secondary" aria-label="View all">View project</paper-button>
 				</a>
 			</div>

@@ -11,7 +11,7 @@
 					"title": "Wallpapers",
 					"description": "Curated list of wallpapers",
 					"info": "View all",
-					"img": "../images/assets/projects/undraw_photos_1nui.svg",
+					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
@@ -20,7 +20,7 @@
 					"title": "Fuse Org",
 					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_group_chat_v059.svg",
+					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
 					"link": "fuseorg"
 				},
@@ -48,7 +48,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_setup_obqo.svg",
+					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -57,7 +57,7 @@
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_virtual_reality_y5ig.svg",
+					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
 				},
@@ -66,7 +66,7 @@
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_Specs_h9jt.svg",
+					"img": "../images/assets/projects/materialthings.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
 				}

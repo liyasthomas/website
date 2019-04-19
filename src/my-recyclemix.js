@@ -66,7 +66,7 @@ class MyRecyclemix extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/undraw_setup_obqo.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/recyclemix.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Recyclemix</div>
@@ -75,7 +75,7 @@ class MyRecyclemix extends PolymerElement {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/recyclemix">
+				<a href="https://github.com/liyasthomas/recycle-mix">
 					<paper-button class="secondary" aria-label="View all">View project</paper-button>
 				</a>
 			</div>

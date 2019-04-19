@@ -75,7 +75,7 @@
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_setup_obqo.svg",
+					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				},
@@ -84,7 +84,7 @@
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_connected_8wvi.svg",
+					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
 					"link": "konnect"
 				},
@@ -93,7 +93,7 @@
 					"title": "Fuse Org",
 					"description": "Website for Fuse Org",
 					"info": "Read more",
-					"img": "../images/assets/projects/undraw_onboarding_o8mv.svg",
+					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
 				}

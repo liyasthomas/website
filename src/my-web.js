@@ -67,7 +67,7 @@ class MyWeb extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/undraw_onboarding_o8mv.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/feeds/web.svg" alt="Banner"></iron-image>
 			</div>
 			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
