@@ -7,6 +7,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "yellow",
+					"title": "Colorbook",
+					"description": "Color scheme for UI design",
+					"info": "Read more",
+					"img": "../images/assets/projects/colorbook.svg",
+					"icon": "arrow-forward",
+					"link": "colorbook"
+				},
+				{
 					"color": "teal",
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",

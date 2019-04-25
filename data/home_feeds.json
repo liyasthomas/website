@@ -7,13 +7,13 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "black",
-					"title": "Metadata",
-					"description": "File metadata viewer made in Electron",
+					"color": "yellow",
+					"title": "Colorbook",
+					"description": "Color scheme for UI design",
 					"info": "Read more",
-					"img": "../images/assets/projects/metadata.svg",
+					"img": "../images/assets/projects/colorbook.svg",
 					"icon": "arrow-forward",
-					"link": "metadata"
+					"link": "colorbook"
 				},
 				{
 					"color": "teal",

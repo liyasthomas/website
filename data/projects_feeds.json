@@ -7,6 +7,15 @@
 			"link": "web",
 			"sub": [
 				{
+					"color": "yellow",
+					"title": "Colorbook",
+					"description": "Color scheme for UI design",
+					"info": "Read more",
+					"img": "../images/assets/projects/colorbook.svg",
+					"icon": "arrow-forward",
+					"link": "colorbook"
+				},
+				{
 					"color": "teal",
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
@@ -23,15 +32,6 @@
 					"img": "../images/assets/projects/metadata.svg",
 					"icon": "arrow-forward",
 					"link": "metadata"
-				},
-				{
-					"color": "white",
-					"title": "MNMLURL Extension",
-					"description": "Cross-browser extension for Minimal URL",
-					"info": "Read more",
-					"img": "../images/assets/projects/mnmlurlextension.svg",
-					"icon": "arrow-forward",
-					"link": "mnmlurlextension"
 				},
 				{
 					"color": "teal",
