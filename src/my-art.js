@@ -75,7 +75,7 @@ class MyArt extends PolymerElement {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
+				<a href="http://liyasthomas.tumblr.com">
 					<paper-button class="secondary" aria-label="View all">View album</paper-button>
 				</a>
 			</div>
