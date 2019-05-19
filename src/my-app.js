@@ -96,7 +96,7 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				#home.iron-selected, #projects.iron-selected, #blog.iron-selected, #about.iron-selected {
+				#home.iron-selected, #projects.iron-selected, #about.iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
@@ -341,7 +341,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a id="blog" href="blog">
+						<a id="blog" href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
 								<span>Blog</span>
@@ -386,8 +386,8 @@ class MyApp extends PolymerElement {
 										Projects
 									</a>
 								</paper-tab>
-								<paper-tab id="blog">
-									<a href="blog">
+								<paper-tab id="blog" target="_blank" rel="noopener">
+									<a href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
 										Blog
 									</a>
 								</paper-tab>
@@ -427,7 +427,6 @@ class MyApp extends PolymerElement {
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
-						<my-blog name="blog"></my-blog>
 						<my-about name="about"></my-about>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
@@ -595,7 +594,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -636,9 +635,6 @@ class MyApp extends PolymerElement {
 				break;
 			case 'projects':
 				import('./my-projects.js');
-				break;
-			case 'blog':
-				import('./my-blog.js');
 				break;
 			case 'about':
 				import('./my-about.js');
