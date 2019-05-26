@@ -441,6 +441,7 @@ class MyApp extends PolymerElement {
 						<my-metadata name="metadata"></my-metadata>
 						<my-marcdown name="marcdown"></my-marcdown>
 						<my-colorbook name="colorbook"></my-colorbook>
+						<my-books name="books"></my-books>
 						<my-fuseorg name="fuseorg"></my-fuseorg>
 						<my-lvr name="lvr"></my-lvr>
 						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
@@ -594,7 +595,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -677,6 +678,9 @@ class MyApp extends PolymerElement {
 				break;
 			case 'colorbook':
 				import('./my-colorbook.js');
+				break;
+			case 'books':
+				import('./my-books.js');
 				break;
 			case 'fuseorg':
 				import('./my-fuseorg.js');

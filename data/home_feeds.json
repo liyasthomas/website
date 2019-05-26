@@ -25,13 +25,13 @@
 					"link": "mnmlurl"
 				},
 				{
-					"color": "teal",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
+					"color": "purple",
+					"title": "Books",
+					"description": "Find books from Google Play Books",
 					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
-					"icon": "language",
-					"link": "konnect"
+					"img": "../images/assets/projects/books.svg",
+					"icon": "arrow-forward",
+					"link": "books"
 				}
 			]
 		}

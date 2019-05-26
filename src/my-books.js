@@ -5,7 +5,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyHapsell extends PolymerElement {
+class MyBooks extends PolymerElement {
 	static get template() {
 		return html `
 			<style include="app-grid-style">
@@ -66,20 +66,20 @@ class MyHapsell extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/hapsell.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/books.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Hapsell</div>
-				<div class="description">Have a product? Sell it!</div>
+				<div class="title">Books</div>
+				<div class="description">Faculty feedback system</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/hapsell">
+				<a href="https://github.com/liyasthomas/books">
 					<paper-button class="secondary" aria-label="View all">View project</paper-button>
 				</a>
 			</div>
-			<iron-ajax auto url="../data/hapsell_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/books_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -110,12 +110,23 @@ class MyHapsell extends PolymerElement {
 						<div class="item">
 							<div class="container">
 								<div class="block top">
+									<div class=" title">{{sub.title}}</div>
+								</div>
+								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
+									<div class="info">
+										<div class="flexchild">
+											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+										</div>
+										<div>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -331,4 +342,4 @@ class MyHapsell extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-hapsell', MyHapsell);
+window.customElements.define('my-books', MyBooks);

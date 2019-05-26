@@ -7,6 +7,15 @@
 			"link": "web",
 			"sub": [
 				{
+					"color": "purple",
+					"title": "Books",
+					"description": "Find books from Google Play Books",
+					"info": "Read more",
+					"img": "../images/assets/projects/books.svg",
+					"icon": "arrow-forward",
+					"link": "books"
+				},
+				{
 					"color": "yellow",
 					"title": "Colorbook",
 					"description": "Color scheme for UI design",
@@ -41,15 +50,6 @@
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "language",
 					"link": "mnmlurl"
-				},
-				{
-					"color": "teal",
-					"title": "HapSell",
-					"description": "Have a product? Sell it!",
-					"info": "Read more",
-					"img": "../images/assets/projects/hapsell.svg",
-					"icon": "language",
-					"link": "hapsell"
 				},
 				{
 					"color": "teal",
