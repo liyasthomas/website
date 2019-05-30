@@ -142,15 +142,6 @@
 					"link": "fuseorg"
 				},
 				{
-					"color": "yellow",
-					"title": "Pineapple Notes",
-					"description": "A simple, clean note app",
-					"info": "Read more",
-					"img": "../images/assets/projects/pineapplenotes.svg",
-					"icon": "arrow-forward",
-					"link": "pineapplenotes"
-				},
-				{
 					"color": "grey",
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
@@ -158,6 +149,15 @@
 					"img": "../images/assets/projects/snake.svg",
 					"icon": "arrow-forward",
 					"link": "snake"
+				},
+				{
+					"color": "yellow",
+					"title": "Pineapple Notes",
+					"description": "A simple, clean note app",
+					"info": "Read more",
+					"img": "../images/assets/projects/pineapplenotes.svg",
+					"icon": "arrow-forward",
+					"link": "pineapplenotes"
 				},
 				{
 					"color": "black",
@@ -178,15 +178,6 @@
 					"link": "ily"
 				},
 				{
-					"color": "green",
-					"title": "Recycle Mix",
-					"description": "Mix of eco-conscious recycling methodologies",
-					"info": "Read more",
-					"img": "../images/assets/projects/recyclemix.svg",
-					"icon": "arrow-forward",
-					"link": "recyclemix"
-				},
-				{
 					"color": "red",
 					"title": "Saapshot",
 					"description": "Camera app",
@@ -194,6 +185,15 @@
 					"img": "../images/assets/projects/saapshot.svg",
 					"icon": "arrow-forward",
 					"link": "saapshot"
+				},
+				{
+					"color": "green",
+					"title": "Recycle Mix",
+					"description": "Mix of eco-conscious recycling methodologies",
+					"info": "Read more",
+					"img": "../images/assets/projects/recyclemix.svg",
+					"icon": "arrow-forward",
+					"link": "recyclemix"
 				}
 			]
 		}

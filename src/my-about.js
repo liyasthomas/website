@@ -117,7 +117,6 @@ class MyAbout extends PolymerElement {
 				</div>
 				<p>
 					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
-					<a href="https://dribbble.com/liyasthomas"><paper-button class="primary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
@@ -149,6 +148,9 @@ class MyAbout extends PolymerElement {
 						</template>
 					</p>
 					<p><a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a></p>
+					<p>
+						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="primary" aria-label="My Blog">My Blog</paper-button></a>
+					</p>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">

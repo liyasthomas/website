@@ -7,13 +7,13 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "yellow",
-					"title": "Colorbook",
-					"description": "Color scheme for UI design",
+					"color": "purple",
+					"title": "Books",
+					"description": "Find books from Google Play Books",
 					"info": "Read more",
-					"img": "../images/assets/projects/colorbook.svg",
+					"img": "../images/assets/projects/books.svg",
 					"icon": "arrow-forward",
-					"link": "colorbook"
+					"link": "books"
 				},
 				{
 					"color": "teal",
@@ -25,13 +25,13 @@
 					"link": "mnmlurl"
 				},
 				{
-					"color": "purple",
-					"title": "Books",
-					"description": "Find books from Google Play Books",
+					"color": "teal",
+					"title": "Marcdown",
+					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
-					"img": "../images/assets/projects/books.svg",
+					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "arrow-forward",
-					"link": "books"
+					"link": "marcdown"
 				}
 			]
 		}
@@ -81,13 +81,13 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "teal",
-					"title": "Marcdown",
-					"description": "Lightweight markdown viewer and editor",
+					"color": "yellow",
+					"title": "Colorbook",
+					"description": "Color scheme for UI design",
 					"info": "Read more",
-					"img": "../images/assets/projects/marcdown.svg",
+					"img": "../images/assets/projects/colorbook.svg",
 					"icon": "arrow-forward",
-					"link": "marcdown"
+					"link": "colorbook"
 				},
 				{
 					"color": "white",
