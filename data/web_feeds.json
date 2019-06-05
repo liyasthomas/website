@@ -7,6 +7,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "white",
+					"title": "Banner",
+					"description": "A simple and clean banner generator",
+					"info": "Read more",
+					"img": "../images/assets/projects/banner.svg",
+					"icon": "arrow-forward",
+					"link": "banner"
+				},
+				{
 					"color": "purple",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
@@ -185,15 +194,6 @@
 					"img": "../images/assets/projects/saapshot.svg",
 					"icon": "arrow-forward",
 					"link": "saapshot"
-				},
-				{
-					"color": "green",
-					"title": "Recycle Mix",
-					"description": "Mix of eco-conscious recycling methodologies",
-					"info": "Read more",
-					"img": "../images/assets/projects/recyclemix.svg",
-					"icon": "arrow-forward",
-					"link": "recyclemix"
 				}
 			]
 		}

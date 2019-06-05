@@ -442,11 +442,11 @@ class MyApp extends PolymerElement {
 						<my-marcdown name="marcdown"></my-marcdown>
 						<my-colorbook name="colorbook"></my-colorbook>
 						<my-books name="books"></my-books>
+						<my-banner name="banner"></my-banner>
 						<my-fuseorg name="fuseorg"></my-fuseorg>
 						<my-lvr name="lvr"></my-lvr>
 						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
 						<my-materialthings name="materialthings"></my-materialthings>
-						<my-recyclemix name="recyclemix"></my-recyclemix>
 						<my-saapshot name="saapshot"></my-saapshot>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
@@ -595,7 +595,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'recyclemix', 'saapshot', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'banner', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -682,6 +682,9 @@ class MyApp extends PolymerElement {
 			case 'books':
 				import('./my-books.js');
 				break;
+			case 'banner':
+				import('./my-banner.js');
+				break;
 			case 'fuseorg':
 				import('./my-fuseorg.js');
 				break;
@@ -693,9 +696,6 @@ class MyApp extends PolymerElement {
 				break;
 			case 'materialthings':
 				import('./my-materialthings.js');
-				break;
-			case 'recyclemix':
-				import('./my-recyclemix.js');
 				break;
 			case 'saapshot':
 				import('./my-saapshot.js');

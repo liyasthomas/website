@@ -7,6 +7,15 @@
 			"link": "web",
 			"sub": [
 				{
+					"color": "white",
+					"title": "Banner",
+					"description": "A simple and clean banner generator",
+					"info": "Read more",
+					"img": "../images/assets/projects/banner.svg",
+					"icon": "arrow-forward",
+					"link": "banner"
+				},
+				{
 					"color": "purple",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
@@ -77,15 +86,6 @@
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
-				},
-				{
-					"color": "yellow",
-					"title": "Pineapple Notes",
-					"description": "A simple, clean note app",
-					"info": "Read more",
-					"img": "../images/assets/projects/pineapplenotes.svg",
-					"icon": "arrow-forward",
-					"link": "pineapplenotes"
 				}
 			]
 		}

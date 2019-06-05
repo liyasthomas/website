@@ -7,6 +7,15 @@
 			"link": "projects",
 			"sub": [
 				{
+					"color": "white",
+					"title": "Banner",
+					"description": "A simple and clean banner generator",
+					"info": "Read more",
+					"img": "../images/assets/projects/banner.svg",
+					"icon": "arrow-forward",
+					"link": "banner"
+				},
+				{
 					"color": "purple",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
@@ -23,15 +32,6 @@
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "arrow-forward",
 					"link": "mnmlurl"
-				},
-				{
-					"color": "teal",
-					"title": "Marcdown",
-					"description": "Lightweight markdown viewer and editor",
-					"info": "Read more",
-					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "arrow-forward",
-					"link": "marcdown"
 				}
 			]
 		}
