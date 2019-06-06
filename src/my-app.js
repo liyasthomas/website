@@ -150,9 +150,12 @@ class MyApp extends PolymerElement {
 					@apply --layout-horizontal;
 					@apply --layout-center-center;
 				}
+				paper-tab iron-icon {
+					margin-right: 8px;
+				}
 				#pages {
 					@apply --layout-flex;
-					min-height: calc(100vh - 219px);
+					min-height: calc(100vh - 128px);
 				}
 				paper-progress {
 					display: block;
@@ -198,7 +201,7 @@ class MyApp extends PolymerElement {
 					}
 				}
 			</style>
-			<paper-dialog id="scrolling" modal>
+			<paper-dialog id="scrolling" with-backdrop>
 				<h2>License</h2>
 				<paper-dialog-scrollable>
 					<code>
@@ -226,8 +229,7 @@ class MyApp extends PolymerElement {
 					</code>
 				</paper-dialog-scrollable>
 				<div class="buttons">
-					<paper-button class="primary" aria-label="View all" dialog-dismiss>Cancel</paper-button>
-					<paper-button class="secondary" aria-label="View all" dialog-confirm autofocus>Ok</paper-button>
+					<a class="link" dialog-confirm><paper-button aria-label="View all" autofocus>Ok</paper-button></a>
 				</div>
 			</paper-dialog>
 			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -379,21 +381,25 @@ class MyApp extends PolymerElement {
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab id="home">
 									<a href="[[rootPath]]">
+										<iron-icon icon="my-icons:home"></iron-icon>
 										Home
 									</a>
 								</paper-tab>
 								<paper-tab id="projects">
 									<a href="projects">
+										<iron-icon icon="my-icons:work"></iron-icon>
 										Projects
 									</a>
 								</paper-tab>
 								<paper-tab id="blog" target="_blank" rel="noopener">
 									<a href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+										<iron-icon icon="my-icons:favorite"></iron-icon>
 										Blog
 									</a>
 								</paper-tab>
 								<paper-tab id="about">
 									<a href="about">
+										<iron-icon icon="my-icons:face"></iron-icon>
 										About
 									</a>
 								</paper-tab>

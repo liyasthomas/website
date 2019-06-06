@@ -76,7 +76,7 @@ class MyColorbook extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/colorbook">
-					<paper-button class="secondary" aria-label="View all">View project</paper-button>
+					<paper-button class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/colorbook_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -99,6 +99,7 @@ class MyColorbook extends PolymerElement {
 						{{section1.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -134,7 +135,7 @@ class MyColorbook extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
-						<paper-button class="secondary" aria-label="View all">View project</paper-button>
+						<paper-button class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -160,6 +161,7 @@ class MyColorbook extends PolymerElement {
 						{{section2.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -195,7 +197,7 @@ class MyColorbook extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section2.link}}">
-						<paper-button class="secondary" aria-label="View all">View project</paper-button>
+						<paper-button class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -221,6 +223,7 @@ class MyColorbook extends PolymerElement {
 						{{section3.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -256,7 +259,7 @@ class MyColorbook extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
-						<paper-button class="secondary" aria-label="View all">View project</paper-button>
+						<paper-button class="secondary" aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -311,7 +314,7 @@ class MyColorbook extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

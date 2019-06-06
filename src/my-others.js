@@ -96,13 +96,14 @@ class MyOthers extends PolymerElement {
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
- 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+ 							<paper-icon-button class="link" icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
 								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
 						</paper-menu-button>
 						<paper-icon-button
+								class="link"
 								hidden$="{{!wideLayout}}"
 								toggles
 								active="{{UI}}"
@@ -142,7 +143,7 @@ class MyOthers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
-						<paper-button class="secondary" aria-label="View all">View all projects</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -181,7 +182,7 @@ class MyOthers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

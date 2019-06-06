@@ -88,6 +88,7 @@ class MyHome extends PolymerElement {
 						{{recent.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -123,7 +124,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{recent.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -133,6 +134,7 @@ class MyHome extends PolymerElement {
 						{{popular.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -168,7 +170,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{popular.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -178,6 +180,7 @@ class MyHome extends PolymerElement {
 						{{projects.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
@@ -213,7 +216,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{projects.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{projects.title}}</paper-button>
+						<paper-button class="secondary" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -17,6 +17,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			a {
 				text-decoration: none;
 				color: inherit;
+				cursor: pointer;
 			}
 			a.link {
 				color: var(--accent-color);
@@ -67,24 +68,23 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 0 4px;
 			}
 			paper-icon-button.link {
-				margin: 4px;
-			}
-			paper-icon-button.link {
-				color: var(--secondary-text-color);
+				color: var(--divider-text-color);
 			}
 			paper-icon-button.link:hover {
-				color: var(--secondary-text-color);
+				color: var(--primary-text-color);
 			}
 			paper-button {
 				margin: 4px;
-				padding: .6em 1.2em;
+				padding: 16px 32px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				text-transform: none;
 				transition: all .1s ease;
-				border-radius: 8px;
+				border-radius: 32px;
+			}
+			paper-button:hover {
+				color: var(--dark-accent-color);
 			}
 			paper-button.primary {
-				background-color: #fff;
 				color: var(--accent-color);
 				border: 1px solid var(--light-text-color);
 				--paper-button-raised-keyboard-focus: {
@@ -135,7 +135,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: var(--light-primary-color);
 			}
 			paper-dialog {
-				border-radius: 8px;
+				border-radius: 16px;
 				max-width: 360px;
 				max-width: 600px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
@@ -145,7 +145,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 24px 24px 0;
 			}
 			code {
-				font-family: 'Roboto Mono', 'Noto', sans-serif;
+				font-family: 'Roboto Mono', monospace;
 			}
 			iron-collapse {
 				outline: none;
@@ -185,9 +185,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-size: 28px;
 				color: var(--primary-text-color);
 				text-transform: capitalize;
-			}
-			.actions paper-icon-button {
-				color: var(--divider-text-color);
 			}
 			.content {
 				background-color: none;
@@ -381,7 +378,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: var(--paper-blue-grey-700);
 				color: #fff;
 			}
-
 			.white-fg {
 				color: var(--paper-grey-800);
 			}

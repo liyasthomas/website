@@ -88,13 +88,13 @@ class MyAbout extends PolymerElement {
 				<p>I've been designing websites professionally for over six years. And still loves every second of it.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Say hello!">Say hello<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button></a>
-					<a href="https://docs.google.com/document/d/1Qce0ZnxGf8spjCIDtrBOOUzq2fVIoTvkbLNHYvSXWMo/export?format=pdf"><paper-button class="primary" aria-label="Download my resume">Download my resume</paper-button></a>
+					<a href="https://docs.google.com/document/d/1Qce0ZnxGf8spjCIDtrBOOUzq2fVIoTvkbLNHYvSXWMo/export?format=pdf"><paper-button class="primary" aria-label="Download my resume">Download my resume<iron-icon icon="my-icons:get-app"></iron-icon></paper-button></a>
 				</p>
 				<p>At first I intended to be an artist and started creating art works.</p>
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="secondary" aria-label="Hire me">Hire me<iron-icon icon="my-icons:alternate-email"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -116,7 +116,7 @@ class MyAbout extends PolymerElement {
 					Open sourcing my projects, or part of it, can help inspire others.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects</paper-button></a>
+					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
@@ -149,7 +149,7 @@ class MyAbout extends PolymerElement {
 					</p>
 					<p><a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a></p>
 					<p>
-						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="primary" aria-label="My Blog">My Blog</paper-button></a>
+						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="primary" aria-label="My Blog">My Blog<iron-icon icon="my-icons:favorite"></iron-icon></paper-button></a>
 					</p>
 				</div>
 			</template>
@@ -159,6 +159,7 @@ class MyAbout extends PolymerElement {
 						{{gallery.title}}
 					</div>
 					<paper-icon-button
+							class="link"
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
