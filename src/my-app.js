@@ -52,11 +52,11 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-blue-a400);
-					--light-accent-color: var(--paper-blue-a200);
-					--dark-accent-color: var(--paper-blue-a700);
+					--accent-color: var(--paper-deep-purple-a400);
+					--light-accent-color: var(--paper-deep-purple-a200);
+					--dark-accent-color: var(--paper-deep-purple-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
-					--secondary-text-color: rgba(0, 0, 0, .54);
+					--secondary-text-color: #5f6469;
 					--divider-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
 					--paper-tabs-selection-bar-color: var(--accent-color);
@@ -64,7 +64,7 @@ class MyApp extends PolymerElement {
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
 					--paper-spinner-color: var(--accent-color);
-//					--paper-progress-secondary-color: var(--dark-accent-color);
+					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--light-text-color);
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
@@ -137,7 +137,7 @@ class MyApp extends PolymerElement {
 				paper-tab {
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 					text-transform: capitalize;
-					font-size: 16px;
+					font-size: 18px;
 					font-weight: 700;
 					padding: 0 16px;
 				}
@@ -167,6 +167,7 @@ class MyApp extends PolymerElement {
 					color: var(--secondary-text-color);
 					border-radius: 8px;
 					max-width: 320px;
+					font-size: 18px;
 				}
 				.toast-button {
 					margin: 8px;

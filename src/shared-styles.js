@@ -17,7 +17,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			a {
 				text-decoration: none;
 				color: inherit;
-				cursor: pointer;
 			}
 			a.link {
 				color: var(--accent-color);
@@ -40,7 +39,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h2,
 			h3,
 			h4 {
-				font-weight: normal;
+				font-weight: 700;
 				margin: 0;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			}
@@ -51,8 +50,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-item,
 			paper-icon-item {
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-size: 18px;
 				white-space: nowrap;
-				font-weight: normal;
 				cursor: pointer;
 				--paper-item-focused: {
 					color: var(--accent-color);
@@ -144,7 +143,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-dialog h2 {
 				padding: 24px 24px 0;
-				font-weight: 700;
 			}
 			code {
 				font-family: 'Roboto Mono', 'Noto', sans-serif;
@@ -168,13 +166,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.flex-end-align {
 				@apply --layout-horizontal;
 				@apply --layout-end;
-				height: 100%
+				height: 100%;
 			}
 			.flex-justified {
 				@apply --layout-justified;
 			}
 			.banner {
-				height: 30vh;
+				height: 50vh;
+				vertical-align: middle;
+				padding: 32px;
 			}
 			.actions {
 				@apply --layout-horizontal;
@@ -213,9 +213,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				--app-grid-item-height: 25vw;
 			}
 			.app-grid {
-				margin: 0 auto;
-				padding-top: 0;
-				padding-bottom: 0;
 			}
 			.item {
 				transition: all .1s ease;

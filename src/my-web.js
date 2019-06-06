@@ -85,7 +85,7 @@ class MyWeb extends PolymerElement {
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 				<div class$="[[getUIType(UI)]] content flex-justified">
-					<paper-input class="searchInput" value="{{filterVal}}" placeholder="search web projects" no-label-float>
+					<paper-input class="searchInput" value="{{filterVal}}" placeholder="Search web projects" no-label-float>
 						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>

@@ -85,7 +85,7 @@ class MyOthers extends PolymerElement {
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 				<div class$="[[getUIType(UI)]] content flex-justified">
-					<paper-input class="searchInput" value="{{filterVal}}" placeholder="search other projects" no-label-float>
+					<paper-input class="searchInput" value="{{filterVal}}" placeholder="Search other projects" no-label-float>
 						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>
