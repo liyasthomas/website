@@ -49,7 +49,7 @@
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
-		"polymer-cli": "^1.9.9",
+		"polymer-cli": "^1.9.10",
 		"wct-browser-legacy": "^1.0.2"
 	},
 	"engines": {
