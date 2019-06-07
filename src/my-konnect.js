@@ -102,7 +102,8 @@ class MyKonnect extends PolymerElement {
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]"
+							aria-label="Icon">
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -153,7 +154,8 @@ class MyKonnect extends PolymerElement {
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]"
+							aria-label="Icon">
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -215,7 +217,8 @@ class MyKonnect extends PolymerElement {
 							hidden$="{{!wideLayout}}"
 							toggles
 							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
+							icon$="my-icons:[[getUIIcon(UI)]]"
+							aria-label="Icon">
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>

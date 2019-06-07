@@ -82,8 +82,8 @@ class MyProjects extends PolymerElement {
 			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 				<div class$="[[getUIType(UI)]] content flex-justified">
 					<paper-input class="searchInput" value="{{filterVal}}" placeholder="Search projects" no-label-float>
-						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
-						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
+						<paper-icon-button icon="my-icons:search" slot="prefix" aria-label="Icon"></paper-icon-button>
+						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}" aria-label="Icon"></paper-icon-button>
 					</paper-input>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
@@ -92,7 +92,7 @@ class MyProjects extends PolymerElement {
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
- 							<paper-icon-button class="link" icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+ 							<paper-icon-button class="link" icon="my-icons:sort" slot="dropdown-trigger" aria-label="Icon"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortWebVal}}">
 								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
@@ -103,7 +103,8 @@ class MyProjects extends PolymerElement {
 								hidden$="{{!wideLayout}}"
 								toggles
 								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
+								icon$="my-icons:[[getUIIcon(UI)]]"
+								aria-label="Icon">
 						</paper-icon-button>
 					</div>
 				</div>
@@ -150,7 +151,7 @@ class MyProjects extends PolymerElement {
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
- 							<paper-icon-button class="link" icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+ 							<paper-icon-button class="link" icon="my-icons:sort" slot="dropdown-trigger" aria-label="Icon"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortOthersVal}}">
 								<paper-icon-item name="date"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
@@ -161,7 +162,8 @@ class MyProjects extends PolymerElement {
 								hidden$="{{!wideLayout}}"
 								toggles
 								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
+								icon$="my-icons:[[getUIIcon(UI)]]"
+								aria-label="Icon">
 						</paper-icon-button>
 					</div>
 				</div>

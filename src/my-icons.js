@@ -37,7 +37,6 @@ $_documentContainer.innerHTML = `<iron-iconset-svg name="my-icons" size="24">
 			<g id="arrow-drop-down"><path d="M7 10l5 5 5-5z"></g>
 			<g id="arrow-drop-down-circle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z"></g>
 			<g id="arrow-drop-up"><path d="M7 14l5-5 5 5z"></g>
-			<g id="chevron-right"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></g>
 			<g id="arrow-upward"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></g>
 			<g id="arrow-forward"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></g>
 			<g id="menu"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></g>

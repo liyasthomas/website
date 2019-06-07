@@ -14,12 +14,15 @@ import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
+import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
+import '@polymer/paper-listbox/paper-listbox.js';
+import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
@@ -254,13 +257,13 @@ class MyApp extends PolymerElement {
 							</a>
 						</template>
 						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-							<paper-icon-button class="toast-button" icon="my-icons:mail-outline"	aria-label="Icon"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:mail-outline" aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="tel:+919539653962">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"	aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="about">
-							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"	aria-label="Icon"></paper-icon-button>
+							<paper-icon-button class="toast-button" icon="my-icons:more-horiz" aria-label="Icon"></paper-icon-button>
 						</a>
 					</div>
 				</div>
@@ -411,7 +414,7 @@ class MyApp extends PolymerElement {
 								</a>
 								<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
 								<paper-menu-button vertical-align="top" horizontal-align="right">
-									<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
+									<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More"></paper-icon-button>
 									<paper-listbox class="listbox" slot="dropdown-content">
 										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 											<paper-icon-item>
@@ -711,8 +714,7 @@ class MyApp extends PolymerElement {
 				this._networkSnackbar = document.createElement('paper-toast');
 				this.root.appendChild(this._networkSnackbar);
 			}
-			this._networkSnackbar.innerHTML = this.offline ?
-				'You are offline' : 'You are online';
+			this._networkSnackbar.innerHTML = this.offline ? 'You are offline' : 'You are online';
 			this._networkSnackbar.open();
 		}
 	}
