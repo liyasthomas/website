@@ -18,31 +18,35 @@ import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-ajax/iron-ajax.js';
-import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-menu-button/paper-menu-button.js';
-import '@polymer/paper-listbox/paper-listbox.js';
-import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
 import '@polymer/paper-progress/paper-progress.js';
 import '@polymer/paper-fab/paper-fab.js';
 import '@polymer/paper-dialog/paper-dialog.js';
-import '@polymer/paper-dialog-scrollable/paper-dialog-scrollable.js';
 import './shared-styles.js';
 import './my-icons.js';
-
+import {
+	afterNextRender
+} from '@polymer/polymer/lib/utils/render-status.js';
+import {
+	timeOut
+} from '@polymer/polymer/lib/utils/async.js';
+import {
+	Debouncer
+} from '@polymer/polymer/lib/utils/debounce.js';
 // Gesture events like tap and track generated from touch will not be
 // preventable, allowing for better scrolling performance.
 setPassiveTouchGestures(true);
-
 // Set Polymer's root path to the same value we passed to our service worker
 // in `index.html`.
 setRootPath(MyAppGlobals.rootPath);
-
+// Performance logging
+window.performance && performance.mark && performance.mark('my-app - before register');
 class MyApp extends PolymerElement {
 	static get template() {
 		return html `
@@ -96,7 +100,7 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				#home.iron-selected, #projects.iron-selected, #about.iron-selected {
+				paper-listbox .iron-selected, paper-tabs .iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
@@ -163,14 +167,16 @@ class MyApp extends PolymerElement {
 				}
 				paper-toast {
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-					@apply --layout-horizontal;
-					@apply --layout-center;
-					@apply --layout-justified;
 					background-color: #fff !important;
 					color: var(--secondary-text-color);
 					border-radius: 8px;
-					max-width: 320px;
 					font-size: 18px;
+				}
+				paper-toast#sharehome {
+					@apply --layout-horizontal;
+					@apply --layout-center;
+					@apply --layout-justified;
+					max-width: 320px;
 				}
 				.toast-button {
 					margin: 8px;
@@ -189,14 +195,13 @@ class MyApp extends PolymerElement {
 					app-drawer {
 						--app-drawer-width: 80%;
 					}
-					paper-toast {
-						max-width: none;
-						width: calc(100% - 24px);
-					}
 					[main-title] {
 						margin-left: -60px;
 					}
-					#sharehome {
+					paper-toast {
+						width: calc(100% - 24px);
+					}
+					paper-toast#sharehome {
 						max-width: none;
 					}
 				}
@@ -206,19 +211,15 @@ class MyApp extends PolymerElement {
 				<paper-dialog-scrollable>
 					<code>
 						<p>MIT License</p>
-
 						<p>Copyright (c) 2019 Liyas Thomas</p>
-
 						<p>Permission is hereby granted, free of charge, to any person obtaining a copy
 						of this software and associated documentation files (the "Software"), to deal
 						in the Software without restriction, including without limitation the rights
 						to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 						copies of the Software, and to permit persons to whom the Software is
 						furnished to do so, subject to the following conditions:</p>
-
 						<p>The above copyright notice and this permission notice shall be included in all
 						copies or substantial portions of the Software.</p>
-
 						<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 						IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 						FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -234,7 +235,7 @@ class MyApp extends PolymerElement {
 			</paper-dialog>
 			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
 			</app-location>
-			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
+			<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
 			</app-route>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
@@ -268,15 +269,15 @@ class MyApp extends PolymerElement {
 				<!-- Drawer content -->
 				<app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
-						<a id="home" href="[[rootPath]]">
+					<paper-listbox selected="[[page]]" attr-for-selected="name" class="listbox" role="listbox">
+						<a name="home" href="[[rootPath]]">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:home" slot="item-icon"></iron-icon>
 								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<a id="projects">
+						<a name="projects">
 							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
 								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
@@ -285,7 +286,7 @@ class MyApp extends PolymerElement {
 							</paper-icon-item>
 						</a>
 						<iron-collapse id="collapse" opened="{{opened}}">
-							<a href="projects">
+							<a name="projects" href="projects">
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:lightbulb-outline" slot="item-icon"></iron-icon>
 										<span class="expand">View all projects</span>
@@ -307,7 +308,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a href="{{web.link}}">
+								<a name="{{web.link}}" href="{{web.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -316,7 +317,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
-									<a href="[[sub.link]]">
+									<a name="[[sub.link]]" href="[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -326,7 +327,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a href="{{others.link}}">
+								<a name="{{others.link}}" href="{{others.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
@@ -334,7 +335,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
-									<a href="[[sub.link]]">
+									<a name="[[sub.link]]" href="[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -344,14 +345,14 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a id="blog" href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+						<a name="blog" href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
 								<span>Blog</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<a id="about" href="about">
+						<a name="about" href="about">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
 								<span>About</span>
@@ -378,26 +379,26 @@ class MyApp extends PolymerElement {
 						</app-toolbar>
 						<app-toolbar>
 							<div class="flexchild"></div>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
-								<paper-tab id="home">
+							<paper-tabs selected="[[page]]" attr-for-selected="name" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
+								<paper-tab name="home">
 									<a href="[[rootPath]]">
 										<iron-icon icon="my-icons:home"></iron-icon>
 										Home
 									</a>
 								</paper-tab>
-								<paper-tab id="projects">
+								<paper-tab name="projects">
 									<a href="projects">
 										<iron-icon icon="my-icons:work"></iron-icon>
 										Projects
 									</a>
 								</paper-tab>
-								<paper-tab id="blog" target="_blank" rel="noopener">
+								<paper-tab name="blog" target="_blank" rel="noopener">
 									<a href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
 										<iron-icon icon="my-icons:favorite"></iron-icon>
 										Blog
 									</a>
 								</paper-tab>
-								<paper-tab id="about">
+								<paper-tab name="about">
 									<a href="about">
 										<iron-icon icon="my-icons:face"></iron-icon>
 										About
@@ -436,25 +437,25 @@ class MyApp extends PolymerElement {
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
 						<my-web name="web"></my-web>
-						<my-others name="others"></my-others>
-						<my-wallpapers name="wallpapers"></my-wallpapers>
-						<my-art name="art"></my-art>
-						<my-feedie name="feedie"></my-feedie>
-						<my-hapsell name="hapsell"></my-hapsell>
-						<my-konnect name="konnect"></my-konnect>
-						<my-aeiou name="aeiou"></my-aeiou>
-						<my-mnmlurl name="mnmlurl"></my-mnmlurl>
-						<my-mnmlurlextension name="mnmlurlextension"></my-mnmlurlextension>
-						<my-metadata name="metadata"></my-metadata>
-						<my-marcdown name="marcdown"></my-marcdown>
-						<my-colorbook name="colorbook"></my-colorbook>
-						<my-books name="books"></my-books>
-						<my-banner name="banner"></my-banner>
-						<my-fuseorg name="fuseorg"></my-fuseorg>
-						<my-lvr name="lvr"></my-lvr>
-						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
-						<my-materialthings name="materialthings"></my-materialthings>
-						<my-saapshot name="saapshot"></my-saapshot>
+						<my-others name="others" route="[[subroute]]"></my-others>
+						<my-wallpapers name="wallpapers" route="[[subroute]]"></my-wallpapers>
+						<my-art name="art" route="[[subroute]]"></my-art>
+						<my-feedie name="feedie" route="[[subroute]]"></my-feedie>
+						<my-hapsell name="hapsell" route="[[subroute]]"></my-hapsell>
+						<my-konnect name="konnect" route="[[subroute]]"></my-konnect>
+						<my-aeiou name="aeiou" route="[[subroute]]"></my-aeiou>
+						<my-mnmlurl name="mnmlurl" route="[[subroute]]"></my-mnmlurl>
+						<my-mnmlurlextension name="mnmlurlextension" route="[[subroute]]"></my-mnmlurlextension>
+						<my-metadata name="metadata" route="[[subroute]]"></my-metadata>
+						<my-marcdown name="marcdown" route="[[subroute]]"></my-marcdown>
+						<my-colorbook name="colorbook" route="[[subroute]]"></my-colorbook>
+						<my-books name="books" route="[[subroute]]"></my-books>
+						<my-banner name="banner" route="[[subroute]]"></my-banner>
+						<my-fuseorg name="fuseorg" route="[[subroute]]"></my-fuseorg>
+						<my-lvr name="lvr" route="[[subroute]]"></my-lvr>
+						<my-pineapplenotes name="pineapplenotes" route="[[subroute]]"></my-pineapplenotes>
+						<my-materialthings name="materialthings" route="[[subroute]]"></my-materialthings>
+						<my-saapshot name="saapshot" route="[[subroute]]"></my-saapshot>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
@@ -464,9 +465,10 @@ class MyApp extends PolymerElement {
 					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 				</app-header-layout>
 			</app-drawer-layout>
+			<!-- a11y announcer -->
+			<div class="announcer" aria-live="assertive">[[_a11yLabel]]</div>
 		`;
 	}
-
 	static get properties() {
 		return {
 			wideLayout: {
@@ -485,117 +487,73 @@ class MyApp extends PolymerElement {
 			},
 			social: {
 				type: Array,
-				value: function () {
-					return [{
-							link: "https://www.facebook.com/liyasthomas",
-							icon: "facebook"
-						},
-						{
-							link: "https://twitter.com/liyasthomas",
-							icon: "twitter"
-						},
-						{
-							link: "https://instagram.com/liyasthomas",
-							icon: "instagram"
-						},
-						{
-							link: "https://liyasthomas.tumblr.com",
-							icon: "tumblr"
-						},
-						{
-							link: "https://github.com/liyasthomas",
-							icon: "github"
-						},
-						{
-							link: "https://www.linkedin.com/in/liyasthomas",
-							icon: "linkedin"
-						},
-						{
-							link: "https://in.pinterest.com/liyasthomas",
-							icon: "pinterest"
-						},
-						{
-							link: "https://www.dribbble.com/liyasthomas",
-							icon: "dribbble"
-						},
-						{
-							link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
-							icon: "whatsapp"
-						}
-					]
-				}
+				value: () => [{
+						link: "https://www.facebook.com/liyasthomas",
+						icon: "facebook"
+					},
+					{
+						link: "https://twitter.com/liyasthomas",
+						icon: "twitter"
+					},
+					{
+						link: "https://instagram.com/liyasthomas",
+						icon: "instagram"
+					},
+					{
+						link: "https://liyasthomas.tumblr.com",
+						icon: "tumblr"
+					},
+					{
+						link: "https://github.com/liyasthomas",
+						icon: "github"
+					},
+					{
+						link: "https://www.linkedin.com/in/liyasthomas",
+						icon: "linkedin"
+					},
+					{
+						link: "https://in.pinterest.com/liyasthomas",
+						icon: "pinterest"
+					},
+					{
+						link: "https://www.dribbble.com/liyasthomas",
+						icon: "dribbble"
+					},
+					{
+						link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
+						icon: "whatsapp"
+					}
+				]
 			},
 			routeData: Object,
 			subroute: Object
 		};
 	}
-
-	show() {
-		this.$.toolbar.animate({
-			transform: ['translateY(-100%)', 'translateY(0)']
-		}, {
-			duration: 600,
-			easing: 'ease-in-out'
-		});
-		this.$.fab.animate({
-			transform: ['scale(0)', 'scale(1)']
-		}, {
-			duration: 1000,
-			easing: 'ease-in-out'
-		});
-	}
-
-	tryAgain() {
-		this.$.ajax.generateRequest();
-	}
-
-	onLayoutChange(wide) {
-		var drawer = this.$.drawer;
-		if (wide && drawer.opened) {
-			drawer.opened = false;
-		}
-	}
-
-	update(worker) {
-		this.$.updateToast.show();
-	}
-
-	toggle() {
-		this.$.collapse.toggle();
-	}
-
-	openShare() {
-		this.$.sharehome.toggle();
-	}
-
-	openModal() {
-		this.$.scrolling.open();
-	}
-
-	_getIcon(opened) {
-		return opened ? 'expand-less' : 'expand-more';
-	}
-
-	scrollTop() {
-		var scrollDuration = 200;
-		var scrollStep = -window.scrollY / (scrollDuration / 10),
-			scrollInterval = setInterval(function () {
-				if (window.scrollY != 0) {
-					window.scrollBy(0, scrollStep);
-				} else clearInterval(scrollInterval);
-			}, 10);
-	}
-
 	static get observers() {
 		return [
 			'_routePageChanged(routeData.page)'
 		];
 	}
-
+	constructor() {
+		super();
+		window.performance && performance.mark && performance.mark('my-app.created');
+	}
+	ready() {
+		super.ready();
+		// Custom elements polyfill safe way to indicate an element has been upgraded.
+		this.removeAttribute('unresolved');
+		// Listen for custom events
+		this.addEventListener('announce', (e) => this._onAnnounce(e));
+		this.addEventListener('dom-change', (e) => this._domChange(e));
+		// Listen for online/offline
+		afterNextRender(this, () => {
+			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
+			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
+		});
+	}
 	_routePageChanged(page) {
 		// Reset scroll position
 		this.scrollTop();
-
 		// Show the corresponding page according to the route.
 		//
 		// If no page was found in the route data, page will be an empty string.
@@ -603,19 +561,16 @@ class MyApp extends PolymerElement {
 		if (!page) {
 			this.page = 'home';
 		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'banner', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'view4'].indexOf(page) !== -1) {
-			this.page = page;
+			this.page = page || 'home';
 		} else {
 			this.page = '404';
 		}
-
 		// Change page title
 		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · Liyas Thomas';
-
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {
 			this.$.drawer.close();
 		}
-
 		// Animations
 		this.animate({
 			opacity: [0, 1],
@@ -631,91 +586,205 @@ class MyApp extends PolymerElement {
 			easing: 'ease-in-out'
 		});
 	}
-
-	_pageChanged(page) {
+	_pageChanged(page, oldPage) {
 		// Import the page component on demand.
 		//
 		// Note: `polymer build` doesn't like string concatenation in the import
 		// statement, so break it up.
-		switch (page) {
-			case 'home':
-				import('./my-home.js');
-				break;
-			case 'projects':
-				import('./my-projects.js');
-				break;
-			case 'about':
-				import('./my-about.js');
-				break;
-			case 'web':
-				import('./my-web.js');
-				break;
-			case 'others':
-				import('./my-others.js');
-				break;
-			case 'wallpapers':
-				import('./my-wallpapers.js');
-				break;
-			case 'art':
-				import('./my-art.js');
-				break;
-			case 'feedie':
-				import('./my-feedie.js');
-				break;
-			case 'hapsell':
-				import('./my-hapsell.js');
-				break;
-			case 'konnect':
-				import('./my-konnect.js');
-				break;
-			case 'aeiou':
-				import('./my-aeiou.js');
-				break;
-			case 'mnmlurl':
-				import('./my-mnmlurl.js');
-				break;
-			case 'mnmlurlextension':
-				import('./my-mnmlurlextension.js');
-				break;
-			case 'metadata':
-				import('./my-metadata.js');
-				break;
-			case 'marcdown':
-				import('./my-marcdown.js');
-				break;
-			case 'colorbook':
-				import('./my-colorbook.js');
-				break;
-			case 'books':
-				import('./my-books.js');
-				break;
-			case 'banner':
-				import('./my-banner.js');
-				break;
-			case 'fuseorg':
-				import('./my-fuseorg.js');
-				break;
-			case 'lvr':
-				import('./my-lvr.js');
-				break;
-			case 'pineapplenotes':
-				import('./my-pineapplenotes.js');
-				break;
-			case 'materialthings':
-				import('./my-materialthings.js');
-				break;
-			case 'saapshot':
-				import('./my-saapshot.js');
-				break;
-			case 'view4':
-				import('./my-view4.js');
-				break;
-			case '404':
-				import('./my-404.js');
-				break;
+		if (page != null) {
+			let cb = this._pageLoaded.bind(this, Boolean(oldPage));
+			switch (page) {
+				case 'home':
+					import('./my-home.js').then(cb);
+					break;
+				case 'projects':
+					import('./my-projects.js').then(cb);
+					break;
+				case 'about':
+					import('./my-about.js').then(cb);
+					break;
+				case 'web':
+					import('./my-web.js').then(cb);
+					break;
+				case 'others':
+					import('./my-others.js').then(cb);
+					break;
+				case 'wallpapers':
+					import('./my-wallpapers.js').then(cb);
+					break;
+				case 'art':
+					import('./my-art.js').then(cb);
+					break;
+				case 'feedie':
+					import('./my-feedie.js').then(cb);
+					break;
+				case 'hapsell':
+					import('./my-hapsell.js').then(cb);
+					break;
+				case 'konnect':
+					import('./my-konnect.js').then(cb);
+					break;
+				case 'aeiou':
+					import('./my-aeiou.js').then(cb);
+					break;
+				case 'mnmlurl':
+					import('./my-mnmlurl.js').then(cb);
+					break;
+				case 'mnmlurlextension':
+					import('./my-mnmlurlextension.js').then(cb);
+					break;
+				case 'metadata':
+					import('./my-metadata.js').then(cb);
+					break;
+				case 'marcdown':
+					import('./my-marcdown.js').then(cb);
+					break;
+				case 'colorbook':
+					import('./my-colorbook.js').then(cb);
+					break;
+				case 'books':
+					import('./my-books.js').then(cb);
+					break;
+				case 'banner':
+					import('./my-banner.js').then(cb);
+					break;
+				case 'fuseorg':
+					import('./my-fuseorg.js').then(cb);
+					break;
+				case 'lvr':
+					import('./my-lvr.js').then(cb);
+					break;
+				case 'pineapplenotes':
+					import('./my-pineapplenotes.js').then(cb);
+					break;
+				case 'materialthings':
+					import('./my-materialthings.js').then(cb);
+					break;
+				case 'saapshot':
+					import('./my-saapshot.js').then(cb);
+					break;
+				case 'view4':
+					import('./my-view4.js').then(cb);
+					break;
+				case '404':
+					import('./my-404.js').then(cb);
+					break;
+				default:
+					this._pageLoaded(Boolean(oldPage));
+			}
 		}
 	}
-
+	_pageLoaded(shouldResetLayout) {
+		this._ensureLazyLoaded();
+		if (shouldResetLayout) {
+			// The size of the header depends on the page (e.g. on some pages the tabs
+			// do not appear), so reset the header's layout only when switching pages.
+			timeOut.run(() => {
+				this.$.toolbar.resetLayout();
+			}, 1);
+		}
+	}
+	_ensureLazyLoaded() {
+		// load lazy resources after render and set `loadComplete` when done.
+		if (!this.loadComplete) {
+			afterNextRender(this, () => {
+				import('./lazy-resources.js').then(() => {
+					// Register service worker if supported.
+					if ('serviceWorker' in navigator) {
+						navigator.serviceWorker.register('service-worker.js', {
+							scope: '/'
+						});
+					}
+					this._notifyNetworkStatus();
+					this.loadComplete = true;
+				});
+			});
+		}
+	}
+	_notifyNetworkStatus() {
+		let oldOffline = this.offline;
+		this.offline = !navigator.onLine;
+		// Show the snackbar if the user is offline when starting a new session
+		// or if the network status changed.
+		if (this.offline || (!this.offline && oldOffline === true)) {
+			if (!this._networkSnackbar) {
+				this._networkSnackbar = document.createElement('paper-toast');
+				this.root.appendChild(this._networkSnackbar);
+			}
+			this._networkSnackbar.innerHTML = this.offline ?
+				'You are offline' : 'You are online';
+			this._networkSnackbar.open();
+		}
+	}
+	// Elements in the app can notify a change to be a11y announced.
+	_onAnnounce(e) {
+		this._announce(e.detail);
+	}
+	// A11y announce the given message.
+	_announce(message) {
+		this._a11yLabel = '';
+		this._announceDebouncer = Debouncer.debounce(this._announceDebouncer,
+			timeOut.after(100), () => {
+				this._a11yLabel = message;
+			});
+	}
+	// This is for performance logging only.
+	_domChange(e) {
+		if (window.performance && performance.mark && !this.__loggedDomChange) {
+			let target = e.composedPath()[0];
+			let host = target.getRootNode().host;
+			if (host && host.localName.match(this.page)) {
+				this.__loggedDomChange = true;
+				performance.mark(host.localName + '.domChange');
+			}
+		}
+	}
+	show() {
+		this.$.toolbar.animate({
+			transform: ['translateY(-100%)', 'translateY(0)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.fab.animate({
+			transform: ['scale(0)', 'scale(1)']
+		}, {
+			duration: 1000,
+			easing: 'ease-in-out'
+		});
+	}
+	tryAgain() {
+		this.$.ajax.generateRequest();
+	}
+	onLayoutChange(wide) {
+		var drawer = this.$.drawer;
+		if (wide && drawer.opened) {
+			drawer.opened = false;
+		}
+	}
+	update(worker) {
+		this.$.updateToast.show();
+	}
+	toggle() {
+		this.$.collapse.toggle();
+	}
+	openShare() {
+		this.$.sharehome.toggle();
+	}
+	openModal() {
+		this.$.scrolling.open();
+	}
+	_getIcon(opened) {
+		return opened ? 'expand-less' : 'expand-more';
+	}
+	scrollTop() {
+		var scrollDuration = 200;
+		var scrollStep = -window.scrollY / (scrollDuration / 10),
+			scrollInterval = setInterval(() => {
+				if (window.scrollY != 0) {
+					window.scrollBy(0, scrollStep);
+				} else clearInterval(scrollInterval)
+			}, 10);
+	}
 }
-
 window.customElements.define('my-app', MyApp);

@@ -2,7 +2,6 @@ import {
 	PolymerElement,
 	html
 } from '@polymer/polymer/polymer-element.js';
-
 class My404 extends PolymerElement {
 	static get template() {
 		return html `
@@ -25,5 +24,4 @@ class My404 extends PolymerElement {
 		`;
 	}
 }
-
 window.customElements.define('my-404', My404);

@@ -4,7 +4,6 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
-
 class MyKonnect extends PolymerElement {
 	static get template() {
 		return html `
@@ -309,29 +308,23 @@ class MyKonnect extends PolymerElement {
 			</template>
 		`;
 	}
-
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();
 		}.bind(this);
 		window.addEventListener('resize', this._updateGridStyles);
 	}
-
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
 	}
-
 	tryAgain() {
 		this.$.ajax0.generateRequest();
 	}
-
 	getUIType(UI) {
 		return UI ? 'list' : 'grid';
 	}
-
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
 	}
 }
-
 window.customElements.define('my-konnect', MyKonnect);

@@ -5,7 +5,6 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
-
 class MyProjects extends PolymerElement {
 	static get template() {
 		return html `
@@ -204,7 +203,6 @@ class MyProjects extends PolymerElement {
 			</template>
 		`;
 	}
-
 	static get properties() {
 		return {
 			sortWebVal: {
@@ -219,18 +217,15 @@ class MyProjects extends PolymerElement {
 			}
 		};
 	}
-
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();
 		}.bind(this);
 		window.addEventListener('resize', this._updateGridStyles);
 	}
-
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
 	}
-
 	_filter(val) {
 		return function (sub) {
 			if (!val) return true;
@@ -239,7 +234,6 @@ class MyProjects extends PolymerElement {
 				(sub.description && ~sub.description.toLowerCase().indexOf(val.toLowerCase()));
 		};
 	}
-
 	_sort(val) {
 		switch (val) {
 			case 'title':
@@ -249,22 +243,17 @@ class MyProjects extends PolymerElement {
 				};
 		}
 	}
-
 	clearInput() {
 		this.filterVal = null;
 	}
-
 	tryAgain() {
 		this.$.ajax0.generateRequest();
 	}
-
 	getUIType(UI) {
 		return UI ? 'list' : 'grid';
 	}
-
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
 	}
 }
-
 window.customElements.define('my-projects', MyProjects);

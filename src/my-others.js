@@ -5,7 +5,6 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
-
 class MyOthers extends PolymerElement {
 	static get template() {
 		return html `
@@ -188,7 +187,6 @@ class MyOthers extends PolymerElement {
 			</template>
 		`;
 	}
-
 	static get properties() {
 		return {
 			sortVal: {
@@ -198,18 +196,15 @@ class MyOthers extends PolymerElement {
 			}
 		};
 	}
-
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();
 		}.bind(this);
 		window.addEventListener('resize', this._updateGridStyles);
 	}
-
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
 	}
-
 	_filter(val) {
 		return function (sub) {
 			if (!val) return true;
@@ -218,7 +213,6 @@ class MyOthers extends PolymerElement {
 				(sub.description && ~sub.description.toLowerCase().indexOf(val.toLowerCase()));
 		};
 	}
-
 	_sort(val) {
 		switch (val) {
 			case 'title':
@@ -228,22 +222,17 @@ class MyOthers extends PolymerElement {
 				};
 		}
 	}
-
 	clearInput() {
 		this.filterVal = null;
 	}
-
 	tryAgain() {
 		this.$.ajax0.generateRequest();
 	}
-
 	getUIType(UI) {
 		return UI ? 'list' : 'grid';
 	}
-
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
 	}
 }
-
 window.customElements.define('my-others', MyOthers);

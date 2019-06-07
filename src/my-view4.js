@@ -3,7 +3,6 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-
 class MyView4 extends PolymerElement {
 	static get template() {
 		return html `
@@ -13,7 +12,6 @@ class MyView4 extends PolymerElement {
 					padding: 10px;
 				}
 			</style>
-
 			<div class="card">
 				<div class="circle">4</div>
 				<h1>View Four</h1>
@@ -23,5 +21,4 @@ class MyView4 extends PolymerElement {
 		`;
 	}
 }
-
 window.customElements.define('my-view4', MyView4);

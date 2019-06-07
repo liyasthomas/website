@@ -1,5 +1,4 @@
 import '@polymer/polymer/polymer-element.js';
-
 const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 	<template>
@@ -66,6 +65,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-icon-button {
 				margin: 0 4px;
+				transition: all .2s ease;
 			}
 			paper-icon-button.link {
 				color: var(--divider-text-color);
@@ -78,7 +78,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 16px 32px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				text-transform: none;
-				transition: all .1s ease;
+				transition: all .2s ease;
 				border-radius: 32px;
 			}
 			paper-button:hover {
@@ -101,7 +101,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					background-color: var(--dark-accent-color);
 				};
 			}
-			paper-button.secondary:hover {
+			paper-button.secondary:hover, paper-fab:hover {
 				background-color: var(--dark-accent-color);
 			}
 			paper-button iron-icon {
@@ -203,7 +203,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.grid, .list {
 				margin: 0 auto;
-				transition: all .1s ease;
+				transition: all .2s ease;
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
@@ -212,7 +212,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.app-grid {
 			}
 			.item {
-				transition: all .1s ease;
+				transition: all .2s ease;
 				border-radius: 8px;
 				background-color: #fff;
 //				@apply --shadow-elevation-2dp;
@@ -227,9 +227,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			iron-image {
 				@apply --layout-flex;
-				transition: all .1s ease;
+				transition: all .2s ease;
 				--iron-image-placeholder: {
-					background-color: #fff;
+					background-color: #eee;
 				}
 			}
 			.bg {
@@ -432,5 +432,4 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 		</style>
 	</template>
 </dom-module>`;
-
 document.head.appendChild($_documentContainer.content);

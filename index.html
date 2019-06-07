@@ -181,9 +181,7 @@
 		</div>
 	</my-app>
 	<script>
-		window.addEventListener('WebComponentsReady', function() {
-			document.querySelector('my-app').show();
-		});
+		window.addEventListener('WebComponentsReady', () => Promise.resolve().then(document.querySelector('my-app').show()));
 
 	</script>
 	<noscript>
