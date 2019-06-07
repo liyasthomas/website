@@ -172,7 +172,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: 50vh;
+				height: calc(100vh - 192px);
 				vertical-align: middle;
 				padding: 32px;
 			}
@@ -182,7 +182,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.actions .title,
 			.content .title {
-				font-size: 28px;
+				font-size: 32px;
 				color: var(--primary-text-color);
 				text-transform: capitalize;
 			}
@@ -264,7 +264,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 24px;
+				font-size: 28px;
 				line-height: 1.25;
 				font-weight: 700;
 			}
@@ -283,7 +283,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
 				color: var(--secondary-text-color);
-				font-size: 20px;
+				font-size: 24px;
 				line-height: 1.2;
 			}
 			.info {
@@ -294,11 +294,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
+				.banner {
+					height: calc(100vh - 160px);
+				}
 				.title {
-					font-size: 20px;
+					font-size: 24px;
 				}
 				.description {
-					font-size: 18px;
+					font-size: 20px;
 				}
 				.grid {
 					width: 100%;
