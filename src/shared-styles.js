@@ -207,7 +207,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.list .item {
 				@apply(--app-grid-expandible-item);
-				--app-grid-item-height: 25vw;
+				--app-grid-item-height: 30vw;
 			}
 			.app-grid {
 			}

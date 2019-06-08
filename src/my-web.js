@@ -42,11 +42,11 @@ class MyWeb extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 60vw;
+						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
-						width: 80vw;
+						width: 90vw;
 					}
 					.item:nth-child(5n+3) {
 						@apply --app-grid-expandible-item;

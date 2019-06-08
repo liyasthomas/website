@@ -32,6 +32,15 @@
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "arrow-forward",
 					"link": "mnmlurl"
+				},
+				{
+					"color": "teal",
+					"title": "Marcdown",
+					"description": "Lightweight markdown viewer and editor",
+					"info": "Read more",
+					"img": "../images/assets/projects/marcdown.svg",
+					"icon": "arrow-forward",
+					"link": "marcdown"
 				}
 			]
 		}
@@ -69,6 +78,15 @@
 					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
 					"link": "fuseorg"
+				},
+				{
+					"color": "light-blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "arrow-forward",
+					"link": "lvr"
 				}
 			]
 		}
@@ -99,13 +117,22 @@
 					"link": "mnmlurlextension"
 				},
 				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Platform to make augmented reality fun and interactive",
+					"color": "yellow",
+					"title": "Pineapple Notes",
+					"description": "A simple, clean note app",
 					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
+					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "arrow-forward",
-					"link": "aeiou"
+					"link": "pineapplenotes"
+				},
+				{
+					"color": "blue",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
+					"info": "Read more",
+					"img": "../images/assets/projects/feedie.svg",
+					"icon": "arrow-forward",
+					"link": "feedie"
 				}
 			]
 		}
