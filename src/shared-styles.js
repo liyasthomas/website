@@ -128,11 +128,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					padding: 4px;
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				};
-				--paper-input-container-input-focus: {
-				}
 			}
 			paper-input.searchInput[focused] {
-				background-color: var(--light-primary-color);
+				background-color: var(--primary-color);
+				@apply --shadow-elevation-2dp;
 			}
 			paper-dialog {
 				border-radius: 16px;

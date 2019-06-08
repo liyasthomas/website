@@ -73,9 +73,6 @@ class MyApp extends PolymerElement {
 					--paper-spinner-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--light-text-color);
-					color: var(--primary-text-color);
-					--iron-icon-height: 26px;
-					--iron-icon-width: 26px;
 				}
 				[hidden] {
 					display: none !important;
