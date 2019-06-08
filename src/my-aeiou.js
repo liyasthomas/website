@@ -68,10 +68,12 @@ class MyAeiou extends PolymerElement {
 				<iron-image preload fade sizing="contain" src="../images/assets/projects/aeiou.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Aeiou</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="title">AEIOU</div>
+				<div class="description">Web platform to make augmented reality fun & interactive!</div>
+				<p>Project AEIOU will enable creative executives, clients and developers to design customized AR experiences and new forms of immersive content. We have this crazy idea that anyone can do AR! So we decided to create a simple platform for everyone to play around, and experiment, with WebAR.</p>
+				<p>We wanted to provide an easy way to create AR content that could be used by everyone anywhere. You don’t need to understand 3D or programming to use it!</p>
+				<p>WebAR provides access to web-based augmented reality via the web browser using a combination of technologies including WebRTC, WebGL, WebVR, and the modern sensor APIs.</p>
+				<p>The goal is to share VR content for all, regardless of the browser and whatever the device or platform used, or even directly on a computer screen in a 360° view if you do not have a headset available. AEIOU will work on desktop, tablet, mobile, or even in your smartwatch!! So basically, we enable users to experience augmented reality on any device, in any platform, at any time - everywhere.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/aeiou">
@@ -140,8 +142,8 @@ class MyAeiou extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>AEIOU playground is a simple, easy-to-use app, designed for those who aren’t experienced programmers or AR devs, but still want to enjoy the tech and create their own experiences.</p>
+				<p>We made it really, really simple for people to make an AR scene and put whatever they want on it. 3D models, molecular structures, human anatomy, pets, plants, photos, links, mp3s, videos, art, deep stuff - you name it. AEIOU is 451 million different scenes, filled with literally whatever.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -203,8 +205,8 @@ class MyAeiou extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Everyone can easily create an AR scene with our playground in just a few clicks. The fastest way is our collections. When you launch the web app, you will see there are various collections curated specifically for students, teachers, advertisers, creative executives, doctors, artists, clients and developers, etc. Simply select anyone from them, customize it, publish it. That's it. The 3D object you choose will be added to your scene. And voilà you have created some AR in just a few clicks!</p>
+				<p>What!!? you don't like predefined stuffs? You can always create a new scene from level zero. Start a new scene and you'll see various 3D objects for you to choose from. You can move the objects around the scene, rotate them, change their size, etc. you'll get the idea. It's pretty simple actually.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -266,8 +268,9 @@ class MyAeiou extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Turns out that when you make it easy to create interesting things, that’s exactly what people do. You can send those great scenes to your friends. We’ll help you find and follow people like you, and we’ll help other people find and follow yours.</p>
+				<p>One key part of our playground is the URL shareability. Once you have created your scene you will be able to export your content and show it to the world. By clicking on the “Export URL” button, you get a shareable link that you can copy. Whoever clicks on this link will be able to access (and/or view) your AR scene, see what you have created, and even edit on top of it.</p>
+				<p>This shareability is what makes AEIOU special. It is a web solution with an important advantage: enabling you to share your AR content anywhere on the web (just by clicking on a url!). It’s a brand new way to distribute augmented reality on the internet! Pretty cool right?</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
