@@ -179,8 +179,8 @@ class MyApp extends PolymerElement {
 				paper-toast {
 					@apply --layout-justified;
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-					background-color: var(--primary-background-color);
-					color: var(--secondary-text-color);
+					background-color: var(--primary-text-color);
+					color: var(--primary-background-color);
 					border-radius: 8px;
 					font-size: 18px;
 				}
@@ -256,7 +256,7 @@ class MyApp extends PolymerElement {
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
 						<div class="flexchild">Connect via</div>
-						<paper-icon-button class="link" icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
+						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
 					</div>
 					<div on-tap="openShare">
 						<template is="dom-repeat" items="[[social]]">
@@ -389,7 +389,7 @@ class MyApp extends PolymerElement {
 							</template>
 						</app-toolbar>
 						<app-toolbar>
-							<div class="flexchild"></div>
+							<div class="flexchild" hidden$="{{!wideLayout}}"></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="name" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab name="home">
 									<a href="[[rootPath]]">
@@ -417,11 +417,11 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 							</paper-tabs>
 							<div class="flexchild" style="text-align:right;">
-							<paper-icon-button
-									icon="my-icons:brightness-medium"
-									aria-label="Icon"
-									on-tap="toggleDark">
-							</paper-icon-button>
+								<paper-icon-button
+										icon="my-icons:brightness-4"
+										aria-label="Icon"
+										on-tap="toggleDark">
+								</paper-icon-button>
 								<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
 								</a>
@@ -776,6 +776,10 @@ class MyApp extends PolymerElement {
 	}
 	toggleDark() {
 		localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+		if ((localStorage.getItem('mode') || 'dark') === 'dark')
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
+		else
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
 		let theme = document.querySelectorAll('.theme');
 		theme.forEach(({
 			classList

@@ -184,6 +184,10 @@
 		}) => {
 			((localStorage.getItem('mode') || 'dark') === 'dark') ? classList.add('dark'): classList.remove('dark')
 		});
+		if ((localStorage.getItem('mode') || 'dark') === 'dark')
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
+		else
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
 		document.addEventListener('DOMContentLoaded', (event) => {
 			Promise.resolve().then(document.querySelector('my-app').show())
 		})
