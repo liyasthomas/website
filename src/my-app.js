@@ -76,6 +76,9 @@ class MyApp extends PolymerElement {
 					--primary-text-color: var(--dark-theme-text-color);
 					--secondary-text-color: var(--dark-theme-secondary-color);
 					--divider-color: var(--dark-primary-color);
+					--accent-color: var(--paper-teal-a200);
+					--light-accent-color: var(--paper-teal-a100);
+					--dark-accent-color: var(--paper-teal-a400);
 				}
 				[hidden] {
 					display: none;
