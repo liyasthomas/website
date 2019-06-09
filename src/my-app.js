@@ -48,8 +48,6 @@ setPassiveTouchGestures(true);
 // Set Polymer's root path to the same value we passed to our service worker
 // in `index.html`.
 setRootPath(MyAppGlobals.rootPath);
-// Performance logging
-window.performance && performance.mark && performance.mark('my-app - before register');
 class MyApp extends PolymerElement {
 	static get template() {
 		return html `
@@ -176,6 +174,7 @@ class MyApp extends PolymerElement {
 					width: 100%;
 				}
 				paper-toast {
+					@apply --layout-justified;
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 					background-color: var(--primary-background-color);
 					color: var(--secondary-text-color);
@@ -185,7 +184,6 @@ class MyApp extends PolymerElement {
 				paper-toast#sharehome {
 					@apply --layout-horizontal;
 					@apply --layout-center;
-					@apply --layout-justified;
 					max-width: 320px;
 				}
 				.toast-button {
@@ -249,7 +247,7 @@ class MyApp extends PolymerElement {
 			</app-route>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button class="secondary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
+				<paper-button onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
@@ -419,7 +417,7 @@ class MyApp extends PolymerElement {
 							<paper-icon-button
 									icon="my-icons:brightness-medium"
 									aria-label="Icon"
-									onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('my-app').classList.add('dark') : document.querySelector('my-app').classList.remove('dark')">
+									on-tap="toggleDark">
 							</paper-icon-button>
 								<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
@@ -480,8 +478,6 @@ class MyApp extends PolymerElement {
 					<paper-fab id="fab" icon="my-icons:arrow-upward" elevation="4" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 				</app-header-layout>
 			</app-drawer-layout>
-			<!-- a11y announcer -->
-			<div class="announcer" aria-live="assertive">[[_a11yLabel]]</div>
 		`;
 	}
 	static get properties() {
@@ -551,7 +547,6 @@ class MyApp extends PolymerElement {
 	}
 	constructor() {
 		super();
-		window.performance && performance.mark && performance.mark('my-app.created');
 	}
 	ready() {
 		super.ready();
@@ -559,7 +554,6 @@ class MyApp extends PolymerElement {
 		this.removeAttribute('unresolved');
 		// Listen for custom events
 		this.addEventListener('announce', (e) => this._onAnnounce(e));
-		this.addEventListener('dom-change', (e) => this._domChange(e));
 		// Listen for online/offline
 		afterNextRender(this, () => {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
@@ -575,13 +569,13 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'banner', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'banner', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'view4'].includes(page)) {
 			this.page = page || 'home';
 		} else {
 			this.page = '404';
 		}
 		// Change page title
-		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · Liyas Thomas';
+		document.title = `${this.page.charAt(0).toUpperCase() + this.page.slice(1)} · Liyas Thomas`;
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {
 			this.$.drawer.close();
@@ -700,7 +694,7 @@ class MyApp extends PolymerElement {
 		}
 	}
 	_ensureLazyLoaded() {
-		// load lazy resources after render and set `loadComplete` when done.
+		// Load lazy resources after render and set `loadComplete` when done.
 		if (!this.loadComplete) {
 			afterNextRender(this, () => {
 				import('./lazy-resources.js').then(() => {
@@ -730,29 +724,6 @@ class MyApp extends PolymerElement {
 			this._networkSnackbar.open();
 		}
 	}
-	// Elements in the app can notify a change to be a11y announced.
-	_onAnnounce(e) {
-		this._announce(e.detail);
-	}
-	// A11y announce the given message.
-	_announce(message) {
-		this._a11yLabel = '';
-		this._announceDebouncer = Debouncer.debounce(this._announceDebouncer,
-			timeOut.after(100), () => {
-				this._a11yLabel = message;
-			});
-	}
-	// This is for performance logging only.
-	_domChange(e) {
-		if (window.performance && performance.mark && !this.__loggedDomChange) {
-			let target = e.composedPath()[0];
-			let host = target.getRootNode().host;
-			if (host && host.localName.match(this.page)) {
-				this.__loggedDomChange = true;
-				performance.mark(host.localName + '.domChange');
-			}
-		}
-	}
 	show() {
 		this.$.toolbar.animate({
 			transform: ['translateY(-100%)', 'translateY(0)']
@@ -771,7 +742,7 @@ class MyApp extends PolymerElement {
 		this.$.ajax.generateRequest();
 	}
 	onLayoutChange(wide) {
-		var drawer = this.$.drawer;
+		const drawer = this.$.drawer;
 		if (wide && drawer.opened) {
 			drawer.opened = false;
 		}
@@ -792,13 +763,22 @@ class MyApp extends PolymerElement {
 		return opened ? 'expand-less' : 'expand-more';
 	}
 	scrollTop() {
-		var scrollDuration = 200;
-		var scrollStep = -window.scrollY / (scrollDuration / 10),
-			scrollInterval = setInterval(() => {
-				if (window.scrollY != 0) {
-					window.scrollBy(0, scrollStep);
-				} else clearInterval(scrollInterval)
-			}, 10);
+		const scrollDuration = 200;
+		const scrollStep = -window.scrollY / (scrollDuration / 10);
+		const scrollInterval = setInterval(() => {
+			if (window.scrollY != 0) {
+				window.scrollBy(0, scrollStep);
+			} else clearInterval(scrollInterval)
+		}, 10);
+	}
+	toggleDark() {
+		localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+		let theme = document.querySelectorAll('.theme');
+		theme.forEach(({
+			classList
+		}) => {
+			((localStorage.getItem('mode') || 'dark') === 'dark') ? classList.add('dark'): classList.remove('dark')
+		});
 	}
 }
 window.customElements.define('my-app', MyApp);
