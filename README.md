@@ -35,6 +35,8 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 :globe_with_meridians: Hosted in Firebase
 
+:crescent_moon: **Dark mode**: Turn the lights off!
+
 :heart: Made with love
 
 ---
