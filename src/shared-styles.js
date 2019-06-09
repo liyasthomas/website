@@ -68,7 +68,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .2s ease;
 			}
 			paper-icon-button.link {
-				color: var(--divider-text-color);
+				color: var(--secondary-text-color);
 			}
 			paper-icon-button.link:hover {
 				color: var(--primary-text-color);
@@ -86,7 +86,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-button.primary {
 				color: var(--accent-color);
-				border: 1px solid var(--light-text-color);
+				border: 1px solid var(--divider-color);
 				--paper-button-raised-keyboard-focus: {
 					color: var(--dark-accent-color);
 				};
@@ -96,7 +96,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-button.secondary {
 				background-color: var(--accent-color);
-				color: #fff;
+				color: var(--primary-background-color);
 				--paper-button-raised-keyboard-focus: {
 					background-color: var(--dark-accent-color);
 				};
@@ -113,6 +113,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-input.searchInput {
 				background-color: rgba(0,0,0,.04);
+				color: var(--primary-text-color);
 				border-radius: 32px;
 				--paper-input-container: {
 					padding: 4px;
@@ -130,7 +131,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				};
 			}
 			paper-input.searchInput[focused] {
-				background-color: var(--primary-color);
+				background-color: var(--primary-background-color);
 				@apply --shadow-elevation-2dp;
 			}
 			paper-dialog {
@@ -182,7 +183,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.actions .title,
 			.content .title {
 				font-size: 32px;
-				color: var(--primary-text-color);
 				text-transform: capitalize;
 			}
 			.content {
@@ -195,7 +195,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.error {
 				padding: 32px;
 				text-align: center;
-				color: var(--secondary-text-color);
+				color: var(--error-color);
 			}
 			.grid {
 				width: 90%;
@@ -211,9 +211,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.app-grid {
 			}
 			.item {
-				transition: all .2s ease;
 				border-radius: 8px;
-				background-color: #fff;
 //				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
@@ -226,14 +224,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			iron-image {
 				@apply --layout-flex;
-				transition: all .2s ease;
 				--iron-image-placeholder: {
-					background-color: #eee;
+					background-color: var(--light-primary-color);
 				}
 			}
 			.bg {
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--divider-color);
+				border-right: 1px solid var(--divider-color);
 			}
 			.block {
 				@apply --layout-horizontal;
@@ -241,21 +238,21 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.top {
 				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
-				border-top: 1px solid var(--light-text-color);
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
+				border-top: 1px solid var(--divider-color);
+				border-left: 1px solid var(--divider-color);
+				border-right: 1px solid var(--divider-color);
 			}
 			.mid {
 				padding: 4px 32px 16px 32px;
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--divider-color);
+				border-right: 1px solid var(--divider-color);
 			}
 			.bottom {
 				padding: 16px;
 				border-radius: 0 0 8px 8px;
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
-				border-bottom: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--divider-color);
+				border-right: 1px solid var(--divider-color);
+				border-bottom: 1px solid var(--divider-color);
 			}
 			.title {
 				display: -webkit-box;
@@ -311,125 +308,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				.actions, .content {
 					padding: 16px;
 				}
-			}
-			.white-bg {
-				background-color: #fff;
-				color: var(--paper-grey-800);
-			}
-			.black-bg {
-				background-color: var(--paper-grey-800);
-				color: #fff;
-			}
-			.grey-bg {
-				background-color: var(--paper-grey-200);
-				color: var(--paper-grey-800);
-			}
-			.purple-bg {
-				background-color: var(--paper-purple-a400);
-				color: #fff;
-			}
-			.deep-purple-bg {
-				background-color: var(--paper-deep-purple-a400);
-				color: #fff;
-			}
-			.red-bg {
-				background-color: var(--paper-red-a400);
-				color: #fff;
-			}
-			.pink-bg {
-				background-color: var(--paper-pink-a400);
-				color: #fff;
-			}
-			.orange-bg {
-				background-color: var(--paper-orange-a400);
-				color: #fff;
-			}
-			.deep-orange-bg {
-				background-color: var(--paper-deep-orange-a400);
-				color: #fff;
-			}
-			.cyan-bg {
-				background-color: var(--paper-cyan-a400);
-				color: #fff;
-			}
-			.green-bg {
-				background-color: var(--paper-green-a400);
-				color: #fff;
-			}
-			.yellow-bg {
-				background-color: var(--paper-yellow-a400);
-				color: var(--paper-grey-900);
-			}
-			.blue-bg {
-				background-color: var(--paper-blue-a400);
-				color: #fff;
-			}
-			.light-blue-bg {
-				background-color: var(--paper-light-blue-a400);
-				color: #fff;
-			}
-			.teal-bg {
-				background-color: var(--paper-teal-a400);
-				color: #fff;
-			}
-			.indigo-bg {
-				background-color: var(--paper-indigo-a400);
-				color: #fff;
-			}
-			.blue-grey-bg {
-				background-color: var(--paper-blue-grey-700);
-				color: #fff;
-			}
-			.white-fg {
-				color: var(--paper-grey-800);
-			}
-			.grey-fg {
-				color: var(--paper-grey-800);
-			}
-			.black-fg {
-				color: var(--paper-grey-900);
-			}
-			.purple-fg {
-				color: var(--paper-purple-a400);
-			}
-			.deep-purple-fg {
-				color: var(--paper-deep-purple-a400);
-			}
-			.red-fg {
-				color: var(--paper-red-a400);
-			}
-			.pink-fg {
-				color: var(--paper-pink-a400);
-			}
-			.yellow-fg {
-				color: var(--paper-yellow-a700);
-			}
-			.cyan-fg {
-				color: var(--paper-cyan-a400);
-			}
-			.green-fg {
-				color: var(--paper-green-a400);
-			}
-			.orange-fg {
-				color: var(--paper-orange-a400);
-			}
-			.deep-orange-fg {
-				color: var(--paper-deep-orange-a400);
-			}
-			.blue-fg {
-				color: var(--paper-blue-a400);
-			}
-			.blue-grey-fg {
-				color: var(--paper-blue-grey-500);
-			}
-			.light-blue-fg {
-				color: var(--paper-light-blue-a400);
-			}
-			.teal-fg {
-				color: var(--paper-teal-a400);
-			}
-			.indigo-fg {
-				color: var(--paper-indigo-a400);
 			}
 		</style>
 	</template>

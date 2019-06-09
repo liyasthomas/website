@@ -127,7 +127,6 @@
 			min-height: 100vh;
 			font-size: 18px;
 			font-weight: 500;
-			color: #212121;
 			-webkit-tap-highlight-color: transparent;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
@@ -181,7 +180,10 @@
 		</div>
 	</my-app>
 	<script>
-		window.addEventListener('WebComponentsReady', () => Promise.resolve().then(document.querySelector('my-app').show()));
+		document.addEventListener('DOMContentLoaded', (event) => {
+			((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('my-app').classList.add('dark'): document.querySelector('my-app').classList.remove('dark')
+			Promise.resolve().then(document.querySelector('my-app').show())
+		})
 
 	</script>
 	<noscript>

@@ -59,29 +59,35 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-deep-purple-a400);
-					--light-accent-color: var(--paper-deep-purple-a200);
-					--dark-accent-color: var(--paper-deep-purple-a700);
-					--primary-text-color: rgba(0, 0, 0, .87);
-					--secondary-text-color: #5f6469;
-					--divider-text-color: rgba(0, 0, 0, .38);
-					--light-text-color: rgba(0, 0, 0, .12);
+					--accent-color: var(--paper-deep-purple-a200);
+					--light-accent-color: var(--paper-deep-purple-a100);
+					--dark-accent-color: var(--paper-deep-purple-a400);
 					--paper-tabs-selection-bar-color: var(--accent-color);
-					--paper-tab-ink: var(--light-text-color);
+					--paper-tab-ink: var(--divider-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
 					--paper-spinner-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
-					--paper-progress-container-color: var(--light-text-color);
+					--paper-progress-container-color: var(--divider-color);
+					background-color: var(--primary-background-color);
+					color: var(--primary-text-color);
+				}
+				:host(.dark) {
+					--primary-color: var(--dark-theme-background-color);
+					--primary-background-color: var(--dark-theme-background-color);
+					--primary-text-color: var(--dark-theme-text-color);
+					--secondary-text-color: var(--dark-theme-secondary-color);
+					--divider-color: var(--dark-primary-color);
 				}
 				[hidden] {
-					display: none !important;
+					display: none;
 				}
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
 					font-weight: 700;
-					color: var(--secondary-text-color);
 					--app-drawer-content-container: {
+						background-color: var(--primary-background-color);
+						color: var(--secondary-text-color);
 						@apply --shadow-elevation-12dp;
 					}
 				}
@@ -94,17 +100,17 @@ class MyApp extends PolymerElement {
 					width: calc(100% - 80px);
 				}
 				.category {
-					border-top: 1px solid var(--paper-grey-100);
+					border-top: 1px solid var(--dark-primary-color);
 				}
 				iron-collapse {
-					border-bottom: 1px solid var(--paper-grey-100);
-					background-color: var(--paper-grey-50);
+					border-bottom: 1px solid var(--dark-primary-color);
+					background-color: var(--dark-primary-color);
 				}
 				paper-listbox .iron-selected, paper-tabs .iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
-					background-color: #fff;
+					background-color: var(--primary-background-color);
 					color: var(--secondary-text-color);
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
@@ -157,6 +163,10 @@ class MyApp extends PolymerElement {
 				paper-tab iron-icon {
 					margin-right: 8px;
 				}
+				.theme {
+					background-color: var(--primary-background-color);
+					color: var(--primary-text-color);
+				}
 				#pages {
 					@apply --layout-flex;
 					min-height: calc(100vh - 128px);
@@ -167,7 +177,7 @@ class MyApp extends PolymerElement {
 				}
 				paper-toast {
 					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-					background-color: #fff !important;
+					background-color: var(--primary-background-color);
 					color: var(--secondary-text-color);
 					border-radius: 8px;
 					font-size: 18px;
@@ -182,11 +192,11 @@ class MyApp extends PolymerElement {
 					margin: 8px;
 				}
 				#fab {
-					@apply --shadow-elevation-4dp;
 					position: fixed;
 					z-index: 6;
 					right: 20px;
 					bottom: 20px;
+					color: var(--primary-color);
 				}
 				footer {
 					padding: 32px;
@@ -230,7 +240,7 @@ class MyApp extends PolymerElement {
 					</code>
 				</paper-dialog-scrollable>
 				<div class="buttons">
-					<a class="link" dialog-confirm><paper-button aria-label="View all" autofocus>Ok</paper-button></a>
+					<a class="link" dialog-confirm><paper-button aria-label="Ok" autofocus>Ok</paper-button></a>
 				</div>
 			</paper-dialog>
 			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -245,7 +255,7 @@ class MyApp extends PolymerElement {
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
 						<div class="flexchild">Connect via</div>
-						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
+						<paper-icon-button class="link" icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
 					</div>
 					<div on-tap="openShare">
 						<template is="dom-repeat" items="[[social]]">
@@ -296,13 +306,13 @@ class MyApp extends PolymerElement {
 							</a>
 							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
-								<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading]]">
+								<div class="actions flex-center-center" hidden$="[[!loading]]">
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
 								</div>
 							</template>
 							<template is="dom-if" if="{{error}}">
 								<template is="dom-if" if="{{!loading}}">
-									<div class$="[[getUIType(UI)]] error">
+									<div class="error">
 										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
 									</div>
 								</template>
@@ -363,7 +373,7 @@ class MyApp extends PolymerElement {
 					</div>
 				</app-drawer>
 				<!-- Main content -->
-				<app-header-layout>
+				<app-header-layout class="theme">
 					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
@@ -406,6 +416,11 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 							</paper-tabs>
 							<div class="flexchild" style="text-align:right;">
+							<paper-icon-button
+									icon="my-icons:brightness-medium"
+									aria-label="Icon"
+									onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('my-app').classList.add('dark') : document.querySelector('my-app').classList.remove('dark')">
+							</paper-icon-button>
 								<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
 								</a>
@@ -462,7 +477,7 @@ class MyApp extends PolymerElement {
 					<footer>
 						&copy; 2019 Liyas Thomas &middot; <a class="link" on-click="openModal">License</a>
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
+					<paper-fab id="fab" icon="my-icons:arrow-upward" elevation="4" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
 				</app-header-layout>
 			</app-drawer-layout>
 			<!-- a11y announcer -->
