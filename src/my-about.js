@@ -40,7 +40,7 @@ class MyAbout extends PolymerElement {
 				@media all and (min-width: 641px) and (max-width: 960px) {
 					:host {
 						--app-grid-columns: 2;
-						--app-grid-gutter: 32px;
+						--app-grid-gutter: 24px;
 						--app-grid-item-height: 40vw;
 						--app-grid-expandible-item-columns: 2;
 					}
@@ -54,7 +54,7 @@ class MyAbout extends PolymerElement {
 				@media all and (min-width: 961px) {
 					:host {
 						--app-grid-columns: 4;
-						--app-grid-gutter: 32px;
+						--app-grid-gutter: 24px;
 						--app-grid-item-height: 25vw;
 						--app-grid-expandible-item-columns: 2;
 					}

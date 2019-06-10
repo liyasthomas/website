@@ -41,7 +41,7 @@ class MyOthers extends PolymerElement {
 				@media all and (min-width: 641px) and (max-width: 960px) {
 					:host {
 						--app-grid-columns: 2;
-						--app-grid-gutter: 32px;
+						--app-grid-gutter: 24px;
 						--app-grid-item-height: 50vw;
 						--app-grid-expandible-item-columns: 2;
 					}
@@ -55,7 +55,7 @@ class MyOthers extends PolymerElement {
 				@media all and (min-width: 961px) {
 					:host {
 						--app-grid-columns: 3;
-						--app-grid-gutter: 32px;
+						--app-grid-gutter: 24px;
 						--app-grid-item-height: 30vw;
 						--app-grid-expandible-item-columns: 3;
 					}

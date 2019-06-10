@@ -249,8 +249,11 @@ class MyApp extends PolymerElement {
 			<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
 			</app-route>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
+			<paper-toast id="updateToast" duration="0">
+				<div class="flex-horizontal">
+					<div class="flexchild">New update is here!</div>
+					<paper-button onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
+				</div>
 			</paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">

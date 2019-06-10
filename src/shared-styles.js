@@ -114,6 +114,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-input.searchInput {
 				background-color: rgba(0,0,0,.04);
 				color: var(--primary-text-color);
+				border: 1px solid var(--divider-color);
 				border-radius: 32px;
 				--paper-input-container: {
 					padding: 4px;
@@ -132,7 +133,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-input.searchInput[focused] {
 				background-color: var(--primary-background-color);
-				@apply --shadow-elevation-2dp;
 			}
 			paper-dialog {
 				border-radius: 16px;
@@ -213,6 +213,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item {
 				border-radius: 8px;
 //				@apply --shadow-elevation-2dp;
+				background-color: var(--light-primary-color);
 			}
 			.item:hover {
 //				@apply --shadow-elevation-4dp;
