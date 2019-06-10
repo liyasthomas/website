@@ -67,9 +67,9 @@ class MyApp extends PolymerElement {
 					--paper-spinner-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--divider-color);
-					--paper-toggle-button-checked-bar-color:  var(--accent-color);
-					--paper-toggle-button-checked-button-color:  var(--dark-accent-color);
-					--paper-toggle-button-checked-ink-color: var(--light-accent-color);
+					--paper-toggle-button-checked-bar-color:  var(--dark-accent-color);
+					--paper-toggle-button-checked-button-color:  var(--light-accent-color);
+					--paper-toggle-button-checked-ink-color: var(--accent-color);
 					background-color: var(--primary-background-color);
 					color: var(--primary-text-color);
 				}
@@ -292,16 +292,16 @@ class MyApp extends PolymerElement {
 					<paper-listbox selected="[[page]]" attr-for-selected="name" class="listbox" role="listbox">
 						<a name="home" href="[[rootPath]]">
 							<paper-icon-item>
-								<iron-icon icon="my-icons:home" slot="item-icon"></iron-icon>
+								<iron-icon icon$="my-icons:home[[_getPageIcon('home',page)]]" slot="item-icon"></iron-icon>
 								<span>Home</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
 						<a name="projects">
 							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
-								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
+								<iron-icon icon$="my-icons:work[[_getPageIcon('projects',page)]]" slot="item-icon"></iron-icon>
 								<span class="expand">Projects</span>
-								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
+								<iron-icon icon$="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
@@ -367,14 +367,14 @@ class MyApp extends PolymerElement {
 						</iron-collapse>
 						<a name="blog" href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
 							<paper-icon-item>
-								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
+								<iron-icon icon$="my-icons:favorite[[_getPageIcon('blog',page)]]" slot="item-icon"></iron-icon>
 								<span>Blog</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
 						<a name="about" href="about">
 							<paper-icon-item>
-								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
+								<iron-icon icon$="my-icons:face[[_getPageIcon('about',page)]]" slot="item-icon"></iron-icon>
 								<span>About</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
@@ -402,25 +402,25 @@ class MyApp extends PolymerElement {
 							<paper-tabs selected="[[page]]" attr-for-selected="name" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab name="home">
 									<a href="[[rootPath]]">
-										<iron-icon icon="my-icons:home"></iron-icon>
+										<iron-icon icon$="my-icons:home[[_getPageIcon('home',page)]]"></iron-icon>
 										Home
 									</a>
 								</paper-tab>
 								<paper-tab name="projects">
 									<a href="projects">
-										<iron-icon icon="my-icons:work"></iron-icon>
+										<iron-icon icon$="my-icons:work[[_getPageIcon('projects',page)]]"></iron-icon>
 										Projects
 									</a>
 								</paper-tab>
 								<paper-tab name="blog" target="_blank" rel="noopener">
 									<a href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
-										<iron-icon icon="my-icons:favorite"></iron-icon>
+										<iron-icon icon$="my-icons:favorite[[_getPageIcon('blog',page)]]"></iron-icon>
 										Blog
 									</a>
 								</paper-tab>
 								<paper-tab name="about">
 									<a href="about">
-										<iron-icon icon="my-icons:face"></iron-icon>
+										<iron-icon icon$="my-icons:face[[_getPageIcon('about',page)]]"></iron-icon>
 										About
 									</a>
 								</paper-tab>
@@ -787,6 +787,12 @@ class MyApp extends PolymerElement {
 	}
 	_getIcon(opened) {
 		return opened ? 'expand-less' : 'expand-more';
+	}
+	_getPageIcon(e, page) {
+		if (e == page)
+			return '-filled'
+		else
+			return '';
 	}
 	scrollTop() {
 		const scrollDuration = 200;
