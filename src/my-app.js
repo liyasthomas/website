@@ -101,11 +101,11 @@ class MyApp extends PolymerElement {
 					width: calc(100% - 80px);
 				}
 				.category {
-					border-top: 1px solid var(--dark-primary-color);
+					border-top: 1px solid var(--light-primary-color);
 				}
 				iron-collapse {
-					border-bottom: 1px solid var(--dark-primary-color);
-					background-color: var(--dark-primary-color);
+					border-bottom: 1px solid var(--light-primary-color);
+					background-color: var(--light-primary-color);
 				}
 				paper-listbox .iron-selected, paper-tabs .iron-selected {
 					color: var(--accent-color);
@@ -389,7 +389,7 @@ class MyApp extends PolymerElement {
 							</template>
 						</app-toolbar>
 						<app-toolbar>
-							<div class="flexchild" hidden$="{{!wideLayout}}"></div>
+							<div class="flexchild"></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="name" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab name="home">
 									<a href="[[rootPath]]">
