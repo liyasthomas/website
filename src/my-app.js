@@ -67,6 +67,9 @@ class MyApp extends PolymerElement {
 					--paper-spinner-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--divider-color);
+					--paper-toggle-button-checked-bar-color:  var(--accent-color);
+					--paper-toggle-button-checked-button-color:  var(--dark-accent-color);
+					--paper-toggle-button-checked-ink-color: var(--light-accent-color);
 					background-color: var(--primary-background-color);
 					color: var(--primary-text-color);
 				}
@@ -76,9 +79,9 @@ class MyApp extends PolymerElement {
 					--primary-text-color: var(--dark-theme-text-color);
 					--secondary-text-color: var(--dark-theme-secondary-color);
 					--divider-color: var(--dark-primary-color);
-					--accent-color: var(--paper-teal-a200);
-					--light-accent-color: var(--paper-teal-a100);
-					--dark-accent-color: var(--paper-teal-a400);
+					--accent-color: var(--paper-teal-a400);
+					--light-accent-color: var(--paper-teal-a200);
+					--dark-accent-color: var(--paper-teal-a700);
 				}
 				[hidden] {
 					display: none;
@@ -184,6 +187,9 @@ class MyApp extends PolymerElement {
 					border-radius: 8px;
 					font-size: 18px;
 				}
+				paper-toast paper-button {
+					color: var(--accent-color);
+				}
 				paper-toast#sharehome {
 					@apply --layout-horizontal;
 					@apply --layout-center;
@@ -249,9 +255,9 @@ class MyApp extends PolymerElement {
 			<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
 			</app-route>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<paper-toast id="updateToast" duration="0">
-				<div class="flex-horizontal">
-					<div class="flexchild">New update is here!</div>
+			<paper-toast id="updateToast" duration="0" text=" ">
+				<div class="flex-center-center">
+					<div class="flexchild">Update available!</div>
 					<paper-button onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
 				</div>
 			</paper-toast>
@@ -267,10 +273,10 @@ class MyApp extends PolymerElement {
 								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg"	aria-label="Icon"></paper-icon-button>
 							</a>
 						</template>
-						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+						<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," target="_blank" rel="noopener">
 							<paper-icon-button class="toast-button" icon="my-icons:mail-outline" aria-label="Icon"></paper-icon-button>
 						</a>
-						<a href="tel:+919539653962">
+						<a href="tel:+919539653962" target="_blank" rel="noopener">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"	aria-label="Icon"></paper-icon-button>
 						</a>
 						<a href="about">
@@ -429,7 +435,7 @@ class MyApp extends PolymerElement {
 										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," target="_blank" rel="noopener">
 											<paper-icon-item>
 												<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
-												<span>Hire me</span>
+												<span>Hire</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
@@ -440,16 +446,16 @@ class MyApp extends PolymerElement {
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
-										<a href="javascript:void(0);">
+										<a>
 											<paper-icon-item on-tap="openShare">
 												<iron-icon icon="my-icons:group" slot="item-icon"></iron-icon>
 												<span>Contact</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
-										<a href="javascript:void(0);">
-											<paper-icon-item on-tap="toggleDark">
-												<iron-icon icon="my-icons:brightness-4" slot="item-icon"></iron-icon>
+										<a>
+											<paper-icon-item>
+												<paper-toggle-button checked=[[mode]] slot="item-icon" on-Change="toggleDark"></paper-toggle-button>
 												<span>Dark mode</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
@@ -499,7 +505,8 @@ class MyApp extends PolymerElement {
 			wideLayout: {
 				type: Boolean,
 				value: false,
-				observer: 'onLayoutChange',
+				reflectToAttribute: true,
+				observer: 'onLayoutChange'
 			},
 			page: {
 				type: String,
@@ -508,6 +515,11 @@ class MyApp extends PolymerElement {
 			},
 			opened: {
 				type: Boolean,
+				reflectToAttribute: true
+			},
+			mode: {
+				type: Boolean,
+				value: (localStorage.getItem('mode') || 'dark') === 'dark' ? true : false,
 				reflectToAttribute: true
 			},
 			social: {
@@ -762,7 +774,7 @@ class MyApp extends PolymerElement {
 		}
 	}
 	update(worker) {
-		this.$.updateToast.show();
+		this.$.updateToast.toggle();
 	}
 	toggle() {
 		this.$.collapse.toggle();
@@ -787,10 +799,13 @@ class MyApp extends PolymerElement {
 	}
 	toggleDark() {
 		localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
-		if ((localStorage.getItem('mode') || 'dark') === 'dark')
+		if ((localStorage.getItem('mode') || 'dark') === 'dark') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
-		else
+			this.mode = true;
+		} else {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
+			this.mode = false;
+		}
 		let theme = document.querySelectorAll('.theme');
 		theme.forEach(({
 			classList
