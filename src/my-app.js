@@ -107,7 +107,7 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--light-primary-color);
 					background-color: var(--light-primary-color);
 				}
-				paper-listbox .iron-selected, paper-tabs .iron-selected {
+				paper-listbox.listbox .iron-selected, paper-tabs .iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
@@ -420,19 +420,13 @@ class MyApp extends PolymerElement {
 								</paper-tab>
 							</paper-tabs>
 							<div class="flexchild" style="text-align:right;">
-								<paper-icon-button
-										icon="my-icons:brightness-4"
-										aria-label="Icon"
-										on-tap="toggleDark">
-								</paper-icon-button>
 								<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
 									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
 								</a>
-								<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
-								<paper-menu-button vertical-align="top" horizontal-align="right">
+								<paper-menu-button vertical-align="top" horizontal-align="right" close-on-activate>
 									<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More"></paper-icon-button>
-									<paper-listbox class="listbox" slot="dropdown-content">
-										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+									<paper-listbox slot="dropdown-content">
+										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," target="_blank" rel="noopener">
 											<paper-icon-item>
 												<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
 												<span>Hire me</span>
@@ -443,6 +437,20 @@ class MyApp extends PolymerElement {
 											<paper-icon-item>
 												<iron-icon src="../images/assets/social/paypal.svg" slot="item-icon"></iron-icon>
 												<span>Donate</span>
+												<paper-ripple></paper-ripple>
+											</paper-icon-item>
+										</a>
+										<a href="javascript:void(0);">
+											<paper-icon-item on-tap="openShare">
+												<iron-icon icon="my-icons:group" slot="item-icon"></iron-icon>
+												<span>Contact</span>
+												<paper-ripple></paper-ripple>
+											</paper-icon-item>
+										</a>
+										<a href="javascript:void(0);">
+											<paper-icon-item on-tap="toggleDark">
+												<iron-icon icon="my-icons:brightness-4" slot="item-icon"></iron-icon>
+												<span>Dark mode</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
