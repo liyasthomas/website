@@ -14,7 +14,6 @@ import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/iron-media-query/iron-media-query.js';
@@ -67,8 +66,9 @@ class MyApp extends PolymerElement {
 					--paper-spinner-color: var(--accent-color);
 					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--divider-color);
-					--paper-toggle-button-checked-bar-color:  var(--dark-accent-color);
-					--paper-toggle-button-checked-button-color:  var(--light-accent-color);
+					--paper-toggle-button-unchecked-bar-color: var(--secondary-text-color);
+					--paper-toggle-button-checked-bar-color: var(--dark-accent-color);
+					--paper-toggle-button-checked-button-color: var(--light-accent-color);
 					--paper-toggle-button-checked-ink-color: var(--accent-color);
 					background-color: var(--primary-background-color);
 					color: var(--primary-text-color);
@@ -435,7 +435,7 @@ class MyApp extends PolymerElement {
 										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," target="_blank" rel="noopener">
 											<paper-icon-item>
 												<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
-												<span>Hire</span>
+												<span>Hire me</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
@@ -754,12 +754,13 @@ class MyApp extends PolymerElement {
 		this.$.toolbar.animate({
 			transform: ['translateY(-100%)', 'translateY(0)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
+			delay: 500,
 			duration: 1000,
 			easing: 'ease-in-out'
 		});
