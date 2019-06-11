@@ -454,8 +454,8 @@ class MyApp extends PolymerElement {
 											</paper-icon-item>
 										</a>
 										<a>
-											<paper-icon-item>
-												<paper-toggle-button checked=[[mode]] slot="item-icon" on-Change="toggleDark"></paper-toggle-button>
+											<paper-icon-item on-tap="toggleDark">
+												<paper-toggle-button checked={{mode}} on-tap="toggleDark" on-checked-changed="toggleDark" slot="item-icon"></paper-toggle-button>
 												<span>Dark mode</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
