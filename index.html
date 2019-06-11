@@ -182,12 +182,13 @@
 		theme.forEach(({
 			classList
 		}) => {
-			((localStorage.getItem('mode') || 'dark') === 'dark') ? classList.add('dark'): classList.remove('dark')
+			localStorage.getItem('mode') == 'dark' ? classList.add('dark') : classList.remove('dark');
 		});
-		if ((localStorage.getItem('mode') || 'dark') === 'dark')
+		if (localStorage.getItem('mode') == 'dark') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
-		else
+		} else {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
+		}
 		document.addEventListener('DOMContentLoaded', (event) => {
 			Promise.resolve().then(document.querySelector('#app').show())
 		})

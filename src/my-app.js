@@ -455,7 +455,7 @@ class MyApp extends PolymerElement {
 										</a>
 										<a>
 											<paper-icon-item on-tap="toggleDark">
-												<paper-toggle-button checked={{mode}} on-tap="toggleDark" on-checked-changed="toggleDark" slot="item-icon"></paper-toggle-button>
+												<paper-toggle-button checked={{mode}} on-tap="toggleDark" on-change="toggleDark" slot="item-icon"></paper-toggle-button>
 												<span>Dark mode</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
@@ -519,7 +519,7 @@ class MyApp extends PolymerElement {
 			},
 			mode: {
 				type: Boolean,
-				value: (localStorage.getItem('mode') || 'dark') === 'dark' ? true : false,
+				value: localStorage.getItem('mode') == 'dark' ? true : false,
 				reflectToAttribute: true
 			},
 			social: {
@@ -804,8 +804,8 @@ class MyApp extends PolymerElement {
 		}, 10);
 	}
 	toggleDark() {
-		localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
-		if ((localStorage.getItem('mode') || 'dark') === 'dark') {
+		localStorage.setItem('mode', localStorage.getItem('mode') == 'dark' ? 'light' : 'dark');
+		if (localStorage.getItem('mode') == 'dark') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
 			this.mode = true;
 		} else {
@@ -816,7 +816,7 @@ class MyApp extends PolymerElement {
 		theme.forEach(({
 			classList
 		}) => {
-			((localStorage.getItem('mode') || 'dark') === 'dark') ? classList.add('dark'): classList.remove('dark')
+			localStorage.getItem('mode') == 'dark' ? classList.add('dark') : classList.remove('dark');
 		});
 	}
 }
