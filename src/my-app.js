@@ -279,9 +279,7 @@ class MyApp extends PolymerElement {
 						<a href="tel:+919539653962" target="_blank" rel="noopener">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"	aria-label="Icon"></paper-icon-button>
 						</a>
-						<a href="about">
-							<paper-icon-button class="toast-button" icon="my-icons:more-horiz" aria-label="Icon"></paper-icon-button>
-						</a>
+						<paper-icon-button id="shareButton" class="toast-button" icon="my-icons:more-horiz" aria-label="Icon" on-tap="moreShare"></paper-icon-button>
 					</div>
 				</div>
 			</paper-toast>
@@ -819,6 +817,16 @@ class MyApp extends PolymerElement {
 		}) => {
 			localStorage.getItem('mode') == 'dark' ? classList.add('dark') : classList.remove('dark');
 		});
+	}
+	async moreShare() {
+		try {
+			await navigator.share({
+				title: "Liyas Thomas",
+				url: window.location.href
+			});
+		} catch (err) {
+			console.log("Share failed:", err.message);
+		}
 	}
 }
 window.customElements.define('my-app', MyApp);
