@@ -110,7 +110,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortWebVal)}}" rendered-item-count="{{renderedWebCount}}">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -124,15 +124,16 @@ class MyProjects extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}" aria-label="Icon"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<paper-ripple></paper-ripple>
+						</a>
 					</template>
 					<template is="dom-if" if="{{!renderedWebCount}}">
 						Nothing found for '{{filterVal}}'
@@ -169,7 +170,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[others.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortOthersVal)}}" rendered-item-count="{{renderedOthersCount}}">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -183,15 +184,16 @@ class MyProjects extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}" aria-label="Icon"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<paper-ripple></paper-ripple>
+						</a>
 					</template>
 					<template is="dom-if" if="{{!renderedOthersCount}}">
 						Nothing found for '{{filterVal}}'

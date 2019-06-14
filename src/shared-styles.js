@@ -178,7 +178,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.actions {
 				@apply --layout-horizontal;
-				padding: 32px;
+				padding: 24px;
 			}
 			.actions .title,
 			.content .title {
@@ -190,10 +190,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				padding: 32px;
+				padding: 24px;
 			}
 			.error {
-				padding: 32px;
+				padding: 24px;
 				text-align: center;
 				color: var(--error-color);
 			}
@@ -237,19 +237,19 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 			}
 			.top {
-				padding: 32px 32px 4px 32px;
+				padding: 24px 24px 4px 24px;
 				border-radius: 8px 8px 0 0;
 				border-top: 1px solid var(--divider-color);
 				border-left: 1px solid var(--divider-color);
 				border-right: 1px solid var(--divider-color);
 			}
 			.mid {
-				padding: 4px 32px 16px 32px;
+				padding: 4px 24px 16px 24px;
 				border-left: 1px solid var(--divider-color);
 				border-right: 1px solid var(--divider-color);
 			}
 			.bottom {
-				padding: 16px;
+				padding: 24px;
 				border-radius: 0 0 8px 8px;
 				border-left: 1px solid var(--divider-color);
 				border-right: 1px solid var(--divider-color);

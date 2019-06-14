@@ -264,7 +264,7 @@ class MyApp extends PolymerElement {
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
-						<div class="flexchild">Connect via</div>
+						<div class="flexchild">Share via</div>
 						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
 					</div>
 					<div on-tap="openShare">
@@ -446,8 +446,8 @@ class MyApp extends PolymerElement {
 										</a>
 										<a>
 											<paper-icon-item on-tap="openShare">
-												<iron-icon icon="my-icons:group" slot="item-icon"></iron-icon>
-												<span>Contact</span>
+												<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
+												<span>Share</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
@@ -821,7 +821,7 @@ class MyApp extends PolymerElement {
 	async moreShare() {
 		try {
 			await navigator.share({
-				title: "Liyas Thomas",
+				title: document.title,
 				url: window.location.href
 			});
 		} catch (err) {

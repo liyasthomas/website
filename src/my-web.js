@@ -113,7 +113,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -127,15 +127,16 @@ class MyWeb extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}" aria-label="Icon"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<paper-ripple></paper-ripple>
+						</a>
 					</template>
 					<template is="dom-if" if="{{!renderedCount}}">
 						Nothing found for '{{filterVal}}'
@@ -155,7 +156,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -169,15 +170,16 @@ class MyWeb extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}" aria-label="Icon"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<paper-ripple></paper-ripple>
+						</a>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
