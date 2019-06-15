@@ -108,7 +108,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class=" title">{{sub.title}}</div>
@@ -122,15 +122,15 @@ class MyWallpapers extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
@@ -159,7 +159,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<div class="item">
+						<a href="{{sub.link}}" class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -173,15 +173,15 @@ class MyWallpapers extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											{{sub.info}}
 										</div>
 										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
