@@ -227,6 +227,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-flex;
 				--iron-image-placeholder: {
 					background-color: var(--light-primary-color);
+					border-radius: 8px;
 				}
 			}
 			.bg {

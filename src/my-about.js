@@ -190,6 +190,7 @@ class MyAbout extends PolymerElement {
 									</div>
 								</div>
 							</div>
+							<paper-ripple></paper-ripple>
 						</a>
 					</template>
 				</div>

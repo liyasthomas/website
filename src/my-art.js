@@ -129,6 +129,7 @@ class MyArt extends PolymerElement {
 									</div>
 								</div>
 							</div>
+							<paper-ripple></paper-ripple>
 						</a>
 					</template>
 				</div>
@@ -180,6 +181,7 @@ class MyArt extends PolymerElement {
 									</div>
 								</div>
 							</div>
+							<paper-ripple></paper-ripple>
 						</a>
 					</template>
 				</div>
