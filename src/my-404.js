@@ -14,13 +14,22 @@ class My404 extends PolymerElement {
 					justify-content: center;
 					padding: 32px;
 				}
-				h1 {
-					font-size: 3em;
+				h2 {
+					font-size: 2em;
+					margin: 0;
+				}
+				h3 {
+					font-size: 1em;
+					margin: 16px 0;
 					color: #b2b2b2;
 				}
+				paper-fab {
+					color: var(--primary-color);
+				}
 			</style>
-			<h1>404</h1>
-			<div><paper-fab icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-fab></div>
+			<h2>404</h2>
+			<h3>Page not found!</h3>
+			<div><a href="/"><paper-fab icon="my-icons:arrow-back" aria-label="Back"></paper-fab></a></div>
 		`;
 	}
 }

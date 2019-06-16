@@ -250,10 +250,9 @@ class MyApp extends PolymerElement {
 					<a class="link" dialog-confirm><paper-button aria-label="Ok" autofocus>Ok</paper-button></a>
 				</div>
 			</paper-dialog>
-			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
-			</app-location>
-			<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
-			</app-route>
+			<app-location route="{{route}}" url-space-regex="^[[rootPath]]"></app-location>
+			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+			<app-route route="{{subroute}}" pattern="[[rootPath]]:page/:id" data="{{subrouteData}}">
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text=" ">
 				<div class="flex-center-center">
@@ -463,11 +462,11 @@ class MyApp extends PolymerElement {
 							</div>
 						</app-toolbar>
 					</app-header>
-					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
+					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="404" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
-						<my-web name="web"></my-web>
+						<my-web name="web" route="[[subroute]]"></my-web>
 						<my-others name="others" route="[[subroute]]"></my-others>
 						<my-wallpapers name="wallpapers" route="[[subroute]]"></my-wallpapers>
 						<my-art name="art" route="[[subroute]]"></my-art>
@@ -507,6 +506,11 @@ class MyApp extends PolymerElement {
 				observer: 'onLayoutChange'
 			},
 			page: {
+				type: String,
+				reflectToAttribute: true,
+				observer: '_pageChanged'
+			},
+			id: {
 				type: String,
 				reflectToAttribute: true,
 				observer: '_pageChanged'
@@ -618,6 +622,7 @@ class MyApp extends PolymerElement {
 			duration: 1000,
 			easing: 'ease-in-out'
 		});
+		console.log('routeData.page=', this.page);
 	}
 	_pageChanged(page, oldPage) {
 		// Import the page component on demand.

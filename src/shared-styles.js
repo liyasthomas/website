@@ -245,12 +245,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-right: 1px solid var(--divider-color);
 			}
 			.mid {
-				padding: 4px 24px 16px 24px;
+				padding: 4px 24px 4px 24px;
 				border-left: 1px solid var(--divider-color);
 				border-right: 1px solid var(--divider-color);
 			}
 			.bottom {
-				padding: 24px;
+				padding: 4px 24px 24px 24px;
 				border-radius: 0 0 8px 8px;
 				border-left: 1px solid var(--divider-color);
 				border-right: 1px solid var(--divider-color);
