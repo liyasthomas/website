@@ -204,6 +204,11 @@ class MyApp extends PolymerElement {
 					right: 20px;
 					bottom: 20px;
 					color: var(--primary-color);
+					will-change: transform;
+					transition: 0.6s transform;
+				}
+				#fab.shrink-to-hidden {
+					transform: scale(0);
 				}
 				footer {
 					padding: 32px;
@@ -580,13 +585,18 @@ class MyApp extends PolymerElement {
 		super.ready();
 		// Custom elements polyfill safe way to indicate an element has been upgraded.
 		this.removeAttribute('unresolved');
-		// Listen for custom events
-		this.addEventListener('announce', (e) => this._onAnnounce(e));
+		window.addEventListener('scroll', (e) => this._scrollHandler(e));
 		// Listen for online/offline
 		afterNextRender(this, () => {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
+	}
+	_scrollHandler() {
+		let progress = this.$.toolbar.getScrollState().progress;
+		this.$.fab.toggleClass('shrink-to-hidden', progress > 0.8);
+		if (window.scrollY > 600)
+			this.$.fab.toggleClass('shrink-to-hidden');
 	}
 	_routePageChanged(page) {
 		// Reset scroll position
