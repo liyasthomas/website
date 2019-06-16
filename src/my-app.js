@@ -223,6 +223,10 @@ class MyApp extends PolymerElement {
 					}
 				}
 			</style>
+			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
+			</app-location>
+			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
+			</app-route>
 			<paper-dialog id="scrolling" with-backdrop>
 				<h2>License</h2>
 				<paper-dialog-scrollable>
@@ -250,9 +254,6 @@ class MyApp extends PolymerElement {
 					<a class="link" dialog-confirm><paper-button aria-label="Ok" autofocus>Ok</paper-button></a>
 				</div>
 			</paper-dialog>
-			<app-location route="{{route}}" url-space-regex="^[[rootPath]]"></app-location>
-			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
-			<app-route route="{{subroute}}" pattern="[[rootPath]]:page/:id" data="{{subrouteData}}">
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<paper-toast id="updateToast" duration="0" text=" ">
 				<div class="flex-center-center">
@@ -286,7 +287,7 @@ class MyApp extends PolymerElement {
 				<!-- Drawer content -->
 				<app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-					<paper-listbox selected="[[page]]" attr-for-selected="name" class="listbox" role="listbox">
+					<paper-listbox selected="[[page]]" attr-for-selected="name" class="listbox" role="navigation">
 						<a name="home" href="[[rootPath]]">
 							<paper-icon-item>
 								<iron-icon icon$="my-icons:home[[_getPageIcon('home',page)]]" slot="item-icon"></iron-icon>
@@ -466,26 +467,26 @@ class MyApp extends PolymerElement {
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
 						<my-about name="about"></my-about>
-						<my-web name="web" route="[[subroute]]"></my-web>
-						<my-others name="others" route="[[subroute]]"></my-others>
-						<my-wallpapers name="wallpapers" route="[[subroute]]"></my-wallpapers>
-						<my-art name="art" route="[[subroute]]"></my-art>
-						<my-feedie name="feedie" route="[[subroute]]"></my-feedie>
-						<my-hapsell name="hapsell" route="[[subroute]]"></my-hapsell>
-						<my-konnect name="konnect" route="[[subroute]]"></my-konnect>
-						<my-aeiou name="aeiou" route="[[subroute]]"></my-aeiou>
-						<my-mnmlurl name="mnmlurl" route="[[subroute]]"></my-mnmlurl>
-						<my-mnmlurlextension name="mnmlurlextension" route="[[subroute]]"></my-mnmlurlextension>
-						<my-metadata name="metadata" route="[[subroute]]"></my-metadata>
-						<my-marcdown name="marcdown" route="[[subroute]]"></my-marcdown>
-						<my-colorbook name="colorbook" route="[[subroute]]"></my-colorbook>
-						<my-books name="books" route="[[subroute]]"></my-books>
-						<my-banner name="banner" route="[[subroute]]"></my-banner>
-						<my-fuseorg name="fuseorg" route="[[subroute]]"></my-fuseorg>
-						<my-lvr name="lvr" route="[[subroute]]"></my-lvr>
-						<my-pineapplenotes name="pineapplenotes" route="[[subroute]]"></my-pineapplenotes>
-						<my-materialthings name="materialthings" route="[[subroute]]"></my-materialthings>
-						<my-saapshot name="saapshot" route="[[subroute]]"></my-saapshot>
+						<my-web name="web"></my-web>
+						<my-others name="others"></my-others>
+						<my-wallpapers name="wallpapers"></my-wallpapers>
+						<my-art name="art"></my-art>
+						<my-feedie name="feedie"></my-feedie>
+						<my-hapsell name="hapsell"></my-hapsell>
+						<my-konnect name="konnect"></my-konnect>
+						<my-aeiou name="aeiou"></my-aeiou>
+						<my-mnmlurl name="mnmlurl"></my-mnmlurl>
+						<my-mnmlurlextension name="mnmlurlextension"></my-mnmlurlextension>
+						<my-metadata name="metadata"></my-metadata>
+						<my-marcdown name="marcdown"></my-marcdown>
+						<my-colorbook name="colorbook"></my-colorbook>
+						<my-books name="books"></my-books>
+						<my-banner name="banner"></my-banner>
+						<my-fuseorg name="fuseorg"></my-fuseorg>
+						<my-lvr name="lvr"></my-lvr>
+						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
+						<my-materialthings name="materialthings"></my-materialthings>
+						<my-saapshot name="saapshot"></my-saapshot>
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
@@ -564,8 +565,7 @@ class MyApp extends PolymerElement {
 					}
 				]
 			},
-			routeData: Object,
-			subroute: Object
+			routeData: Object
 		};
 	}
 	static get observers() {
@@ -609,9 +609,16 @@ class MyApp extends PolymerElement {
 			this.$.drawer.close();
 		}
 		// Animations
-		this.animate({
+		this.$.toolbar.animate({
 			opacity: [0, 1],
 			transform: ['translateY(-32px)', 'translateY(0)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.pages.animate({
+			opacity: [0, 1],
+			transform: ['translateY(32px)', 'translateY(0)']
 		}, {
 			duration: 600,
 			easing: 'ease-in-out'
@@ -619,10 +626,9 @@ class MyApp extends PolymerElement {
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
-			duration: 1000,
+			duration: 600,
 			easing: 'ease-in-out'
 		});
-		console.log('routeData.page=', this.page);
 	}
 	_pageChanged(page, oldPage) {
 		// Import the page component on demand.
@@ -755,16 +761,23 @@ class MyApp extends PolymerElement {
 	}
 	show() {
 		this.$.toolbar.animate({
-			transform: ['translateY(-100%)', 'translateY(0)']
+			opacity: [0, 1],
+			transform: ['translateY(-32px)', 'translateY(0)']
 		}, {
-			duration: 500,
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.pages.animate({
+			opacity: [0, 1],
+			transform: ['translateY(32px)', 'translateY(0)']
+		}, {
+			duration: 600,
 			easing: 'ease-in-out'
 		});
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
-			delay: 500,
-			duration: 1000,
+			duration: 600,
 			easing: 'ease-in-out'
 		});
 	}
