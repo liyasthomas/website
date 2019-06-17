@@ -51,6 +51,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-icon-item {
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 				font-size: 18px;
+				font-weight: 700;
 				white-space: nowrap;
 				cursor: pointer;
 				--paper-item-focused: {
@@ -77,6 +78,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 4px;
 				padding: 16px 32px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-weight: 700;
 				text-transform: none;
 				transition: all .2s ease;
 				border-radius: 32px;
@@ -211,13 +213,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item {
 				border-radius: 8px;
 				background-color: var(--light-primary-color);
-//				@apply --shadow-elevation-2dp;
-			}
-			.item:hover {
-//				@apply --shadow-elevation-4dp;
 			}
 			.item:hover .title {
 				color: var(--accent-color);
+			}
+			.item:hover .description {
+				color: var(--primary-text-color);
+			}
+			.item:hover .info {
+				color: var(--dark-accent-color);
 			}
 			.container {
 				@apply --layout-flex;
@@ -290,6 +294,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 				@apply --layout-center;
 				color: var(--accent-color);
+				font-weight: 700;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
