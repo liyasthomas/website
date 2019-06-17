@@ -206,6 +206,7 @@ class MyApp extends PolymerElement {
 					color: var(--primary-color);
 					will-change: transform;
 					transition: 0.6s transform;
+					@apply --shadow-elevation-4dp;
 				}
 				#fab.shrink-to-hidden {
 					transform: scale(0);
@@ -498,7 +499,7 @@ class MyApp extends PolymerElement {
 					<footer>
 						&copy; 2019 Liyas Thomas &middot; <a class="link" on-click="openModal">License</a>
 					</footer>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" elevation="4" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
+					<paper-fab id="fab" icon$="my-icons:[[_getShareIcon(scrolled)]]" aria-label="Scroll top" on-click="_getShareAction"></paper-fab>
 				</app-header-layout>
 			</app-drawer-layout>
 		`;
@@ -509,21 +510,23 @@ class MyApp extends PolymerElement {
 				type: Boolean,
 				value: false,
 				reflectToAttribute: true,
-				observer: 'onLayoutChange'
+				observer: '_onLayoutChange'
 			},
 			page: {
 				type: String,
 				reflectToAttribute: true,
 				observer: '_pageChanged'
 			},
-			id: {
-				type: String,
+			opened: {
+				type: Boolean,
 				reflectToAttribute: true,
 				observer: '_pageChanged'
 			},
-			opened: {
-				type: Boolean,
-				reflectToAttribute: true
+			scrolled: {
+				type: Number,
+				value: 0,
+				reflectToAttribute: true,
+				observer: '_scrollHandler'
 			},
 			mode: {
 				type: Boolean,
@@ -591,12 +594,6 @@ class MyApp extends PolymerElement {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
-	}
-	_scrollHandler() {
-		let progress = this.$.toolbar.getScrollState().progress;
-		this.$.fab.toggleClass('shrink-to-hidden', progress > 0.8);
-		if (window.scrollY > 600)
-			this.$.fab.toggleClass('shrink-to-hidden');
 	}
 	_routePageChanged(page) {
 		// Reset scroll position
@@ -769,6 +766,25 @@ class MyApp extends PolymerElement {
 			this._networkSnackbar.open();
 		}
 	}
+	_onLayoutChange(wide) {
+		const drawer = this.$.drawer;
+		if (wide && drawer.opened) {
+			drawer.opened = false;
+		}
+	}
+	_getShareIcon(scrolled) {
+		return scrolled > 520 ? 'arrow-upward' : 'share';
+	}
+	_getShareAction() {
+		return this.scrolled > 520 ? this.scrollTop() : this.openShare();
+	}
+	_scrollHandler() {
+		this.scrolled = window.scrollY;
+		if (this.scrolled > 320 && this.scrolled < 720)
+			this.$.fab.classList.add('shrink-to-hidden');
+		else
+			this.$.fab.classList.remove('shrink-to-hidden');
+	}
 	show() {
 		this.$.toolbar.animate({
 			opacity: [0, 1],
@@ -793,12 +809,6 @@ class MyApp extends PolymerElement {
 	}
 	tryAgain() {
 		this.$.ajax.generateRequest();
-	}
-	onLayoutChange(wide) {
-		const drawer = this.$.drawer;
-		if (wide && drawer.opened) {
-			drawer.opened = false;
-		}
 	}
 	update(worker) {
 		this.$.updateToast.toggle();
