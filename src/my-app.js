@@ -205,7 +205,7 @@ class MyApp extends PolymerElement {
 					bottom: 20px;
 					color: var(--primary-color);
 					will-change: transform;
-					transition: 0.6s transform;
+					transition: .5s transform;
 					@apply --shadow-elevation-4dp;
 				}
 				#fab.shrink-to-hidden {
@@ -620,20 +620,20 @@ class MyApp extends PolymerElement {
 			opacity: [0, 1],
 			transform: ['translateY(-32px)', 'translateY(0)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 		this.$.pages.animate({
 			opacity: [0, 1],
 			transform: ['translateY(32px)', 'translateY(0)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 	}
@@ -790,20 +790,20 @@ class MyApp extends PolymerElement {
 			opacity: [0, 1],
 			transform: ['translateY(-32px)', 'translateY(0)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 		this.$.pages.animate({
 			opacity: [0, 1],
 			transform: ['translateY(32px)', 'translateY(0)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
-			duration: 600,
+			duration: 500,
 			easing: 'ease-in-out'
 		});
 	}

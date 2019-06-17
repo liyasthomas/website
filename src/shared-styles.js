@@ -208,15 +208,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply(--app-grid-expandible-item);
 				--app-grid-item-height: 30vw;
 			}
-			.app-grid {
-			}
 			.item {
 				border-radius: 8px;
-//				@apply --shadow-elevation-2dp;
 				background-color: var(--light-primary-color);
+//				@apply --shadow-elevation-2dp;
 			}
 			.item:hover {
 //				@apply --shadow-elevation-4dp;
+			}
+			.item:hover .title {
+				color: var(--accent-color);
 			}
 			.container {
 				@apply --layout-flex;
