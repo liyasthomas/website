@@ -88,7 +88,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-button.primary {
 				color: var(--accent-color);
-				border: 1px solid var(--divider-color);
 				--paper-button-raised-keyboard-focus: {
 					color: var(--dark-accent-color);
 				};
@@ -103,7 +102,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					background-color: var(--dark-accent-color);
 				};
 			}
-			paper-button.secondary:hover, paper-fab:hover {
+			paper-button.secondary:hover,
+			paper-fab:hover {
 				background-color: var(--dark-accent-color);
 			}
 			paper-button iron-icon {
@@ -114,9 +114,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				background-color: rgba(0,0,0,.04);
+				background-color: rgba(0, 0, 0, .04);
 				color: var(--primary-text-color);
-				border: 1px solid var(--divider-color);
 				border-radius: 32px;
 				--paper-input-container: {
 					padding: 4px;
@@ -135,6 +134,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-input.searchInput[focused] {
 				background-color: var(--primary-background-color);
+				@apply --shadow-elevation-2dp;
 			}
 			paper-dialog {
 				border-radius: 16px;
@@ -202,7 +202,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.grid {
 				width: 90%;
 			}
-			.grid, .list {
+			.grid,
+			.list {
 				margin: 0 auto;
 				transition: all .2s ease;
 			}
@@ -213,15 +214,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.item {
 				border-radius: 8px;
 				background-color: var(--light-primary-color);
+				@apply --shadow-elevation-2dp;
+				transition: all .2s ease;
 			}
-			.item:hover .title {
-				color: var(--accent-color);
-			}
-			.item:hover .description {
-				color: var(--primary-text-color);
-			}
-			.item:hover .info {
-				color: var(--dark-accent-color);
+			.item:hover {
+				@apply --shadow-elevation-8dp;
 			}
 			.container {
 				@apply --layout-flex;
@@ -235,31 +232,20 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					border-radius: 8px;
 				}
 			}
-			.bg {
-				border-left: 1px solid var(--divider-color);
-				border-right: 1px solid var(--divider-color);
-			}
+			.bg {}
 			.block {
 				@apply --layout-horizontal;
 			}
 			.top {
 				padding: 24px 24px 4px 24px;
 				border-radius: 8px 8px 0 0;
-				border-top: 1px solid var(--divider-color);
-				border-left: 1px solid var(--divider-color);
-				border-right: 1px solid var(--divider-color);
 			}
 			.mid {
-				padding: 4px 24px 4px 24px;
-				border-left: 1px solid var(--divider-color);
-				border-right: 1px solid var(--divider-color);
+				padding: 4px 24px 8px 24px;
 			}
 			.bottom {
-				padding: 4px 24px 24px 24px;
+				padding: 8px 24px 24px 24px;
 				border-radius: 0 0 8px 8px;
-				border-left: 1px solid var(--divider-color);
-				border-right: 1px solid var(--divider-color);
-				border-bottom: 1px solid var(--divider-color);
 			}
 			.title {
 				display: -webkit-box;
@@ -285,15 +271,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
-				color: var(--secondary-text-color);
 				font-size: 24px;
 				line-height: 1.2;
+				opacity: .54;
 			}
 			.info {
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
-				color: var(--accent-color);
 				font-weight: 700;
 				text-overflow: ellipsis;
 			}
@@ -313,9 +298,78 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				.list .item {
 					--app-grid-item-height: 100vw;
 				}
-				.actions, .content {
+				.actions,
+				.content {
 					padding: 16px;
 				}
+			}
+			.white-bg {
+				background-color: #fff;
+				color: var(--paper-grey-800);
+			}
+			.black-bg {
+				background-color: var(--paper-grey-800);
+				color: #fff;
+			}
+			.grey-bg {
+				background-color: var(--paper-grey-200);
+				color: var(--paper-grey-800);
+			}
+			.purple-bg {
+				background-color: var(--paper-purple-a100);
+				color: #fff;
+			}
+			.deep-purple-bg {
+				background-color: var(--paper-deep-purple-a100);
+				color: #fff;
+			}
+			.red-bg {
+				background-color: var(--paper-red-a100);
+				color: #fff;
+			}
+			.pink-bg {
+				background-color: var(--paper-pink-a100);
+				color: #fff;
+			}
+			.orange-bg {
+				background-color: var(--paper-orange-a100);
+				color: var(--paper-grey-800);
+			}
+			.deep-orange-bg {
+				background-color: var(--paper-deep-orange-a100);
+				color: #fff;
+			}
+			.cyan-bg {
+				background-color: var(--paper-cyan-a100);
+				color: var(--paper-grey-800);
+			}
+			.green-bg {
+				background-color: var(--paper-green-a100);
+				color: var(--paper-grey-800);
+			}
+			.yellow-bg {
+				background-color: var(--paper-yellow-a100);
+				color: var(--paper-grey-800);
+			}
+			.blue-bg {
+				background-color: var(--paper-blue-a100);
+				color: #fff;
+			}
+			.light-blue-bg {
+				background-color: var(--paper-light-blue-a100);
+				color: #fff;
+			}
+			.teal-bg {
+				background-color: var(--paper-teal-a100);
+				color: var(--paper-grey-800);
+			}
+			.indigo-bg {
+				background-color: var(--paper-indigo-a100);
+				color: #fff;
+			}
+			.blue-grey-bg {
+				background-color: var(--paper-blue-grey-700);
+				color: #fff;
 			}
 		</style>
 	</template>

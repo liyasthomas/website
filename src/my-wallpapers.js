@@ -75,7 +75,7 @@ class MyWallpapers extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
-					<paper-button class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					<paper-button class="secondary" raised aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/wallpapers_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -108,7 +108,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
-						<a href="{{sub.link}}" class="item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class=" title">{{sub.title}}</div>
@@ -136,7 +136,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{wallpapers.link}}">
-						<paper-button class="secondary" aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="secondary" raised aria-label="View all">View album<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -160,7 +160,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<a href="{{sub.link}}" class="item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -188,7 +188,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{similar.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{similar.title}} projects</paper-button>
+						<paper-button class="secondary" raised aria-label="View all">View all {{similar.title}} projects</paper-button>
 					</a>
 				</div>
 			</template>
@@ -211,6 +211,9 @@ class MyWallpapers extends PolymerElement {
 	}
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
+	}
+	_computeTileClass(color) {
+		return color + '-bg';
 	}
 }
 window.customElements.define('my-wallpapers', MyWallpapers);

@@ -97,7 +97,7 @@
 			"link": "blog",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Title 1",
 					"description": "Description",
 					"info": "View photo",
@@ -106,7 +106,7 @@
 					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Title 2",
 					"description": "Description",
 					"info": "View photo",
@@ -115,7 +115,7 @@
 					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Title 3",
 					"description": "Description",
 					"info": "View photo",
@@ -124,7 +124,7 @@
 					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Title 4",
 					"description": "Description",
 					"info": "View photo",
@@ -133,7 +133,7 @@
 					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Title 5",
 					"description": "Description",
 					"info": "View photo",

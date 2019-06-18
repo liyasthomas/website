@@ -7,7 +7,7 @@
 			"link": "https://github.com/liyasthomas/hapsell",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Home page",
 					"info": "View",
@@ -16,7 +16,7 @@
 					"link": "../images/assets/ss/hapsell/hapsell_1.png"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Products",
 					"info": "View",
@@ -25,7 +25,7 @@
 					"link": "../images/assets/ss/hapsell/hapsell_2.png"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "View product",
 					"info": "View",
@@ -34,7 +34,7 @@
 					"link": "../images/assets/ss/hapsell/hapsell_3.png"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Add to cart",
 					"info": "View",
@@ -43,7 +43,7 @@
 					"link": "../images/assets/ss/hapsell/hapsell_4.png"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Cart",
 					"info": "View",
@@ -52,7 +52,7 @@
 					"link": "../images/assets/ss/hapsell/hapsell_5.png"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Checkout",
 					"info": "View",
@@ -71,7 +71,7 @@
 			"link": "https://github.com/liyasthomas/hapsell",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -80,7 +80,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -89,7 +89,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -108,7 +108,7 @@
 			"link": "https://github.com/liyasthomas/hapsell",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -117,7 +117,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -126,7 +126,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",

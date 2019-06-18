@@ -7,7 +7,7 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "white",
+					"color": "cyan",
 					"title": "Banner",
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
@@ -16,7 +16,7 @@
 					"link": "banner"
 				},
 				{
-					"color": "purple",
+					"color": "blue",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
 					"info": "Read more",
@@ -25,7 +25,7 @@
 					"link": "books"
 				},
 				{
-					"color": "yellow",
+					"color": "light-blue",
 					"title": "Colorbook",
 					"description": "Color scheme for UI design",
 					"info": "Read more",
@@ -34,7 +34,7 @@
 					"link": "colorbook"
 				},
 				{
-					"color": "teal",
+					"color": "grey",
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
@@ -52,7 +52,7 @@
 					"link": "metadata"
 				},
 				{
-					"color": "white",
+					"color": "red",
 					"title": "MNMLURL Extension",
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
@@ -61,7 +61,7 @@
 					"link": "mnmlurlextension"
 				},
 				{
-					"color": "teal",
+					"color": "pink",
 					"title": "MNMLURL",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
@@ -79,7 +79,7 @@
 					"link": "hapsell"
 				},
 				{
-					"color": "teal",
+					"color": "black",
 					"title": "threeJS Demos",
 					"description": "3D demos",
 					"info": "Read more",
@@ -88,7 +88,7 @@
 					"link": "threejs"
 				},
 				{
-					"color": "teal",
+					"color": "indigo",
 					"title": "Stack",
 					"description": "Keep on stackin'",
 					"info": "Read more",
@@ -97,7 +97,7 @@
 					"link": "stack"
 				},
 				{
-					"color": "teal",
+					"color": "green",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
 					"info": "Read more",
@@ -106,7 +106,7 @@
 					"link": "konnect"
 				},
 				{
-					"color": "indigo",
+					"color": "purple",
 					"title": "AEIOU",
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
@@ -115,7 +115,7 @@
 					"link": "aeiou"
 				},
 				{
-					"color": "light-blue",
+					"color": "blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
@@ -142,7 +142,7 @@
 					"link": "feedie"
 				},
 				{
-					"color": "blue",
+					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Website for Fuse Org",
 					"info": "Read more",

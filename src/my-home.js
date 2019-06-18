@@ -97,7 +97,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
-						<a href="{{sub.link}}" class="item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -125,7 +125,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="secondary" raised aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -145,7 +145,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
-						<a href="{{sub.link}}" class="item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -173,7 +173,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="secondary" raised aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -193,7 +193,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">
-						<a href="{{sub.link}}" class="item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -221,7 +221,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{projects.link}}">
-						<paper-button class="secondary" aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="secondary" raised aria-label="View all">View all {{projects.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -244,6 +244,9 @@ class MyHome extends PolymerElement {
 	}
 	getUIIcon(icon) {
 		return icon ? 'dashboard' : 'view-agenda';
+	}
+	_computeTileClass(color) {
+		return color + '-bg';
 	}
 }
 window.customElements.define('my-home', MyHome);

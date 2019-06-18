@@ -7,7 +7,7 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "white",
+					"color": "cyan",
 					"title": "Banner",
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
@@ -16,7 +16,7 @@
 					"link": "banner"
 				},
 				{
-					"color": "purple",
+					"color": "blue",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
 					"info": "Read more",
@@ -25,7 +25,7 @@
 					"link": "books"
 				},
 				{
-					"color": "teal",
+					"color": "pink",
 					"title": "MNMLURL",
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
@@ -34,7 +34,7 @@
 					"link": "mnmlurl"
 				},
 				{
-					"color": "teal",
+					"color": "grey",
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
@@ -80,7 +80,7 @@
 					"link": "fuseorg"
 				},
 				{
-					"color": "light-blue",
+					"color": "blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
@@ -99,7 +99,7 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "yellow",
+					"color": "light-blue",
 					"title": "Colorbook",
 					"description": "Color scheme for UI design",
 					"info": "Read more",
@@ -108,7 +108,7 @@
 					"link": "colorbook"
 				},
 				{
-					"color": "white",
+					"color": "red",
 					"title": "MNMLURL Extension",
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
@@ -126,7 +126,7 @@
 					"link": "pineapplenotes"
 				},
 				{
-					"color": "blue",
+					"color": "indigo",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",

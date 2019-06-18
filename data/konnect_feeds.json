@@ -7,7 +7,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Sign in",
 					"info": "View",
@@ -16,7 +16,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Home page",
 					"info": "View",
@@ -25,7 +25,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Insights",
 					"info": "View",
@@ -34,7 +34,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Pages",
 					"info": "View",
@@ -43,7 +43,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Gallery",
 					"info": "View",
@@ -52,7 +52,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "Directory",
 					"info": "View",
@@ -71,7 +71,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -80,7 +80,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -89,7 +89,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -108,7 +108,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -117,7 +117,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -126,7 +126,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "white",
+					"color": "grey",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
