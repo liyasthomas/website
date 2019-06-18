@@ -7,7 +7,7 @@
 			"link": "web",
 			"sub": [
 				{
-					"color": "cyan",
+					"color": "indigo",
 					"title": "Banner",
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
@@ -34,7 +34,7 @@
 					"link": "colorbook"
 				},
 				{
-					"color": "grey",
+					"color": "purple",
 					"title": "Marcdown",
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
@@ -107,15 +107,6 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuse.svg",
-					"icon": "group",
-					"link": "fuseorg"
-				},
-				{
 					"color": "grey",
 					"title": "Art",
 					"description": "Doodles and drawings",
@@ -123,6 +114,15 @@
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
 					"link": "art"
+				},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuse.svg",
+					"icon": "group",
+					"link": "fuseorg"
 				}
 			]
 		}

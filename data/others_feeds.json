@@ -44,7 +44,7 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "blue",
+					"color": "indigo",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
 					"info": "Read more",

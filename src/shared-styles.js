@@ -368,7 +368,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: #fff;
 			}
 			.blue-grey-bg {
-				background-color: var(--paper-blue-grey-700);
+				background-color: var(--paper-blue-grey-500);
 				color: #fff;
 			}
 		</style>
