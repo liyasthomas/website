@@ -12,7 +12,7 @@
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
-					"icon": "arrow-forward",
+					"icon": "aspect-ratio",
 					"link": "banner"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Find books from Google Play Books",
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
-					"icon": "arrow-forward",
+					"icon": "book",
 					"link": "books"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "arrow-forward",
+					"icon": "link",
 					"link": "mnmlurl"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "arrow-forward",
+					"icon": "bubble-chart",
 					"link": "marcdown"
 				}
 			]
@@ -85,7 +85,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
+					"icon": "visibility",
 					"link": "lvr"
 				}
 			]
@@ -104,7 +104,7 @@
 					"description": "Color scheme for UI design",
 					"info": "Read more",
 					"img": "../images/assets/projects/colorbook.svg",
-					"icon": "arrow-forward",
+					"icon": "color-lens",
 					"link": "colorbook"
 				},
 				{
@@ -113,7 +113,7 @@
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurlextension.svg",
-					"icon": "arrow-forward",
+					"icon": "extension",
 					"link": "mnmlurlextension"
 				},
 				{
@@ -122,7 +122,7 @@
 					"description": "A simple, clean note app",
 					"info": "Read more",
 					"img": "../images/assets/projects/pineapplenotes.svg",
-					"icon": "arrow-forward",
+					"icon": "note",
 					"link": "pineapplenotes"
 				},
 				{
@@ -131,7 +131,7 @@
 					"description": "Faculty feedback system",
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
-					"icon": "arrow-forward",
+					"icon": "star",
 					"link": "feedie"
 				}
 			]

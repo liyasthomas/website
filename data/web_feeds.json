@@ -12,7 +12,7 @@
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
-					"icon": "arrow-forward",
+					"icon": "aspect-ratio",
 					"link": "banner"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Find books from Google Play Books",
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
-					"icon": "arrow-forward",
+					"icon": "book",
 					"link": "books"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Color scheme for UI design",
 					"info": "Read more",
 					"img": "../images/assets/projects/colorbook.svg",
-					"icon": "arrow-forward",
+					"icon": "color-lens",
 					"link": "colorbook"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "arrow-forward",
+					"icon": "bubble-chart",
 					"link": "marcdown"
 				},
 				{
@@ -48,7 +48,7 @@
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
 					"img": "../images/assets/projects/metadata.svg",
-					"icon": "arrow-forward",
+					"icon": "info",
 					"link": "metadata"
 				},
 				{
@@ -57,7 +57,7 @@
 					"description": "Cross-browser extension for Minimal URL",
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurlextension.svg",
-					"icon": "arrow-forward",
+					"icon": "extension",
 					"link": "mnmlurlextension"
 				},
 				{
@@ -66,7 +66,7 @@
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "language",
+					"icon": "link",
 					"link": "mnmlurl"
 				},
 				{
@@ -75,7 +75,7 @@
 					"description": "Have a product? Sell it!",
 					"info": "Read more",
 					"img": "../images/assets/projects/hapsell.svg",
-					"icon": "language",
+					"icon": "shopping-cart",
 					"link": "hapsell"
 				},
 				{
@@ -84,7 +84,7 @@
 					"description": "3D demos",
 					"info": "Read more",
 					"img": "../images/assets/projects/threejs.svg",
-					"icon": "language",
+					"icon": "3d-rotation",
 					"link": "threejs"
 				},
 				{
@@ -93,7 +93,7 @@
 					"description": "Keep on stackin'",
 					"info": "Read more",
 					"img": "../images/assets/projects/stack.svg",
-					"icon": "language",
+					"icon": "layers",
 					"link": "stack"
 				},
 				{
@@ -111,7 +111,7 @@
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
-					"icon": "arrow-forward",
+					"icon": "adjust",
 					"link": "aeiou"
 				},
 				{
@@ -120,7 +120,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
+					"icon": "visibility",
 					"link": "lvr"
 				},
 				{
@@ -129,7 +129,7 @@
 					"description": "Reusable Material Design components",
 					"info": "Read more",
 					"img": "../images/assets/projects/materialthings.svg",
-					"icon": "arrow-forward",
+					"icon": "code",
 					"link": "materialthings"
 				},
 				{
@@ -138,7 +138,7 @@
 					"description": "Faculty feedback system",
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
-					"icon": "arrow-forward",
+					"icon": "star",
 					"link": "feedie"
 				},
 				{
@@ -147,7 +147,7 @@
 					"description": "Website for Fuse Org",
 					"info": "Read more",
 					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "arrow-forward",
+					"icon": "group",
 					"link": "fuseorg"
 				},
 				{
@@ -156,7 +156,7 @@
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Read more",
 					"img": "../images/assets/projects/snake.svg",
-					"icon": "arrow-forward",
+					"icon": "gesture",
 					"link": "snake"
 				},
 				{
@@ -165,7 +165,7 @@
 					"description": "A simple, clean note app",
 					"info": "Read more",
 					"img": "../images/assets/projects/pineapplenotes.svg",
-					"icon": "arrow-forward",
+					"icon": "note",
 					"link": "pineapplenotes"
 				},
 				{
@@ -174,7 +174,7 @@
 					"description": "Shoot em down!",
 					"info": "Read more",
 					"img": "../images/assets/projects/shooter.svg",
-					"icon": "arrow-forward",
+					"icon": "whatshot",
 					"link": "shooter"
 				},
 				{
@@ -183,7 +183,7 @@
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
 					"img": "../images/assets/projects/ily.svg",
-					"icon": "arrow-forward",
+					"icon": "favorite",
 					"link": "ily"
 				},
 				{
@@ -192,7 +192,7 @@
 					"description": "Camera app",
 					"info": "Read more",
 					"img": "../images/assets/projects/saapshot.svg",
-					"icon": "arrow-forward",
+					"icon": "camera-alt",
 					"link": "saapshot"
 				}
 			]

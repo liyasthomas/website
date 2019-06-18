@@ -6,6 +6,26 @@
 			"link": "web",
 			"sub": [
 				{
+					"title": "Books",
+					"icon": "book",
+					"link": "books"
+				},
+				{
+					"title": "Colorbook",
+					"icon": "color-lens",
+					"link": "colorbook"
+				},
+				{
+					"title": "Marcdown",
+					"icon": "bubble-chart",
+					"link": "marcdown"
+				},
+				{
+					"title": "MNMLURL",
+					"icon": "link",
+					"link": "mnmlurl"
+				},
+				{
 					"title": "Lvr",
 					"icon": "visibility",
 					"link": "lvr"
@@ -14,6 +34,11 @@
 					"title": "Feedie",
 					"icon": "star",
 					"link": "feedie"
+				},
+				{
+					"title": "Pineapple Notes",
+					"icon": "note",
+					"link": "pineapplenotes"
 				}
 			]
 		}
@@ -33,6 +58,11 @@
 					"title": "Fuse Org",
 					"icon": "group",
 					"link": "fuseorg"
+				},
+				{
+					"title": "Art",
+					"icon": "create",
+					"link": "art"
 				}
 			]
 		}

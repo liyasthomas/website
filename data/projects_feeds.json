@@ -12,7 +12,7 @@
 					"description": "A simple and clean banner generator",
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
-					"icon": "arrow-forward",
+					"icon": "aspect-ratio",
 					"link": "banner"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Find books from Google Play Books",
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
-					"icon": "arrow-forward",
+					"icon": "book",
 					"link": "books"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Color scheme for UI design",
 					"info": "Read more",
 					"img": "../images/assets/projects/colorbook.svg",
-					"icon": "arrow-forward",
+					"icon": "color-lens",
 					"link": "colorbook"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Lightweight markdown viewer and editor",
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "arrow-forward",
+					"icon": "bubble-chart",
 					"link": "marcdown"
 				},
 				{
@@ -48,7 +48,7 @@
 					"description": "File metadata viewer made in Electron",
 					"info": "Read more",
 					"img": "../images/assets/projects/metadata.svg",
-					"icon": "arrow-forward",
+					"icon": "info",
 					"link": "metadata"
 				},
 				{
@@ -57,7 +57,7 @@
 					"description": "Minimal URL is a modern URL shortener with support for custom alias",
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "language",
+					"icon": "link",
 					"link": "mnmlurl"
 				},
 				{
@@ -75,7 +75,7 @@
 					"description": "Platform to make augmented reality fun and interactive",
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
-					"icon": "arrow-forward",
+					"icon": "adjust",
 					"link": "aeiou"
 				},
 				{
@@ -84,7 +84,7 @@
 					"description": "Faculty feedback system",
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
-					"icon": "arrow-forward",
+					"icon": "star",
 					"link": "feedie"
 				}
 			]
