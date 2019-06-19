@@ -7,8 +7,8 @@ class MyView4 extends PolymerElement {
 	static get template() {
 		return html `
 			<style include="shared-styles">
-				:host {
-					display: block;
+
+
 					padding: 10px;
 				}
 			</style>

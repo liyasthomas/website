@@ -52,7 +52,6 @@ class MyApp extends PolymerElement {
 		return html `
 			<style include="shared-styles">
 				:host {
-					display: block;
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
@@ -127,11 +126,11 @@ class MyApp extends PolymerElement {
 				.leftItem {
 					display: none;
 				}
-				:host(:not([page=home])) .leftItem {
-					display: block;
-				}
 				:host(:not([page=home])) [drawer-toggle] {
 					display: none;
+				}
+				:host(:not([page=home])) .leftItem {
+					display: block;
 				}
 				[main-title] {
 					font-size: 32px;
@@ -207,6 +206,7 @@ class MyApp extends PolymerElement {
 					color: var(--primary-color);
 					will-change: transform;
 					transition: .5s transform;
+					@apply --shadow-elevation-6dp;
 				}
 				#fab.shrink-to-hidden {
 					transform: scale(0);

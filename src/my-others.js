@@ -11,58 +11,6 @@ class MyOthers extends PolymerElement {
 			<style include="app-grid-style">
 			</style>
 			<style include="shared-styles">
-				:host {
-					display: block;
-					--app-grid-item-height: 100%;
-					margin-top: 32px;
-				}
-				@media all and (min-width: 0) and (max-width: 360px) {
-					:host {
-						--app-grid-columns: 1;
-						--app-grid-gutter: 16px;
-						--app-grid-item-height: 110vw;
-						--app-grid-expandible-item-columns: 1;
-					}
-					.list {
-						width: 100%;
-					}
-				}
-				@media all and (min-width: 361px) and (max-width: 640px) {
-					:host {
-						--app-grid-columns: 1;
-						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
-						--app-grid-expandible-item-columns: 1;
-					}
-					.list {
-						width: 100%;
-					}
-				}
-				@media all and (min-width: 641px) and (max-width: 960px) {
-					:host {
-						--app-grid-columns: 2;
-						--app-grid-gutter: 24px;
-						--app-grid-item-height: 50vw;
-						--app-grid-expandible-item-columns: 2;
-					}
-					.list {
-						width: 90vw;
-					}
-					.item:nth-child(5n+3) {
-						@apply --app-grid-expandible-item;
-					}
-				}
-				@media all and (min-width: 961px) {
-					:host {
-						--app-grid-columns: 3;
-						--app-grid-gutter: 24px;
-						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 3;
-					}
-					.list {
-						width: 50vw;
-					}
-				}
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
