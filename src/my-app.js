@@ -87,7 +87,7 @@ class MyApp extends PolymerElement {
 					display: none;
 				}
 				app-drawer {
-					--app-drawer-scrim-background: rgba(0,0,0,.4);
+					--app-drawer-scrim-background: rgba(0, 0, 0, .4);
 					font-weight: 700;
 					--app-drawer-content-container: {
 						background-color: var(--primary-background-color);
@@ -110,7 +110,8 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--light-primary-color);
 					background-color: var(--light-primary-color);
 				}
-				paper-listbox.listbox .iron-selected, paper-tabs .iron-selected {
+				paper-listbox.listbox .iron-selected,
+				paper-tabs .iron-selected {
 					color: var(--accent-color);
 				}
 				app-header {
@@ -206,7 +207,6 @@ class MyApp extends PolymerElement {
 					color: var(--primary-color);
 					will-change: transform;
 					transition: .5s transform;
-					@apply --shadow-elevation-4dp;
 				}
 				#fab.shrink-to-hidden {
 					transform: scale(0);
@@ -388,7 +388,7 @@ class MyApp extends PolymerElement {
 				</app-drawer>
 				<!-- Main content -->
 				<app-header-layout class="theme">
-					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
+					<app-header id="toolbar" class="toolbar" slot="header" reveals condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
 							<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
@@ -610,7 +610,7 @@ class MyApp extends PolymerElement {
 			this.page = '404';
 		}
 		// Change page title
-		document.title = `${this.page.charAt(0).toUpperCase() + this.page.slice(1)} · Liyas Thomas`;
+		document.title = `Liyas Thomas - ${this.page.charAt(0).toUpperCase() + this.page.slice(1)}`;
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {
 			this.$.drawer.close();

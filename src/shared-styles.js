@@ -43,6 +43,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 0;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			}
+			[disabled] {
+				opacity: .2;
+			}
 			.listbox {
 				background: none;
 				color: inherit;
@@ -95,6 +98,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button.primary:hover {
 				color: var(--dark-accent-color);
 			}
+			paper-fab,
 			paper-button.secondary {
 				background-color: var(--accent-color);
 				color: var(--primary-background-color);

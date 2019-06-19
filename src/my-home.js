@@ -53,10 +53,10 @@ class MyHome extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 2;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 24px;
 						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
 						width: 50vw;
@@ -67,7 +67,7 @@ class MyHome extends PolymerElement {
 			<div class="banner flexchild flex-vertical">
 				<iron-image preload fade sizing="contain" src="../images/assets/home/banner.svg" alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="_handleResponse" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -82,7 +82,7 @@ class MyHome extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{recent.title}}
 					</div>
@@ -96,7 +96,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
+					<template is="dom-repeat" items="[[filteredResults]]" as="sub">
 						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -123,14 +123,16 @@ class MyHome extends PolymerElement {
 						</a>
 					</template>
 				</div>
-				<div class$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
+					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" on-click="_getAllResults">Prev</paper-fab>
 					<a href="{{recent.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" on-click="_getAllResults">Next</paper-fab>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{popular.title}}
 					</div>
@@ -178,7 +180,7 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.projects]]" as="projects">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{projects.title}}
 					</div>
@@ -227,6 +229,14 @@ class MyHome extends PolymerElement {
 			</template>
 		`;
 	}
+	static get properties() {
+		return {
+			pageNumber: {
+				type: Number,
+				value: 0
+			}
+		};
+	}
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();
@@ -247,6 +257,42 @@ class MyHome extends PolymerElement {
 	}
 	_computeTileClass(color) {
 		return color + '-bg';
+	}
+	_handleResponse(e) {
+		this.data = e.detail.response;
+		this._getAllResults();
+	}
+	_getAllResults(event) {
+		this.resData = this.data.recent[0].sub;
+		this.isPrevDisabled = true;
+		this.isNextDisabled = false;
+		let start;
+		let end;
+		start = 0;
+		end = start + 3;
+		if (event) {
+			switch (event.target.innerHTML) {
+				case 'Next':
+					this.pageNumber++;
+					start = this.pageNumber * 3;
+					end = start + 3;
+					this.isPrevDisabled = false;
+					this.isNextDisabled = end > this.resData.length - 1 ? true : false;
+					break;
+				case 'Prev':
+					this.pageNumber--;
+					start = this.pageNumber * 3;
+					end = start + 3;
+					this.isPrevDisabled = this.pageNumber === 0 ? true : false;
+					this.isNextDisabled = false;
+					break;
+				default:
+					start = 0;
+					end = start + 3;
+					break;
+			}
+		}
+		this.filteredResults = this.resData.slice(start, end);
 	}
 }
 window.customElements.define('my-home', MyHome);

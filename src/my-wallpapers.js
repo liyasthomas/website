@@ -93,7 +93,7 @@ class MyWallpapers extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.wallpapers]]" as="wallpapers">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{wallpapers.title}}
 					</div>

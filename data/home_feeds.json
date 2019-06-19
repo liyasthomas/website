@@ -7,15 +7,6 @@
 			"link": "projects",
 			"sub": [
 				{
-					"color": "indigo",
-					"title": "Banner",
-					"description": "A simple and clean banner generator",
-					"info": "Read more",
-					"img": "../images/assets/projects/banner.svg",
-					"icon": "aspect-ratio",
-					"link": "banner"
-				},
-				{
 					"color": "blue",
 					"title": "Books",
 					"description": "Find books from Google Play Books",
@@ -41,6 +32,51 @@
 					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "bubble-chart",
 					"link": "marcdown"
+				},
+				{
+					"color": "indigo",
+					"title": "Banner",
+					"description": "A simple and clean banner generator",
+					"info": "Read more",
+					"img": "../images/assets/projects/banner.svg",
+					"icon": "aspect-ratio",
+					"link": "banner"
+				},
+				{
+					"color": "yellow",
+					"title": "Pineapple Notes",
+					"description": "A simple, clean note app",
+					"info": "Read more",
+					"img": "../images/assets/projects/pineapplenotes.svg",
+					"icon": "note",
+					"link": "pineapplenotes"
+				},
+				{
+					"color": "purple",
+					"title": "AEIOU",
+					"description": "Platform to make augmented reality fun and interactive",
+					"info": "Read more",
+					"img": "../images/assets/projects/aeiou.svg",
+					"icon": "adjust",
+					"link": "aeiou"
+				},
+				{
+					"color": "pink",
+					"title": "ily",
+					"description": "Sharing is better than getting Likes",
+					"info": "Read more",
+					"img": "../images/assets/projects/ily.svg",
+					"icon": "favorite",
+					"link": "ily"
+				},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Website for Fuse Org",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
 				}
 			]
 		}
@@ -62,15 +98,6 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuse.svg",
-					"icon": "group",
-					"link": "fuseorg"
-				},
-				{
 					"color": "grey",
 					"title": "Art",
 					"description": "Doodles and drawings",
@@ -80,13 +107,13 @@
 					"link": "art"
 				},
 				{
-					"color": "blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "visibility",
-					"link": "lvr"
+					"img": "../images/assets/projects/fuse.svg",
+					"icon": "group",
+					"link": "fuseorg"
 				}
 			]
 		}
@@ -108,24 +135,6 @@
 					"link": "colorbook"
 				},
 				{
-					"color": "red",
-					"title": "MNMLURL Extension",
-					"description": "Cross-browser extension for Minimal URL",
-					"info": "Read more",
-					"img": "../images/assets/projects/mnmlurlextension.svg",
-					"icon": "extension",
-					"link": "mnmlurlextension"
-				},
-				{
-					"color": "yellow",
-					"title": "Pineapple Notes",
-					"description": "A simple, clean note app",
-					"info": "Read more",
-					"img": "../images/assets/projects/pineapplenotes.svg",
-					"icon": "note",
-					"link": "pineapplenotes"
-				},
-				{
 					"color": "indigo",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
@@ -133,6 +142,15 @@
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "star",
 					"link": "feedie"
+				},
+				{
+					"color": "blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone!",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "visibility",
+					"link": "lvr"
 				}
 			]
 		}

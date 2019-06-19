@@ -92,7 +92,7 @@ class MyArt extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.art]]" as="art">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{art.title}}
 					</div>

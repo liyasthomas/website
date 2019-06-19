@@ -153,7 +153,7 @@ class MyAbout extends PolymerElement {
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{gallery.title}}
 					</div>

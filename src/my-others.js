@@ -89,7 +89,7 @@ class MyOthers extends PolymerElement {
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}" aria-label="Icon"></paper-icon-button>
 					</paper-input>
 				</div>
-				<div class$="[[getUIType(UI)]] actions flex-justified">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
 					<div class="title">
 						{{others.title}} <span>({{renderedCount}})</span>
 					</div>
