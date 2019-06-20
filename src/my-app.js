@@ -52,7 +52,6 @@ class MyApp extends PolymerElement {
 		return html `
 			<style include="shared-styles">
 				:host {
-					display: block;
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
@@ -127,11 +126,11 @@ class MyApp extends PolymerElement {
 				.leftItem {
 					display: none;
 				}
-				:host(:not([page=home])) .leftItem {
-					display: block;
-				}
 				:host(:not([page=home])) [drawer-toggle] {
 					display: none;
+				}
+				:host(:not([page=home])) .leftItem {
+					display: block;
 				}
 				[main-title] {
 					font-size: 32px;
@@ -207,6 +206,7 @@ class MyApp extends PolymerElement {
 					color: var(--primary-color);
 					will-change: transform;
 					transition: .5s transform;
+					@apply --shadow-elevation-6dp;
 				}
 				#fab.shrink-to-hidden {
 					transform: scale(0);
@@ -229,10 +229,9 @@ class MyApp extends PolymerElement {
 					}
 				}
 			</style>
-			<app-location route="{{route}}" url-space-regex="^[[rootPath]]">
-			</app-location>
-			<app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
-			</app-route>
+			<app-location route="{{route}}"></app-location>
+			<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+			<app-route route="{{subroute}}" pattern="/:id" data="{{subrouteData}}"></app-route>
 			<paper-dialog id="scrolling" with-backdrop>
 				<h2>License</h2>
 				<paper-dialog-scrollable>
@@ -493,7 +492,6 @@ class MyApp extends PolymerElement {
 						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
 						<my-materialthings name="materialthings"></my-materialthings>
 						<my-saapshot name="saapshot"></my-saapshot>
-						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<footer>
@@ -572,13 +570,12 @@ class MyApp extends PolymerElement {
 						icon: "whatsapp"
 					}
 				]
-			},
-			routeData: Object
+			}
 		};
 	}
 	static get observers() {
 		return [
-			'_routePageChanged(routeData.page)'
+			'_routePageChanged(routeData.page, subrouteData.id)'
 		];
 	}
 	constructor() {
@@ -595,7 +592,7 @@ class MyApp extends PolymerElement {
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
 	}
-	_routePageChanged(page) {
+	_routePageChanged(page, id) {
 		// Reset scroll position
 		this.scrollTop();
 		// Show the corresponding page according to the route.
@@ -604,8 +601,10 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about', 'web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'banner', 'books', 'aeiou', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'view4'].includes(page)) {
-			this.page = page || 'home';
+		} else if (['home', 'about'].includes(page)) {
+			this.page = page;
+		} else if (page == 'projects' && id) {
+			this.page = id;
 		} else {
 			this.page = '404';
 		}
@@ -713,9 +712,6 @@ class MyApp extends PolymerElement {
 					break;
 				case 'saapshot':
 					import('./my-saapshot.js').then(cb);
-					break;
-				case 'view4':
-					import('./my-view4.js').then(cb);
 					break;
 				case '404':
 					import('./my-404.js').then(cb);

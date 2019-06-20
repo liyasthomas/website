@@ -46,9 +46,57 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			[disabled] {
 				opacity: .2;
 			}
-			.listbox {
-				background: none;
-				color: inherit;
+			:host {
+				display: block;
+				--app-grid-item-height: 100%;
+				margin-top: 32px;
+			}
+			@media all and (min-width: 0) and (max-width: 360px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 110vw;
+					--app-grid-expandible-item-columns: 1;
+				}
+				.list {
+					width: 100%;
+				}
+			}
+			@media all and (min-width: 361px) and (max-width: 640px) {
+				:host {
+					--app-grid-columns: 1;
+					--app-grid-gutter: 16px;
+					--app-grid-item-height: 100vw;
+					--app-grid-expandible-item-columns: 1;
+				}
+				.list {
+					width: 100%;
+				}
+			}
+			@media all and (min-width: 641px) and (max-width: 960px) {
+				:host {
+					--app-grid-columns: 2;
+					--app-grid-gutter: 24px;
+					--app-grid-item-height: 50vw;
+					--app-grid-expandible-item-columns: 2;
+				}
+				.list {
+					width: 90vw;
+				}
+				.item:nth-child(5n+3) {
+					@apply --app-grid-expandible-item;
+				}
+			}
+			@media all and (min-width: 961px) {
+				:host {
+					--app-grid-columns: 3;
+					--app-grid-gutter: 24px;
+					--app-grid-item-height: 30vw;
+					--app-grid-expandible-item-columns: 3;
+				}
+				.list {
+					width: 50vw;
+				}
 			}
 			paper-item,
 			paper-icon-item {
@@ -145,7 +193,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				max-width: 360px;
 				max-width: 600px;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
-				line-height: 1.25;
+				line-height: 1.2;
 			}
 			paper-dialog h2 {
 				padding: 24px 24px 0;
@@ -220,6 +268,17 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: var(--light-primary-color);
 				@apply --shadow-elevation-2dp;
 				transition: all .2s ease;
+				transform: scale(0);
+				animation: scale .6s;
+				animation-fill-mode: forwards;
+			}
+			@keyframes scale {
+				from {
+					transform: scale(0);
+				}
+				to {
+					transform: scale(1);
+				}
 			}
 			.item:hover {
 				@apply --shadow-elevation-8dp;
@@ -236,7 +295,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					border-radius: 8px;
 				}
 			}
-			.bg {}
 			.block {
 				@apply --layout-horizontal;
 			}
@@ -258,7 +316,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
 				font-size: 28px;
-				line-height: 1.25;
+				line-height: 1.2;
 				font-weight: 700;
 			}
 			.title span {
@@ -274,7 +332,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
+				-webkit-line-clamp: 2;
 				font-size: 24px;
 				line-height: 1.2;
 				opacity: .54;
@@ -288,7 +346,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			@media (max-width: 640px) {
 				.banner {
-					height: calc(100vh - 160px);
+					height: calc(100vh - 128px);
 				}
 				.title {
 					font-size: 24px;
@@ -306,6 +364,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				.content {
 					padding: 16px;
 				}
+			}
+			.listbox {
+				background: none;
+				color: inherit;
 			}
 			.white-bg {
 				background-color: #fff;
