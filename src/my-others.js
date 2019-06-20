@@ -182,6 +182,9 @@ class MyOthers extends PolymerElement {
 	getUIType(UI) {
 		return UI ? 'list' : 'grid';
 	}
+	getUIIcon(icon) {
+		return icon ? 'dashboard' : 'view-agenda';
+	}
 	_computeTileClass(color) {
 		return color + '-bg';
 	}

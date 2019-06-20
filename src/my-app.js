@@ -293,7 +293,7 @@ class MyApp extends PolymerElement {
 				<app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
 					<paper-listbox selected="[[page]]" attr-for-selected="name" class="listbox" role="navigation">
-						<a name="home" href="[[rootPath]]">
+						<a name="home" href="{{rootPath}}">
 							<paper-icon-item>
 								<iron-icon icon$="my-icons:home[[_getPageIcon('home',page)]]" slot="item-icon"></iron-icon>
 								<span>Home</span>
@@ -331,7 +331,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a name="{{web.link}}" href="projects/{{web.link}}">
+								<a name="{{web.link}}" href="project/{{web.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -340,7 +340,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
-									<a name="[[sub.link]]" href="projects/[[sub.link]]">
+									<a name="{{sub.link}}" href="project/{{sub.link}}">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -358,7 +358,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
-									<a name="[[sub.link]]" href="projects/[[sub.link]]">
+									<a name="{{sub.link}}" href="project/{{sub.link}}">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -404,7 +404,7 @@ class MyApp extends PolymerElement {
 							<div class="flexchild"></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="name" autoselect no-bar hidden$="{{!wideLayout}}" on-click="scrollTop">
 								<paper-tab name="home">
-									<a href="[[rootPath]]">
+									<a href="{{rootPath}}">
 										<iron-icon icon$="my-icons:home[[_getPageIcon('home',page)]]"></iron-icon>
 										Home
 									</a>
