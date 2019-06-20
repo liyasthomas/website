@@ -331,7 +331,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a name="{{web.link}}" href="{{web.link}}">
+								<a name="{{web.link}}" href="projects/{{web.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -340,7 +340,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
-									<a name="[[sub.link]]" href="[[sub.link]]">
+									<a name="[[sub.link]]" href="projects/[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -350,7 +350,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a name="{{others.link}}" href="{{others.link}}">
+								<a name="{{others.link}}" href="project/{{others.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
@@ -358,7 +358,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
-									<a name="[[sub.link]]" href="[[sub.link]]">
+									<a name="[[sub.link]]" href="projects/[[sub.link]]">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -601,9 +601,9 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'about'].includes(page)) {
+		} else if (['home', 'projects', 'about'].includes(page)) {
 			this.page = page;
-		} else if (page == 'projects' && id) {
+		} else if (page == 'project' && id) {
 			this.page = id;
 		} else {
 			this.page = '404';

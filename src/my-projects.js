@@ -58,7 +58,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortWebVal)}}" rendered-item-count="{{renderedWebCount}}">
-						<a href="projects/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -88,7 +88,7 @@ class MyProjects extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="projects/{{web.link}}">
+					<a href="project/{{web.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -118,7 +118,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[others.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortOthersVal)}}" rendered-item-count="{{renderedOthersCount}}">
-						<a href="projects/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -148,7 +148,7 @@ class MyProjects extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="projects/{{others.link}}">
+					<a href="project/{{others.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
 				</div>
