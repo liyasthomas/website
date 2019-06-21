@@ -466,13 +466,13 @@ class MyApp extends PolymerElement {
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
-										<template is="dom-if" if="{{!pwainstalled}}">
+										<template is="dom-if" if="{{!pwaInstalled}}">
 											<a>
 												<paper-icon-item on-tap="installPWA">
 													<iron-icon icon="my-icons:get-app" slot="item-icon"></iron-icon>
 													<span>
 														Get app
-														<paper-badge hidden$="{{pwainstalled}}" label=""></paper-badge>
+														<paper-badge hidden$="{{pwaInstalled}}" label=""></paper-badge>
 													</span>
 													<paper-ripple></paper-ripple>
 												</paper-icon-item>
@@ -480,7 +480,7 @@ class MyApp extends PolymerElement {
 										</template>
 									</paper-listbox>
 								</paper-menu-button>
-								<paper-badge hidden$="{{pwainstalled}}" for="menu-button" label=""></paper-badge>
+								<paper-badge hidden$="{{pwaInstalled}}" for="menu-button" label=""></paper-badge>
 							</div>
 						</app-toolbar>
 					</app-header>
@@ -536,9 +536,9 @@ class MyApp extends PolymerElement {
 				reflectToAttribute: true,
 				observer: '_pageChanged'
 			},
-			pwainstalled: {
+			pwaInstalled: {
 				type: Boolean,
-				value: window.matchMedia('(display-mode: standalone)').matches ? true : false,
+				value: localStorage.getItem('pwaInstalled') == 'yes' ? true : false,
 				reflectToAttribute: true
 			},
 			deferredPrompt: {
@@ -616,17 +616,25 @@ class MyApp extends PolymerElement {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
+		if (window.matchMedia('(display-mode: standalone)').matches) {
+			localStorage.setItem('pwaInstalled', 'yes');
+			this.pwaInstalled = true;
+		}
+		if (window.navigator.standalone === true) {
+			localStorage.setItem('pwaInstalled', 'yes');
+			this.pwaInstalled = true;
+		}
 		window.addEventListener('beforeinstallprompt', (e) => {
 			// Stash the event so it can be triggered later.
 			this.deferredPrompt = e;
 			// Update UI notify the user they can add to home screen
+			localStorage.setItem('pwaInstalled', localStorage.getItem('pwaInstalled') == 'yes' ? 'yes' : 'no');
+			this.pwaInstalled = localStorage.getItem('pwaInstalled') == 'yes' ? true : false;
 		});
 		window.addEventListener('appinstalled', (evt) => {
-			this.pwainstalled = true;
+			localStorage.setItem('pwaInstalled', 'yes');
+			this.pwaInstalled = true;
 		});
-		if (window.navigator.standalone === true) {
-			this.pwainstalled = true;
-		}
 	}
 	_routePageChanged(page, id) {
 		// Reset scroll position
@@ -899,7 +907,6 @@ class MyApp extends PolymerElement {
 		}
 	}
 	installPWA() {
-		console.log("Hide notification");
 		// Show the prompt
 		this.deferredPrompt.prompt();
 		// Wait for the user to respond to the prompt
