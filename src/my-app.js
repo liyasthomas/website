@@ -462,13 +462,6 @@ class MyApp extends PolymerElement {
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
-										<a>
-											<paper-icon-item on-tap="installPWA">
-												<iron-icon icon="my-icons:get-app" slot="item-icon"></iron-icon>
-												<span>Get app</span>
-												<paper-ripple></paper-ripple>
-											</paper-icon-item>
-										</a>
 									</paper-listbox>
 								</paper-menu-button>
 							</div>
@@ -597,24 +590,6 @@ class MyApp extends PolymerElement {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
-		// Install PWA
-		window.addEventListener('beforeinstallprompt', (e) => {
-			// Prevent Chrome 67 and earlier from automatically showing the prompt
-			e.preventDefault();
-			// Stash the event so it can be triggered later.
-			deferredPrompt = e;
-			// Update UI notify the user they can add to home screen
-			console.log("show button");
-		});
-		window.addEventListener('appinstalled', (evt) => {
-			app.logEvent('a2hs', 'installed');
-		});
-		if (window.matchMedia('(display-mode: standalone)').matches) {
-			console.log('display-mode is standalone');
-		}
-		if (window.navigator.standalone === true) {
-			console.log('display-mode is standalone');
-		}
 	}
 	_routePageChanged(page, id) {
 		// Reset scroll position
@@ -885,20 +860,6 @@ class MyApp extends PolymerElement {
 		} catch (err) {
 			console.log("Share failed:", err.message);
 		}
-	}
-	installPWA() {
-		// Show the prompt
-		beforeinstallpromptevent.prompt();
-		// Wait for the user to respond to the prompt
-		beforeinstallpromptevent.prompt().userChoice
-			.then((choiceResult) => {
-				if (choiceResult.outcome === 'accepted') {
-					console.log('User accepted the A2HS prompt');
-				} else {
-					console.log('User dismissed the A2HS prompt');
-				}
-				deferredPrompt = null;
-			});
 	}
 }
 window.customElements.define('my-app', MyApp);
