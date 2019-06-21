@@ -888,9 +888,9 @@ class MyApp extends PolymerElement {
 	}
 	installPWA() {
 		// Show the prompt
-		deferredPrompt.prompt();
+		beforeinstallpromptevent.prompt();
 		// Wait for the user to respond to the prompt
-		deferredPrompt.userChoice
+		beforeinstallpromptevent.prompt().userChoice
 			.then((choiceResult) => {
 				if (choiceResult.outcome === 'accepted') {
 					console.log('User accepted the A2HS prompt');
