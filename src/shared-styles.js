@@ -13,6 +13,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			[hidden] {
 				display: none;
 			}
+			[disabled] {
+				opacity: .2;
+			}
 			a {
 				text-decoration: none;
 				color: inherit;
@@ -43,15 +46,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 0;
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			}
-			[disabled] {
-				opacity: .2;
-			}
 			:host {
 				display: block;
 				--app-grid-item-height: 100%;
 				margin-top: 32px;
 			}
-			@media all and (min-width: 0) and (max-width: 360px) {
+			@media all and (max-width: 360px) {
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
@@ -162,7 +162,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin-left: 8px;
 			}
 			paper-progress {
-				display: block;
 				width: 100%;
 			}
 			paper-input.searchInput {

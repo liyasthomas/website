@@ -69,6 +69,8 @@ class MyApp extends PolymerElement {
 					--paper-toggle-button-checked-bar-color: var(--dark-accent-color);
 					--paper-toggle-button-checked-button-color: var(--light-accent-color);
 					--paper-toggle-button-checked-ink-color: var(--accent-color);
+					--paper-badge-width: 8px;
+					--paper-badge-height: 8px;
 					background-color: var(--primary-background-color);
 					color: var(--primary-text-color);
 				}
@@ -432,7 +434,7 @@ class MyApp extends PolymerElement {
 									<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
 								</a>
 								<paper-menu-button vertical-align="top" horizontal-align="right" close-on-activate>
-									<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More"></paper-icon-button>
+									<paper-icon-button id="menu-button" icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More"></paper-icon-button>
 									<paper-listbox slot="dropdown-content">
 										<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi," target="_blank" rel="noopener">
 											<paper-icon-item>
@@ -457,13 +459,28 @@ class MyApp extends PolymerElement {
 										</a>
 										<a>
 											<paper-icon-item on-tap="toggleDark">
-												<paper-toggle-button checked={{mode}} on-tap="toggleDark" on-change="toggleDark" slot="item-icon"></paper-toggle-button>
-												<span>Dark mode</span>
+												<paper-toggle-button checked={{darkMode}} on-tap="toggleDark" on-change="toggleDark" slot="item-icon"></paper-toggle-button>
+												<span>
+														Dark mode
+													</span>
 												<paper-ripple></paper-ripple>
 											</paper-icon-item>
 										</a>
+										<template is="dom-if" if="{{!pwainstalled}}">
+											<a>
+												<paper-icon-item on-tap="installPWA">
+													<iron-icon icon="my-icons:get-app" slot="item-icon"></iron-icon>
+													<span>
+														Get app
+														<paper-badge hidden$="{{pwainstalled}}" label=""></paper-badge>
+													</span>
+													<paper-ripple></paper-ripple>
+												</paper-icon-item>
+											</a>
+										</template>
 									</paper-listbox>
 								</paper-menu-button>
+								<paper-badge hidden$="{{pwainstalled}}" for="menu-button" label=""></paper-badge>
 							</div>
 						</app-toolbar>
 					</app-header>
@@ -519,13 +536,22 @@ class MyApp extends PolymerElement {
 				reflectToAttribute: true,
 				observer: '_pageChanged'
 			},
+			pwainstalled: {
+				type: Boolean,
+				value: window.matchMedia('(display-mode: standalone)').matches ? true : false,
+				reflectToAttribute: true
+			},
+			deferredPrompt: {
+				type: Event,
+				reflectToAttribute: true
+			},
 			scrolled: {
 				type: Number,
 				value: 0,
 				reflectToAttribute: true,
 				observer: '_scrollHandler'
 			},
-			mode: {
+			darkMode: {
 				type: Boolean,
 				value: localStorage.getItem('mode') == 'dark' ? true : false,
 				reflectToAttribute: true
@@ -590,6 +616,17 @@ class MyApp extends PolymerElement {
 			window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
 			window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
 		});
+		window.addEventListener('beforeinstallprompt', (e) => {
+			// Stash the event so it can be triggered later.
+			this.deferredPrompt = e;
+			// Update UI notify the user they can add to home screen
+		});
+		window.addEventListener('appinstalled', (evt) => {
+			this.pwainstalled = true;
+		});
+		if (window.navigator.standalone === true) {
+			this.pwainstalled = true;
+		}
 	}
 	_routePageChanged(page, id) {
 		// Reset scroll position
@@ -839,10 +876,10 @@ class MyApp extends PolymerElement {
 		localStorage.setItem('mode', localStorage.getItem('mode') == 'dark' ? 'light' : 'dark');
 		if (localStorage.getItem('mode') == 'dark') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
-			this.mode = true;
+			this.darkMode = true;
 		} else {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
-			this.mode = false;
+			this.darkMode = false;
 		}
 		let theme = document.querySelectorAll('.theme');
 		theme.forEach(({
@@ -860,6 +897,21 @@ class MyApp extends PolymerElement {
 		} catch (err) {
 			console.log("Share failed:", err.message);
 		}
+	}
+	installPWA() {
+		console.log("Hide notification");
+		// Show the prompt
+		this.deferredPrompt.prompt();
+		// Wait for the user to respond to the prompt
+		this.deferredPrompt.userChoice
+			.then((choiceResult) => {
+				if (choiceResult.outcome === 'accepted') {
+					console.log('User accepted the A2HS prompt');
+				} else {
+					console.log('User dismissed the A2HS prompt');
+				}
+				this.deferredPrompt = null;
+			});
 	}
 }
 window.customElements.define('my-app', MyApp);

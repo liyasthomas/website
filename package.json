@@ -28,6 +28,7 @@
 		"@polymer/iron-pages": "^3.0.1",
 		"@polymer/iron-scroll-threshold": "^3.0.1",
 		"@polymer/iron-selector": "^3.0.1",
+		"@polymer/paper-badge": "^3.0.1",
 		"@polymer/paper-button": "^3.0.1",
 		"@polymer/paper-dialog": "^3.0.1",
 		"@polymer/paper-dialog-scrollable": "^3.0.1",
