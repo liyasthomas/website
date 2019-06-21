@@ -72,11 +72,11 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
-					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" on-click="_getAllResults">Prev</paper-fab>
+					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" aria-label="Prev" on-click="_getAllResults">Prev</paper-fab>
 					<a href="{{recent.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" on-click="_getAllResults">Next</paper-fab>
+					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" aria-label="Next" on-click="_getAllResults">Next</paper-fab>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
