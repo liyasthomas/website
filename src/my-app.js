@@ -86,12 +86,11 @@ class MyApp extends PolymerElement {
 					display: none;
 				}
 				app-drawer {
-					--app-drawer-scrim-background: rgba(0, 0, 0, .4);
 					font-weight: 700;
 					--app-drawer-content-container: {
 						background-color: var(--primary-background-color);
 						color: var(--secondary-text-color);
-						@apply --shadow-elevation-12dp;
+						@apply --shadow-elevation-16dp;
 					}
 				}
 				.drawer-contents {
@@ -387,7 +386,7 @@ class MyApp extends PolymerElement {
 				</app-drawer>
 				<!-- Main content -->
 				<app-header-layout class="theme">
-					<app-header id="toolbar" class="toolbar" slot="header" reveals condenses effects="waterfall resize-snapped-title">
+					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
 							<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>

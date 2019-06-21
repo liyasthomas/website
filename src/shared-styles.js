@@ -226,7 +226,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: calc(100vh - 192px);
+				height: calc(100vh - 160px);
 				vertical-align: middle;
 				padding: 32px;
 			}
@@ -288,6 +288,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-vertical;
 				height: 100%;
 			}
+			.bg {
+				margin: 24px 24px 4px 24px;
+			}
 			iron-image {
 				@apply --layout-flex;
 				--iron-image-placeholder: {
@@ -303,10 +306,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 8px 8px 0 0;
 			}
 			.mid {
-				padding: 4px 24px 8px 24px;
+				padding: 4px 24px 4px 24px;
 			}
 			.bottom {
-				padding: 8px 24px 24px 24px;
+				padding: 4px 24px 24px 24px;
 				border-radius: 0 0 8px 8px;
 			}
 			.title {
@@ -345,9 +348,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
-				.banner {
-					height: calc(100vh - 128px);
-				}
 				.title {
 					font-size: 24px;
 				}

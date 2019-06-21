@@ -58,7 +58,7 @@ class MyAeiou extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
-						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class=" title">{{sub.title}}</div>
@@ -122,7 +122,7 @@ class MyAeiou extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
-						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class=" title">{{sub.title}}</div>
@@ -186,7 +186,7 @@ class MyAeiou extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
-						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class=" title">{{sub.title}}</div>
@@ -243,7 +243,7 @@ class MyAeiou extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
