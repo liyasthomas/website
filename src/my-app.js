@@ -897,16 +897,18 @@ class MyApp extends PolymerElement {
 		});
 	}
 	async moreShare() {
+		let title = document.title;
 		try {
 			await navigator.share({
-				title: document.title,
+				title: title,
+				text: title,
 				url: window.location.href
 			});
 		} catch (err) {
-			console.log("Share failed:", err.message);
+			location.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(title + ' - ') + location.href;
 		}
 	}
-	installPWA() {
+	async installPWA() {
 		// Show the prompt
 		this.deferredPrompt.prompt();
 		// Wait for the user to respond to the prompt

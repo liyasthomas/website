@@ -217,9 +217,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-center-center;
 			}
 			.flex-end-align {
+				height: 100%;
 				@apply --layout-horizontal;
 				@apply --layout-end;
-				height: 100%;
 			}
 			.flex-justified {
 				@apply --layout-justified;
@@ -230,8 +230,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 32px;
 			}
 			.actions {
-				@apply --layout-horizontal;
 				padding: 24px;
+				@apply --layout-horizontal;
 			}
 			.actions .title,
 			.content .title {
@@ -264,12 +264,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.item {
 				border-radius: 8px;
-				background-color: var(--light-primary-color);
-				@apply --shadow-elevation-2dp;
 				transition: all .2s ease;
 				transform: scale(0);
 				animation: scale .6s;
 				animation-fill-mode: forwards;
+				@apply --shadow-elevation-2dp;
 			}
 			@keyframes scale {
 				from {
@@ -283,9 +282,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --shadow-elevation-8dp;
 			}
 			.container {
+				height: 100%;
 				@apply --layout-flex;
 				@apply --layout-vertical;
-				height: 100%;
 			}
 			.bg {
 				margin: 24px 24px 4px 24px;
@@ -340,11 +339,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				opacity: .54;
 			}
 			.info {
+				font-weight: 700;
+				text-overflow: ellipsis;
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
-				font-weight: 700;
-				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
 				.title {
