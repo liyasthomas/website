@@ -897,15 +897,15 @@ class MyApp extends PolymerElement {
 		});
 	}
 	async moreShare() {
-		let title = document.title;
+		let text = document.title;
 		try {
 			await navigator.share({
-				title: title,
-				text: title,
+				title: text,
+				text,
 				url: window.location.href
 			});
 		} catch (err) {
-			location.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(title + ' - ') + location.href;
+			location.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${text} - `)}${location.href}`;
 		}
 	}
 	async installPWA() {
@@ -913,8 +913,10 @@ class MyApp extends PolymerElement {
 		this.deferredPrompt.prompt();
 		// Wait for the user to respond to the prompt
 		this.deferredPrompt.userChoice
-			.then((choiceResult) => {
-				if (choiceResult.outcome === 'accepted') {
+			.then(({
+				outcome
+			}) => {
+				if (outcome === 'accepted') {
 					console.log('User accepted the A2HS prompt');
 				} else {
 					console.log('User dismissed the A2HS prompt');
