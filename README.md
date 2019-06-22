@@ -27,17 +27,17 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ### Features :sparkles:
 
-:eyeglasses: Progressive web app
+:eyeglasses: **PWA**: Progressive web app
 
-:electric_plug: Offline support using Service Worker
+:electric_plug: **Offline support**: Using Service Worker
 
-:zap: Lightining fast loading and caching made with Polymer and Web Components
+:zap: **Lightining fast loading and caching**: Made with Polymer and Web Components
 
-:globe_with_meridians: Hosted in Firebase
+:globe_with_meridians: **Cloud**: Hosted in Firebase
 
 :crescent_moon: **Dark mode**: Turn the lights off!
 
-:heart: Made with love
+:heart: **Made with love**
 
 ---
 
