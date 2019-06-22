@@ -647,7 +647,7 @@ class MyApp extends PolymerElement {
 			this.page = 'home';
 		} else if (['home', 'projects', 'about'].includes(page)) {
 			this.page = page;
-		} else if (page == 'project' && id) {
+		} else if (page == 'project' && ['web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'aeiou', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'banner', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot'].includes(id)) {
 			this.page = id;
 		} else {
 			this.page = '404';
