@@ -17,9 +17,18 @@ class MyKonnect extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Konnect</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">Intranet for NCERC</div>
+				<p>College Intranet Application is for departmental utility management. It is a product built for solving the common problems colleges/schools/educational institutions face in developing a contact with the students and their caretakers on a regular basis. It has a comprehensive feature list.</p>
+				<p>- Attendance System</p>
+				<p>- Internal Marks</p>
+				<p>- E- Notes</p>
+				<p>- Events</p>
+				<p>- News and Constant updates</p>
+				<p>- Mentor – Student Management</p>
+				<p>- Student and Placement Management</p>
+				<p>- Feedback</p>
+				<p>- Subjects and Syllabus</p>
+				<p>- Many more...</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/konnect">
@@ -89,8 +98,7 @@ class MyKonnect extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>A responsive notification system is one of the most crucial intranet features to consider. Notifications alert users about everything significant to their job, including tasks sent through a workflow, responses to a forum question, or department updates. The sooner students and faculties are notified about important information, the sooner they can take action.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +161,8 @@ class MyKonnect extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Design and UI are related in many ways, but it's important to differentiate the two, as design focuses more on the visual look of your intranet than how it actually operates. Bearing this in mind, a well-designed intranet is one that is clean and minimalist in nature. A jumbled, unorganized, or messy intranet design will make even the best social intranet difficult to navigate and should be avoided at all costs.</p>
+				<p>In this case, less is always more.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +225,8 @@ class MyKonnect extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>An intranet calendar is incredibly important to stay organized and track appointments, meetings, and events. Comprehensive intranet software will have a robust calendar system and allow you to easily log an event as simply or as detailed as you wish!</p>
+				<p>Intranet document management lets employees upload documents to a repository or share them directly with certain individuals, and it comes along with as few data restrictions as possible.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

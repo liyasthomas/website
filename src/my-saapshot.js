@@ -17,9 +17,14 @@ class MySaapshot extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Saapshot</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">Camera app</div>
+				<p>- Saapshot is a fully featured and completely free Camera app for Android phones and tablets.</p>
+				<p>- Option to auto-level so your pictures are perfectly level no matter what.</p>
+				<p>- Expose your camera's functionality: support for focus modes, scene modes, color effects, white balance, ISO, exposure compensation/lock, face detection, torch, antibanding.</p>
+				<p>- Zoom via multi-touch gesture and single-touch control.</p>
+				<p>- Yes you can take a selfie (also known as front camera), includes support for "screen flash".</p>
+				<p>- Completely free, and no ads in the app. Open Source.</p>
+				<p>- Many more...</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/saapshot">
@@ -89,8 +94,8 @@ class MySaapshot extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Never miss a moment with Saapshot, and take fantastic pictures using features such as Portrait and Night Sight.</p>
+				<p>Take photos and record videos with your camera. An easy-to-use Camera app for taking photos and recording videos.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +158,8 @@ class MySaapshot extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Transform photos with a click. Use simple, yet powerful, photo and video editing tools to apply filters, adjust colors, and more.</p>
+				<p>A ccamera app to demonstrate camera functionality in the context of a Progressive Web App.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +222,8 @@ class MySaapshot extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>All photos will remain strictly private, unless you choose to share them later.</p>
+				<p>The app functions purely in your own web browser. If you do not choose to share your photos, they will remain only on your phone.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

@@ -17,9 +17,9 @@ class MyFuseorg extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Fuse org</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">Developers community</div>
+				<p>Fuse Org is dedicated to assisting individual organizers of active mobile, web, cloud, and AI developer communities on their journey leading successful and engaged groups via online training, meetup materials, networking opportunities, and more.</p>
+				<p>The community membership is free with no strings attached - we won’t ask you to promote our products, use our branding in events, or limit your work to any specific technologies, topics, or partners.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/fuse-org">
@@ -89,8 +89,8 @@ class MyFuseorg extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>As a member, you’ll get support to grow your network and community and, most importantly, support to grow as an individual leader. If you want a closer partnership with Fuse Org, you can optionally join the mailing list on top of the standard membership.</p>
+				<p>Professional growth - Access to community management and technical knowledge to help you become a stronger leader.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +153,8 @@ class MyFuseorg extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Network growth - Opportunities to connect with other community leaders, industry experts, and devs to share knowledge.</p>
+				<p>Community growth - Content, events, and best practices to assist you in building and engaging with your community.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +217,10 @@ class MyFuseorg extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>- Run by passionate individuals in local developer communities</p>
+				<p>- A group to share ideas and network with fellow developers</p>
+				<p>- Focused on developers and educational technical content</p>
+				<p>- Open to and free for all interested</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

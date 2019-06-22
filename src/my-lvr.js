@@ -17,9 +17,13 @@ class MyLvr extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Lvr</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">Virtual and Augmented Reality for everyone</div>
+				<p>Lvr is a thin framework on top of AR.js and A-Frame. Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive WebVR experiences. It runs efficiently even on mobile phones!</p>
+				<p>What things you need to install the software and how to install them.</p>
+				<p>- A device which supports WebGL and WebRTC with a working camera input</p>
+				<p>- Internet connection</p>
+				<p>- A web browser that supports WebVR. Works best with Chrome on Android devices. You can still experience WebVR content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support WebVR</p>
+				<p>- Wonder!</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/lvr">
@@ -89,8 +93,8 @@ class MyLvr extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Build VR applications for Vive, Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.</p>
+				<p>Lvr is a powerful framework on top of three.js, providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, WebVR, and WebGL.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +157,8 @@ class MyLvr extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>HTML is easy to read and copy-and-paste. Since Lvr can be used from HTML, Lvr is accessible to everyone: web developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!</p>
+				<p>Lvr contains the 3D and WebVR boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with WebGL and WebRTC.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +221,8 @@ class MyLvr extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>We supports a wide range of markers, multiple types of markers, pattern/barcode markers, multiple independent markers at the same time, or multiple markers acting as a single marker up to you to choose.</p>
+				<p>Lvr uses ar.js, which is a software with years of experience doing augmented reality.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

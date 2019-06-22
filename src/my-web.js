@@ -16,7 +16,7 @@ class MyWeb extends PolymerElement {
 			<div class="banner flexchild flex-vertical">
 				<iron-image preload fade sizing="contain" src="../images/assets/feeds/web.svg" alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/web_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" on-response="_handleResponse" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -60,7 +60,7 @@ class MyWeb extends PolymerElement {
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
+					<template is="dom-repeat" items="[[filteredResults]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
 						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -90,10 +90,12 @@ class MyWeb extends PolymerElement {
 						Nothing found for '{{filterVal}}'
 					</template>
 				</div>
-				<div class$="[[getUIType(UI)]] actions flex-center-center">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
+					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" aria-label="Prev" on-click="_getAllResults">Prev</paper-fab>
 					<a href="{{web.link}}">
-						<paper-button class="secondary" raised aria-label="View all">View all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+						<paper-button class="secondary" raised aria-label="View all">Back to all projects<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" aria-label="Next" on-click="_getAllResults">Next</paper-fab>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.similar]]" as="similar">
@@ -144,6 +146,10 @@ class MyWeb extends PolymerElement {
 				type: String,
 				value: "none",
 				reflectToAttribute: true
+			},
+			pageNumber: {
+				type: Number,
+				value: 0
 			}
 		};
 	}
@@ -187,6 +193,42 @@ class MyWeb extends PolymerElement {
 	}
 	_computeTileClass(color) {
 		return color + '-bg';
+	}
+	_handleResponse(e) {
+		this.data = e.detail.response;
+		this._getAllResults();
+	}
+	_getAllResults(event) {
+		this.resData = this.data.web[0].sub;
+		this.isPrevDisabled = true;
+		this.isNextDisabled = false;
+		let start;
+		let end;
+		start = 0;
+		end = start + 6;
+		if (event) {
+			switch (event.target.innerHTML) {
+				case 'Next':
+					this.pageNumber++;
+					start = this.pageNumber * 6;
+					end = start + 6;
+					this.isPrevDisabled = false;
+					this.isNextDisabled = end > this.resData.length - 1 ? true : false;
+					break;
+				case 'Prev':
+					this.pageNumber--;
+					start = this.pageNumber * 6;
+					end = start + 6;
+					this.isPrevDisabled = this.pageNumber === 0 ? true : false;
+					this.isNextDisabled = false;
+					break;
+				default:
+					start = 0;
+					end = start + 6;
+					break;
+			}
+		}
+		this.filteredResults = this.resData.slice(start, end);
 	}
 }
 window.customElements.define('my-web', MyWeb);

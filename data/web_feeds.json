@@ -71,7 +71,7 @@
 				},
 				{
 					"color": "teal",
-					"title": "Hapsell",
+					"title": "HapSell",
 					"description": "Have a product? Sell it!",
 					"info": "Read more",
 					"img": "../images/assets/projects/hapsell.svg",
@@ -117,7 +117,7 @@
 				{
 					"color": "blue",
 					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
+					"description": "Virtual and Augmented Reality for everyone",
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "visibility",
@@ -179,7 +179,7 @@
 				},
 				{
 					"color": "pink",
-					"title": "ily",
+					"title": "Ily",
 					"description": "Sharing is better than getting Likes",
 					"info": "Read more",
 					"img": "../images/assets/projects/ily.svg",

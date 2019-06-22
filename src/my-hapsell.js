@@ -16,10 +16,10 @@ class MyHapsell extends PolymerElement {
 				<iron-image preload fade sizing="contain" src="../images/assets/projects/hapsell.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Hapsell</div>
+				<div class="title">HapSell</div>
 				<div class="description">Have a product? Sell it!</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>HapSell will be an e-commerce marketplace that helps brands, small businesses & startups sell their products to public & private organizations, consumers & corporates. This platform is intended to enable everyone, especially small businesses' owners to be able to sell products for a wider range of buyers from India & abroad.</p>
+				<p>Entrepreneurs can open an online store on HapSell and start selling with 40,000 Indian startups who build & grow their business with government.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/hapsell">
@@ -89,8 +89,8 @@ class MyHapsell extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Offers free B2B & B2C business platforms for merchants and buyers. Selling on HapSell is free, without commission, and is free of charge.</p>
+				<p>Startups list their products and its informations such as: title, description, category, price, images, videos, availability, inventory etc. They can add, update or remove products from stores anytime.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +153,8 @@ class MyHapsell extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Post free ads. Users will easily find products based on the location & category of the startup.</p>
+				<p>Official store is a paid membership that can provide convenience for sellers in managing online stores with a variety of excellent facilities such as Shop Statistics, Cashback Giving, Coupons, Shop Cover, and much more updated features to maximize sales & services. Enjoy promos specifically for buyers in stores with “Official Store” badge. Merchant sellers who have a good & verified shop performance have the right to get an Official Store badge.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +217,8 @@ class MyHapsell extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Millions of products divided into categories. Search by product, store, startup, category, location etc. Sort and filter out newest, trending, best selling & hot products.</p>
+				<p>What will make this site different is that the entire content of the site will constantly be changing, the sellers changing, products updating, everything changing. People will be drawn to the site daily because of all the new additions.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

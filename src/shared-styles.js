@@ -55,7 +55,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 110vw;
+					--app-grid-item-height: 100vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -66,7 +66,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 100vw;
+					--app-grid-item-height: 75vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -77,7 +77,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 24px;
-					--app-grid-item-height: 50vw;
+					--app-grid-item-height: 40vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -91,7 +91,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 3;
 					--app-grid-gutter: 24px;
-					--app-grid-item-height: 30vw;
+					--app-grid-item-height: 25vw;
 					--app-grid-expandible-item-columns: 3;
 				}
 				.list {

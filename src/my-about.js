@@ -19,7 +19,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -30,7 +30,7 @@ class MyAbout extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 75vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {

@@ -17,9 +17,15 @@ class MyMnmlurl extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">MNMLURL</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">Minimal URL is a modern URL shortener with support for custom alias</div>
+				<p>The goal was to build a simple URL Shortener which can be hosted with GitHub Pages and doesn't need any costly server to host it, I knew it was not gonna be Super Secure because everything was done in client side.</p>
+				<p>Minimal URL is a modern URL shortener with support for custom alias</p>
+				<p>- Free and open source.</p>
+				<p>- Custom domain support.</p>
+				<p>- Custom URLs for shortened links.</p>
+				<p>What mnmlurl isn't</p>
+				<p>- Super Turbo Nitro Fascinating Amazing Dazzling Fast</p>
+				<p>- Most Secure URL Shortener of the universe</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/mnmlurl">
@@ -89,8 +95,8 @@ class MyMnmlurl extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Completely open source and free. You can host it on your own server.</p>
+				<p>As we all know, some social media sites such as Twitter have a character limit that doesn’t allow users to post long URLs. Therefore, the post must be relevant and concise. Best create short url tool is the one that makes a shorter web address having the more accurate information about the content that you want to share instead of having a tweet with a very long URL and misleading content. Moreover, it is recommended to brand a URL created with link compressor so that you know when it is shared.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +159,10 @@ class MyMnmlurl extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>- Shareable, user-friendly URLs.</p>
+				<p>- Short links using your brand or custom domain.</p>
+				<p>- Custom option for making personalized URLs.</p>
+				<p>- High volume commercial URL platforms for applications such as SMS text, email, advertising or social media campaigns.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +225,8 @@ class MyMnmlurl extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Insert URLs into email or Skype and never have issues with the links wrapping or breaking. Ideal for blogs, forums, social networks. Used in ebooks, online magazines, newspapers and journals. Archival uses in schools and universities.</p>
+				<p>Or anytime you run into a ridiculously long URL that just won't fit the spot mnmlurl can make your address short, plus meaningful!</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

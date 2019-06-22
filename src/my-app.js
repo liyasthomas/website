@@ -508,6 +508,7 @@ class MyApp extends PolymerElement {
 						<my-pineapplenotes name="pineapplenotes"></my-pineapplenotes>
 						<my-materialthings name="materialthings"></my-materialthings>
 						<my-saapshot name="saapshot"></my-saapshot>
+						<my-ily name="ily"></my-ily>
 						<my-404 name="404"></my-404>
 					</iron-pages>
 					<footer>
@@ -647,7 +648,7 @@ class MyApp extends PolymerElement {
 			this.page = 'home';
 		} else if (['home', 'projects', 'about'].includes(page)) {
 			this.page = page;
-		} else if (page == 'project' && ['web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'aeiou', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'banner', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot'].includes(id)) {
+		} else if (page == 'project' && ['web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'aeiou', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'banner', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'ily'].includes(id)) {
 			this.page = id;
 		} else {
 			this.page = '404';
@@ -756,6 +757,9 @@ class MyApp extends PolymerElement {
 					break;
 				case 'saapshot':
 					import('./my-saapshot.js').then(cb);
+					break;
+				case 'ily':
+					import('./my-ily.js').then(cb);
 					break;
 				case '404':
 					import('./my-404.js').then(cb);

@@ -18,8 +18,8 @@ class MyFeedie extends PolymerElement {
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Feedie</div>
 				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Fastest way to collect real-time and offline feedback from students and faculties, and get detailed and actionable reports.</p>
+				<p>A simple to use, flexible Feedback & Survey Builder to create customized, good-looking surveys. Select from pre-existing industry templates or design from scratch. Allow students to give feedbacks and ratings to teachers and professors. Also, capture insights regarding the effectiveness of their lectures, current courses, and syllabuses.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/feedie">
@@ -89,8 +89,8 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Monitor every feedback and view it in detail. Set up negative feedback alerts on Email & SMS. Mark feedbacks as urgent or flag them for review. Filter feedbacks by comments, CSAT Score and NPS Score or add custom tags to filter feedbacks easily in the Response Inbox.</p>
+				<p>Add tasks for relevant team members to take action for a feedback. Write notes about action taken against the feedback. Send emails to customers from Feedie to take immediate action, address customers’ concerns and close the loop to keep your customers delighted.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +153,8 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>With Feedie’s real-time reporting and alerts, you can monitor every negative feedback and review. Take action on customer feedback to swiftly resolve issues and improve customer experience.</p>
+				<p>Create and take feedback at education institutions like Schools, Colleges and Universities from teachers and students.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +217,8 @@ class MyFeedie extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Education surveys and feedback forms are a great way to get unbiased and direct feedback from students, parents and opportunities. Use Feedie Feedback at schools, colleges and universities to get real-time, actionable feedback and take prompt action to address complaints.</p>
+				<p>Analyze student feedback regarding the performance of teachers, professors, coaches and effectiveness of their lectures. Also, capture student feedbacks regarding other facilities.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

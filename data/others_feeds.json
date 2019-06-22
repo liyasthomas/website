@@ -32,6 +32,15 @@
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
 					"link": "art"
+				},
+				{
+					"color": "pink",
+					"title": "Blog",
+					"description": "What if life gave you another chance to learn to love again?",
+					"info": "View all",
+					"img": "../images/assets/projects/blog.svg",
+					"icon": "favorite",
+					"link": "blog"
 				}
 			]
 		}

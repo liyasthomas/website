@@ -17,9 +17,9 @@ class MyPineapplenotes extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Pineapple notes</div>
-				<div class="description">Faculty feedback system</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<div class="description">A simple, clean note app</div>
+				<p>Pineapple notes is an easy way to keep notes, lists, ideas and more. Your notes stay in sync with all of your devices for free.</p>
+				<p>The experience is all about speed and efficiency. Open it, write some thoughts, and you're done. As your collection of notes grows, you can search them instantly and keep them organized with tags and pins.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/pineapple-notes">
@@ -89,8 +89,8 @@ class MyPineapplenotes extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Help you in whatever area of your life that needs to be kept organized – and it does so in a way that is efficient and easy to understand.</p>
+				<p>If you have multiple devices, Pineapple notes will sync across all devices automatically, so you can download it everywhere and always use the same account. It is also available directly on the web, which can be great if you need to access it on a device that isn’t your own.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -153,8 +153,8 @@ class MyPineapplenotes extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Pineapple notes’s features are light and minimal. This is done intentionally in order to give you a powerful and good quality experience without all the complications. Keeping things in order doesn’t have to be complex and Pineapple notes aims to make it easy for you.</p>
+				<p>Every writer has a different process, a different method of research, different note-taking preferences, and the list goes on. There are programs out there to suit the differing and ever-changing needs of all writers. Pineapple notes caters to the type of writer whose planning and outlining process is more minimalistic. Pineapple notes doesn’t have a lot of bells and whistles, it can’t do 12 different things at once, and this is just right for some writers.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -217,8 +217,8 @@ class MyPineapplenotes extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Pineapple notes is so light-weight, clean, and minimal – but it provides tremendous quality and practical help for its users. Whether it be to research a novel, write an essay, organize your life, keep track of school assignments, or manage a business, Pineapple notes makes it easy. With no extravagant features or excessive lists of options, everything is streamlined. Notes can be searched and everything is accessible with just a click or two.</p>
+				<p>The best part is that Pineapple notes is completely free. You can download it on all of your devices, and you don’t have to pay a thing for any of them. So, what are you waiting for? Let Pineapple notes simplify your life, and give yourself more free time for everything else you need to do!</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

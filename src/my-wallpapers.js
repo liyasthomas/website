@@ -18,8 +18,8 @@ class MyWallpapers extends PolymerElement {
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Wallpapers</div>
 				<div class="description">Curated list of wallpapers</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ipsum. Alias facilis illo, consequatur perspiciatis! Itaque ex dicta similique iste nostrum veritatis fugiat cupiditate magnam asperiores, laudantium sint vitae esse!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem neque saepe ut minus nostrum non eligendi iusto, inventore, nam, repellat! Facilis veniam eius, magnam dolore pariatur soluta corrupti quibusdam?</p>
+				<p>Free HD wallpapers for your mobile and desktop screens.</p>
+				<p>On average, nowadays, we check our phone over a hundred times a day. Our phone wallpaper being the first thing we see, it can really influence our mood and it is also a great way to express our unique personality. We think it’s important that you can easily find inspiring and beautiful wallpapers that will make you happy and feel great every time you pick up your phone. Enjoy a collection that keeps on growing. Access images from Google Earth, Google+ and other partners.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://photos.app.goo.gl/6kPov1TtR65cupPi8">
