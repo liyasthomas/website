@@ -369,7 +369,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a name="blog" href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+						<a name="blog" href="blog">
 							<paper-icon-item>
 								<iron-icon icon$="my-icons:favorite[[_getPageIcon('blog',page)]]" slot="item-icon"></iron-icon>
 								<span>Blog</span>
@@ -417,7 +417,7 @@ class MyApp extends PolymerElement {
 									</a>
 								</paper-tab>
 								<paper-tab name="blog" target="_blank" rel="noopener">
-									<a href="https://liyasthomas.tumblr.com" target="_blank" rel="noopener">
+									<a href="blog">
 										<iron-icon icon$="my-icons:favorite[[_getPageIcon('blog',page)]]"></iron-icon>
 										Blog
 									</a>
@@ -487,6 +487,7 @@ class MyApp extends PolymerElement {
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="404" role="main">
 						<my-home name="home"></my-home>
 						<my-projects name="projects"></my-projects>
+						<my-blog name="blog"></my-blog>
 						<my-about name="about"></my-about>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
@@ -646,7 +647,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'about'].includes(page)) {
+		} else if (['home', 'projects', 'blog', 'about'].includes(page)) {
 			this.page = page;
 		} else if (page == 'project' && ['web', 'others', 'wallpapers', 'art', 'feedie', 'hapsell', 'konnect', 'aeiou', 'mnmlurl', 'mnmlurlextension', 'metadata', 'marcdown', 'colorbook', 'books', 'banner', 'fuseorg', 'lvr', 'pineapplenotes', 'materialthings', 'saapshot', 'ily'].includes(id)) {
 			this.page = id;
@@ -694,6 +695,9 @@ class MyApp extends PolymerElement {
 					break;
 				case 'projects':
 					import('./my-projects.js').then(cb);
+					break;
+				case 'blog':
+					import('./my-blog.js').then(cb);
 					break;
 				case 'about':
 					import('./my-about.js').then(cb);
