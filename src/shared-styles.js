@@ -47,9 +47,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
 			}
 			:host {
-				display: block;
 				--app-grid-item-height: 100%;
-				margin-top: 32px;
 			}
 			@media all and (max-width: 360px) {
 				:host {
@@ -225,7 +223,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: calc(100vh - 160px);
+				height: calc(100vh - 128px);
 				vertical-align: middle;
 				padding: 32px;
 			}

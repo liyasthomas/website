@@ -10,56 +10,10 @@ class MyAbout extends PolymerElement {
 			<style include="app-grid-style">
 			</style>
 			<style include="shared-styles">
-				:host {
-					display: block;
-					--app-grid-item-height: 100%;
-					margin-top: 32px;
-				}
-				@media all and (min-width: 0) and (max-width: 360px) {
-					:host {
-						--app-grid-columns: 1;
-						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
-						--app-grid-expandible-item-columns: 1;
-					}
-					.list {
-						width: 100%;
-					}
-				}
-				@media all and (min-width: 361px) and (max-width: 640px) {
-					:host {
-						--app-grid-columns: 1;
-						--app-grid-gutter: 16px;
-						--app-grid-item-height: 75vw;
-						--app-grid-expandible-item-columns: 1;
-					}
-					.list {
-						width: 100%;
-					}
-				}
-				@media all and (min-width: 641px) and (max-width: 960px) {
-					:host {
-						--app-grid-columns: 2;
-						--app-grid-gutter: 24px;
-						--app-grid-item-height: 40vw;
-						--app-grid-expandible-item-columns: 2;
-					}
-					.list {
-						width: 80vw;
-					}
-					.item:nth-child(5n+3) {
-						@apply --app-grid-expandible-item;
-					}
-				}
 				@media all and (min-width: 961px) {
 					:host {
 						--app-grid-columns: 4;
-						--app-grid-gutter: 24px;
-						--app-grid-item-height: 25vw;
 						--app-grid-expandible-item-columns: 2;
-					}
-					.list {
-						width: 60vw;
 					}
 					.item:nth-child(5n+1) {
 						@apply --app-grid-expandible-item;
