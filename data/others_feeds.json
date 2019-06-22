@@ -40,7 +40,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/blog.svg",
 					"icon": "favorite",
-					"link": "blog"
+					"link": "../blog"
 				}
 			]
 		}
