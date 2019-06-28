@@ -4,7 +4,7 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
-class MyIly extends PolymerElement {
+class MyShooter extends PolymerElement {
 	static get template() {
 		return html `
 			<style include="app-grid-style">
@@ -13,25 +13,20 @@ class MyIly extends PolymerElement {
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image preload fade sizing="contain" src="../images/assets/projects/ily.svg" alt="Banner"></iron-image>
+				<iron-image preload fade sizing="contain" src="../images/assets/projects/shooter.svg" alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
-				<div class="title">Ily</div>
-				<div class="description">Sharing is better than getting Likes</div>
-				<p>Your social network is owned by advertisers.</p>
-				<p>Every post you share, every friend you make and every link you follow is tracked, recorded and converted into data.</p>
-				<p>You are the product that’s bought and sold.</p>
-				<p>We believe there is a better way.</p>
-				<p>We believe in audacity.</p>
-				<p>We believe in beauty, simplicity and transparency.</p>
-				<p>We believe that the people who make things and the people who use them should be in partnership. We believe a social network can be a tool for empowerment. Not a tool to deceive, coerce and manipulate — but a place to connect, create and celebrate life. You are not a product.</p>
+				<div class="title">Shooter</div>
+				<div class="description">Shoot em down!</div>
+				<p>Shooter games are a subgenre of action video game, which often test the player's spatial awareness, reflexes, and speed in both isolated single player or networked multiplayer environments.</p>
+				<p>Shoot 'em ups are a specific subgenre of shooters wherein the player may move up and down and left and right around the screen, typically firing straight forward.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/ily">
+				<a href="https://github.com/liyasthomas/shooter">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 			</div>
-			<iron-ajax auto url="../data/ily_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/shooter_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -94,9 +89,7 @@ class MyIly extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Your social network has colors.</p>
-				<p>What's the point of those? Deceit.
-				<p>Your social network has other people and not just the two weird guys who told you to join and some tech journalist who posts about nothing but the death of Facebook. Who could ask for more than that? Trust us, this is not going to be as depressing as Google+ all over again.</p>
+				<p>Shoot 'em ups share common gameplay, but are often categorized by viewpoint. This includes fixed shooters on fixed screens. Test your marksmanship abilities, and prove you're a pro shot.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -159,8 +152,7 @@ class MyIly extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>Your social network has advertisers who pay for the social network to continue operating. You are the product that is bought and sold to pay for servers. To pay for coders. To pay for Vietnamese takeout on Fridays.</p>
-				<p>We believe there is a better way. An empty social network with no ads. A social network that keeps costs low by not using a lot of bandwidth on graphics. We believe in a social network that looks like a text file. One with circles and no sense of design. A social network you will join and then never look at again. But not like Google+, seriously.</p>
+				<p>Most commonly, the purpose of a shooter game is to shoot opponents and proceed through missions without the player character being killed or dying as a result of the player's actions. A shooting game is a genre of video game where the focus is almost entirely on the defeat of the character's enemies using the weapons given to the player.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -223,11 +215,7 @@ class MyIly extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>We believe in audacity. We believe in beauty, simplicity, and patching in privacy settings because we accidentally gave away the full names of all our users. We believe in a partnership between the social network and the users who are going to be complaining any time we inevitably try to make any money off this thing.</p>
-				<p>We believe a social network can be a tool for empowerment. Like fire or the wheel, only it lets you share pictures of cats and make vague, self-pitying posts about how hard your day was. It lets you rediscover friends who told you to join Ello on Facebook. It lets you be smug because you were an early adopter with a name like @beef or @jim and not like those late adopters like @roastbeef and @james.</p>
-				<p>You are not a product. You're a sort of apelike creature that likes to post pictures of what you are having for dinner and talk about your kids to nobody.</p>
-				<p>It may be another hollow experience. Another desperate scream into the digital abyss that will go unanswered.</p>
-				<p>But goddamn it, there aren't ads.</p>
+				<p>Keep shooting until game over! and boast to your friends about the amazing high score you reached in this online shooter game.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -305,4 +293,4 @@ class MyIly extends PolymerElement {
 		return color + '-bg';
 	}
 }
-window.customElements.define('my-ily', MyIly);
+window.customElements.define('my-shooter', MyShooter);
