@@ -12,6 +12,7 @@ class MyMnmlurlextension extends PolymerElement {
 			<style include="shared-styles">
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+      <paper-dialog id="lightbox" class="lightboxdialog" on-click="toggleLightbox"></paper-dialog>
 			<div class="banner flexchild flex-vertical">
 				<iron-image preload fade sizing="contain" src="../images/assets/projects/mnmlurlextension.svg" alt="Banner"></iron-image>
 			</div>
@@ -58,10 +59,10 @@ class MyMnmlurlextension extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section1.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
 								<div class="block top">
-									<div class=" title">{{sub.title}}</div>
+									<div class="title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -75,13 +76,13 @@ class MyMnmlurlextension extends PolymerElement {
 											{{sub.info}}
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+											<a href="{{sub.img}}" download="{{sub.img}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:{{sub.icon}}"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<paper-ripple></paper-ripple>
-						</a>
+						</div>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
@@ -122,10 +123,10 @@ class MyMnmlurlextension extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section2.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
 								<div class="block top">
-									<div class=" title">{{sub.title}}</div>
+									<div class="title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -139,13 +140,13 @@ class MyMnmlurlextension extends PolymerElement {
 											{{sub.info}}
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+											<a href="{{sub.img}}" download="{{sub.img}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:{{sub.icon}}"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<paper-ripple></paper-ripple>
-						</a>
+						</div>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
@@ -188,10 +189,10 @@ class MyMnmlurlextension extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[section3.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
 								<div class="block top">
-									<div class=" title">{{sub.title}}</div>
+									<div class="title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -205,13 +206,13 @@ class MyMnmlurlextension extends PolymerElement {
 											{{sub.info}}
 										</div>
 										<div>
-											<iron-icon icon="my-icons:{{sub.icon}}"></iron-icon>
+											<a href="{{sub.img}}" download="{{sub.img}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:{{sub.icon}}"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<paper-ripple></paper-ripple>
-						</a>
+						</div>
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
@@ -298,6 +299,17 @@ class MyMnmlurlextension extends PolymerElement {
 	}
 	_computeTileClass(color) {
 		return color + '-bg';
+	}
+	toggleLightbox(event) {
+		this.$.lightbox.toggle();
+		let model = (this.$.lightbox.opened) ?
+			`
+<iron-image class="lightbox" preload fade sizing="contain" src="`+event.model.__data.sub.img+`" alt="Banner"></iron-image>
+			` :
+			`
+Something went wrong!
+			`;
+		this.$.lightbox.innerHTML = model;
 	}
 }
 window.customElements.define('my-mnmlurlextension', MyMnmlurlextension);

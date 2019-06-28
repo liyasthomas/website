@@ -12,7 +12,7 @@ class MyWeb extends PolymerElement {
 			</style>
 			<style include="shared-styles">
 			</style>
-			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+			<iron-media-query query="min-width: 341px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
 				<iron-image preload fade sizing="contain" src="../images/assets/feeds/web.svg" alt="Banner"></iron-image>
 			</div>
@@ -205,26 +205,26 @@ class MyWeb extends PolymerElement {
 		let start;
 		let end;
 		start = 0;
-		end = start + 6;
+		end = start + 3;
 		if (event) {
 			switch (event.target.innerHTML) {
 				case 'Next':
 					this.pageNumber++;
-					start = this.pageNumber * 6;
-					end = start + 6;
+					start = this.pageNumber * 3;
+					end = start + 3;
 					this.isPrevDisabled = false;
 					this.isNextDisabled = end > this.resData.length - 1 ? true : false;
 					break;
 				case 'Prev':
 					this.pageNumber--;
-					start = this.pageNumber * 6;
-					end = start + 6;
+					start = this.pageNumber * 3;
+					end = start + 3;
 					this.isPrevDisabled = this.pageNumber === 0 ? true : false;
 					this.isNextDisabled = false;
 					break;
 				default:
 					start = 0;
-					end = start + 6;
+					end = start + 3;
 					break;
 			}
 		}

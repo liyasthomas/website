@@ -27,6 +27,7 @@ class MyAbout extends PolymerElement {
 				}
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
+      <paper-dialog id="lightbox" class="lightboxdialog" on-click="toggleLightbox"></paper-dialog>
 			<div class="banner flexchild flex-vertical">
 				<iron-image preload fade sizing="contain" src="../images/assets/about/banner.svg" alt="Banner"></iron-image>
 			</div>
@@ -122,10 +123,10 @@ class MyAbout extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[gallery.sub]]" as="sub">
-						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
 								<div class="block top">
-									<div class=" title">{{sub.title}}</div>
+									<div class="title">{{sub.title}}</div>
 								</div>
 								<div class="block mid">
 									<div class="description">{{sub.description}}</div>
@@ -139,13 +140,13 @@ class MyAbout extends PolymerElement {
 											{{sub.info}}
 										</div>
 										<div>
-											<iron-icon src="../images/assets/social/{{sub.icon}}.svg"></iron-icon>
+											<a href="{{sub.link}}" target="_blank" rel="noopener"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<paper-ripple></paper-ripple>
-						</a>
+						</div>
 					</template>
 				</div>
 			</template>
@@ -171,6 +172,17 @@ class MyAbout extends PolymerElement {
 	}
 	_computeTileClass(color) {
 		return color + '-bg';
+	}
+	toggleLightbox(event) {
+		this.$.lightbox.toggle();
+		let model = (this.$.lightbox.opened) ?
+			`
+<iron-image class="lightbox" preload fade sizing="contain" src="`+event.model.__data.sub.img+`" alt="Banner"></iron-image>
+			` :
+			`
+Something went wrong!
+			`;
+		this.$.lightbox.innerHTML = model;
 	}
 }
 window.customElements.define('my-about', MyAbout);

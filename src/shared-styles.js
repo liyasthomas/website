@@ -265,6 +265,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .2s ease;
 				transform: scale(0);
 				animation: scale .6s;
+				cursor: pointer;
 				animation-fill-mode: forwards;
 				@apply --shadow-elevation-2dp;
 			}
@@ -342,6 +343,22 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
+			}
+			.lightbox {
+				height: 100%;
+				width: auto;
+			}
+			.lightboxdialog {
+				@apply --layout-flex;
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				height: 100vh;
+				min-width: 100vw;
+				border-radius: 0;
+				background: var(--dark-primary-color);
+				box-shadow: none;
+				margin: 0;
+				padding: 0;
 			}
 			@media (max-width: 640px) {
 				.title {

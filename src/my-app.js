@@ -388,7 +388,7 @@ class MyApp extends PolymerElement {
 				</app-drawer>
 				<!-- Main content -->
 				<app-header-layout class="theme">
-					<app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-snapped-title">
+					<app-header id="toolbar" class="toolbar" slot="header" condenses reveals condenses effects="waterfall resize-snapped-title">
 						<app-toolbar sticky>
 							<paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
 							<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
