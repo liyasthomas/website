@@ -59,12 +59,6 @@ class MyWallpapers extends PolymerElement {
 					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
 						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
