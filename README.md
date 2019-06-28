@@ -37,7 +37,7 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 :crescent_moon: **Dark mode**: Turn the lights off!
 
-:crescent_moon: **Share API**: Uses native share API on compitable devices
+:see_no_evil: **Share API**: Uses native share API on compitable devices
 
 :heart: **Made with love**
 
