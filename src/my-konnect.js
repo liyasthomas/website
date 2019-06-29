@@ -20,16 +20,16 @@ class MyKonnect extends PolymerElement {
 				<div class="title">Konnect</div>
 				<div class="description">Intranet for NCERC</div>
 				<p>College Intranet Application is for departmental utility management. It is a product built for solving the common problems colleges/schools/educational institutions face in developing a contact with the students and their caretakers on a regular basis. It has a comprehensive feature list.</p>
-				<p>- Attendance System</p>
-				<p>- Internal Marks</p>
-				<p>- E- Notes</p>
-				<p>- Events</p>
-				<p>- News and Constant updates</p>
-				<p>- Mentor – Student Management</p>
-				<p>- Student and Placement Management</p>
-				<p>- Feedback</p>
-				<p>- Subjects and Syllabus</p>
-				<p>- Many more...</p>
+				<p>• Attendance System</p>
+				<p>• Internal Marks</p>
+				<p>• E-Notes</p>
+				<p>• Events</p>
+				<p>• News and Constant updates</p>
+				<p>• Mentor – Student Management</p>
+				<p>• Student and Placement Management</p>
+				<p>• Feedback</p>
+				<p>• Subjects and Syllabus</p>
+				<p>• Many more...</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/konnect">

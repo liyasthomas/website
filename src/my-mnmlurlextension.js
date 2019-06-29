@@ -20,9 +20,9 @@ class MyMnmlurlextension extends PolymerElement {
 				<div class="title">MNMLURL extension</div>
 				<div class="description">Cross-browser extension for Minimal URL</div>
 				<p>Minimal URL is a modern URL shortener with support for custom alias</p>
-				<p>- Free and open source.</p>
-				<p>- Custom domain support.</p>
-				<p>- Custom URLs for shortened links.</p>
+				<p>• Free and open source.</p>
+				<p>• Custom domain support.</p>
+				<p>• Custom URLs for shortened links.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/mnmlurl-extension">
@@ -144,10 +144,10 @@ class MyMnmlurlextension extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>- Shareable, user-friendly URLs.</p>
-				<p>- Short links using your brand or custom domain.</p>
-				<p>- Custom option for making personalized URLs.</p>
-				<p>- High volume commercial URL platforms for applications such as SMS text, email, advertising or social media campaigns.</p>
+				<p>• Shareable, user-friendly URLs.</p>
+				<p>• Short links using your brand or custom domain.</p>
+				<p>• Custom option for making personalized URLs.</p>
+				<p>• High volume commercial URL platforms for applications such as SMS text, email, advertising or social media campaigns.</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

@@ -643,8 +643,6 @@ class MyApp extends PolymerElement {
 		});
 	}
 	_routePageChanged(page, id) {
-		// Reset scroll position
-		this.scrollTop();
 		// Show the corresponding page according to the route.
 		//
 		// If no page was found in the route data, page will be an empty string.

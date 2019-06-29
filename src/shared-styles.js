@@ -382,6 +382,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background: none;
 				color: inherit;
 			}
+			.transparent-bg {
+				background-color: var(--divider-color);
+			}
 			.white-bg {
 				background-color: #fff;
 				color: var(--paper-grey-800);

@@ -200,10 +200,10 @@ class MyFuseorg extends PolymerElement {
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
-				<p>- Run by passionate individuals in local developer communities</p>
-				<p>- A group to share ideas and network with fellow developers</p>
-				<p>- Focused on developers and educational technical content</p>
-				<p>- Open to and free for all interested</p>
+				<p>• Run by passionate individuals in local developer communities</p>
+				<p>• A group to share ideas and network with fellow developers</p>
+				<p>• Focused on developers and educational technical content</p>
+				<p>• Open to and free for all interested</p>
 			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">

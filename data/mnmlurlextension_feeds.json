@@ -7,7 +7,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -16,7 +16,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -25,7 +25,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -44,7 +44,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -53,7 +53,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -62,7 +62,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -81,7 +81,7 @@
 			"link": "https://github.com/liyasthomas/konnect",
 			"sub": [
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -90,7 +90,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
@@ -99,7 +99,7 @@
 					"link": "wallpapers"
 				},
 				{
-					"color": "grey",
+					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",

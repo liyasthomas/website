@@ -21,10 +21,10 @@ class MyLvr extends PolymerElement {
 				<div class="description">Virtual and Augmented Reality for everyone</div>
 				<p>Lvr is a thin framework on top of AR.js and A-Frame. Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive WebVR experiences. It runs efficiently even on mobile phones!</p>
 				<p>What things you need to install the software and how to install them.</p>
-				<p>- A device which supports WebGL and WebRTC with a working camera input</p>
-				<p>- Internet connection</p>
-				<p>- A web browser that supports WebVR. Works best with Chrome on Android devices. You can still experience WebVR content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support WebVR</p>
-				<p>- Wonder!</p>
+				<p>• A device which supports WebGL and WebRTC with a working camera input</p>
+				<p>• Internet connection</p>
+				<p>• A web browser that supports WebVR. Works best with Chrome on Android devices. You can still experience WebVR content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support WebVR</p>
+				<p>• Wonder!</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/lvr">

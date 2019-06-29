@@ -19,13 +19,13 @@ class MySaapshot extends PolymerElement {
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">Saapshot</div>
 				<div class="description">Camera app</div>
-				<p>- Saapshot is a fully featured and completely free Camera app for Android phones and tablets.</p>
-				<p>- Option to auto-level so your pictures are perfectly level no matter what.</p>
-				<p>- Expose your camera's functionality: support for focus modes, scene modes, color effects, white balance, ISO, exposure compensation/lock, face detection, torch, antibanding.</p>
-				<p>- Zoom via multi-touch gesture and single-touch control.</p>
-				<p>- Yes you can take a selfie (also known as front camera), includes support for "screen flash".</p>
-				<p>- Completely free, and no ads in the app. Open Source.</p>
-				<p>- Many more...</p>
+				<p>• Saapshot is a fully featured and completely free Camera app for Android phones and tablets.</p>
+				<p>• Option to auto-level so your pictures are perfectly level no matter what.</p>
+				<p>• Expose your camera's functionality: support for focus modes, scene modes, color effects, white balance, ISO, exposure compensation/lock, face detection, torch, antibanding.</p>
+				<p>• Zoom via multi-touch gesture and single-touch control.</p>
+				<p>• Yes you can take a selfie (also known as front camera), includes support for "screen flash".</p>
+				<p>• Completely free, and no ads in the app. Open Source.</p>
+				<p>• Many more...</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
 				<a href="https://github.com/liyasthomas/saapshot">
