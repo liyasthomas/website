@@ -64,7 +64,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 1;
 					--app-grid-gutter: 16px;
-					--app-grid-item-height: 75vw;
+					--app-grid-item-height: 80vw;
 					--app-grid-expandible-item-columns: 1;
 				}
 				.list {
@@ -75,7 +75,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 2;
 					--app-grid-gutter: 24px;
-					--app-grid-item-height: 40vw;
+					--app-grid-item-height: 50vw;
 					--app-grid-expandible-item-columns: 2;
 				}
 				.list {
@@ -89,7 +89,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				:host {
 					--app-grid-columns: 3;
 					--app-grid-gutter: 24px;
-					--app-grid-item-height: 25vw;
+					--app-grid-item-height: 30vw;
 					--app-grid-expandible-item-columns: 3;
 				}
 				.list {
@@ -319,21 +319,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				line-height: 1.2;
 				font-weight: 700;
 			}
-			.title span {
-				color: var(--secondary-text-color);
-			}
-			iron-icon.big {
-				margin-right: 16px;
-				--iron-icon-height: 32px;
-				--iron-icon-width: 32px;
-			}
 			.description {
 				display: -webkit-box;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 24px;
+				font-size: 22px;
 				line-height: 1.2;
 				opacity: .54;
 			}
