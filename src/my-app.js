@@ -150,7 +150,7 @@ class MyApp extends PolymerElement {
 					height: 100%;
 				}
 				paper-tab {
-					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+					font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 					text-transform: capitalize;
 					font-size: 18px;
 					font-weight: 700;
@@ -182,7 +182,7 @@ class MyApp extends PolymerElement {
 				}
 				paper-toast {
 					@apply --layout-justified;
-					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+					font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 					background-color: var(--primary-text-color);
 					color: var(--primary-background-color);
 					border-radius: 8px;

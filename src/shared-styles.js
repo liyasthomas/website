@@ -44,7 +44,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h4 {
 				font-weight: 700;
 				margin: 0;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 			}
 			:host {
 				--app-grid-item-height: 100%;
@@ -98,7 +98,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 				font-size: 18px;
 				font-weight: 700;
 				white-space: nowrap;
@@ -126,7 +126,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button {
 				margin: 4px;
 				padding: 16px 32px;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 				font-weight: 700;
 				text-transform: none;
 				transition: all .2s ease;
@@ -178,7 +178,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				};
 				--paper-input-container-input: {
 					padding: 4px;
-					font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+					font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 				};
 			}
 			paper-input.searchInput[focused] {
@@ -189,7 +189,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 16px;
 				max-width: 360px;
 				max-width: 600px;
-				font-family: 'Product Sans', 'Roboto', 'Noto', sans-serif;
+				font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
 				line-height: 1.2;
 			}
 			paper-dialog h2 {
