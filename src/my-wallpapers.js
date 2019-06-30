@@ -10,6 +10,20 @@ class MyWallpapers extends PolymerElement {
 			<style include="app-grid-style">
 			</style>
 			<style include="shared-styles">
+				.walls .bg {
+					margin: 0;
+				}
+				.walls iron-image {
+					@apply --layout-flex;
+					border-radius: 8px 8px 0 0;
+					--iron-image-placeholder: {
+						background-color: var(--light-primary-color);
+						border-radius: 8px 8px 0 0;
+					}
+				}
+				.walls .bottom {
+					padding: 8px 24px 8px 24px;
+				}
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
       <paper-dialog id="lightbox" class="lightboxdialog" on-click="toggleLightbox"></paper-dialog>
@@ -57,7 +71,7 @@ class MyWallpapers extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[wallpapers.sub]]" as="sub">
-						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
+						<div class$="[[_computeTileClass(sub.color)]] item walls" on-click="toggleLightbox">
 							<div class="container">
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
