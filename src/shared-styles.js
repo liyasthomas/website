@@ -137,6 +137,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-button.primary {
 				color: var(--accent-color);
+				border: 2px solid var(--accent-color);
 				--paper-button-raised-keyboard-focus: {
 					color: var(--dark-accent-color);
 				};
@@ -163,7 +164,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				background-color: rgba(0, 0, 0, .04);
+				background-color: rgba(0,0,0,.1);
 				color: var(--primary-text-color);
 				border-radius: 32px;
 				--paper-input-container: {
@@ -347,7 +348,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				height: 100vh;
 				min-width: 100vw;
 				border-radius: 0;
-				background: var(--dark-primary-color);
+				background: rgba(0,0,0,.6);
 				box-shadow: none;
 				margin: 0;
 				padding: 0;

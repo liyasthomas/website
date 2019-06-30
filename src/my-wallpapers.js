@@ -60,7 +60,7 @@ class MyWallpapers extends PolymerElement {
 						<div class$="[[_computeTileClass(sub.color)]] item" on-click="toggleLightbox">
 							<div class="container">
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
+									<iron-image class="bg" preload fade sizing="cover" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">

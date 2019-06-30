@@ -2,62 +2,62 @@
 	"wallpapers": [
 		{
 			"title": "popular",
-			"icon": "wallpaper",
+			"icon": "get-app",
 			"color": "blue",
 			"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8",
 			"sub": [
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_1.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				},
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_2.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				},
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_3.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				},
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_4.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				},
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_5.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				},
 				{
-					"color": "transparent",
+					"color": "white",
 					"title": "Wall",
 					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/feeds/puff.svg",
-					"icon": "wallpaper",
+					"info": "View",
+					"img": "../images/assets/ss/walls/wall_6.jpg",
+					"icon": "get-app",
 					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
 				}
 			]
