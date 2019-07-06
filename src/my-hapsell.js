@@ -23,8 +23,11 @@ class MyHapsell extends PolymerElement {
 				<p>Entrepreneurs can open an online store on HapSell and start selling with 40,000 Indian startups who build & grow their business with government.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/hapsell">
+				<a href="https://hap-sell.web.app">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+				<a href="https://github.com/liyasthomas/hapsell">
+					<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/hapsell_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -80,6 +83,9 @@ class MyHapsell extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/hapsell">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -139,6 +145,9 @@ class MyHapsell extends PolymerElement {
 					<a href="{{section2.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<a href="https://github.com/liyasthomas/hapsell">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
@@ -196,6 +205,9 @@ class MyHapsell extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/hapsell">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

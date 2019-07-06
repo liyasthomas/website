@@ -23,8 +23,11 @@ class MyFeedie extends PolymerElement {
 				<p>A simple to use, flexible Feedback & Survey Builder to create customized, good-looking surveys. Select from pre-existing industry templates or design from scratch. Allow students to give feedbacks and ratings to teachers and professors. Also, capture insights regarding the effectiveness of their lectures, current courses, and syllabuses.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/feedie">
+				<a href="http://feedie.rf.gd">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+				<a href="https://github.com/liyasthomas/feedie">
+					<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/feedie_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -80,6 +83,9 @@ class MyFeedie extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/feedie">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -139,6 +145,9 @@ class MyFeedie extends PolymerElement {
 					<a href="{{section2.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<a href="https://github.com/liyasthomas/feedie">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
@@ -196,6 +205,9 @@ class MyFeedie extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/feedie">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

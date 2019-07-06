@@ -23,8 +23,11 @@ class MyPineapplenotes extends PolymerElement {
 				<p>The experience is all about speed and efficiency. Open it, write some thoughts, and you're done. As your collection of notes grows, you can search them instantly and keep them organized with tags and pins.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/pineapple-notes">
+				<a href="https://pineapple-notes.firebaseapp.com">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+				<a href="https://github.com/liyasthomas/pineapple-notes">
+					<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/pineapplenotes_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -80,6 +83,9 @@ class MyPineapplenotes extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/pineapple-notes">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -139,6 +145,9 @@ class MyPineapplenotes extends PolymerElement {
 					<a href="{{section2.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<a href="https://github.com/liyasthomas/pineapple-notes">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
@@ -196,6 +205,9 @@ class MyPineapplenotes extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/pineapple-notes">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -22,8 +22,11 @@ class MySnake extends PolymerElement {
 				<p>Feeling nostalgic for retro games? When was the last time you played a classic snake game? Wanna give it a try again? This fun game takes you back to the time when cool games were simple, yet addictive. So, if you are a fan of retro games or just in search of a simple game to keep the clock ticking, get this free Snake Game and enjoy!</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/snake">
+				<a href="https://liyasthomas.github.io/snake">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+				<a href="https://github.com/liyasthomas/snake">
+					<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/snake_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -79,6 +82,9 @@ class MySnake extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/snake">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -137,6 +143,9 @@ class MySnake extends PolymerElement {
 					<a href="{{section2.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<a href="https://github.com/liyasthomas/snake">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
@@ -193,6 +202,9 @@ class MySnake extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/snake">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

@@ -23,8 +23,11 @@ class MyThreejs extends PolymerElement {
 				<p>The aim of the project is to create an easy to use, lightweight, 3D library with a default WebGL renderer. The library also provides Canvas 2D, SVG and CSS3D renderers in the examples.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/threejs">
+				<a href="https://liyasthomas.github.io/threejs">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+				</a>
+				<a href="https://github.com/liyasthomas/threejs">
+					<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
 			<iron-ajax auto url="../data/threejs_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -80,6 +83,9 @@ class MyThreejs extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section1.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/threejs">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -138,6 +144,9 @@ class MyThreejs extends PolymerElement {
 					<a href="{{section2.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
+					<a href="https://github.com/liyasthomas/threejs">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
+					</a>
 				</div>
 			</template>
 			<div class$="[[getUIType(UI)]] content">
@@ -194,6 +203,9 @@ class MyThreejs extends PolymerElement {
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{section3.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
+					</a>
+					<a href="https://github.com/liyasthomas/threejs">
+						<paper-button class="primary" aria-label="View all">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
