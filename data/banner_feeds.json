@@ -41,7 +41,7 @@
 					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "wallpapers"
+					"link": "../images/assets/feeds/puff.svg"
 				},
 				{
 					"color": "transparent",
@@ -50,7 +50,7 @@
 					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "wallpapers"
+					"link": "../images/assets/feeds/puff.svg"
 				}
 			]
 		}
@@ -69,7 +69,7 @@
 					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "wallpapers"
+					"link": "../images/assets/feeds/puff.svg"
 				},
 				{
 					"color": "transparent",
@@ -78,7 +78,7 @@
 					"info": "View",
 					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "wallpapers"
+					"link": "../images/assets/feeds/puff.svg"
 				}
 			]
 		}
