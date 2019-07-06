@@ -9,56 +9,20 @@
 				{
 					"color": "transparent",
 					"title": "Wall",
-					"description": "Home page",
+					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_1.png"
+					"link": "wallpapers"
 				},
 				{
 					"color": "transparent",
 					"title": "Wall",
-					"description": "Products",
+					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_2.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_2.png"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "View product",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_3.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_3.png"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "Add to cart",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_4.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_4.png"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "Cart",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_5.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_5.png"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "Checkout",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_6.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/hapsell/hapsell_6.png"
+					"link": "wallpapers"
 				}
 			]
 		}
@@ -75,7 +39,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				},
@@ -84,16 +48,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
-					"icon": "get-app",
-					"link": "wallpapers"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				}
@@ -112,7 +67,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				},
@@ -121,16 +76,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
-					"icon": "get-app",
-					"link": "wallpapers"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/hapsell/hapsell_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				}
@@ -144,15 +90,6 @@
 			"color": "blue-grey",
 			"link": "projects",
 			"sub": [
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Read more",
-					"img": "../images/assets/projects/materialthings.svg",
-					"icon": "arrow-forward",
-					"link": "materialthings"
-				},
 				{
 					"color": "indigo",
 					"title": "AEIOU",

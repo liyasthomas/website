@@ -75,7 +75,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				},
@@ -84,16 +84,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
-					"icon": "get-app",
-					"link": "wallpapers"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				}
@@ -112,7 +103,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				},
@@ -121,16 +112,7 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
-					"icon": "get-app",
-					"link": "wallpapers"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/konnect/konnect_1.png",
+					"img": "../images/assets/feeds/puff.svg",
 					"icon": "get-app",
 					"link": "wallpapers"
 				}
@@ -144,15 +126,6 @@
 			"color": "blue-grey",
 			"link": "projects",
 			"sub": [
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Read more",
-					"img": "../images/assets/projects/materialthings.svg",
-					"icon": "arrow-forward",
-					"link": "materialthings"
-				},
 				{
 					"color": "indigo",
 					"title": "AEIOU",

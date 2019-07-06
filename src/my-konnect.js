@@ -10,6 +10,12 @@ class MyKonnect extends PolymerElement {
 			<style include="app-grid-style">
 			</style>
 			<style include="shared-styles">
+				@media all and (min-width: 961px) {
+					:host {
+						--app-grid-columns: 2;
+						--app-grid-expandible-item-columns: 2;
+					}
+				}
 			</style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
       <paper-dialog id="lightbox" class="lightboxdialog" on-click="toggleLightbox"></paper-dialog>
