@@ -39,18 +39,18 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/proto/figma.svg",
 					"icon": "get-app",
-					"link": "../images/assets/feeds/puff.svg"
+					"link": "../images/assets/proto/figma.svg"
 				},
 				{
 					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/proto/lunacy.svg",
 					"icon": "get-app",
-					"link": "../images/assets/feeds/puff.svg"
+					"link": "../images/assets/proto/lunacy.svg"
 				}
 			]
 		}
@@ -67,18 +67,18 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/proto/figma.svg",
 					"icon": "get-app",
-					"link": "../images/assets/feeds/puff.svg"
+					"link": "../images/assets/proto/figma.svg"
 				},
 				{
 					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/feeds/puff.svg",
+					"img": "../images/assets/proto/figma.svg",
 					"icon": "get-app",
-					"link": "../images/assets/feeds/puff.svg"
+					"link": "../images/assets/proto/figma.svg"
 				}
 			]
 		}
