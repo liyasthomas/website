@@ -559,7 +559,7 @@ class MyApp extends PolymerElement {
 			},
 			darkMode: {
 				type: Boolean,
-				value: localStorage.getItem('mode') == 'dark' ? true : false,
+				value: localStorage.getItem('mode') == 'light' ? false : true,
 				reflectToAttribute: true
 			},
 			social: {
@@ -903,7 +903,7 @@ class MyApp extends PolymerElement {
 		}, 10);
 	}
 	toggleDark() {
-		localStorage.setItem('mode', localStorage.getItem('mode') == 'dark' ? 'light' : 'dark');
+		localStorage.setItem('mode', localStorage.getItem('mode') == 'light' ? 'dark' : 'light');
 		if (localStorage.getItem('mode') == 'dark') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
 			this.darkMode = true;

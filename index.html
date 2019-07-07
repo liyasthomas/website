@@ -179,8 +179,8 @@
 	</style>
 </head>
 
-<body class="theme">
-	<my-app id="app" class="theme">
+<body class="theme dark">
+	<my-app id="app" class="theme dark">
 		<div id="preloader">
 			<div class="loader">🦄</div>
 		</div>
@@ -190,12 +190,12 @@
 		theme.forEach(({
 			classList
 		}) => {
-			localStorage.getItem('mode') == 'dark' ? classList.add('dark') : classList.remove('dark');
+			localStorage.getItem('mode') == 'light' ? classList.remove('dark') : classList.add('dark');
 		});
-		if (localStorage.getItem('mode') == 'dark') {
-			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
-		} else {
+		if (localStorage.getItem('mode') == 'light') {
 			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
+		} else {
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
 		}
 
 	</script>
