@@ -57,7 +57,7 @@
 	],
 	"section3": [
 		{
-			"title": "architecture",
+			"title": "Stack",
 			"icon": "code",
 			"color": "black",
 			"link": "https://liyasthomas.github.io/marcdown",
@@ -67,18 +67,18 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/proto/figma.svg",
+					"img": "../images/assets/stack/js.svg",
 					"icon": "get-app",
-					"link": "../images/assets/proto/figma.svg"
+					"link": "../images/assets/stack/js.svg"
 				},
 				{
 					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "../images/assets/proto/figma.svg",
+					"img": "../images/assets/stack/htmlcss.svg",
 					"icon": "get-app",
-					"link": "../images/assets/proto/figma.svg"
+					"link": "../images/assets/stack/htmlcss.svg"
 				}
 			]
 		}
