@@ -30,10 +30,10 @@ class MyMaterialthings extends PolymerElement {
 				<p>Material components are created with CSS, JavaScript, and HTML. You can use the components to construct web pages and web apps that are attractive, consistent, and functional. Pages developed with Material will adhere to modern web design principles like browser portability, device independence, and graceful degradation.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://material-things.web.app">
+				<a href="https://material-things.web.app" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
-				<a href="https://github.com/liyasthomas/material-things">
+				<a href="https://github.com/liyasthomas/material-things" target="_blank" rel="noopener">
 					<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -88,10 +88,10 @@ class MyMaterialthings extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section1.link}}">
+					<a href="{{section1.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/material-things">
+					<a href="https://github.com/liyasthomas/material-things" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -149,10 +149,10 @@ class MyMaterialthings extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section2.link}}">
+					<a href="{{section2.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/material-things">
+					<a href="https://github.com/liyasthomas/material-things" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -210,10 +210,10 @@ class MyMaterialthings extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section3.link}}">
+					<a href="{{section3.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/material-things">
+					<a href="https://github.com/liyasthomas/material-things" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>

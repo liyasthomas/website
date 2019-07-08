@@ -29,10 +29,10 @@ class MyMetadata extends PolymerElement {
 				<p>Just drag & drop or upload an image, document, video, audio or even e-book file. We will show you all metadata hidden inside the file!</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/metadata">
+				<a href="https://github.com/liyasthomas/metadata" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
-				<a href="https://github.com/liyasthomas/metadata">
+				<a href="https://github.com/liyasthomas/metadata" target="_blank" rel="noopener">
 					<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -87,10 +87,10 @@ class MyMetadata extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section1.link}}">
+					<a href="{{section1.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/metadata">
+					<a href="https://github.com/liyasthomas/metadata" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -148,10 +148,10 @@ class MyMetadata extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section2.link}}">
+					<a href="{{section2.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/metadata">
+					<a href="https://github.com/liyasthomas/metadata" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -209,10 +209,10 @@ class MyMetadata extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section3.link}}">
+					<a href="{{section3.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/metadata">
+					<a href="https://github.com/liyasthomas/metadata" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>

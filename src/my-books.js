@@ -29,10 +29,10 @@ class MyBooks extends PolymerElement {
 				<p>If the book is out of copyright, or the publisher has given us permission, you'll be able to see a preview of the book, and in some cases the entire text. If it's in the public domain, you're free to download a PDF copy.</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://liyasthomas.github.io/books">
+				<a href="https://liyasthomas.github.io/books" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
-				<a href="https://github.com/liyasthomas/books">
+				<a href="https://github.com/liyasthomas/books" target="_blank" rel="noopener">
 					<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -87,10 +87,10 @@ class MyBooks extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section1.link}}">
+					<a href="{{section1.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/books">
+					<a href="https://github.com/liyasthomas/books" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -148,10 +148,10 @@ class MyBooks extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section2.link}}">
+					<a href="{{section2.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/books">
+					<a href="https://github.com/liyasthomas/books" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -209,10 +209,10 @@ class MyBooks extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section3.link}}">
+					<a href="{{section3.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/books">
+					<a href="https://github.com/liyasthomas/books" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>

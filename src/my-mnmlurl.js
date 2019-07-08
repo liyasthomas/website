@@ -35,10 +35,10 @@ class MyMnmlurl extends PolymerElement {
 				<p>• Most Secure URL Shortener of the universe</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://mnmlurl.ml">
+				<a href="https://mnmlurl.ml" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
-				<a href="https://github.com/liyasthomas/mnmlurl">
+				<a href="https://github.com/liyasthomas/mnmlurl" target="_blank" rel="noopener">
 					<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
@@ -93,10 +93,10 @@ class MyMnmlurl extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section1.link}}">
+					<a href="{{section1.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/mnmlurl">
+					<a href="https://github.com/liyasthomas/mnmlurl" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -154,10 +154,10 @@ class MyMnmlurl extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section2.link}}">
+					<a href="{{section2.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/mnmlurl">
+					<a href="https://github.com/liyasthomas/mnmlurl" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>
@@ -217,10 +217,10 @@ class MyMnmlurl extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{section3.link}}">
+					<a href="{{section3.link}}" target="_blank" rel="noopener">
 						<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<a href="https://github.com/liyasthomas/mnmlurl">
+					<a href="https://github.com/liyasthomas/mnmlurl" target="_blank" rel="noopener">
 						<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 					</a>
 				</div>

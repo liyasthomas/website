@@ -416,7 +416,7 @@ class MyApp extends PolymerElement {
 										Projects
 									</a>
 								</paper-tab>
-								<paper-tab name="blog" target="_blank" rel="noopener">
+								<paper-tab name="blog">
 									<a href="blog">
 										<iron-icon icon$="my-icons:favorite[[_getPageIcon('blog',page)]]"></iron-icon>
 										Blog

@@ -71,7 +71,7 @@ class MyAbout extends PolymerElement {
 				</div>
 				<p>
 					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
-					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
+					<a href="https://github.com/liyasthomas" target="_blank" rel="noopener"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<iron-ajax auto url="../data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -101,7 +101,9 @@ class MyAbout extends PolymerElement {
 							<a href="{{sub.link}}"><paper-icon-button src="../images/assets/social/{{sub.icon}}.svg" aria-label="Icon"></paper-icon-button></a>
 						</template>
 					</p>
-					<p><a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a></p>
+					<p>
+						<a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a>
+					</p>
 					<p>
 						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="primary" aria-label="My Blog">My Blog<iron-icon icon="my-icons:favorite"></iron-icon></paper-button></a>
 					</p>
