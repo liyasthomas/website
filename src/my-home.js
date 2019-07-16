@@ -44,7 +44,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[filteredResults]]" as="sub">
+					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
 						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="flexchild flex-vertical">
@@ -71,12 +71,10 @@ class MyHome extends PolymerElement {
 						</a>
 					</template>
 				</div>
-				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
-					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" aria-label="Prev" on-click="_getAllResults">Prev</paper-fab>
+				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
 						<paper-button class="secondary" raised aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 					</a>
-					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" aria-label="Next" on-click="_getAllResults">Next</paper-fab>
 				</div>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
@@ -175,6 +173,53 @@ class MyHome extends PolymerElement {
 					</a>
 				</div>
 			</template>
+			<template is="dom-repeat" items="[[ajaxResponse0.testimonials]]" as="testimonials">
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
+					<div class="title">
+						{{testimonials.title}}
+					</div>
+					<paper-icon-button
+							class="link"
+							hidden$="{{!wideLayout}}"
+							toggles
+							active="{{UI}}"
+							icon$="my-icons:[[getUIIcon(UI)]]"
+							aria-label="Icon">
+					</paper-icon-button>
+				</div>
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+					<template is="dom-repeat" items="[[filteredResults]]" as="sub">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item" target="_blank" rel="noopener">
+							<div class="container">
+								<div class="block top flexchild flex-vertical">
+									<div class="title">{{sub.title}}</div>
+								</div>
+								<div class="block mid">
+									<div class="description">{{sub.description}}</div>
+								</div>
+								<div class="block bottom">
+									<div class="info">
+										<div class="flexchild">
+											{{sub.info}}
+										</div>
+										<div>
+											<iron-icon icon="my-icons:{{sub.icon}}" aria-label="Icon"></iron-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+							<paper-ripple></paper-ripple>
+						</a>
+					</template>
+				</div>
+				<div class$="[[getUIType(UI)]] actions flex-center-center flex-justified">
+					<paper-fab icon="my-icons:arrow-back" mini disabled="[[isPrevDisabled]]" aria-label="Prev" on-click="_getAllResults">Prev</paper-fab>
+					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
+						<paper-button class="secondary" raised aria-label="Say hello!">Say hello<iron-icon icon="my-icons:mail-outline"></iron-icon></paper-button>
+					</a>
+					<paper-fab icon="my-icons:arrow-forward" mini disabled="[[isNextDisabled]]" aria-label="Next" on-click="_getAllResults">Next</paper-fab>
+				</div>
+			</template>
 		`;
 	}
 	static get properties() {
@@ -211,7 +256,7 @@ class MyHome extends PolymerElement {
 		this._getAllResults();
 	}
 	_getAllResults(event) {
-		this.resData = this.data.recent[0].sub;
+		this.resData = this.data.testimonials[0].sub;
 		this.isPrevDisabled = true;
 		this.isNextDisabled = false;
 		let start;

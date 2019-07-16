@@ -59,7 +59,7 @@ class MyAbout extends PolymerElement {
 					Appreciate my works by making a donation.
 				</div>
 				<p>
-					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="primary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
+					<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener"><paper-button class="secondary" aria-label="PayPal">PayPal<iron-icon src="../images/assets/social/paypal.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -70,7 +70,7 @@ class MyAbout extends PolymerElement {
 					Open sourcing my projects, or part of it, can help inspire others.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
+					<a href="projects"><paper-button class="secondary" aria-label="My projects">My projects<iron-icon icon="my-icons:work"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas" target="_blank" rel="noopener"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
@@ -105,7 +105,7 @@ class MyAbout extends PolymerElement {
 						<a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a>
 					</p>
 					<p>
-						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="primary" aria-label="My Blog">My Blog<iron-icon icon="my-icons:favorite"></iron-icon></paper-button></a>
+						<a href="https://liyasthomas.tumblr.com" target="_blank"><paper-button class="secondary" aria-label="My Blog">My Blog<iron-icon icon="my-icons:favorite"></iron-icon></paper-button></a>
 					</p>
 				</div>
 			</template>
