@@ -45,7 +45,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[filteredResults]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
@@ -95,7 +95,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="flexchild flex-vertical">
 									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}" alt="{{sub.title}}"></iron-image>
@@ -143,7 +143,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[projects.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>

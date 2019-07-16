@@ -4,7 +4,7 @@
 			"title": "web",
 			"icon": "language",
 			"color": "light-blue",
-			"link": "web",
+			"link": "project/web",
 			"sub": [
 				{
 					"color": "indigo",
@@ -13,7 +13,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
 					"icon": "aspect-ratio",
-					"link": "banner"
+					"link": "project/banner"
 				},
 				{
 					"color": "blue",
@@ -22,7 +22,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
 					"icon": "book",
-					"link": "books"
+					"link": "project/books"
 				},
 				{
 					"color": "light-blue",
@@ -31,7 +31,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/colorbook.svg",
 					"icon": "color-lens",
-					"link": "colorbook"
+					"link": "project/colorbook"
 				},
 				{
 					"color": "purple",
@@ -40,7 +40,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "bubble-chart",
-					"link": "marcdown"
+					"link": "project/marcdown"
 				},
 				{
 					"color": "black",
@@ -49,7 +49,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/metadata.svg",
 					"icon": "info",
-					"link": "metadata"
+					"link": "project/metadata"
 				},
 				{
 					"color": "pink",
@@ -58,7 +58,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "link",
-					"link": "mnmlurl"
+					"link": "project/mnmlurl"
 				},
 				{
 					"color": "green",
@@ -67,7 +67,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "project/konnect"
 				},
 				{
 					"color": "purple",
@@ -76,7 +76,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "adjust",
-					"link": "aeiou"
+					"link": "project/aeiou"
 				},
 				{
 					"color": "indigo",
@@ -85,7 +85,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "star",
-					"link": "feedie"
+					"link": "project/feedie"
 				}
 			]
 		}
@@ -95,7 +95,7 @@
 			"title": "other",
 			"icon": "group",
 			"color": "indigo",
-			"link": "others",
+			"link": "project/others",
 			"sub": [
 				{
 					"color": "orange",
@@ -104,7 +104,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
-					"link": "wallpapers"
+					"link": "project/wallpapers"
 				},
 				{
 					"color": "grey",
@@ -113,7 +113,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
-					"link": "art"
+					"link": "project/art"
 				},
 				{
 					"color": "deep-purple",
@@ -122,7 +122,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				}
 			]
 		}

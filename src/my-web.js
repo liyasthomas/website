@@ -61,7 +61,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[filteredResults]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -106,7 +106,7 @@ class MyWeb extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>

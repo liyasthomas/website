@@ -97,7 +97,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
-					"link": "aeiou"
+					"link": "project/aeiou"
 				},
 				{
 					"color": "light-blue",
@@ -106,7 +106,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
-					"link": "lvr"
+					"link": "project/lvr"
 				}
 			]
 		}

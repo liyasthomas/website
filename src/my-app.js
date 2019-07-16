@@ -332,7 +332,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.web]]" as="web">
-								<a name="{{web.link}}" href="project/{{web.link}}">
+								<a name="{{web.link}}" href="{{web.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[web.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{web.title}}</span>
@@ -341,7 +341,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[web.sub]]" as="sub">
-									<a name="{{sub.link}}" href="project/{{sub.link}}">
+									<a name="{{sub.link}}" href="{{sub.link}}">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>
@@ -351,7 +351,7 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse.others]]" as="others">
-								<a name="{{others.link}}" href="project/{{others.link}}">
+								<a name="{{others.link}}" href="{{others.link}}">
 									<paper-icon-item class="category">
 										<iron-icon icon="my-icons:[[others.icon]]" slot="item-icon"></iron-icon>
 										<span class="expand">{{others.title}}</span>
@@ -359,7 +359,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<template is="dom-repeat" items="[[others.sub]]" as="sub">
-									<a name="{{sub.link}}" href="project/{{sub.link}}">
+									<a name="{{sub.link}}" href="{{sub.link}}">
 										<paper-icon-item>
 											<iron-icon icon="my-icons:[[sub.icon]]" slot="item-icon"></iron-icon>
 											<span>{{sub.title}}</span>

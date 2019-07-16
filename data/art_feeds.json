@@ -4,7 +4,7 @@
 			"title": "popular",
 			"icon": "create",
 			"color": "blue",
-			"link": "http://liyasthomas.tumblr.com",
+			"link": "https://liyasthomas.tumblr.com",
 			"sub": [
 				{
 					"color": "transparent",
@@ -13,7 +13,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
 					"color": "transparent",
@@ -22,7 +22,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
 					"color": "transparent",
@@ -31,7 +31,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
 					"color": "transparent",
@@ -40,7 +40,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
 					"color": "transparent",
@@ -49,7 +49,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				},
 				{
 					"color": "transparent",
@@ -58,7 +58,7 @@
 					"info": "View album",
 					"img": "../images/assets/app/puff.svg",
 					"icon": "visibility",
-					"link": "http://liyasthomas.tumblr.com"
+					"link": "https://liyasthomas.tumblr.com"
 				}
 			]
 		}
@@ -77,7 +77,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "arrow-forward",
-					"link": "feedie"
+					"link": "project/feedie"
 				},
 				{
 					"color": "green",
@@ -86,7 +86,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "project/konnect"
 				},
 				{
 					"color": "blue",
@@ -95,7 +95,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "arrow-forward",
-					"link": "feedie"
+					"link": "project/feedie"
 				}
 			]
 		}

@@ -13,7 +13,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
 					"icon": "book",
-					"link": "books"
+					"link": "project/books"
 				},
 				{
 					"color": "pink",
@@ -22,7 +22,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "link",
-					"link": "mnmlurl"
+					"link": "project/mnmlurl"
 				},
 				{
 					"color": "purple",
@@ -31,7 +31,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "bubble-chart",
-					"link": "marcdown"
+					"link": "project/marcdown"
 				},
 				{
 					"color": "indigo",
@@ -40,7 +40,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
 					"icon": "aspect-ratio",
-					"link": "banner"
+					"link": "project/banner"
 				},
 				{
 					"color": "yellow",
@@ -49,16 +49,16 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "note",
-					"link": "pineapplenotes"
+					"link": "project/pineapplenotes"
 				},
 				{
 					"color": "pink",
 					"title": "Blog",
 					"description": "What if life gave you another chance to learn to love again?",
 					"info": "View all",
-					"img": "../images/assets/projects/blog.svg",
+					"img": "../images/assets/feeds/blog.svg",
 					"icon": "favorite",
-					"link": "../blog"
+					"link": "project/../blog"
 				},
 				{
 					"color": "purple",
@@ -67,7 +67,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "adjust",
-					"link": "aeiou"
+					"link": "project/aeiou"
 				},
 				{
 					"color": "pink",
@@ -76,7 +76,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/ily.svg",
 					"icon": "favorite",
-					"link": "ily"
+					"link": "project/ily"
 				},
 				{
 					"color": "deep-purple",
@@ -85,7 +85,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				}
 			]
 		}
@@ -104,7 +104,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
-					"link": "wallpapers"
+					"link": "project/wallpapers"
 				},
 				{
 					"color": "grey",
@@ -113,7 +113,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
-					"link": "art"
+					"link": "project/art"
 				},
 				{
 					"color": "deep-purple",
@@ -122,7 +122,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				}
 			]
 		}
@@ -136,30 +136,30 @@
 			"sub": [
 				{
 					"color": "light-blue",
-					"title": "Colorbook",
-					"description": "Color scheme for UI design",
-					"info": "Read more",
-					"img": "../images/assets/projects/colorbook.svg",
-					"icon": "color-lens",
-					"link": "colorbook"
+					"title": "Web",
+					"description": "",
+					"info": "View all",
+					"img": "../images/assets/feeds/web.svg",
+					"icon": "arrow-forward",
+					"link": "project/web"
 				},
 				{
 					"color": "indigo",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
-					"icon": "star",
-					"link": "feedie"
+					"title": "Others",
+					"description": "",
+					"info": "View all",
+					"img": "../images/assets/feeds/others.svg",
+					"icon": "arrow-forward",
+					"link": "project/others"
 				},
 				{
-					"color": "blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
+					"color": "pink",
+					"title": "Blog",
+					"description": "",
 					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "visibility",
-					"link": "lvr"
+					"img": "../images/assets/feeds/blog.svg",
+					"icon": "arrow-forward",
+					"link": "blog"
 				}
 			]
 		}

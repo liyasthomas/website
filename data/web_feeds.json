@@ -13,7 +13,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/banner.svg",
 					"icon": "aspect-ratio",
-					"link": "banner"
+					"link": "project/banner"
 				},
 				{
 					"color": "blue",
@@ -22,7 +22,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/books.svg",
 					"icon": "book",
-					"link": "books"
+					"link": "project/books"
 				},
 				{
 					"color": "light-blue",
@@ -31,7 +31,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/colorbook.svg",
 					"icon": "color-lens",
-					"link": "colorbook"
+					"link": "project/colorbook"
 				},
 				{
 					"color": "purple",
@@ -40,7 +40,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/marcdown.svg",
 					"icon": "bubble-chart",
-					"link": "marcdown"
+					"link": "project/marcdown"
 				},
 				{
 					"color": "black",
@@ -49,7 +49,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/metadata.svg",
 					"icon": "info",
-					"link": "metadata"
+					"link": "project/metadata"
 				},
 				{
 					"color": "red",
@@ -58,7 +58,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurlextension.svg",
 					"icon": "extension",
-					"link": "mnmlurlextension"
+					"link": "project/mnmlurlextension"
 				},
 				{
 					"color": "pink",
@@ -67,7 +67,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/mnmlurl.svg",
 					"icon": "link",
-					"link": "mnmlurl"
+					"link": "project/mnmlurl"
 				},
 				{
 					"color": "teal",
@@ -76,7 +76,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/hapsell.svg",
 					"icon": "shopping-cart",
-					"link": "hapsell"
+					"link": "project/hapsell"
 				},
 				{
 					"color": "black",
@@ -85,7 +85,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/threejs.svg",
 					"icon": "3d-rotation",
-					"link": "threejs"
+					"link": "project/threejs"
 				},
 				{
 					"color": "indigo",
@@ -94,7 +94,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/stack.svg",
 					"icon": "layers",
-					"link": "stack"
+					"link": "project/stack"
 				},
 				{
 					"color": "green",
@@ -103,7 +103,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/konnect.svg",
 					"icon": "language",
-					"link": "konnect"
+					"link": "project/konnect"
 				},
 				{
 					"color": "purple",
@@ -112,7 +112,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "adjust",
-					"link": "aeiou"
+					"link": "project/aeiou"
 				},
 				{
 					"color": "blue",
@@ -121,7 +121,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "visibility",
-					"link": "lvr"
+					"link": "project/lvr"
 				},
 				{
 					"color": "blue-grey",
@@ -130,7 +130,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/materialthings.svg",
 					"icon": "code",
-					"link": "materialthings"
+					"link": "project/materialthings"
 				},
 				{
 					"color": "indigo",
@@ -139,7 +139,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/feedie.svg",
 					"icon": "star",
-					"link": "feedie"
+					"link": "project/feedie"
 				},
 				{
 					"color": "deep-purple",
@@ -148,7 +148,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuseorg.svg",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				},
 				{
 					"color": "grey",
@@ -157,7 +157,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/snake.svg",
 					"icon": "gesture",
-					"link": "snake"
+					"link": "project/snake"
 				},
 				{
 					"color": "yellow",
@@ -166,7 +166,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/pineapplenotes.svg",
 					"icon": "note",
-					"link": "pineapplenotes"
+					"link": "project/pineapplenotes"
 				},
 				{
 					"color": "black",
@@ -175,7 +175,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/shooter.svg",
 					"icon": "whatshot",
-					"link": "shooter"
+					"link": "project/shooter"
 				},
 				{
 					"color": "pink",
@@ -184,7 +184,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/ily.svg",
 					"icon": "favorite",
-					"link": "ily"
+					"link": "project/ily"
 				},
 				{
 					"color": "red",
@@ -193,7 +193,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/saapshot.svg",
 					"icon": "camera-alt",
-					"link": "saapshot"
+					"link": "project/saapshot"
 				}
 			]
 		}
@@ -212,7 +212,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/walls.svg",
 					"icon": "wallpaper",
-					"link": "wallpapers"
+					"link": "project/wallpapers"
 				},
 				{
 					"color": "grey",
@@ -221,7 +221,7 @@
 					"info": "View all",
 					"img": "../images/assets/projects/art.svg",
 					"icon": "create",
-					"link": "art"
+					"link": "project/art"
 				},
 				{
 					"color": "deep-purple",
@@ -230,7 +230,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/fuse.svg",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				}
 			]
 		}

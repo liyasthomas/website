@@ -13,7 +13,7 @@
 					"info": "View",
 					"img": "https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely.png",
 					"icon": "get-app",
-					"link": "https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely.png"
+					"link": "project/https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely.png"
 				},
 				{
 					"color": "transparent",
@@ -22,7 +22,7 @@
 					"info": "View",
 					"img": "https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely2.png",
 					"icon": "get-app",
-					"link": "https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely2.png"
+					"link": "project/https://raw.githubusercontent.com/liyasthomas/feedie/master/images/screely2.png"
 				}
 			]
 		}
@@ -97,7 +97,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/aeiou.svg",
 					"icon": "arrow-forward",
-					"link": "aeiou"
+					"link": "project/aeiou"
 				},
 				{
 					"color": "light-blue",
@@ -106,7 +106,7 @@
 					"info": "Read more",
 					"img": "../images/assets/projects/lvr.svg",
 					"icon": "arrow-forward",
-					"link": "lvr"
+					"link": "project/lvr"
 				}
 			]
 		}

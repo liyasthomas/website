@@ -250,7 +250,7 @@ class MyIly extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[similar.sub]]" as="sub">
-						<a href="project/{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
+						<a href="{{sub.link}}" class$="[[_computeTileClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>

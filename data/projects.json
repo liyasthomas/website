@@ -3,42 +3,42 @@
 		{
 			"title": "Web",
 			"icon": "language",
-			"link": "web",
+			"link": "project/web",
 			"sub": [
 				{
 					"title": "Books",
 					"icon": "book",
-					"link": "books"
+					"link": "project/books"
 				},
 				{
 					"title": "Colorbook",
 					"icon": "color-lens",
-					"link": "colorbook"
+					"link": "project/colorbook"
 				},
 				{
 					"title": "Marcdown",
 					"icon": "bubble-chart",
-					"link": "marcdown"
+					"link": "project/marcdown"
 				},
 				{
 					"title": "MNMLURL",
 					"icon": "link",
-					"link": "mnmlurl"
+					"link": "project/mnmlurl"
 				},
 				{
 					"title": "Lvr",
 					"icon": "visibility",
-					"link": "lvr"
+					"link": "project/lvr"
 				},
 				{
 					"title": "Feedie",
 					"icon": "star",
-					"link": "feedie"
+					"link": "project/feedie"
 				},
 				{
 					"title": "Pineapple Notes",
 					"icon": "note",
-					"link": "pineapplenotes"
+					"link": "project/pineapplenotes"
 				}
 			]
 		}
@@ -47,22 +47,22 @@
 		{
 			"title": "Others",
 			"icon": "group",
-			"link": "others",
+			"link": "project/others",
 			"sub": [
 				{
 					"title": "Wallpapers",
 					"icon": "wallpaper",
-					"link": "wallpapers"
+					"link": "project/wallpapers"
 				},
 				{
 					"title": "Fuse Org",
 					"icon": "group",
-					"link": "fuseorg"
+					"link": "project/fuseorg"
 				},
 				{
 					"title": "Art",
 					"icon": "create",
-					"link": "art"
+					"link": "project/art"
 				}
 			]
 		}
