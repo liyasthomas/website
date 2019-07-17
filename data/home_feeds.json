@@ -128,39 +128,12 @@
 				},
 				{
 					"color": "transparent",
-					"title": "“Write on your way too and from work, you have mad skills, I'm sure we would all love to hear how your getting on.”",
-					"description": "—Adam Crockett",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/adam_cyclones/comment/d3kn"
-				},
-				{
-					"color": "transparent",
 					"title": "“You are definitely a 20x Engineer”",
 					"description": "—Emmy Leke",
 					"info": "",
 					"img": "",
 					"icon": "arrow-forward",
 					"link": "https://liyasthomas.hashnode.dev/i-created-an-easy-way-to-browse-and-find-google-books-today-is-my-birthday-cjxzoeylg0006v7s147f3soxh#cjy3dpdsv000zpjs1cojh5j9c"
-				},
-				{
-					"color": "transparent",
-					"title": "“That's an awesome design Liyas. I looked at your Github projects. They are phenomenal.”",
-					"description": "—Pavan Bawdane",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/pavanbawdane/comment/d0ld"
-				},
-				{
-					"color": "transparent",
-					"title": "“Wow! such a beautiful UI. What was the inspiration behind the UI design?”",
-					"description": "—Abhi",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/abhigk/comment/d0ap"
 				},
 				{
 					"color": "transparent",
@@ -173,12 +146,21 @@
 				},
 				{
 					"color": "transparent",
-					"title": "“I really like your project. Great design, performant, and user friendly. I'd love to try and contribute and I may do soon.”",
-					"description": "—Bill",
+					"title": "“That's an awesome design Liyas. I looked at your Github projects. They are phenomenal.”",
+					"description": "—Pavan Bawdane",
 					"info": "",
 					"img": "",
 					"icon": "arrow-forward",
-					"link": "https://dev.to/babrown93/comment/d06k"
+					"link": "https://dev.to/pavanbawdane/comment/d0ld"
+				},
+				{
+					"color": "transparent",
+					"title": "“Write on your way too and from work, you have mad skills, I'm sure we would all love to hear how your getting on.”",
+					"description": "—Adam Crockett",
+					"info": "",
+					"img": "",
+					"icon": "arrow-forward",
+					"link": "https://dev.to/adam_cyclones/comment/d3kn"
 				},
 				{
 					"color": "transparent",
@@ -188,6 +170,24 @@
 					"img": "",
 					"icon": "arrow-forward",
 					"link": "https://dev.to/piyukore06/comment/d0e8"
+				},
+				{
+					"color": "transparent",
+					"title": "“Wow! such a beautiful UI. What was the inspiration behind the UI design?”",
+					"description": "—Abhi",
+					"info": "",
+					"img": "",
+					"icon": "arrow-forward",
+					"link": "https://dev.to/abhigk/comment/d0ap"
+				},
+				{
+					"color": "transparent",
+					"title": "“I really like your project. Great design, performant, and user friendly. I'd love to try and contribute and I may do soon.”",
+					"description": "—Bill",
+					"info": "",
+					"img": "",
+					"icon": "arrow-forward",
+					"link": "https://dev.to/babrown93/comment/d06k"
 				},
 				{
 					"color": "transparent",
