@@ -59,7 +59,7 @@ class MyBlog extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											{{posts.title}}
+											{{posts.summary}}
 										</div>
 										<div>
 											<a href="{{posts.post_url}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:visibility"></paper-icon-button></a>

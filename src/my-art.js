@@ -44,6 +44,11 @@ class MyArt extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-if" if="{{!error0}}">
+				<div class="grid">
+					<div class="actions flex-justified">
+						<div class="title"></div>
+					</div>
+				</div>
 				<div class="grid app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[ajaxResponse0.response.posts]]" as="posts">
 						<div class="item" on-click="toggleLightbox">
@@ -54,7 +59,7 @@ class MyArt extends PolymerElement {
 								<div class="block bottom">
 									<div class="info">
 										<div class="flexchild">
-											{{posts.title}}
+											{{posts.summary}}
 										</div>
 										<div>
 											<a href="{{posts.post_url}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:visibility"></paper-icon-button></a>
