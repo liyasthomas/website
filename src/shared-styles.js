@@ -164,7 +164,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				background-color: rgba(0, 0, 0, .1);
+				background-color: rgba(0, 0, 0, .05);
 				color: var(--primary-text-color);
 				border-radius: 32px;
 				--paper-input-container: {
@@ -376,7 +376,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: inherit;
 			}
 			.transparent-bg {
-				background-color: var(--divider-color);
+				background-color: var(--light-primary-color);
 			}
 			.white-bg {
 				background-color: #fff;

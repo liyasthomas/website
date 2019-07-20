@@ -27,6 +27,10 @@ class MyBlog extends PolymerElement {
       <paper-dialog id="lightbox" class="lightboxdialog" on-click="toggleLightbox"></paper-dialog>
 			<iron-ajax auto url="https://api.tumblr.com/v2/blog/liyasthomas.tumblr.com/posts/photo?api_key=k0Zl9Xz2V8rZ0TiBJmV5mREM9KUEieE0AkAx0cvbKJpbkwxN4p" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
+			<div class="grid content">
+				<div class="title">tumblr</div>
+				<div class="description">Where I roam</div>
+			</div>
 			<template is="dom-if" if="{{loading0}}">
 				<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
 					<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
@@ -42,21 +46,29 @@ class MyBlog extends PolymerElement {
 			<template is="dom-if" if="{{!error0}}">
 				<div class="grid">
 					<div class="actions flex-justified">
-						<div class="title">
-							tumblr
-						</div>
+						<div class="title"></div>
 					</div>
 				</div>
 				<div class="grid app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[ajaxResponse0.response.posts]]" as="posts">
-						<a class="item" href="{{posts.post_url}}" target="_blank" rel="noopener">
+						<div class="item" on-click="toggleLightbox">
 							<div class="container">
-								<div class="flexchild flex-vertical" hidden="{{posts.photos.0.original_size.url}}">
-									<iron-image class="bg" preload fade sizing="contain" src="{{posts.photos.0.original_size.url}}" alt="{{sub.title}}" hidden="{{!posts.photos.0.original_size.url}}"></iron-image>
+								<div class="flexchild flex-vertical">
+									<iron-image class="bg" preload fade sizing="contain" src="{{posts.photos.0.original_size.url}}" alt="{{sub.title}}"></iron-image>
+								</div>
+								<div class="block bottom">
+									<div class="info">
+										<div class="flexchild">
+											{{posts.title}}
+										</div>
+										<div>
+											<a href="{{posts.post_url}}" target="_blank" rel="noopener"><paper-icon-button icon="my-icons:visibility"></paper-icon-button></a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<paper-ripple></paper-ripple>
-						</a>
+						</div>
 					</template>
 				</div>
 				<div class="grid actions flex-center-center">
@@ -78,6 +90,17 @@ class MyBlog extends PolymerElement {
 	}
 	tryAgain() {
 		this.$.ajax0.generateRequest();
+	}
+	toggleLightbox(event) {
+		this.$.lightbox.toggle();
+		let model = (this.$.lightbox.opened) ?
+			`
+<iron-image class="lightbox" preload fade sizing="contain" src="` + event.model.__data.posts.photos[0].original_size.url + `" alt="Banner"></iron-image>
+			` :
+			`
+Something went wrong!
+			`;
+		this.$.lightbox.innerHTML = model;
 	}
 }
 window.customElements.define('my-blog', MyBlog);
