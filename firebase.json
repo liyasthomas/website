@@ -1,0 +1,29 @@
+{
+	"hosting": [{
+		"target": "liyas-thomas",
+		"public": "build/es6-bundled",
+		"ignore": [
+			"firebase.json",
+			"**/.*"
+		],
+		"rewrites": [
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	}, {
+		"target": "liyasthomas",
+		"public": "build/es6-bundled",
+		"ignore": [
+			"firebase.json",
+			"**/.*"
+		],
+		"rewrites": [
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	}]
+}

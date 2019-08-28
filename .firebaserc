@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "liyas-thomas"
+  },
+  "targets": {
+    "liyas-thomas": {
+      "hosting": {
+        "liyas-thomas": [
+          "liyas-thomas"
+        ],
+        "liyasthomas": [
+          "liyasthomas"
+        ]
+      }
+    }
+  }
+}

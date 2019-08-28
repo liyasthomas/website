@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="Polymer Starter Kit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+	<title>Liyas Thomas</title>
+	<meta name="description" content="Developer, Designer, Entrepreneur, Artist">
+	<meta itemprop="name" content="Liyas Thomas">
+	<meta itemprop="description" content="Developer, Designer, Entrepreneur, Artist">
+	<meta itemprop="image" content="images/manifest/icon-192x192.png">
+	<!-- Verify website ownership -->
+	<meta name="google-site-verification" content="gqwxzAhLA2mTGR2iHGobthHY9NNrBPgLqFN6nMa2WvU"><!-- Google Search Console -->
+	<meta name="p:domain_verify" content="c2e64463dfbe3cc6311de0fd6cdb299d"><!-- Pinterest Console-->
+	<!--
+      The `<base>` tag below is present to support two advanced deployment options:
+      1) Differential serving. 2) Serving from a non-root path.
+      Instead of manually editing the `<base>` tag yourself, you should generally either:
+      a) Add a `basePath` property to the build configuration in your `polymer.json`.
+      b) Use the `--base-path` command-line option for `polymer build`.
+      Note: If you intend to serve from a non-root path, see [polymer-root-path] below.
+    -->
+	<base href="/">
+	<link rel="icon" href="images/favicon.ico">
+	<!-- See https://goo.gl/OOhYW5 -->
+	<link rel="manifest" href="manifest.json">
+	<!-- See https://goo.gl/qRE0vM -->
+	<meta name="theme-color" content="#212121">
+	<!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Liyas Thomas">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Liyas Thomas">
+	<!-- Homescreen icons -->
+	<link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+	<!-- Tile icon for Windows 8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#212121">
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- OpenGraph -->
+	<meta property="og:site_name" content="Liyas Thomas">
+	<meta property="og:url" content="https://liyas-thomas.firebaseapp.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Liyas Thomas">
+	<meta property="og:description" content="Developer, Designer, Entrepreneur, Artist">
+	<meta property="og:image" content="images/manifest/icon-144x144.png">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@liyasthomas">
+	<meta name="twitter:creator" content="@liyasthomas">
+	<meta name="twitter:url" content="https://liyas-thomas.firebaseapp.com">
+	<meta name="twitter:title" content="Liyas Thomas">
+	<meta name="twitter:description" content="Developer, Designer, Entrepreneur, Artist">
+	<meta name="twitter:image" content="images/manifest/icon-144x144.png">
+	<!-- Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+	<script>
+		/**
+		 * [polymer-root-path]
+		 *
+		 * Leave this line unchanged if you intend to serve your app from the root
+		 * path (e.g., with URLs like `my.domain/` and `my.domain/view1`).
+		 *
+		 * If you intend to serve your app from a non-root path (e.g., with URLs
+		 * like `my.domain/my-app/` and `my.domain/my-app/view1`), edit this line
+		 * to indicate the path from which you'll be serving, including leading
+		 * and trailing slashes (e.g., `/my-app/`).
+		 */
+		window.MyAppGlobals = {
+			rootPath: '/'
+		};
+		// Load and register pre-caching Service Worker
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js', {
+					scope: MyAppGlobals.rootPath
+				});
+			});
+		}
+
+	</script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+					var app = document.querySelector('#app');
+					if (registration.waiting) {
+						app.update(registration);
+						return;
+					}
+					if (registration.installing) {
+						registration.installing.addEventListener('statechange', function() {
+							app.update(registration);
+						});
+						return;
+					}
+					registration.addEventListener('updatefound', function() {
+						app.update(registration);
+					});
+					console.info('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					console.info('ServiceWorker registration failed: ', err);
+				});;
+			});
+		}
+
+	</script>
+	<!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+	<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+	<script src="node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
+	<!-- Load your application shell -->
+	<script type="module" src="src/my-app.js"></script>
+	<!-- Add any global styles for body, document, etc. -->
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
+			line-height: 1.5;
+			min-height: 100vh;
+			font-size: 18px;
+			font-weight: 500;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			user-select: none;
+		}
+
+		#preloader {
+			position: fixed;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			z-index: 1000;
+		}
+
+		.loader {
+			font-size: 64px;
+			animation: pulse 0.82s infinite;
+		}
+
+		@keyframes pulse {
+
+			10%,
+			90% {
+				transform: translate3d(-1px, 0, 0);
+			}
+
+			20%,
+			80% {
+				transform: translate3d(2px, 0, 0);
+			}
+
+			30%,
+			50%,
+			70% {
+				transform: translate3d(-4px, 0, 0);
+			}
+
+			40%,
+			60% {
+				transform: translate3d(4px, 0, 0);
+			}
+		}
+
+		.dark {
+			background-color: #212121;
+		}
+
+	</style>
+</head>
+
+<body class="theme dark">
+	<my-app id="app" class="theme dark">
+		<div id="preloader">
+			<div class="loader">🦄</div>
+		</div>
+	</my-app>
+	<script>
+		let theme = document.querySelectorAll('.theme');
+		theme.forEach(({
+			classList
+		}) => {
+			localStorage.getItem('mode') == 'light' ? classList.remove('dark') : classList.add('dark');
+		});
+		if (localStorage.getItem('mode') == 'light') {
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
+		} else {
+			document.querySelector("meta[name=theme-color]").setAttribute("content", "#212121");
+		}
+
+	</script>
+	<noscript>
+		Please enable JavaScript to view this website.
+	</noscript>
+	<!-- Built with love using Polymer Starter Kit -->
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+{
+	"web": [
+		{
+			"title": "web",
+			"icon": "language",
+			"color": "light-blue",
+			"link": "projects",
+			"sub": [
+				{
+					"color": "green",
+					"title": "Postwoman",
+					"description": "Helps you create your requests faster, saving you precious time on your development",
+					"info": "Read more",
+					"img": "../images/assets/projects/postwoman.svg",
+					"icon": "api",
+					"link": "project/postwoman"
+				},
+				{
+					"color": "indigo",
+					"title": "Banner",
+					"description": "A simple and clean banner generator",
+					"info": "Read more",
+					"img": "../images/assets/projects/banner.svg",
+					"icon": "aspect-ratio",
+					"link": "project/banner"
+				},
+				{
+					"color": "blue",
+					"title": "Books",
+					"description": "Find books from Google Play Books",
+					"info": "Read more",
+					"img": "../images/assets/projects/books.svg",
+					"icon": "book",
+					"link": "project/books"
+				},
+				{
+					"color": "light-blue",
+					"title": "Colorbook",
+					"description": "Color scheme for UI design",
+					"info": "Read more",
+					"img": "../images/assets/projects/colorbook.svg",
+					"icon": "color-lens",
+					"link": "project/colorbook"
+				},
+				{
+					"color": "purple",
+					"title": "Marcdown",
+					"description": "Lightweight markdown viewer and editor",
+					"info": "Read more",
+					"img": "../images/assets/projects/marcdown.svg",
+					"icon": "bubble-chart",
+					"link": "project/marcdown"
+				},
+				{
+					"color": "black",
+					"title": "Metadata",
+					"description": "File metadata viewer made in Electron",
+					"info": "Read more",
+					"img": "../images/assets/projects/metadata.svg",
+					"icon": "info",
+					"link": "project/metadata"
+				},
+				{
+					"color": "red",
+					"title": "MNMLURL Extension",
+					"description": "Cross-browser extension for Minimal URL",
+					"info": "Read more",
+					"img": "../images/assets/projects/mnmlurlextension.svg",
+					"icon": "extension",
+					"link": "project/mnmlurlextension"
+				},
+				{
+					"color": "pink",
+					"title": "MNMLURL",
+					"description": "Minimal URL is a modern URL shortener with support for custom alias",
+					"info": "Read more",
+					"img": "../images/assets/projects/mnmlurl.svg",
+					"icon": "link",
+					"link": "project/mnmlurl"
+				},
+				{
+					"color": "teal",
+					"title": "HapSell",
+					"description": "Have a product? Sell it!",
+					"info": "Read more",
+					"img": "../images/assets/projects/postwoman.svg",
+					"icon": "shopping-cart",
+					"link": "project/postwoman"
+				},
+				{
+					"color": "black",
+					"title": "threeJS Demos",
+					"description": "3D demos",
+					"info": "Read more",
+					"img": "../images/assets/projects/threejs.svg",
+					"icon": "3d-rotation",
+					"link": "project/threejs"
+				},
+				{
+					"color": "indigo",
+					"title": "Stack",
+					"description": "Keep on stackin'",
+					"info": "Read more",
+					"img": "../images/assets/projects/stack.svg",
+					"icon": "layers",
+					"link": "project/stack"
+				},
+				{
+					"color": "green",
+					"title": "Konnect",
+					"description": "Intranet for NCERC",
+					"info": "Read more",
+					"img": "../images/assets/projects/konnect.svg",
+					"icon": "language",
+					"link": "project/konnect"
+				},
+				{
+					"color": "purple",
+					"title": "AEIOU",
+					"description": "Platform to make augmented reality fun and interactive",
+					"info": "Read more",
+					"img": "../images/assets/projects/aeiou.svg",
+					"icon": "adjust",
+					"link": "project/aeiou"
+				},
+				{
+					"color": "blue",
+					"title": "Lvr",
+					"description": "Virtual and Augmented Reality for everyone",
+					"info": "Read more",
+					"img": "../images/assets/projects/lvr.svg",
+					"icon": "visibility",
+					"link": "project/lvr"
+				},
+				{
+					"color": "blue-grey",
+					"title": "Material Things",
+					"description": "Reusable Material Design components",
+					"info": "Read more",
+					"img": "../images/assets/projects/materialthings.svg",
+					"icon": "code",
+					"link": "project/materialthings"
+				},
+				{
+					"color": "indigo",
+					"title": "Feedie",
+					"description": "Faculty feedback system",
+					"info": "Read more",
+					"img": "../images/assets/projects/feedie.svg",
+					"icon": "star",
+					"link": "project/feedie"
+				},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Website for Fuse Org",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "project/fuseorg"
+				},
+				{
+					"color": "grey",
+					"title": "Snake",
+					"description": "Snakes! Snakes everywhere!",
+					"info": "Read more",
+					"img": "../images/assets/projects/snake.svg",
+					"icon": "gesture",
+					"link": "project/snake"
+				},
+				{
+					"color": "yellow",
+					"title": "Pineapple Notes",
+					"description": "A simple, clean note app",
+					"info": "Read more",
+					"img": "../images/assets/projects/pineapplenotes.svg",
+					"icon": "note",
+					"link": "project/pineapplenotes"
+				},
+				{
+					"color": "black",
+					"title": "Shooter",
+					"description": "Shoot em down!",
+					"info": "Read more",
+					"img": "../images/assets/projects/shooter.svg",
+					"icon": "whatshot",
+					"link": "project/shooter"
+				},
+				{
+					"color": "pink",
+					"title": "Ily",
+					"description": "Sharing is better than getting Likes",
+					"info": "Read more",
+					"img": "../images/assets/projects/ily.svg",
+					"icon": "favorite",
+					"link": "project/ily"
+				},
+				{
+					"color": "red",
+					"title": "Saapshot",
+					"description": "Camera app",
+					"info": "Read more",
+					"img": "../images/assets/projects/saapshot.svg",
+					"icon": "camera-alt",
+					"link": "project/saapshot"
+				}
+			]
+		}
+	],
+	"similar": [
+		{
+			"title": "similar",
+			"icon": "star",
+			"color": "blue-grey",
+			"link": "projects",
+			"sub": [
+				{
+					"color": "orange",
+					"title": "Wallpapers",
+					"description": "Curated list of wallpapers",
+					"info": "View all",
+					"img": "../images/assets/projects/walls.svg",
+					"icon": "wallpaper",
+					"link": "project/wallpapers"
+				},
+				{
+					"color": "grey",
+					"title": "Art",
+					"description": "Doodles and drawings",
+					"info": "View all",
+					"img": "../images/assets/projects/art.svg",
+					"icon": "create",
+					"link": "project/art"
+				},
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuse.svg",
+					"icon": "group",
+					"link": "project/fuseorg"
+				}
+			]
+		}
+	]
+}
