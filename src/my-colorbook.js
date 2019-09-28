@@ -31,10 +31,10 @@ class MyColorbook extends PolymerElement {
 				<p>3. Copy color codes</p>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://github.com/liyasthomas/colorbook" target="_blank" rel="noopener">
+				<a href="https://liyasthomas.github.io/colorbook" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
-				<a href="https://liyasthomas.github.io/colorbook" target="_blank" rel="noopener">
+				<a href="https://github.com/liyasthomas/colorbook" target="_blank" rel="noopener">
 					<paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button>
 				</a>
 			</div>
