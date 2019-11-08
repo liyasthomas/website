@@ -27,7 +27,7 @@ class MyPostwoman extends PolymerElement {
 				<div class="description">Helps you create your requests faster, saving you precious time on your development</div>
 			</div>
 			<div class$="[[getUIType(UI)]] actions flex-center-center">
-				<a href="https://liyasthomas.github.io/postwoman" target="_blank" rel="noopener">
+				<a href="https://postwoman.io" target="_blank" rel="noopener">
 					<paper-button class="secondary" raised aria-label="View all">View project<iron-icon icon="my-icons:arrow-forward"></iron-icon></paper-button>
 				</a>
 				<a href="https://github.com/liyasthomas/postwoman" target="_blank" rel="noopener">
