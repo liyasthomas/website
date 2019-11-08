@@ -4,7 +4,7 @@
 			"title": "screenshots",
 			"icon": "get-app",
 			"color": "blue",
-			"link": "https://liyasthomas.github.io/postwoman",
+			"link": "https://postwoman.io",
 			"sub": [
 				{
 					"color": "transparent",
@@ -32,7 +32,7 @@
 			"title": "prototyping",
 			"icon": "language",
 			"color": "red",
-			"link": "https://liyasthomas.github.io/postwoman",
+			"link": "https://postwoman.io",
 			"sub": [
 				{
 					"color": "transparent",
@@ -60,7 +60,7 @@
 			"title": "Stack",
 			"icon": "code",
 			"color": "black",
-			"link": "https://liyasthomas.github.io/postwoman",
+			"link": "https://postwoman.io",
 			"sub": [
 				{
 					"color": "transparent",
