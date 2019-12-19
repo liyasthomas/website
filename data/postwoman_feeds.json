@@ -11,18 +11,18 @@
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/screely.png",
+					"img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot1.png",
 					"icon": "get-app",
-					"link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master//screely.png"
+					"link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot1.png"
 				},
 				{
 					"color": "transparent",
 					"title": "Wall",
 					"description": "blah",
 					"info": "View",
-					"img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/screely2.png",
+					"img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot2.png",
 					"icon": "get-app",
-					"link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/screely2.png"
+					"link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot2.png"
 				}
 			]
 		}
