@@ -1,70 +1,70 @@
 {
-	"web": [
-		{
-			"title": "Web",
-			"icon": "language",
-			"link": "project/web",
-			"sub": [
-				{
-					"title": "Books",
-					"icon": "book",
-					"link": "project/books"
-				},
-				{
-					"title": "Colorbook",
-					"icon": "color-lens",
-					"link": "project/colorbook"
-				},
-				{
-					"title": "Marcdown",
-					"icon": "bubble-chart",
-					"link": "project/marcdown"
-				},
-				{
-					"title": "MNMLURL",
-					"icon": "link",
-					"link": "project/mnmlurl"
-				},
-				{
-					"title": "Lvr",
-					"icon": "visibility",
-					"link": "project/lvr"
-				},
-				{
-					"title": "Feedie",
-					"icon": "star",
-					"link": "project/feedie"
-				},
-				{
-					"title": "Pineapple Notes",
-					"icon": "note",
-					"link": "project/pineapplenotes"
-				}
-			]
-		}
-	],
-	"others": [
-		{
-			"title": "Others",
-			"icon": "group",
-			"link": "project/others",
-			"sub": [
-				{
-					"title": "Wallpapers",
-					"icon": "wallpaper",
-					"link": "project/wallpapers"
-				},
-				{
-					"title": "Fuse Org",
-					"icon": "group",
-					"link": "project/fuseorg"
-				},
-				{
-					"title": "Art",
-					"icon": "create",
-					"link": "project/art"
-				}
-			]
-		}
-	]
+  "web": [
+    {
+      "title": "Web",
+      "icon": "language",
+      "link": "project/web",
+      "sub": [
+        {
+          "title": "Books",
+          "icon": "book",
+          "link": "project/books"
+        },
+        {
+          "title": "Colorbook",
+          "icon": "color-lens",
+          "link": "project/colorbook"
+        },
+        {
+          "title": "Marcdown",
+          "icon": "bubble-chart",
+          "link": "project/marcdown"
+        },
+        {
+          "title": "MNMLURL",
+          "icon": "link",
+          "link": "project/mnmlurl"
+        },
+        {
+          "title": "Lvr",
+          "icon": "visibility",
+          "link": "project/lvr"
+        },
+        {
+          "title": "Feedie",
+          "icon": "star",
+          "link": "project/feedie"
+        },
+        {
+          "title": "Pineapple Notes",
+          "icon": "note",
+          "link": "project/pineapplenotes"
+        }
+      ]
+    }
+  ],
+  "others": [
+    {
+      "title": "Others",
+      "icon": "group",
+      "link": "project/others",
+      "sub": [
+        {
+          "title": "Wallpapers",
+          "icon": "wallpaper",
+          "link": "project/wallpapers"
+        },
+        {
+          "title": "Fuse Org",
+          "icon": "group",
+          "link": "project/fuseorg"
+        },
+        {
+          "title": "Art",
+          "icon": "create",
+          "link": "project/art"
+        }
+      ]
+    }
+  ]
 }

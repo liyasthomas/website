@@ -8,15 +8,12 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-module.exports = {
-	staticFileGlobs: [
-    'src/**/*',
-    'manifest.json'
-  ],
-	runtimeCaching: [
-		{
-			urlPattern: /\/@webcomponents\/webcomponentsjs\//,
-			handler: 'fastest'
+export default {
+  staticFileGlobs: ["src/**/*", "manifest.json"],
+  runtimeCaching: [
+    {
+      urlPattern: /\/@webcomponents\/webcomponentsjs\//,
+      handler: "fastest"
     }
   ]
 };

@@ -1,103 +1,103 @@
 {
-	"wallpapers": [
-		{
-			"title": "popular",
-			"icon": "get-app",
-			"color": "blue",
-			"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_1.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_2.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_3.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_4.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_5.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/walls/wall_6.jpg",
-					"icon": "get-app",
-					"link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
-				}
-			]
-		}
-	],
-	"similar": [
-		{
-			"title": "similar",
-			"icon": "group",
-			"color": "blue-grey",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
-					"icon": "arrow-forward",
-					"link": "project/feedie"
-				},
-				{
-					"color": "teal",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
-					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
-					"icon": "language",
-					"link": "project/konnect"
-				},
-				{
-					"color": "blue",
-					"title": "Fuse Org",
-					"description": "Website for Fuse Org",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "arrow-forward",
-					"link": "project/feedie"
-				}
-			]
-		}
-	]
+  "wallpapers": [
+    {
+      "title": "popular",
+      "icon": "get-app",
+      "color": "blue",
+      "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_1.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_2.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_3.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_4.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_5.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/walls/wall_6.jpg",
+          "icon": "get-app",
+          "link": "https://photos.app.goo.gl/6kPov1TtR65cupPi8"
+        }
+      ]
+    }
+  ],
+  "similar": [
+    {
+      "title": "similar",
+      "icon": "group",
+      "color": "blue-grey",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "blue",
+          "title": "Feedie",
+          "description": "Faculty feedback system",
+          "info": "Read more",
+          "img": "../images/assets/projects/feedie.svg",
+          "icon": "arrow-forward",
+          "link": "project/feedie"
+        },
+        {
+          "color": "teal",
+          "title": "Konnect",
+          "description": "Intranet for NCERC",
+          "info": "Read more",
+          "img": "../images/assets/projects/konnect.svg",
+          "icon": "language",
+          "link": "project/konnect"
+        },
+        {
+          "color": "blue",
+          "title": "Fuse Org",
+          "description": "Website for Fuse Org",
+          "info": "Read more",
+          "img": "../images/assets/projects/fuseorg.svg",
+          "icon": "arrow-forward",
+          "link": "project/feedie"
+        }
+      ]
+    }
+  ]
 }

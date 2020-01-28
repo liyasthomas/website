@@ -1,103 +1,103 @@
 {
-	"art": [
-		{
-			"title": "popular",
-			"icon": "create",
-			"color": "blue",
-			"link": "https://liyasthomas.tumblr.com",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View album",
-					"img": "../images/assets/app/puff.svg",
-					"icon": "visibility",
-					"link": "https://liyasthomas.tumblr.com"
-				}
-			]
-		}
-	],
-	"similar": [
-		{
-			"title": "similar",
-			"icon": "group",
-			"color": "blue-grey",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
-					"icon": "arrow-forward",
-					"link": "project/feedie"
-				},
-				{
-					"color": "green",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
-					"info": "Read more",
-					"img": "../images/assets/projects/konnect.svg",
-					"icon": "language",
-					"link": "project/konnect"
-				},
-				{
-					"color": "blue",
-					"title": "Fuse Org",
-					"description": "Website for Fuse Org",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuseorg.svg",
-					"icon": "arrow-forward",
-					"link": "project/feedie"
-				}
-			]
-		}
-	]
+  "art": [
+    {
+      "title": "popular",
+      "icon": "create",
+      "color": "blue",
+      "link": "https://liyasthomas.tumblr.com",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View album",
+          "img": "../images/assets/app/puff.svg",
+          "icon": "visibility",
+          "link": "https://liyasthomas.tumblr.com"
+        }
+      ]
+    }
+  ],
+  "similar": [
+    {
+      "title": "similar",
+      "icon": "group",
+      "color": "blue-grey",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "blue",
+          "title": "Feedie",
+          "description": "Faculty feedback system",
+          "info": "Read more",
+          "img": "../images/assets/projects/feedie.svg",
+          "icon": "arrow-forward",
+          "link": "project/feedie"
+        },
+        {
+          "color": "green",
+          "title": "Konnect",
+          "description": "Intranet for NCERC",
+          "info": "Read more",
+          "img": "../images/assets/projects/konnect.svg",
+          "icon": "language",
+          "link": "project/konnect"
+        },
+        {
+          "color": "blue",
+          "title": "Fuse Org",
+          "description": "Website for Fuse Org",
+          "info": "Read more",
+          "img": "../images/assets/projects/fuseorg.svg",
+          "icon": "arrow-forward",
+          "link": "project/feedie"
+        }
+      ]
+    }
+  ]
 }

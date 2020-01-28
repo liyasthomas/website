@@ -1,114 +1,114 @@
 {
-	"section1": [
-		{
-			"title": "screenshots",
-			"icon": "get-app",
-			"color": "blue",
-			"link": "https://fuse-org.web.app",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/fuse/fuse_1.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/fuse/fuse_1.png"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/ss/fuse/fuse_2.png",
-					"icon": "get-app",
-					"link": "../images/assets/ss/fuse/fuse_2.png"
-				}
-			]
-		}
-	],
-	"section2": [
-		{
-			"title": "prototyping",
-			"icon": "language",
-			"color": "red",
-			"link": "https://fuse-org.web.app",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/proto/figma.svg",
-					"icon": "get-app",
-					"link": "../images/assets/proto/figma.svg"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/proto/lunacy.svg",
-					"icon": "get-app",
-					"link": "../images/assets/proto/lunacy.svg"
-				}
-			]
-		}
-	],
-	"section3": [
-		{
-			"title": "Stack",
-			"icon": "code",
-			"color": "black",
-			"link": "https://fuse-org.web.app",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/stack/polymer.svg",
-					"icon": "get-app",
-					"link": "../images/assets/stack/polymer.svg"
-				},
-				{
-					"color": "transparent",
-					"title": "Wall",
-					"description": "blah",
-					"info": "View",
-					"img": "../images/assets/stack/js.svg",
-					"icon": "get-app",
-					"link": "../images/assets/stack/js.svg"
-				}
-			]
-		}
-	],
-	"similar": [
-		{
-			"title": "similar",
-			"icon": "group",
-			"color": "blue-grey",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Platform to make augmented reality fun and interactive",
-					"info": "Read more",
-					"img": "../images/assets/projects/aeiou.svg",
-					"icon": "arrow-forward",
-					"link": "project/aeiou"
-				},
-				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "arrow-forward",
-					"link": "project/lvr"
-				}
-			]
-		}
-	]
+  "section1": [
+    {
+      "title": "screenshots",
+      "icon": "get-app",
+      "color": "blue",
+      "link": "https://fuse-org.web.app",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/fuse/fuse_1.png",
+          "icon": "get-app",
+          "link": "../images/assets/ss/fuse/fuse_1.png"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/ss/fuse/fuse_2.png",
+          "icon": "get-app",
+          "link": "../images/assets/ss/fuse/fuse_2.png"
+        }
+      ]
+    }
+  ],
+  "section2": [
+    {
+      "title": "prototyping",
+      "icon": "language",
+      "color": "red",
+      "link": "https://fuse-org.web.app",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/proto/figma.svg",
+          "icon": "get-app",
+          "link": "../images/assets/proto/figma.svg"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/proto/lunacy.svg",
+          "icon": "get-app",
+          "link": "../images/assets/proto/lunacy.svg"
+        }
+      ]
+    }
+  ],
+  "section3": [
+    {
+      "title": "Stack",
+      "icon": "code",
+      "color": "black",
+      "link": "https://fuse-org.web.app",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/stack/polymer.svg",
+          "icon": "get-app",
+          "link": "../images/assets/stack/polymer.svg"
+        },
+        {
+          "color": "transparent",
+          "title": "Wall",
+          "description": "blah",
+          "info": "View",
+          "img": "../images/assets/stack/js.svg",
+          "icon": "get-app",
+          "link": "../images/assets/stack/js.svg"
+        }
+      ]
+    }
+  ],
+  "similar": [
+    {
+      "title": "similar",
+      "icon": "group",
+      "color": "blue-grey",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "indigo",
+          "title": "AEIOU",
+          "description": "Platform to make augmented reality fun and interactive",
+          "info": "Read more",
+          "img": "../images/assets/projects/aeiou.svg",
+          "icon": "arrow-forward",
+          "link": "project/aeiou"
+        },
+        {
+          "color": "light-blue",
+          "title": "Lvr",
+          "description": "Virtual and Augmented Reality for everyone!",
+          "info": "Read more",
+          "img": "../images/assets/projects/lvr.svg",
+          "icon": "arrow-forward",
+          "link": "project/lvr"
+        }
+      ]
+    }
+  ]
 }

@@ -1,85 +1,85 @@
 {
-	"others": [
-		{
-			"title": "other",
-			"icon": "group",
-			"color": "indigo",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "orange",
-					"title": "Wallpapers",
-					"description": "Curated list of wallpapers",
-					"info": "View all",
-					"img": "../images/assets/projects/walls.svg",
-					"icon": "wallpaper",
-					"link": "project/wallpapers"
-				},
-				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuse.svg",
-					"icon": "group",
-					"link": "project/fuseorg"
-				},
-				{
-					"color": "grey",
-					"title": "Art",
-					"description": "Doodles and drawings",
-					"info": "View all",
-					"img": "../images/assets/projects/art.svg",
-					"icon": "create",
-					"link": "project/art"
-				},
-				{
-					"color": "pink",
-					"title": "Blog",
-					"description": "What if life gave you another chance to learn to love again?",
-					"info": "View all",
-					"img": "../images/assets/feeds/blog.svg",
-					"icon": "favorite",
-					"link": "../blog"
-				}
-			]
-		}
-	],
-	"similar": [
-		{
-			"title": "similar",
-			"icon": "star",
-			"color": "blue-grey",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "indigo",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
-					"icon": "star",
-					"link": "project/feedie"
-				},
-				{
-					"color": "blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
-					"img": "../images/assets/projects/lvr.svg",
-					"icon": "visibility",
-					"link": "project/lvr"
-				},
-				{
-					"color": "pink",
-					"title": "MNMLURL",
-					"description": "Minimal URL is a modern URL shortener with support for custom alias",
-					"info": "Read more",
-					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "link",
-					"link": "project/mnmlurl"
-				}
-			]
-		}
-	]
+  "others": [
+    {
+      "title": "other",
+      "icon": "group",
+      "color": "indigo",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "orange",
+          "title": "Wallpapers",
+          "description": "Curated list of wallpapers",
+          "info": "View all",
+          "img": "../images/assets/projects/walls.svg",
+          "icon": "wallpaper",
+          "link": "project/wallpapers"
+        },
+        {
+          "color": "deep-purple",
+          "title": "Fuse Org",
+          "description": "Developers community",
+          "info": "Read more",
+          "img": "../images/assets/projects/fuse.svg",
+          "icon": "group",
+          "link": "project/fuseorg"
+        },
+        {
+          "color": "grey",
+          "title": "Art",
+          "description": "Doodles and drawings",
+          "info": "View all",
+          "img": "../images/assets/projects/art.svg",
+          "icon": "create",
+          "link": "project/art"
+        },
+        {
+          "color": "pink",
+          "title": "Blog",
+          "description": "What if life gave you another chance to learn to love again?",
+          "info": "View all",
+          "img": "../images/assets/feeds/blog.svg",
+          "icon": "favorite",
+          "link": "../blog"
+        }
+      ]
+    }
+  ],
+  "similar": [
+    {
+      "title": "similar",
+      "icon": "star",
+      "color": "blue-grey",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "indigo",
+          "title": "Feedie",
+          "description": "Faculty feedback system",
+          "info": "Read more",
+          "img": "../images/assets/projects/feedie.svg",
+          "icon": "star",
+          "link": "project/feedie"
+        },
+        {
+          "color": "blue",
+          "title": "Lvr",
+          "description": "Virtual and Augmented Reality for everyone!",
+          "info": "Read more",
+          "img": "../images/assets/projects/lvr.svg",
+          "icon": "visibility",
+          "link": "project/lvr"
+        },
+        {
+          "color": "pink",
+          "title": "MNMLURL",
+          "description": "Minimal URL is a modern URL shortener with support for custom alias",
+          "info": "Read more",
+          "img": "../images/assets/projects/mnmlurl.svg",
+          "icon": "link",
+          "link": "project/mnmlurl"
+        }
+      ]
+    }
+  ]
 }

@@ -1,103 +1,103 @@
 {
-	"web": [
-		{
-			"title": "web",
-			"icon": "language",
-			"color": "light-blue",
-			"link": "project/web",
-			"sub": [
-				{
-					"color": "green",
-					"title": "Postwoman",
-					"description": "Helps you create your requests faster, saving you precious time on your development",
-					"info": "Read more",
-					"img": "../images/assets/projects/postwoman.svg",
-					"icon": "api",
-					"link": "project/postwoman"
-				},
-				{
-					"color": "blue",
-					"title": "Books",
-					"description": "Find books from Google Play Books",
-					"info": "Read more",
-					"img": "../images/assets/projects/books.svg",
-					"icon": "book",
-					"link": "project/books"
-				},
-				{
-					"color": "light-blue",
-					"title": "Colorbook",
-					"description": "Color scheme for UI design",
-					"info": "Read more",
-					"img": "../images/assets/projects/colorbook.svg",
-					"icon": "color-lens",
-					"link": "project/colorbook"
-				},
-				{
-					"color": "purple",
-					"title": "Marcdown",
-					"description": "Lightweight markdown viewer and editor",
-					"info": "Read more",
-					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "bubble-chart",
-					"link": "project/marcdown"
-				},
-				{
-					"color": "pink",
-					"title": "MNMLURL",
-					"description": "Minimal URL is a modern URL shortener with support for custom alias",
-					"info": "Read more",
-					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "link",
-					"link": "project/mnmlurl"
-				},
-				{
-					"color": "indigo",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
-					"img": "../images/assets/projects/feedie.svg",
-					"icon": "star",
-					"link": "project/feedie"
-				}
-			]
-		}
-	],
-	"others": [
-		{
-			"title": "other",
-			"icon": "group",
-			"color": "indigo",
-			"link": "project/others",
-			"sub": [
-				{
-					"color": "orange",
-					"title": "Wallpapers",
-					"description": "Curated list of wallpapers",
-					"info": "View all",
-					"img": "../images/assets/projects/walls.svg",
-					"icon": "wallpaper",
-					"link": "project/wallpapers"
-				},
-				{
-					"color": "grey",
-					"title": "Art",
-					"description": "Doodles and drawings",
-					"info": "View all",
-					"img": "../images/assets/projects/art.svg",
-					"icon": "create",
-					"link": "project/art"
-				},
-				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuse.svg",
-					"icon": "group",
-					"link": "project/fuseorg"
-				}
-			]
-		}
-	]
+  "web": [
+    {
+      "title": "web",
+      "icon": "language",
+      "color": "light-blue",
+      "link": "project/web",
+      "sub": [
+        {
+          "color": "green",
+          "title": "Postwoman",
+          "description": "Helps you create your requests faster, saving you precious time on your development",
+          "info": "Read more",
+          "img": "../images/assets/projects/postwoman.svg",
+          "icon": "api",
+          "link": "project/postwoman"
+        },
+        {
+          "color": "blue",
+          "title": "Books",
+          "description": "Find books from Google Play Books",
+          "info": "Read more",
+          "img": "../images/assets/projects/books.svg",
+          "icon": "book",
+          "link": "project/books"
+        },
+        {
+          "color": "light-blue",
+          "title": "Colorbook",
+          "description": "Color scheme for UI design",
+          "info": "Read more",
+          "img": "../images/assets/projects/colorbook.svg",
+          "icon": "color-lens",
+          "link": "project/colorbook"
+        },
+        {
+          "color": "purple",
+          "title": "Marcdown",
+          "description": "Lightweight markdown viewer and editor",
+          "info": "Read more",
+          "img": "../images/assets/projects/marcdown.svg",
+          "icon": "bubble-chart",
+          "link": "project/marcdown"
+        },
+        {
+          "color": "pink",
+          "title": "MNMLURL",
+          "description": "Minimal URL is a modern URL shortener with support for custom alias",
+          "info": "Read more",
+          "img": "../images/assets/projects/mnmlurl.svg",
+          "icon": "link",
+          "link": "project/mnmlurl"
+        },
+        {
+          "color": "indigo",
+          "title": "Feedie",
+          "description": "Faculty feedback system",
+          "info": "Read more",
+          "img": "../images/assets/projects/feedie.svg",
+          "icon": "star",
+          "link": "project/feedie"
+        }
+      ]
+    }
+  ],
+  "others": [
+    {
+      "title": "other",
+      "icon": "group",
+      "color": "indigo",
+      "link": "project/others",
+      "sub": [
+        {
+          "color": "orange",
+          "title": "Wallpapers",
+          "description": "Curated list of wallpapers",
+          "info": "View all",
+          "img": "../images/assets/projects/walls.svg",
+          "icon": "wallpaper",
+          "link": "project/wallpapers"
+        },
+        {
+          "color": "grey",
+          "title": "Art",
+          "description": "Doodles and drawings",
+          "info": "View all",
+          "img": "../images/assets/projects/art.svg",
+          "icon": "create",
+          "link": "project/art"
+        },
+        {
+          "color": "deep-purple",
+          "title": "Fuse Org",
+          "description": "Developers community",
+          "info": "Read more",
+          "img": "../images/assets/projects/fuse.svg",
+          "icon": "group",
+          "link": "project/fuseorg"
+        }
+      ]
+    }
+  ]
 }

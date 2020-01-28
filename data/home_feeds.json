@@ -1,240 +1,240 @@
 {
-	"recent": [
-		{
-			"title": "recent",
-			"icon": "star",
-			"color": "orange",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "green",
-					"title": "Postwoman",
-					"description": "Helps you create your requests faster, saving you precious time on your development",
-					"info": "Read more",
-					"img": "../images/assets/projects/postwoman.svg",
-					"icon": "api",
-					"link": "project/postwoman"
-				},
-				{
-					"color": "pink",
-					"title": "MNMLURL",
-					"description": "Minimal URL is a modern URL shortener with support for custom alias",
-					"info": "Read more",
-					"img": "../images/assets/projects/mnmlurl.svg",
-					"icon": "link",
-					"link": "project/mnmlurl"
-				},
-				{
-					"color": "purple",
-					"title": "Marcdown",
-					"description": "Lightweight markdown viewer and editor",
-					"info": "Read more",
-					"img": "../images/assets/projects/marcdown.svg",
-					"icon": "bubble-chart",
-					"link": "project/marcdown"
-				}
-			]
-		}
-	],
-	"popular": [
-		{
-			"title": "popular",
-			"icon": "whatshot",
-			"color": "red",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "orange",
-					"title": "Wallpapers",
-					"description": "Curated list of wallpapers",
-					"info": "View all",
-					"img": "../images/assets/projects/walls.svg",
-					"icon": "wallpaper",
-					"link": "project/wallpapers"
-				},
-				{
-					"color": "grey",
-					"title": "Art",
-					"description": "Doodles and drawings",
-					"info": "View all",
-					"img": "../images/assets/projects/art.svg",
-					"icon": "create",
-					"link": "project/art"
-				},
-				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Read more",
-					"img": "../images/assets/projects/fuse.svg",
-					"icon": "group",
-					"link": "project/fuseorg"
-				}
-			]
-		}
-	],
-	"projects": [
-		{
-			"title": "projects",
-			"icon": "work",
-			"color": "blue",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "light-blue",
-					"title": "Web",
-					"description": "",
-					"info": "View all",
-					"img": "../images/assets/feeds/web.svg",
-					"icon": "arrow-forward",
-					"link": "project/web"
-				},
-				{
-					"color": "indigo",
-					"title": "Others",
-					"description": "",
-					"info": "View all",
-					"img": "../images/assets/feeds/others.svg",
-					"icon": "arrow-forward",
-					"link": "project/others"
-				},
-				{
-					"color": "pink",
-					"title": "Blog",
-					"description": "",
-					"info": "Read more",
-					"img": "../images/assets/feeds/blog.svg",
-					"icon": "arrow-forward",
-					"link": "blog"
-				}
-			]
-		}
-	],
-	"testimonials": [
-		{
-			"title": "testimonials",
-			"icon": "star",
-			"color": "orange",
-			"link": "projects",
-			"sub": [
-				{
-					"color": "transparent",
-					"title": "“What is this sorcery? :) This is pure awesome.”",
-					"description": "—Murali Nunna",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/muralinunna/comment/egac"
-				},
-				{
-					"color": "transparent",
-					"title": "“Wow!! I never knew I needed this! I'll surely contribute to make this more awesome!”",
-					"description": "—Arman Khan",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/iarmankhan/comment/ed43"
-				},
-				{
-					"color": "transparent",
-					"title": "“You are definitely a 20x Engineer”",
-					"description": "—Emmy Leke",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://liyasthomas.hashnode.dev/i-created-an-easy-way-to-browse-and-find-google-books-today-is-my-birthday-cjxzoeylg0006v7s147f3soxh#cjy3dpdsv000zpjs1cojh5j9c"
-				},
-				{
-					"color": "transparent",
-					"title": "“Your projects on github are super awesome! Your markdown editor is one of the best, almost like it was done by a unicorn from the heavens :)”",
-					"description": "—Fernando B",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/kodaman2/comment/d3j1"
-				},
-				{
-					"color": "transparent",
-					"title": "“Wow, The UI is really awesome! Everything feels so smooth and well-animated 👏 I took a look at your other projects, and wow, they're really inspiring 🤩”",
-					"description": "—Wiktor Olejniczak",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/myfrom/comment/d10m"
-				},
-				{
-					"color": "transparent",
-					"title": "“That's an awesome design Liyas. I looked at your Github projects. They are phenomenal.”",
-					"description": "—Pavan Bawdane",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/pavanbawdane/comment/d0ld"
-				},
-				{
-					"color": "transparent",
-					"title": "“Write on your way too and from work, you have mad skills, I'm sure we would all love to hear how your getting on.”",
-					"description": "—Adam Crockett",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/adam_cyclones/comment/d3kn"
-				},
-				{
-					"color": "transparent",
-					"title": "“Amazing app 👏🏻 looks wise and also functionally, all the book worms of the world thank you.”",
-					"description": "—Priyanka Kore",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/piyukore06/comment/d0e8"
-				},
-				{
-					"color": "transparent",
-					"title": "“Wow! such a beautiful UI. What was the inspiration behind the UI design?”",
-					"description": "—Abhi",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/abhigk/comment/d0ap"
-				},
-				{
-					"color": "transparent",
-					"title": "“I really like your project. Great design, performant, and user friendly. I'd love to try and contribute and I may do soon.”",
-					"description": "—Bill",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/babrown93/comment/d06k"
-				},
-				{
-					"color": "transparent",
-					"title": "“There are so many things I love about this post!”",
-					"description": "—Jacob Brokaw",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/jacobbrokaw/comment/d0p0"
-				},
-				{
-					"color": "transparent",
-					"title": "“This is amazing. Thank you so much for giving us this beautiful markdown editor. <3 Both colors themes are perfect and soothing to the eyes.”",
-					"description": "—Pankaj Sanam",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://hashnode.com/post/i-created-an-open-source-online-markdown-viewer-and-editor-cjxnae7td002yt6s1p88x9ssn#cjxzzlol3000jbqs1bqr4bvlj"
-				},
-				{
-					"color": "transparent",
-					"title": "“You beat me to it. Its been on my side-project bucket list for a while, because discord was a hassle. It's probably for the best though, it looks great and much better than what I would have made!”",
-					"description": "—Raheem",
-					"info": "",
-					"img": "",
-					"icon": "arrow-forward",
-					"link": "https://dev.to/r4h33m/comment/cfg9"
-				}
-			]
-		}
-	]
+  "recent": [
+    {
+      "title": "recent",
+      "icon": "star",
+      "color": "orange",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "green",
+          "title": "Postwoman",
+          "description": "Helps you create your requests faster, saving you precious time on your development",
+          "info": "Read more",
+          "img": "../images/assets/projects/postwoman.svg",
+          "icon": "api",
+          "link": "project/postwoman"
+        },
+        {
+          "color": "pink",
+          "title": "MNMLURL",
+          "description": "Minimal URL is a modern URL shortener with support for custom alias",
+          "info": "Read more",
+          "img": "../images/assets/projects/mnmlurl.svg",
+          "icon": "link",
+          "link": "project/mnmlurl"
+        },
+        {
+          "color": "purple",
+          "title": "Marcdown",
+          "description": "Lightweight markdown viewer and editor",
+          "info": "Read more",
+          "img": "../images/assets/projects/marcdown.svg",
+          "icon": "bubble-chart",
+          "link": "project/marcdown"
+        }
+      ]
+    }
+  ],
+  "popular": [
+    {
+      "title": "popular",
+      "icon": "whatshot",
+      "color": "red",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "orange",
+          "title": "Wallpapers",
+          "description": "Curated list of wallpapers",
+          "info": "View all",
+          "img": "../images/assets/projects/walls.svg",
+          "icon": "wallpaper",
+          "link": "project/wallpapers"
+        },
+        {
+          "color": "grey",
+          "title": "Art",
+          "description": "Doodles and drawings",
+          "info": "View all",
+          "img": "../images/assets/projects/art.svg",
+          "icon": "create",
+          "link": "project/art"
+        },
+        {
+          "color": "deep-purple",
+          "title": "Fuse Org",
+          "description": "Developers community",
+          "info": "Read more",
+          "img": "../images/assets/projects/fuse.svg",
+          "icon": "group",
+          "link": "project/fuseorg"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "projects",
+      "icon": "work",
+      "color": "blue",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "light-blue",
+          "title": "Web",
+          "description": "",
+          "info": "View all",
+          "img": "../images/assets/feeds/web.svg",
+          "icon": "arrow-forward",
+          "link": "project/web"
+        },
+        {
+          "color": "indigo",
+          "title": "Others",
+          "description": "",
+          "info": "View all",
+          "img": "../images/assets/feeds/others.svg",
+          "icon": "arrow-forward",
+          "link": "project/others"
+        },
+        {
+          "color": "pink",
+          "title": "Blog",
+          "description": "",
+          "info": "Read more",
+          "img": "../images/assets/feeds/blog.svg",
+          "icon": "arrow-forward",
+          "link": "blog"
+        }
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "title": "testimonials",
+      "icon": "star",
+      "color": "orange",
+      "link": "projects",
+      "sub": [
+        {
+          "color": "transparent",
+          "title": "“What is this sorcery? :) This is pure awesome.”",
+          "description": "—Murali Nunna",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/muralinunna/comment/egac"
+        },
+        {
+          "color": "transparent",
+          "title": "“Wow!! I never knew I needed this! I'll surely contribute to make this more awesome!”",
+          "description": "—Arman Khan",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/iarmankhan/comment/ed43"
+        },
+        {
+          "color": "transparent",
+          "title": "“You are definitely a 20x Engineer”",
+          "description": "—Emmy Leke",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://liyasthomas.hashnode.dev/i-created-an-easy-way-to-browse-and-find-google-books-today-is-my-birthday-cjxzoeylg0006v7s147f3soxh#cjy3dpdsv000zpjs1cojh5j9c"
+        },
+        {
+          "color": "transparent",
+          "title": "“Your projects on github are super awesome! Your markdown editor is one of the best, almost like it was done by a unicorn from the heavens :)”",
+          "description": "—Fernando B",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/kodaman2/comment/d3j1"
+        },
+        {
+          "color": "transparent",
+          "title": "“Wow, The UI is really awesome! Everything feels so smooth and well-animated 👏 I took a look at your other projects, and wow, they're really inspiring 🤩”",
+          "description": "—Wiktor Olejniczak",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/myfrom/comment/d10m"
+        },
+        {
+          "color": "transparent",
+          "title": "“That's an awesome design Liyas. I looked at your Github projects. They are phenomenal.”",
+          "description": "—Pavan Bawdane",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/pavanbawdane/comment/d0ld"
+        },
+        {
+          "color": "transparent",
+          "title": "“Write on your way too and from work, you have mad skills, I'm sure we would all love to hear how your getting on.”",
+          "description": "—Adam Crockett",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/adam_cyclones/comment/d3kn"
+        },
+        {
+          "color": "transparent",
+          "title": "“Amazing app 👏🏻 looks wise and also functionally, all the book worms of the world thank you.”",
+          "description": "—Priyanka Kore",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/piyukore06/comment/d0e8"
+        },
+        {
+          "color": "transparent",
+          "title": "“Wow! such a beautiful UI. What was the inspiration behind the UI design?”",
+          "description": "—Abhi",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/abhigk/comment/d0ap"
+        },
+        {
+          "color": "transparent",
+          "title": "“I really like your project. Great design, performant, and user friendly. I'd love to try and contribute and I may do soon.”",
+          "description": "—Bill",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/babrown93/comment/d06k"
+        },
+        {
+          "color": "transparent",
+          "title": "“There are so many things I love about this post!”",
+          "description": "—Jacob Brokaw",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/jacobbrokaw/comment/d0p0"
+        },
+        {
+          "color": "transparent",
+          "title": "“This is amazing. Thank you so much for giving us this beautiful markdown editor. <3 Both colors themes are perfect and soothing to the eyes.”",
+          "description": "—Pankaj Sanam",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://hashnode.com/post/i-created-an-open-source-online-markdown-viewer-and-editor-cjxnae7td002yt6s1p88x9ssn#cjxzzlol3000jbqs1bqr4bvlj"
+        },
+        {
+          "color": "transparent",
+          "title": "“You beat me to it. Its been on my side-project bucket list for a while, because discord was a hassle. It's probably for the best though, it looks great and much better than what I would have made!”",
+          "description": "—Raheem",
+          "info": "",
+          "img": "",
+          "icon": "arrow-forward",
+          "link": "https://dev.to/r4h33m/comment/cfg9"
+        }
+      ]
+    }
+  ]
 }
