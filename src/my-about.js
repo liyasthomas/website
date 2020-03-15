@@ -198,7 +198,7 @@ class MyAbout extends PolymerElement {
           </p>
         </div>
       </template>
-      <template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
+      <!-- <template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">
         <div
           class$="[[getUIType(UI)]] actions flex-center-center flex-justified"
         >
@@ -257,7 +257,7 @@ class MyAbout extends PolymerElement {
             </div>
           </template>
         </div>
-      </template>
+      </template> -->
     `;
   }
   attached() {

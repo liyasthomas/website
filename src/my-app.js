@@ -278,11 +278,11 @@ class MyApp extends PolymerElement {
       ></iron-media-query>
       <paper-toast id="updateToast" duration="0" text=" ">
         <div class="flex-center-center">
-          <div class="flexchild">Update available!</div>
+          <div class="flexchild">This page is now available offline</div>
           <paper-button
             onclick="window.location.reload(true)"
             aria-label="Update"
-            >Update</paper-button
+            >Ok</paper-button
           >
         </div>
       </paper-toast>

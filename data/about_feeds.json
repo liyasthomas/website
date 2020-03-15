@@ -7,12 +7,24 @@
       "link": "blog",
       "sub": [
         {
-          "link": "https://www.facebook.com/liyasthomas",
-          "icon": "facebook"
+          "link": "https://github.com/liyasthomas",
+          "icon": "github"
+        },
+        {
+          "link": "https://dev.to/liyasthomas",
+          "icon": "dev"
         },
         {
           "link": "https://twitter.com/liyasthomas",
           "icon": "twitter"
+        },
+        {
+          "link": "https://www.linkedin.com/in/liyasthomas",
+          "icon": "linkedin"
+        },
+        {
+          "link": "https://www.facebook.com/liyasthomas",
+          "icon": "facebook"
         },
         {
           "link": "https://instagram.com/liyasthomas",
@@ -41,10 +53,6 @@
         {
           "link": "https://github.com/liyasthomas",
           "icon": "github"
-        },
-        {
-          "link": "https://www.linkedin.com/in/liyasthomas",
-          "icon": "linkedin"
         },
         {
           "link": "https://in.pinterest.com/liyasthomas",
