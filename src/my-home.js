@@ -115,7 +115,7 @@ class MyHome extends PolymerElement {
           </a>
         </div>
       </template>
-      <template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
+      <!-- <template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
         <div
           class$="[[getUIType(UI)]] actions flex-center-center flex-justified"
         >
@@ -254,7 +254,7 @@ class MyHome extends PolymerElement {
             ></paper-button>
           </a>
         </div>
-      </template>
+      </template> -->
       <template
         is="dom-repeat"
         items="[[ajaxResponse0.testimonials]]"

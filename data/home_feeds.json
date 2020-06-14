@@ -1,7 +1,7 @@
 {
   "recent": [
     {
-      "title": "recent",
+      "title": "recent projects",
       "icon": "star",
       "color": "orange",
       "link": "projects",
@@ -16,22 +16,22 @@
           "link": "project/postwoman"
         },
         {
-          "color": "pink",
-          "title": "MNMLURL",
-          "description": "Minimal URL is a modern URL shortener with support for custom alias",
+          "color": "blue",
+          "title": "Books",
+          "description": "Find books from Google Play Books",
           "info": "Read more",
-          "img": "../images/assets/projects/mnmlurl.svg",
-          "icon": "link",
-          "link": "project/mnmlurl"
+          "img": "../images/assets/projects/books.svg",
+          "icon": "book",
+          "link": "project/books"
         },
         {
-          "color": "purple",
-          "title": "Marcdown",
-          "description": "Lightweight markdown viewer and editor",
+          "color": "light-blue",
+          "title": "Colorbook",
+          "description": "Color scheme for UI design",
           "info": "Read more",
-          "img": "../images/assets/projects/marcdown.svg",
-          "icon": "bubble-chart",
-          "link": "project/marcdown"
+          "img": "../images/assets/projects/colorbook.svg",
+          "icon": "color-lens",
+          "link": "project/colorbook"
         }
       ]
     }

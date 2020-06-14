@@ -185,7 +185,7 @@ class MyAbout extends PolymerElement {
               ></a>
             </template>
           </p>
-          <p>
+          <!-- <p>
             <a href="https://🏹.to/👦💻" target="_blank">🏹.to/👦💻</a>
           </p>
           <p>
@@ -195,7 +195,7 @@ class MyAbout extends PolymerElement {
                   icon="my-icons:favorite"
                 ></iron-icon></paper-button
             ></a>
-          </p>
+          </p> -->
         </div>
       </template>
       <!-- <template is="dom-repeat" items="[[ajaxResponse0.gallery]]" as="gallery">

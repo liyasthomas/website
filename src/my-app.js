@@ -465,7 +465,7 @@ class MyApp extends PolymerElement {
                   </template>
                 </template>
               </iron-collapse>
-              <a name="blog" href="blog">
+              <!-- <a name="blog" href="blog">
                 <paper-icon-item>
                   <iron-icon
                     icon$="my-icons:favorite[[_getPageIcon('blog',page)]]"
@@ -474,7 +474,7 @@ class MyApp extends PolymerElement {
                   <span>Blog</span>
                   <paper-ripple></paper-ripple>
                 </paper-icon-item>
-              </a>
+              </a> -->
               <a name="about" href="about">
                 <paper-icon-item>
                   <iron-icon
@@ -553,13 +553,13 @@ class MyApp extends PolymerElement {
                     Projects
                   </a>
                 </paper-tab>
-                <paper-tab name="blog">
+                <!-- <paper-tab name="blog">
                   <a href="blog">
                     <iron-icon
                       icon$="my-icons:favorite[[_getPageIcon('blog',page)]]"
                     ></iron-icon>
                     Blog
-                  </a>
+                  </a> -->
                 </paper-tab>
                 <paper-tab name="about">
                   <a href="about">
