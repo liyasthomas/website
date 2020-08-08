@@ -65,7 +65,7 @@ class MyAbout extends PolymerElement {
               ></iron-icon></paper-button
           ></a>
           <a
-            href="https://docs.google.com/document/d/1Qce0ZnxGf8spjCIDtrBOOUzq2fVIoTvkbLNHYvSXWMo/export?format=pdf"
+            href="https://docs.google.com/document/d/1HspJ5r6OWqlzYd9On4OJxOcsb_c3oucPhjWVc1PHAAw/export?format=pdf"
             ><paper-button class="primary" aria-label="Download my resume"
               >Download my resume<iron-icon
                 icon="my-icons:get-app"
