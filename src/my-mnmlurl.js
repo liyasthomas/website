@@ -53,7 +53,7 @@ class MyMnmlurl extends PolymerElement {
         <p>• Most Secure URL Shortener of the universe</p>
       </div>
       <div class$="[[getUIType(UI)]] actions flex-center-center">
-        <a href="https://mnmlurl.ml" target="_blank" rel="noopener">
+        <a href="https://liyasthomas.github.io/mnmlurl/src" target="_blank" rel="noopener">
           <paper-button class="secondary" raised aria-label="View all"
             >View project<iron-icon icon="my-icons:arrow-forward"></iron-icon
           ></paper-button>
