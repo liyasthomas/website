@@ -15,16 +15,6 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 [![Build Status](https://travis-ci.org/liyasthomas/website.svg?branch=master)](https://travis-ci.org/liyasthomas/website) [![GitHub release](https://img.shields.io/github/release/liyasthomas/website/all.svg)](https://github.com/liyasthomas/website/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/website.svg)](https://github.com/liyasthomas/website/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/website.svg)](https://github.com/liyasthomas/website/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/website/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/website/master/images/manifest/icon-48x48.png" alt="Liyas Thomas" width="32"> Liyas Thomas
-
-### 🍭 My official website by [Liyas Thomas](https://github.com/liyasthomas)
-
-<div align="center">
-  <br>
-  <img src="images/assets/app/unicorn.svg" alt="Liyas Thomas" width="50%">
-  <br>
-</div>
-
 ### Features :sparkles:
 
 :eyeglasses: **PWA**: Progressive web app
@@ -45,7 +35,7 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ## Demo
 
-[https://liyas-thomas.firebaseapp.com](https://liyas-thomas.firebaseapp.com)
+[https://liyasthomas.web.app](https://liyasthomas.web.app)
 
 ---
 
@@ -83,12 +73,6 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 ---
 
 ## Authors
-
-### Lead Developers
-* [**Liyas Thomas**](https://github.com/liyasthomas) - *Author*
-
-### Testing and Debugging
-* [Liyas Thomas](https://github.com/liyasthomas)
 
 ### Contributors
 * [Liyas Thomas](https://github.com/liyasthomas)
