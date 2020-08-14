@@ -7,15 +7,15 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
   <h1>Liyas Thomas</h1>
   <sub>Built with ❤︎ by
   <a href="https://github.com/liyasthomas">liyasthomas</a> and
-  <a href="https://github.com/liyasthomas/liyasthomas/graphs/contributors">contributors</a>
+  <a href="https://github.com/liyasthomas/website/graphs/contributors">contributors</a>
 	</sub>
 </div>
 
 ---
 
-[![Build Status](https://travis-ci.org/liyasthomas/liyasthomas.svg?branch=master)](https://travis-ci.org/liyasthomas/liyasthomas) [![GitHub release](https://img.shields.io/github/release/liyasthomas/liyasthomas/all.svg)](https://github.com/liyasthomas/liyasthomas/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/liyasthomas.svg)](https://github.com/liyasthomas/liyasthomas/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/liyasthomas.svg)](https://github.com/liyasthomas/liyasthomas/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/liyasthomas/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+[![Build Status](https://travis-ci.org/liyasthomas/website.svg?branch=master)](https://travis-ci.org/liyasthomas/website) [![GitHub release](https://img.shields.io/github/release/liyasthomas/website/all.svg)](https://github.com/liyasthomas/website/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/website.svg)](https://github.com/liyasthomas/website/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/website.svg)](https://github.com/liyasthomas/website/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/website/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/liyasthomas/master/images/manifest/icon-48x48.png" alt="Liyas Thomas" width="32"> Liyas Thomas
+# <img src="https://raw.githubusercontent.com/liyasthomas/website/master/images/manifest/icon-48x48.png" alt="Liyas Thomas" width="32"> Liyas Thomas
 
 ### 🍭 My official website by [Liyas Thomas](https://github.com/liyasthomas)
 
