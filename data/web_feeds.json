@@ -8,12 +8,12 @@
       "sub": [
         {
           "color": "green",
-          "title": "Postwoman",
+          "title": "Hoppscotch",
           "description": "Helps you create your requests faster, saving you precious time on your development",
           "info": "Read more",
-          "img": "../images/assets/projects/postwoman.svg",
+          "img": "../images/assets/projects/hoppscotch.svg",
           "icon": "api",
-          "link": "project/postwoman"
+          "link": "project/hoppscotch"
         },
         {
           "color": "indigo",
@@ -83,9 +83,9 @@
           "title": "HapSell",
           "description": "Have a product? Sell it!",
           "info": "Read more",
-          "img": "../images/assets/projects/postwoman.svg",
+          "img": "../images/assets/projects/hoppscotch.svg",
           "icon": "shopping-cart",
-          "link": "project/postwoman"
+          "link": "project/hoppscotch"
         },
         {
           "color": "black",

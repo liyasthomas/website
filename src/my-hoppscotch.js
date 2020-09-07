@@ -1,7 +1,7 @@
 import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 import "./shared-styles.js";
 import "@polymer/app-layout/app-grid/app-grid-style.js";
-class MyPostwoman extends PolymerElement {
+class MyHoppscotch extends PolymerElement {
   static get template() {
     return html`
       <style include="app-grid-style"></style>
@@ -27,25 +27,25 @@ class MyPostwoman extends PolymerElement {
           preload
           fade
           sizing="contain"
-          src="../images/assets/projects/postwoman.svg"
-          alt="Postwoman"
+          src="../images/assets/projects/hoppscotch.svg"
+          alt="Hoppscotch"
         ></iron-image>
       </div>
       <div class$="[[getUIType(UI)]] content">
-        <div class="title">Postwoman</div>
+        <div class="title">Hoppscotch</div>
         <div class="description">
           Helps you create your requests faster, saving you precious time on
           your development
         </div>
       </div>
       <div class$="[[getUIType(UI)]] actions flex-center-center">
-        <a href="https://postwoman.io" target="_blank" rel="noopener">
+        <a href="https://hoppscotch.io" target="_blank" rel="noopener">
           <paper-button class="secondary" raised aria-label="View all"
             >View project<iron-icon icon="my-icons:arrow-forward"></iron-icon
           ></paper-button>
         </a>
         <a
-          href="https://github.com/liyasthomas/postwoman"
+          href="https://github.com/hoppscotch/hoppscotch"
           target="_blank"
           rel="noopener"
         >
@@ -58,7 +58,7 @@ class MyPostwoman extends PolymerElement {
       </div>
       <iron-ajax
         auto
-        url="../data/postwoman_feeds.json"
+        url="../data/hoppscotch_feeds.json"
         id="ajax0"
         loading="{{loading0}}"
         handle-as="json"
@@ -151,7 +151,7 @@ class MyPostwoman extends PolymerElement {
             ></paper-button>
           </a>
           <a
-            href="https://github.com/liyasthomas/banner"
+            href="https://github.com/hoppscotch/hoppscotch"
             target="_blank"
             rel="noopener"
           >
@@ -254,7 +254,7 @@ class MyPostwoman extends PolymerElement {
             ></paper-button>
           </a>
           <a
-            href="https://github.com/liyasthomas/banner"
+            href="https://github.com/hoppscotch/hoppscotch"
             target="_blank"
             rel="noopener"
           >
@@ -354,7 +354,7 @@ class MyPostwoman extends PolymerElement {
             ></paper-button>
           </a>
           <a
-            href="https://github.com/liyasthomas/banner"
+            href="https://github.com/hoppscotch/hoppscotch"
             target="_blank"
             rel="noopener"
           >
@@ -368,7 +368,7 @@ class MyPostwoman extends PolymerElement {
       </template>
       <div class$="[[getUIType(UI)]] content">
         <p>
-          Join the open source community and contribute to make Postwoman
+          Join the open source community and contribute to make Hoppscotch
           better.
         </p>
       </div>
@@ -474,7 +474,7 @@ class MyPostwoman extends PolymerElement {
       ? `
 <iron-image class="lightbox" preload fade sizing="contain" src="` +
         event.model.__data.sub.img +
-        `" alt="Postwoman"></iron-image>
+        `" alt="Hoppscotch"></iron-image>
 			`
       : `
 Something went wrong!
@@ -482,4 +482,4 @@ Something went wrong!
     this.$.lightbox.innerHTML = model;
   }
 }
-window.customElements.define("my-postwoman", MyPostwoman);
+window.customElements.define("my-hoppscotch", MyHoppscotch);

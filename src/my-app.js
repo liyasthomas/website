@@ -695,7 +695,7 @@ class MyApp extends PolymerElement {
             <my-marcdown name="marcdown"></my-marcdown>
             <my-colorbook name="colorbook"></my-colorbook>
             <my-books name="books"></my-books>
-            <my-postwoman name="postwoman"></my-postwoman>
+            <my-hoppscotch name="hoppscotch"></my-hoppscotch>
             <my-banner name="banner"></my-banner>
             <my-fuseorg name="fuseorg"></my-fuseorg>
             <my-lvr name="lvr"></my-lvr>
@@ -870,7 +870,7 @@ class MyApp extends PolymerElement {
         "marcdown",
         "colorbook",
         "books",
-        "postwoman",
+        "hoppscotch",
         "banner",
         "fuseorg",
         "lvr",
@@ -988,8 +988,8 @@ class MyApp extends PolymerElement {
         case "banner":
           import("./my-banner.js").then(cb);
           break;
-        case "postwoman":
-          import("./my-postwoman.js").then(cb);
+        case "hoppscotch":
+          import("./my-hoppscotch.js").then(cb);
           break;
         case "fuseorg":
           import("./my-fuseorg.js").then(cb);
