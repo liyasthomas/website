@@ -4,25 +4,25 @@
       "title": "screenshots",
       "icon": "get-app",
       "color": "blue",
-      "link": "https://postwoman.io",
+      "link": "https://hoppscotch.io",
       "sub": [
         {
           "color": "transparent",
           "title": "Wall",
           "description": "blah",
           "info": "View",
-          "img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot1.png",
+          "img": "https://raw.githubusercontent.com/hoppscotch/hoppscotch/master/static/images/screenshot1.png",
           "icon": "get-app",
-          "link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot1.png"
+          "link": "https://raw.githubusercontent.com/hoppscotch/hoppscotch/master/static/images/screenshot1.png"
         },
         {
           "color": "transparent",
           "title": "Wall",
           "description": "blah",
           "info": "View",
-          "img": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot2.png",
+          "img": "https://raw.githubusercontent.com/hoppscotch/hoppscotch/master/static/images/screenshot2.png",
           "icon": "get-app",
-          "link": "https://raw.githubusercontent.com/liyasthomas/postwoman/master/static/images/screenshot2.png"
+          "link": "https://raw.githubusercontent.com/hoppscotch/hoppscotch/master/static/images/screenshot2.png"
         }
       ]
     }
@@ -32,7 +32,7 @@
       "title": "prototyping",
       "icon": "language",
       "color": "red",
-      "link": "https://postwoman.io",
+      "link": "https://hoppscotch.io",
       "sub": [
         {
           "color": "transparent",
@@ -60,7 +60,7 @@
       "title": "Stack",
       "icon": "code",
       "color": "black",
-      "link": "https://postwoman.io",
+      "link": "https://hoppscotch.io",
       "sub": [
         {
           "color": "transparent",
